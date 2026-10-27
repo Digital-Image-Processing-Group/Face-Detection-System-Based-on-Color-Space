@@ -1,0 +1,265 @@
+{
+  "schema_version": 1,
+  "color_space": "OpenCV-YCrCb-uint8-full-range",
+  "feature_order": [
+    "Cb",
+    "Cr"
+  ],
+  "mean": [
+    109.97977617905676,
+    151.46239008792966
+  ],
+  "covariance": [
+    [
+      109.45432538257333,
+      -81.05527921241885
+    ],
+    [
+      -81.05527921241885,
+      88.852136738988
+    ]
+  ],
+  "regularization_lambda": 1.0,
+  "training_info": {
+    "usage": "bootstrap_only",
+    "skin_annotation_scope": "sampled",
+    "training_image_count": 20,
+    "sampled_pixel_count": 25020,
+    "requested_samples_per_image": 2000,
+    "actual_samples_per_image": 1251,
+    "random_seed": 42,
+    "manifest_sha256": "27cbc9b824d9c398e7e83d2e3b857bded16262fc5f672119bf1a0fce4761e0c6",
+    "data_revision": "d2e87560f8945823bdf0a8bbeb504d0e943de7ff993916bcfed3f76120698d5d",
+    "opencv_version": "5.0.0",
+    "numpy_version": "2.4.4",
+    "sources": [
+      {
+        "image_id": "fairface_train_000000",
+        "image_sha256": "8e020a7e77f3e5515fd1085ec3f0aea75dec442134c99beae891d4327175d70a",
+        "skin_mask_sha256": "d10a3f02fd668bb46e8f9b5dd204ca738be32e13224168981fc021629eed2f57",
+        "available_pixels": 2296,
+        "sampled_pixels": 1251,
+        "skin_status": "sampled",
+        "identity_status": "unverified"
+      },
+      {
+        "image_id": "fairface_train_000010",
+        "image_sha256": "58ad2e086a5de269e821e8cd3a6d4b24c1412cde9a5a3ff299ad9f5a4992482a",
+        "skin_mask_sha256": "088e5b772a8f9c6a66aa861e14fd54a2c0929a824622a712130007a888a6a65a",
+        "available_pixels": 2127,
+        "sampled_pixels": 1251,
+        "skin_status": "sampled",
+        "identity_status": "unverified"
+      },
+      {
+        "image_id": "fairface_train_000011",
+        "image_sha256": "d582b1ff86dc9233325443a63c4b47b34ca58d9549369c53d5c8284797bedb46",
+        "skin_mask_sha256": "2252b1656d3883eaa6139664597d3928ee02358906606e141989927338654f42",
+        "available_pixels": 1846,
+        "sampled_pixels": 1251,
+        "skin_status": "sampled",
+        "identity_status": "unverified"
+      },
+      {
+        "image_id": "fairface_train_000016",
+        "image_sha256": "99e093da336ba2615b2916f5a3efe5aac27e9d7e80988887c95d52ef31918325",
+        "skin_mask_sha256": "0d90b6fe6bb54e4dba9142391b30aef6eab31fcbe58ccf9ea30fb579ae3a1438",
+        "available_pixels": 1580,
+        "sampled_pixels": 1251,
+        "skin_status": "sampled",
+        "identity_status": "unverified"
+      },
+      {
+        "image_id": "fairface_train_000017",
+        "image_sha256": "796fe717a19056164c0156cf4bf81ccf646d40bc1b8016de401bd7cc12bb9868",
+        "skin_mask_sha256": "a90750145ac08f5cdd566b6b5c65d913a52be889831b7ed8d5cdff9f74b143e3",
+        "available_pixels": 2014,
+        "sampled_pixels": 1251,
+        "skin_status": "sampled",
+        "identity_status": "unverified"
+      },
+      {
+        "image_id": "fairface_train_000019",
+        "image_sha256": "91566c629d4dd3ab6bf944dc2bc5d1d30f0251b48e67945d357833a34bac5878",
+        "skin_mask_sha256": "9f3cbcb10a63aa466b59b1a015126c584c7538d6a17f3b17b991f0299e59066b",
+        "available_pixels": 1898,
+        "sampled_pixels": 1251,
+        "skin_status": "sampled",
+        "identity_status": "unverified"
+      },
+      {
+        "image_id": "fairface_train_000034",
+        "image_sha256": "173249837735da8562f08840918f3d66019b792278338776e7297305ecbcebb8",
+        "skin_mask_sha256": "104595666253728c9b69ffa13923a6edbee9b44906a53397cfee679f34d36152",
+        "available_pixels": 2068,
+        "sampled_pixels": 1251,
+        "skin_status": "sampled",
+        "identity_status": "unverified"
+      },
+      {
+        "image_id": "fairface_train_000046",
+        "image_sha256": "2cae2fb7c02f8a417e0e5b8980ac4a1801b4dad805ef38eb1fc3ce579ef09815",
+        "skin_mask_sha256": "1d53b4d74c3423451745ae092554e22c922549325881c4f2d42a34e7e2804bc4",
+        "available_pixels": 1420,
+        "sampled_pixels": 1251,
+        "skin_status": "sampled",
+        "identity_status": "unverified"
+      },
+      {
+        "image_id": "fairface_train_000052",
+        "image_sha256": "cf3ffe9dc645ae51bf51d89b4146920c167c450a1abb77d0817ef1a1a7af3a94",
+        "skin_mask_sha256": "44e02fcceb525bc6b7ae444eb62b14e56a4f0dd9d4c3d36b033c3092f84448e3",
+        "available_pixels": 1962,
+        "sampled_pixels": 1251,
+        "skin_status": "sampled",
+        "identity_status": "unverified"
+      },
+      {
+        "image_id": "fairface_train_000053",
+        "image_sha256": "ac9b3bc4640a69e3374abf6c6fbd5ce122759d7d122e045b3adff65aea119a9b",
+        "skin_mask_sha256": "ca29ce0290fdcdee0d57240f5b8890052fca2c810d4b9c195e5d338d34151351",
+        "available_pixels": 2248,
+        "sampled_pixels": 1251,
+        "skin_status": "sampled",
+        "identity_status": "unverified"
+      },
+      {
+        "image_id": "fairface_train_000054",
+        "image_sha256": "6cff30be56c3ced5e80e2b2c77798946955fa0d978f7c634b699e073142288ee",
+        "skin_mask_sha256": "65d68a2d7cd039c7173b2072b39cb5fa6cb4b627f1071d0cd5cbee954a2e96b4",
+        "available_pixels": 1923,
+        "sampled_pixels": 1251,
+        "skin_status": "sampled",
+        "identity_status": "unverified"
+      },
+      {
+        "image_id": "fairface_train_000063",
+        "image_sha256": "e9da17f223d8e4cc1de9f652e88e0f04a14fb36b7d704c7430ea2277c965e864",
+        "skin_mask_sha256": "f96c39aeb63f0509829b6233dbca8b0d199c012526ca9bc2a6813d5f7d518d93",
+        "available_pixels": 1792,
+        "sampled_pixels": 1251,
+        "skin_status": "sampled",
+        "identity_status": "unverified"
+      },
+      {
+        "image_id": "fairface_train_000064",
+        "image_sha256": "72cfd50d55f4bb22e195292cea8e4534b83816d6c0268b027b6ae1589a437ef0",
+        "skin_mask_sha256": "7ff8ad86f793324c59fc1cd6c607d73201e85d5ef5d06613aadd7d529e04b3ef",
+        "available_pixels": 1754,
+        "sampled_pixels": 1251,
+        "skin_status": "sampled",
+        "identity_status": "unverified"
+      },
+      {
+        "image_id": "fairface_train_000068",
+        "image_sha256": "48b5c26738e41b68b82932d0e0ec8186546272d102ae31a81cd7835084a4dbb5",
+        "skin_mask_sha256": "0ceb8c2cf506e7ad88619f349fb9f393676ede29911f7f5f64aef24686e1a6cd",
+        "available_pixels": 1914,
+        "sampled_pixels": 1251,
+        "skin_status": "sampled",
+        "identity_status": "unverified"
+      },
+      {
+        "image_id": "fairface_train_000073",
+        "image_sha256": "b2dc248beea0f163c8d869aa4870e71676f8a2fc335da972fa2b71762bc30317",
+        "skin_mask_sha256": "2678c4f4009df20848ae55deeb0765fb431746a7961013f9d5c01d178ca213af",
+        "available_pixels": 1510,
+        "sampled_pixels": 1251,
+        "skin_status": "sampled",
+        "identity_status": "unverified"
+      },
+      {
+        "image_id": "fairface_train_000075",
+        "image_sha256": "f8c2b7138ccea9efbd46b26acac9d6b8428b2835cbb317a9c1c5f8c121b549c1",
+        "skin_mask_sha256": "8a014d00da8719a99c891f6669b21cc8b062c10b4cb387ba28b8e34415f6aefa",
+        "available_pixels": 1890,
+        "sampled_pixels": 1251,
+        "skin_status": "sampled",
+        "identity_status": "unverified"
+      },
+      {
+        "image_id": "fairface_train_000087",
+        "image_sha256": "c29a3267e03716deef4ac80fafb32f100bbd7ee159a4e5d460cfdb27882fe970",
+        "skin_mask_sha256": "54237a5125f9ec841e0fe68cbdc5ecd7cace33b8f95d597f0c5fb33fead6c232",
+        "available_pixels": 1251,
+        "sampled_pixels": 1251,
+        "skin_status": "sampled",
+        "identity_status": "unverified"
+      },
+      {
+        "image_id": "fairface_train_000097",
+        "image_sha256": "27bd3afac1edc31d20ba486b8491a57ad0234084272f11a47ed4293d1a9e7c7f",
+        "skin_mask_sha256": "b38ff84deac65d8b35e5aaaa74a1c2e5d5164bb07fb09a1ec2d44fa8de9f461f",
+        "available_pixels": 1500,
+        "sampled_pixels": 1251,
+        "skin_status": "sampled",
+        "identity_status": "unverified"
+      },
+      {
+        "image_id": "fairface_train_000099",
+        "image_sha256": "606e79c96e07bde1db1498675b9138239f4dbdc81bfd1948a283d73918a04a97",
+        "skin_mask_sha256": "efffad41decf915108ff9cf06aac9628ac5548d592b8dda0ffa542195ef223ab",
+        "available_pixels": 1504,
+        "sampled_pixels": 1251,
+        "skin_status": "sampled",
+        "identity_status": "unverified"
+      },
+      {
+        "image_id": "fairface_train_000104",
+        "image_sha256": "99eac53871ce21b66ff827889b414aeff505febe44cc83affa058d5c94fefb79",
+        "skin_mask_sha256": "b7c960a2b4de9f9ce6d1294a5e72f0168e9ad7ba7fc0c6213a3c17790c89d47a",
+        "available_pixels": 1837,
+        "sampled_pixels": 1251,
+        "skin_status": "sampled",
+        "identity_status": "unverified"
+      }
+    ],
+    "skipped": [
+      {
+        "image_id": "beans_train_000005",
+        "reason": "empty skin mask"
+      },
+      {
+        "image_id": "beans_train_000020",
+        "reason": "empty skin mask"
+      },
+      {
+        "image_id": "beans_train_000026",
+        "reason": "empty skin mask"
+      },
+      {
+        "image_id": "beans_train_000036",
+        "reason": "empty skin mask"
+      },
+      {
+        "image_id": "beans_train_000041",
+        "reason": "empty skin mask"
+      },
+      {
+        "image_id": "beans_train_000052",
+        "reason": "empty skin mask"
+      },
+      {
+        "image_id": "beans_train_000062",
+        "reason": "empty skin mask"
+      },
+      {
+        "image_id": "beans_train_000078",
+        "reason": "empty skin mask"
+      },
+      {
+        "image_id": "beans_train_000083",
+        "reason": "empty skin mask"
+      },
+      {
+        "image_id": "beans_train_000088",
+        "reason": "empty skin mask"
+      },
+      {
+        "image_id": "beans_train_000099",
+        "reason": "empty skin mask"
+      }
+    ]
+  },
+  "model_revision": "skin-1c8e6be653044d11"
+}

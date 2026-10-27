@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.py[cod]
+.mplconfig/
+data/cache/
+data/images/
+data/annotations/skin/
+data/annotations/face/
+data/contact_sheets/
+artifacts/

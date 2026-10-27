@@ -1,0 +1,124 @@
+{
+  "image_id": "fairface_train_000019",
+  "width": 224,
+  "height": 224,
+  "annotator": "codex_visual_review",
+  "method": "Visual selection of conservative skin patches and a coarse face contour from the original photo; no model-generated labels.",
+  "review_note": "Sparse skin positives for bootstrap training. Face contour is a draft, not pixel-accurate evaluation ground truth.",
+  "skin": {
+    "status": "sampled",
+    "include": [
+      [
+        [
+          36,
+          112
+        ],
+        [
+          62,
+          112
+        ],
+        [
+          62,
+          138
+        ],
+        [
+          36,
+          138
+        ]
+      ],
+      [
+        [
+          147,
+          113
+        ],
+        [
+          174,
+          113
+        ],
+        [
+          174,
+          135
+        ],
+        [
+          147,
+          135
+        ]
+      ],
+      [
+        [
+          77,
+          32
+        ],
+        [
+          111,
+          32
+        ],
+        [
+          111,
+          46
+        ],
+        [
+          77,
+          46
+        ]
+      ]
+    ],
+    "exclude": []
+  },
+  "face": {
+    "status": "draft",
+    "include": [
+      [
+        [
+          58,
+          5
+        ],
+        [
+          141,
+          5
+        ],
+        [
+          178,
+          24
+        ],
+        [
+          192,
+          74
+        ],
+        [
+          194,
+          131
+        ],
+        [
+          177,
+          178
+        ],
+        [
+          138,
+          211
+        ],
+        [
+          85,
+          210
+        ],
+        [
+          42,
+          184
+        ],
+        [
+          22,
+          138
+        ],
+        [
+          20,
+          82
+        ],
+        [
+          29,
+          38
+        ]
+      ]
+    ],
+    "exclude": []
+  }
+}
