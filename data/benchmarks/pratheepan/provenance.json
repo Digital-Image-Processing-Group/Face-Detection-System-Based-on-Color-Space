@@ -1,0 +1,13 @@
+{
+  "paired_images": 78,
+  "source_url": "https://cs-chan.com/downloads_skin_dataset.html",
+  "mirror_url": "https://staff.fnwi.uva.nl/r.vandenboomgaard/IPCV20172018/_downloads/SkinColor.zip",
+  "course_url": "https://staff.fnwi.uva.nl/r.vandenboomgaard/IPCV20172018/20172018/LabExercises/SkinColorDetection.html",
+  "archive_sha256": "ec1c897f6acb8fd3feaffdd77bc6097b11118c80e42354c49db36923c0d5d26c",
+  "purpose": "external_mixed_population_skin_segmentation_only",
+  "not_certified": [
+    "Asian-only population",
+    "identity-disjoint test",
+    "full face-region ground truth"
+  ]
+}

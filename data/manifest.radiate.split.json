@@ -1,0 +1,17 @@
+{
+  "seed": 42,
+  "ratios": [
+    0.6,
+    0.2,
+    0.2
+  ],
+  "counts": {
+    "test": 8,
+    "validation": 10,
+    "train": 26
+  },
+  "input_manifest": "data\\manifest.radiate.unsplit.csv",
+  "strategy": "transitive subject and scene groups",
+  "annotation_check": "preparation_only",
+  "evaluation_ready": false
+}

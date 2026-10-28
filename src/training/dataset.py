@@ -165,8 +165,8 @@ def assign_splits(records: list[Record], seed: int = 42,
         raise ValueError("Identity grouping is unverified; row IDs are not verified subject IDs")
     if any(not row.group_id for row in records):
         raise ValueError("Every record needs an acquisition/scene group_id")
-    if any(row.face_status != "complete" or (not row.subjects and row.source_label) for row in records):
-        raise ValueError("Complete face annotations and verified subject IDs for face sources are required before splitting")
+    if any(not row.subjects and row.source_label for row in records):
+        raise ValueError("Verified subject IDs are required for face sources before splitting")
     groups = connected_groups(records)
     if len(groups) < 3:
         raise ValueError("At least three independent groups are needed for train/validation/test")
@@ -193,7 +193,7 @@ def validate_dataset(manifest: Path, purpose: str = "train") -> dict:
     errors: list[str] = []
     warnings: list[str] = []
     hashes: dict[str, Record] = {}
-    perceptual: list[tuple[Record, np.ndarray]] = []
+    perceptual: list[tuple[Record, np.ndarray, np.ndarray]] = []
     samples = 0
     for row in records:
         try:
@@ -217,10 +217,14 @@ def validate_dataset(manifest: Path, purpose: str = "train") -> dict:
             gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
             small = cv2.resize(gray, (9, 8), interpolation=cv2.INTER_AREA)
             dhash = (small[:, 1:] > small[:, :-1]).ravel()
-            for other, other_hash in perceptual:
+            thumbnail = cv2.resize(image, (32, 32), interpolation=cv2.INTER_AREA).astype(np.float32)
+            for other, other_hash, other_thumbnail in perceptual:
                 if other.split != row.split and np.count_nonzero(dhash != other_hash) <= 4:
-                    raise ValueError(f"Potential near-duplicate across splits with {other.image_id}; review/group them")
-            perceptual.append((row, dhash))
+                    difference = np.abs(thumbnail - other_thumbnail)
+                    if difference.mean() <= 1.5 and np.percentile(difference, 90) <= 4:
+                        raise ValueError(f"Potential near-duplicate across splits with {other.image_id}; review/group them")
+                    warnings.append(f"{row.image_id}: coarse hash resembles {other.image_id}, but RGB pixels differ; hash alone is not evidence of duplicate subjects")
+            perceptual.append((row, dhash, thumbnail))
             skin = None
             face = None
             if row.skin_status != "missing":

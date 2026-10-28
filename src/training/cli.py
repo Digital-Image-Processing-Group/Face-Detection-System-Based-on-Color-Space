@@ -23,6 +23,11 @@ def parser() -> argparse.ArgumentParser:
     negatives = commands.add_parser("collect-beans", help="Download candidate no-face leaf photos for visual review")
     negatives.add_argument("--manifest", type=Path, default=Path("data/manifest.csv"))
     negatives.add_argument("--count", type=int, default=20)
+    radiate = commands.add_parser("collect-radiate", help="Download official RADIATE color photos with anonymous author participant codes")
+    radiate.add_argument("--manifest", type=Path, default=Path("data/manifest.radiate.unsplit.csv"))
+    benchmark = commands.add_parser("import-skin-benchmark", help="Import original mixed-population skin ground truth, kept separate from face evaluation")
+    benchmark.add_argument("--archive", type=Path, required=True)
+    benchmark.add_argument("--output", type=Path, default=Path("data/benchmarks/pratheepan"))
     validate = commands.add_parser("validate", help="Check files, masks, provenance and split leakage")
     validate.add_argument("--manifest", type=Path, required=True)
     validate.add_argument("--purpose", choices=("train", "evaluation"), default="train")
@@ -32,6 +37,8 @@ def parser() -> argparse.ArgumentParser:
     split.add_argument("--output", type=Path, required=True)
     split.add_argument("--seed", type=int, default=42)
     split.add_argument("--ratios", nargs=3, type=float, default=(0.6, 0.2, 0.2))
+    split.add_argument("--prepare-only", action="store_true",
+                       help="Prepare verified subject groups before masks are complete; does not certify evaluation readiness")
     annotate = commands.add_parser("rasterize", help="Render reviewed polygon annotations and update their manifest")
     annotate.add_argument("--manifest", type=Path, required=True)
     annotate.add_argument("--polygons", type=Path, default=Path("data/annotations/polygons"))
@@ -60,6 +67,12 @@ def main(argv: list[str] | None = None) -> int:
         elif args.command == "collect-beans":
             from .collect import collect_beans
             print(json.dumps(collect_beans(args.manifest, args.count), indent=2))
+        elif args.command == "collect-radiate":
+            from .radiate import collect_radiate
+            print(json.dumps(collect_radiate(args.manifest), indent=2))
+        elif args.command == "import-skin-benchmark":
+            from .skin_benchmark import import_skin_benchmark
+            print(json.dumps(import_skin_benchmark(args.archive, args.output), indent=2))
         elif args.command == "validate":
             report = validate_dataset(args.manifest, args.purpose)
             if args.report:
@@ -79,7 +92,7 @@ def main(argv: list[str] | None = None) -> int:
                 trial = args.manifest.parent / (Path(temporary).name + ".csv")
                 try:
                     write_manifest(trial, rows)
-                    report = validate_dataset(trial, "evaluation")
+                    report = validate_dataset(trial, "train" if args.prepare_only else "evaluation")
                     if not report["valid"]:
                         raise ValueError("Split validation failed:\n" + "\n".join(report["errors"]))
                 finally:
@@ -88,6 +101,8 @@ def main(argv: list[str] | None = None) -> int:
             write_json(args.output.with_suffix(".split.json"), {
                 "seed": args.seed, "ratios": args.ratios, "counts": report["splits"],
                 "input_manifest": str(args.manifest), "strategy": "transitive subject and scene groups",
+                "annotation_check": "preparation_only" if args.prepare_only else "complete_evaluation_annotations_required",
+                "evaluation_ready": False if args.prepare_only else True,
             })
             print(f"Saved split manifest: {args.output}")
         elif args.command == "rasterize":
