@@ -53,6 +53,8 @@ def parse_directory(content: bytes) -> list[dict]:
 
 
 def extract_entry(entry: dict, cache: Path) -> bytes:
+    if not 0 < entry["size"] <= 20 * 1024 * 1024 or not 0 < entry["compressed_size"] <= 8 * 1024 * 1024:
+        raise ValueError("Unexpected ZIP image size")
     offset = entry["offset"]
     header = byte_range(offset, offset + 29, cache)
     if header[:4] != b"PK\x03\x04":
