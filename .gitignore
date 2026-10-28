@@ -7,6 +7,4 @@ data/images/
 data/annotations/skin/
 data/annotations/face/
 data/contact_sheets/
-data/benchmarks/*/images/
-data/benchmarks/*/masks/
 artifacts/

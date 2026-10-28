@@ -11,23 +11,14 @@ from .annotations import contact_sheet, rasterize
 from .dataset import (assign_splits, read_manifest, validate_dataset,
                       write_json, write_manifest)
 from .model import fit_model, save_diagnostics
+from .assessment import assess
 
 
 def parser() -> argparse.ArgumentParser:
     root = argparse.ArgumentParser(description="A: dataset preparation and YCrCb skin-model training")
     commands = root.add_subparsers(dest="command", required=True)
-    collect = commands.add_parser("collect-fairface", help="Download source-labeled bootstrap photos")
-    collect.add_argument("--manifest", type=Path, default=Path("data/manifest.csv"))
-    collect.add_argument("--count", type=int, default=200)
-    collect.add_argument("--pages", type=int, default=16)
-    negatives = commands.add_parser("collect-beans", help="Download candidate no-face leaf photos for visual review")
-    negatives.add_argument("--manifest", type=Path, default=Path("data/manifest.csv"))
-    negatives.add_argument("--count", type=int, default=20)
     radiate = commands.add_parser("collect-radiate", help="Download official RADIATE color photos with anonymous author participant codes")
-    radiate.add_argument("--manifest", type=Path, default=Path("data/manifest.radiate.unsplit.csv"))
-    benchmark = commands.add_parser("import-skin-benchmark", help="Import original mixed-population skin ground truth, kept separate from face evaluation")
-    benchmark.add_argument("--archive", type=Path, required=True)
-    benchmark.add_argument("--output", type=Path, default=Path("data/benchmarks/pratheepan"))
+    radiate.add_argument("--manifest", type=Path, default=Path("data/manifest.csv"))
     validate = commands.add_parser("validate", help="Check files, masks, provenance and split leakage")
     validate.add_argument("--manifest", type=Path, required=True)
     validate.add_argument("--purpose", choices=("train", "evaluation"), default="train")
@@ -48,31 +39,32 @@ def parser() -> argparse.ArgumentParser:
     sheet.add_argument("--offset", type=int, default=0)
     sheet.add_argument("--limit", type=int, default=20)
     sheet.add_argument("--overlays", action="store_true")
+    sheet.add_argument("--tile-size", type=int, default=600)
+    sheet.add_argument("--columns", type=int, default=2)
     train = commands.add_parser("train", help="Fit a Gaussian using annotated training skin only")
     train.add_argument("--manifest", type=Path, required=True)
     train.add_argument("--output", type=Path, default=Path("models/skin_model.json"))
-    train.add_argument("--diagnostics", type=Path, default=Path("artifacts/A"))
+    train.add_argument("--diagnostics", type=Path, default=Path("artifacts/radiate_model"))
     train.add_argument("--samples-per-image", type=int, default=2000)
     train.add_argument("--seed", type=int, default=42)
     train.add_argument("--regularization", type=float, default=1.0)
+    train.add_argument("--mask-margin", type=int, default=15,
+                       help="Erode training-only skin masks by this many original-image pixels")
+    evaluation = commands.add_parser("assess", help="Select threshold on validation people, then report held-out test metrics")
+    evaluation.add_argument("--manifest", type=Path, default=Path("data/manifest.csv"))
+    evaluation.add_argument("--model", type=Path, default=Path("models/skin_model.json"))
+    evaluation.add_argument("--output", type=Path, default=Path("models/evaluation.json"))
+    evaluation.add_argument("--operating-point", type=Path, default=Path("models/operating_point.json"))
+    evaluation.add_argument("--previews", type=Path, default=Path("artifacts/radiate_predictions"))
     return root
 
 
 def main(argv: list[str] | None = None) -> int:
     args = parser().parse_args(argv)
     try:
-        if args.command == "collect-fairface":
-            from .collect import collect_fairface
-            print(json.dumps(collect_fairface(args.manifest, args.count, args.pages), ensure_ascii=False, indent=2))
-        elif args.command == "collect-beans":
-            from .collect import collect_beans
-            print(json.dumps(collect_beans(args.manifest, args.count), indent=2))
-        elif args.command == "collect-radiate":
+        if args.command == "collect-radiate":
             from .radiate import collect_radiate
             print(json.dumps(collect_radiate(args.manifest), indent=2))
-        elif args.command == "import-skin-benchmark":
-            from .skin_benchmark import import_skin_benchmark
-            print(json.dumps(import_skin_benchmark(args.archive, args.output), indent=2))
         elif args.command == "validate":
             report = validate_dataset(args.manifest, args.purpose)
             if args.report:
@@ -109,10 +101,10 @@ def main(argv: list[str] | None = None) -> int:
             count = rasterize(args.manifest, args.polygons)
             print(f"Rasterized annotations for {count} images")
         elif args.command == "contact-sheet":
-            contact_sheet(args.manifest, args.output, args.offset, args.limit, args.overlays)
+            contact_sheet(args.manifest, args.output, args.offset, args.limit, args.overlays, args.tile_size, args.columns)
             print(f"Saved contact sheet: {args.output}")
         elif args.command == "train":
-            model, pixels, report = fit_model(args.manifest, args.samples_per_image, args.seed, args.regularization)
+            model, pixels, report = fit_model(args.manifest, args.samples_per_image, args.seed, args.regularization, args.mask_margin)
             save_diagnostics(model, pixels, args.diagnostics)
             write_json(args.diagnostics / "dataset_validation.json", report)
             write_json(args.output, model)
@@ -120,6 +112,10 @@ def main(argv: list[str] | None = None) -> int:
                               "usage": model["training_info"]["usage"],
                               "images": model["training_info"]["training_image_count"],
                               "sampled_pixels": model["training_info"]["sampled_pixel_count"]}, indent=2))
+        elif args.command == "assess":
+            model = json.loads(args.model.read_text(encoding="utf-8"))
+            report = assess(args.manifest, model, args.output, args.operating_point, args.previews)
+            print(json.dumps(report["summary"], indent=2))
     except (OSError, ValueError, KeyError, TypeError) as error:
         print(f"Error: {error}", file=sys.stderr)
         return 1

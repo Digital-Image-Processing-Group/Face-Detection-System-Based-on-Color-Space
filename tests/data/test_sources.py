@@ -1,8 +1,8 @@
 import io
+import hashlib
 import tempfile
 import unittest
 import zipfile
-from dataclasses import replace
 from pathlib import Path
 from unittest.mock import patch
 
@@ -10,12 +10,35 @@ import numpy as np
 from PIL import Image
 
 from src.training.cli import main
-from src.training.dataset import Record, read_manifest, validate_dataset, write_manifest
-from src.training.radiate import extract_entry, parse_directory
-from src.training.skin_benchmark import decode_ground_truth, import_skin_benchmark
+from src.training.dataset import Record, read_manifest, validate_dataset, write_json, write_manifest
+from src.training.radiate import collect_radiate, extract_entry, parse_directory
 
 
 class PublicSourceTests(unittest.TestCase):
+    def test_complete_local_sources_resume_offline_and_reject_corruption(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            rows, sources = [], []
+            for i in range(44):
+                name = f"radiate_{i}"
+                image_path = root / f"{name}.png"
+                Image.new("RGB", (4, 4), (i, 100, 80)).save(image_path)
+                rows.append(Record(name, image_path.name, f"p{i//2}", f"p{i//2}", "train",
+                                   "skin.png", "face.png", "fixture", "synthetic:fixture", "fixture",
+                                   "test-only", "verified", "complete", "complete"))
+                sources.append({"image_id": name, "sha256": hashlib.sha256(image_path.read_bytes()).hexdigest()})
+            manifest = root / "manifest.csv"
+            write_manifest(manifest, rows)
+            write_json(root / "sources/radiate_downloads.json", sources)
+            before = manifest.read_bytes()
+            with patch("src.training.radiate.byte_range", side_effect=AssertionError("Unexpected network access")):
+                report = collect_radiate(manifest)
+                self.assertEqual(report["author_participant_groups"], 22)
+                self.assertEqual(manifest.read_bytes(), before)
+                (root / rows[0].image_path).write_bytes(b"corrupt")
+                with self.assertRaisesRegex(ValueError, "hash mismatch"):
+                    collect_radiate(manifest)
+
     def test_radiate_directory_and_crc_checked_extraction(self):
         stream = io.BytesIO()
         with zipfile.ZipFile(stream, "w", zipfile.ZIP_DEFLATED) as archive:
@@ -28,34 +51,6 @@ class PublicSourceTests(unittest.TestCase):
             self.assertEqual(extract_entry(entry, Path("unused")), b"original-photo" * 100)
             with self.assertRaisesRegex(ValueError, "CRC"):
                 extract_entry(dict(entry, crc32=0), Path("unused"))
-
-    def test_benchmark_masks_follow_published_first_channel_rule(self):
-        values = np.zeros((20, 20, 4), dtype=np.uint8)
-        values[:, :, 3] = 255
-        values[1:5, 1:5, :3] = 255
-        values[10, 10, :3] = [3, 2, 1]
-        content = io.BytesIO()
-        Image.fromarray(values).save(content, format="PNG")
-        mask = decode_ground_truth(content.getvalue(), (20, 20))
-        self.assertEqual(np.count_nonzero(mask), 16)
-        self.assertEqual(mask[10, 10], 0)
-        with self.assertRaisesRegex(ValueError, "shape"):
-            decode_ground_truth(content.getvalue(), (21, 20))
-
-    def test_benchmark_import_pairs_and_preserves_scope(self):
-        with tempfile.TemporaryDirectory() as temporary:
-            root = Path(temporary)
-            photo, mask = io.BytesIO(), io.BytesIO()
-            Image.new("RGB", (20, 20), (170, 110, 80)).save(photo, format="JPEG")
-            Image.new("L", (20, 20), 255).save(mask, format="PNG")
-            source = root / "source.zip"
-            with zipfile.ZipFile(source, "w") as archive:
-                archive.writestr("FacePhoto/example.jpg", photo.getvalue())
-                archive.writestr("GroundT_FacePhoto/example.png", mask.getvalue())
-            report = import_skin_benchmark(source, root / "output")
-            self.assertEqual(report["paired_images"], 1)
-            self.assertIn("Asian-only population", report["not_certified"])
-            self.assertTrue((root / "output" / "manifest.csv").exists())
 
     def test_prepare_split_does_not_certify_missing_masks(self):
         with tempfile.TemporaryDirectory() as temporary:

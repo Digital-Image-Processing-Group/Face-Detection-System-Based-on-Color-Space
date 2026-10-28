@@ -1,0 +1,51 @@
+{
+  "seed": 42,
+  "requested_ratios": [
+    0.6,
+    0.2,
+    0.2
+  ],
+  "strategy": "transitive author participant and scene groups",
+  "manifest_sha256": "17cca2693850e85d95b3bfb351c0f9f01a96aed73df7cb73bc68fe4245083c68",
+  "evaluation_ready": true,
+  "annotation_reference": "project-authored visually traced polygons; not independently expert reviewed",
+  "splits": {
+    "train": {
+      "images": 26,
+      "groups": [
+        "radiate_AF06",
+        "radiate_AF08",
+        "radiate_AF09",
+        "radiate_AF11",
+        "radiate_AF12",
+        "radiate_AM02",
+        "radiate_AM03",
+        "radiate_AM04",
+        "radiate_AM05",
+        "radiate_AM06",
+        "radiate_AM07",
+        "radiate_AM08",
+        "radiate_AM11"
+      ]
+    },
+    "validation": {
+      "images": 10,
+      "groups": [
+        "radiate_AF05",
+        "radiate_AF07",
+        "radiate_AF10",
+        "radiate_AM09",
+        "radiate_AM10"
+      ]
+    },
+    "test": {
+      "images": 8,
+      "groups": [
+        "radiate_AF01",
+        "radiate_AF02",
+        "radiate_AF03",
+        "radiate_AM01"
+      ]
+    }
+  }
+}

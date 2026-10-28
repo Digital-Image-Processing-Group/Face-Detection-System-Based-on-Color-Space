@@ -43,12 +43,14 @@ def check_model(model: dict) -> None:
 
 
 def fit_model(manifest: Path, samples_per_image: int = 2000, seed: int = 42,
-              regularization: float = 1.0) -> tuple[dict, np.ndarray, dict]:
+              regularization: float = 1.0, mask_margin: int = 0) -> tuple[dict, np.ndarray, dict]:
     if samples_per_image < 3 or seed < 0:
         raise ValueError("samples_per_image must be >= 3 and seed must be nonnegative")
     if not np.isfinite(regularization) or regularization < 0:
         raise ValueError("regularization must be finite and nonnegative")
-    report = validate_dataset(manifest, "train")
+    if mask_margin < 0 or mask_margin > 50:
+        raise ValueError("mask_margin must be between 0 and 50 pixels")
+    report = validate_dataset(manifest, "evaluation")
     if not report["valid"]:
         raise ValueError("Dataset validation failed:\n" + "\n".join(report["errors"]))
     records = sorted(read_manifest(manifest), key=lambda row: row.image_id)
@@ -69,6 +71,9 @@ def fit_model(manifest: Path, samples_per_image: int = 2000, seed: int = 42,
         seen.add(digest)
         mask_path = data_path(manifest, row.skin_mask_path)
         mask = read_mask(mask_path, image.shape[:2])
+        if mask_margin:
+            mask = cv2.erode(mask, np.ones((2 * mask_margin + 1,) * 2, dtype=np.uint8),
+                             borderType=cv2.BORDER_CONSTANT, borderValue=0)
         if mask.any() and np.mean(np.ptp(image[mask.astype(bool)], axis=1) <= 2) >= 0.98:
             skipped.append({"image_id": row.image_id, "reason": "achromatic skin samples carry no reliable color information"})
             continue
@@ -98,13 +103,13 @@ def fit_model(manifest: Path, samples_per_image: int = 2000, seed: int = 42,
     pixels = np.concatenate(sampled)
     mean = pixels.mean(axis=0)
     covariance = np.cov(pixels, rowvar=False, ddof=1)
-    bootstrap = any(item[0].identity_status != "verified" for item in available)
     training_info = {
-        "usage": "bootstrap_only" if bootstrap else "identity_grouping_verified",
-        "skin_annotation_scope": "sampled" if any(item[0].skin_status == "sampled" for item in available) else "complete",
+        "usage": "verified_subjects",
+        "skin_annotation_scope": "complete",
         "training_image_count": len(available), "sampled_pixel_count": len(pixels),
         "requested_samples_per_image": samples_per_image, "actual_samples_per_image": count,
         "random_seed": seed, "manifest_sha256": report["manifest_sha256"],
+        "training_mask_margin_pixels": mask_margin,
         "data_revision": hashlib.sha256(json.dumps(sources, sort_keys=True).encode()).hexdigest(),
         "opencv_version": cv2.__version__, "numpy_version": np.__version__,
         "sources": sources, "skipped": skipped,

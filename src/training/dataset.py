@@ -243,13 +243,11 @@ def validate_dataset(manifest: Path, purpose: str = "train") -> dict:
                 if row.skin_status != "complete" or row.face_status != "complete":
                     raise ValueError("Formal evaluation requires complete skin and face annotations")
             if row.identity_status == "unverified":
-                warnings.append(f"{row.image_id}: identity grouping unverified; bootstrap use only")
-                if row.split != "train":
-                    raise ValueError("Unverified identities must stay in bootstrap training, not validation/test")
+                raise ValueError("Verified author subject/scene grouping is required")
             if row.split == "train" and skin is not None:
                 samples += int(skin.sum())
             if row.split == "train" and row.skin_status == "missing":
-                warnings.append(f"{row.image_id}: no skin annotation; trainer will skip")
+                warnings.append(f"{row.image_id}: skin annotation pending; model fitting requires complete annotations")
         except (OSError, ValueError, TypeError) as error:
             errors.append(f"{row.image_id}: {error}")
     for group in connected_groups(records):

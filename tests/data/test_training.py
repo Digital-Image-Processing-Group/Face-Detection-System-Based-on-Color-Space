@@ -77,14 +77,14 @@ class TrainingTests(unittest.TestCase):
         np.save(path, np.array([[0, 1]], dtype=np.uint8))
         np.testing.assert_array_equal(read_mask(path, (1, 2)), [[0, 1]])
 
-    def test_train_accepts_sampled_but_evaluation_rejects(self):
+    def test_fit_rejects_unverified_or_incomplete_annotation(self):
         rows = [self.make_record(1, skin_status="sampled", identity_status="unverified"),
                 self.make_record(2, skin_status="sampled", identity_status="unverified")]
         write_manifest(self.manifest, rows)
-        self.assertTrue(validate_dataset(self.manifest, "train")["valid"])
+        self.assertFalse(validate_dataset(self.manifest, "train")["valid"])
         self.assertFalse(validate_dataset(self.manifest, "evaluation")["valid"])
-        model, _, _ = fit_model(self.manifest)
-        self.assertEqual(model["training_info"]["usage"], "bootstrap_only")
+        with self.assertRaisesRegex(ValueError, "Dataset validation failed"):
+            fit_model(self.manifest)
 
     def test_subject_leakage_and_transitive_groups(self):
         rows = [self.make_record(1), self.make_record(2, "validation"), self.make_record(3, "test")]
@@ -200,31 +200,13 @@ class TrainingTests(unittest.TestCase):
         self.assertEqual(main(["split", "--manifest", str(self.manifest), "--output", str(output)]), 0)
         self.assertTrue(validate_dataset(output, "evaluation")["valid"])
 
-    def test_collector_resumes_without_overwriting_annotations(self):
-        from src.training.collect import collect_fairface
-
-        image_id = "fairface_train_000000"
-        target = self.root / "images" / "fairface" / f"{image_id}.jpg"
-        target.parent.mkdir(parents=True)
-        Image.new("RGB", (16, 12), (160, 110, 90)).save(target)
-        write_json(self.root / "cache" / "fairface_rows_0.json", {
-            "features": [{"name": "race", "type": {"names": ["East Asian", "Indian", "Black", "White", "Middle Eastern", "Latino_Hispanic", "Southeast Asian"]}}],
-            "rows": [{"row_idx": 0, "row": {"race": 0, "age": 3, "image": {"src": "https://invalid.example/not-used"}}}],
-        })
-        self.assertEqual(collect_fairface(self.manifest, count=1, pages=1)["downloaded_or_reused"], 1)
-        row = read_manifest(self.manifest)[0]
-        row = replace(row, skin_status="sampled", skin_mask_path="existing.png")
-        write_manifest(self.manifest, [row])
-        collect_fairface(self.manifest, count=1, pages=1)
-        self.assertEqual(read_manifest(self.manifest)[0], row)
-
     def test_cli_train_exports_valid_model_and_diagnostics(self):
         rows = [self.make_record(1), self.make_record(2)]
         write_manifest(self.manifest, rows)
         output = self.root / "model.json"
         diagnostics = self.root / "diagnostics"
         self.assertEqual(main(["train", "--manifest", str(self.manifest), "--output", str(output),
-                               "--diagnostics", str(diagnostics), "--samples-per-image", "10"]), 0)
+                               "--diagnostics", str(diagnostics), "--samples-per-image", "10", "--mask-margin", "0"]), 0)
         import json
         check_model(json.loads(output.read_text(encoding="utf-8")))
         self.assertTrue((diagnostics / "cbcr_distribution.png").exists())

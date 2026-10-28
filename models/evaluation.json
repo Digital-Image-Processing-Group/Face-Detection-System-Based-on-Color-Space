@@ -1,0 +1,845 @@
+{
+  "model_revision": "skin-ba3957b66e4eb101",
+  "operating_point": {
+    "schema_version": 1,
+    "model_revision": "skin-ba3957b66e4eb101",
+    "manifest_sha256": "17cca2693850e85d95b3bfb351c0f9f01a96aed73df7cb73bc68fe4245083c68",
+    "distance_squared_threshold": 6.5,
+    "selection": "validation_skin_micro_dice",
+    "candidate_grid": {
+      "min": 0.5,
+      "max": 20.0,
+      "step": 0.25
+    },
+    "face_baseline": "fixed scale-aware opening/closing, largest component and hole fill for single portraits"
+  },
+  "dataset": {
+    "manifest_sha256": "17cca2693850e85d95b3bfb351c0f9f01a96aed73df7cb73bc68fe4245083c68",
+    "images": 44,
+    "author_groups": 22,
+    "splits": {
+      "test": 8,
+      "validation": 10,
+      "train": 26
+    },
+    "skin_status": {
+      "complete": 44
+    },
+    "face_status": {
+      "complete": 44
+    },
+    "identity_status": {
+      "verified": 44
+    },
+    "validation_errors": [],
+    "validation_warnings": [
+      "radiate_AF05_HC: coarse hash resembles radiate_AF01_NC, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "radiate_AF05_NC: coarse hash resembles radiate_AF01_NC, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "radiate_AM02_HC: coarse hash resembles radiate_AF01_HC, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "radiate_AM03_NC: coarse hash resembles radiate_AM01_NC, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "radiate_AM04_NC: coarse hash resembles radiate_AM01_HC, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "radiate_AM04_NC: coarse hash resembles radiate_AM01_NC, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "radiate_AM07_HC: coarse hash resembles radiate_AM01_NC, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "radiate_AM07_NC: coarse hash resembles radiate_AM01_NC, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "radiate_AM10_HC: coarse hash resembles radiate_AF01_NC, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "radiate_AM10_HC: coarse hash resembles radiate_AM07_HC, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "radiate_AM10_HC: coarse hash resembles radiate_AM07_NC, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "radiate_AM10_NC: coarse hash resembles radiate_AM04_NC, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "radiate_AM11_HC: coarse hash resembles radiate_AM09_HC, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "radiate_AM11_HC: coarse hash resembles radiate_AM10_NC, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "radiate_AM11_NC: coarse hash resembles radiate_AM09_HC, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "radiate_AM11_NC: coarse hash resembles radiate_AM09_NC, but RGB pixels differ; hash alone is not evidence of duplicate subjects"
+    ]
+  },
+  "annotation_reference": "Project-authored visually traced polygons with curved eye/brow/lip exclusions; not independently expert-reviewed benchmark truth",
+  "scope": "Controlled single-person portraits; no no-face/multi-person test images; no claim of unrestricted scene performance",
+  "summary": {
+    "validation": {
+      "skin": {
+        "tp": 5512191,
+        "fp": 1163398,
+        "fn": 531357,
+        "precision": 0.8257235428963646,
+        "recall": 0.9120786332796562,
+        "iou": 0.7648442211166838,
+        "dice": 0.8667555039308091,
+        "mean_image_iou": 0.7675794992333256
+      },
+      "face_baseline": {
+        "tp": 5758351,
+        "fp": 868432,
+        "fn": 245182,
+        "precision": 0.8689511939654581,
+        "recall": 0.9591603810622845,
+        "iou": 0.8379482433336025,
+        "dice": 0.9118300761437798,
+        "mean_image_iou": 0.8374652457297369
+      }
+    },
+    "test": {
+      "skin": {
+        "tp": 4397627,
+        "fp": 1091295,
+        "fn": 306461,
+        "precision": 0.8011822722203011,
+        "recall": 0.9348521966425798,
+        "iou": 0.7588155951038956,
+        "dice": 0.8628711244274262,
+        "mean_image_iou": 0.7641207078448007
+      },
+      "face_baseline": {
+        "tp": 4688380,
+        "fp": 903151,
+        "fn": 80380,
+        "precision": 0.8384787636874409,
+        "recall": 0.9831444652278579,
+        "iou": 0.8265961860120866,
+        "dice": 0.9050672418371261,
+        "mean_image_iou": 0.8301395502284559
+      }
+    }
+  },
+  "per_image": [
+    {
+      "image_id": "radiate_AF01_HC",
+      "subject_ids": [
+        "radiate_AF01"
+      ],
+      "split": "test",
+      "shape": [
+        1500,
+        1500
+      ],
+      "processing_ms": 200.59019999962402,
+      "skin": {
+        "tp": 586526,
+        "fp": 101599,
+        "fn": 53262,
+        "precision": 0.8523538601271571,
+        "recall": 0.9167505486192301,
+        "iou": 0.7911198874541906,
+        "dice": 0.8833801612003196
+      },
+      "face_baseline": {
+        "tp": 659666,
+        "fp": 70657,
+        "fn": 8837,
+        "precision": 0.9032523965423518,
+        "recall": 0.9867809119779567,
+        "iou": 0.8924535959738081,
+        "dice": 0.9431709161825702
+      }
+    },
+    {
+      "image_id": "radiate_AF01_NC",
+      "subject_ids": [
+        "radiate_AF01"
+      ],
+      "split": "test",
+      "shape": [
+        1500,
+        1500
+      ],
+      "processing_ms": 207.51870000003692,
+      "skin": {
+        "tp": 619280,
+        "fp": 119090,
+        "fn": 37101,
+        "precision": 0.8387122987120278,
+        "recall": 0.9434764260391449,
+        "iou": 0.7985856337632226,
+        "dice": 0.888015136752008
+      },
+      "face_baseline": {
+        "tp": 681572,
+        "fp": 87155,
+        "fn": 2132,
+        "precision": 0.8866242502214701,
+        "recall": 0.9968816914922247,
+        "iou": 0.8841720729731377,
+        "dice": 0.938525823257697
+      }
+    },
+    {
+      "image_id": "radiate_AF02_HC",
+      "subject_ids": [
+        "radiate_AF02"
+      ],
+      "split": "test",
+      "shape": [
+        1500,
+        1500
+      ],
+      "processing_ms": 224.574500000017,
+      "skin": {
+        "tp": 566108,
+        "fp": 207656,
+        "fn": 13620,
+        "precision": 0.7316287653599806,
+        "recall": 0.9765062236083129,
+        "iou": 0.718973207481991,
+        "dice": 0.8365147337405763
+      },
+      "face_baseline": {
+        "tp": 593544,
+        "fp": 177805,
+        "fn": 2094,
+        "precision": 0.769488260177948,
+        "recall": 0.9964844418925589,
+        "iou": 0.7674049671404357,
+        "dice": 0.86839743172393
+      }
+    },
+    {
+      "image_id": "radiate_AF02_NC",
+      "subject_ids": [
+        "radiate_AF02"
+      ],
+      "split": "test",
+      "shape": [
+        1500,
+        1500
+      ],
+      "processing_ms": 229.05039999977816,
+      "skin": {
+        "tp": 521489,
+        "fp": 279149,
+        "fn": 52914,
+        "precision": 0.6513418049105838,
+        "recall": 0.9078800075904896,
+        "iou": 0.6109633625133559,
+        "dice": 0.758506837250671
+      },
+      "face_baseline": {
+        "tp": 562148,
+        "fp": 230861,
+        "fn": 23809,
+        "precision": 0.7088797226765396,
+        "recall": 0.9593673255887377,
+        "iou": 0.6882169589798461,
+        "dice": 0.8153181441746932
+      }
+    },
+    {
+      "image_id": "radiate_AF03_HC",
+      "subject_ids": [
+        "radiate_AF03"
+      ],
+      "split": "test",
+      "shape": [
+        1500,
+        1500
+      ],
+      "processing_ms": 217.0368000001872,
+      "skin": {
+        "tp": 510864,
+        "fp": 86762,
+        "fn": 24009,
+        "precision": 0.8548222466894011,
+        "recall": 0.9551127089982108,
+        "iou": 0.821807008936112,
+        "dice": 0.9021888761049679
+      },
+      "face_baseline": {
+        "tp": 528371,
+        "fp": 76688,
+        "fn": 11968,
+        "precision": 0.8732553354300986,
+        "recall": 0.9778509417236216,
+        "iou": 0.8563174707103579,
+        "dice": 0.9225980838101691
+      }
+    },
+    {
+      "image_id": "radiate_AF03_NC",
+      "subject_ids": [
+        "radiate_AF03"
+      ],
+      "split": "test",
+      "shape": [
+        1500,
+        1500
+      ],
+      "processing_ms": 217.8951999999299,
+      "skin": {
+        "tp": 526708,
+        "fp": 101431,
+        "fn": 26545,
+        "precision": 0.8385214100700641,
+        "recall": 0.9520201426833654,
+        "iou": 0.804522487184657,
+        "dice": 0.8916735512006175
+      },
+      "face_baseline": {
+        "tp": 541779,
+        "fp": 90181,
+        "fn": 12621,
+        "precision": 0.8572995126273815,
+        "recall": 0.9772348484848485,
+        "iou": 0.8405134498224428,
+        "dice": 0.9133467075761151
+      }
+    },
+    {
+      "image_id": "radiate_AF05_HC",
+      "subject_ids": [
+        "radiate_AF05"
+      ],
+      "split": "validation",
+      "shape": [
+        1500,
+        1500
+      ],
+      "processing_ms": 203.6833000001934,
+      "skin": {
+        "tp": 573289,
+        "fp": 68191,
+        "fn": 18333,
+        "precision": 0.8936973872918875,
+        "recall": 0.9690123085348415,
+        "iou": 0.86886587563446,
+        "dice": 0.9298322442101302
+      },
+      "face_baseline": {
+        "tp": 545832,
+        "fp": 118135,
+        "fn": 116,
+        "precision": 0.8220770008147995,
+        "recall": 0.9997875255518841,
+        "iou": 0.8219334029029504,
+        "dice": 0.9022650351470971
+      }
+    },
+    {
+      "image_id": "radiate_AF05_NC",
+      "subject_ids": [
+        "radiate_AF05"
+      ],
+      "split": "validation",
+      "shape": [
+        1500,
+        1500
+      ],
+      "processing_ms": 215.50829999978305,
+      "skin": {
+        "tp": 494477,
+        "fp": 101139,
+        "fn": 100806,
+        "precision": 0.8301942862515446,
+        "recall": 0.830658695108041,
+        "iou": 0.7100249561329194,
+        "dice": 0.8304264257506304
+      },
+      "face_baseline": {
+        "tp": 552419,
+        "fp": 142621,
+        "fn": 5,
+        "precision": 0.794801738029466,
+        "recall": 0.9999909489812173,
+        "iou": 0.7947960204015567,
+        "dice": 0.8856672416999609
+      }
+    },
+    {
+      "image_id": "radiate_AF07_HC",
+      "subject_ids": [
+        "radiate_AF07"
+      ],
+      "split": "validation",
+      "shape": [
+        1500,
+        1500
+      ],
+      "processing_ms": 214.95359999971697,
+      "skin": {
+        "tp": 548563,
+        "fp": 191432,
+        "fn": 11874,
+        "precision": 0.7413063601781094,
+        "recall": 0.9788129620278462,
+        "iou": 0.7295991721962204,
+        "dice": 0.843662721311072
+      },
+      "face_baseline": {
+        "tp": 533679,
+        "fp": 100503,
+        "fn": 345,
+        "precision": 0.8415234112604899,
+        "recall": 0.9993539616197025,
+        "iou": 0.8410658648095353,
+        "dice": 0.9136727597701091
+      }
+    },
+    {
+      "image_id": "radiate_AF07_NC",
+      "subject_ids": [
+        "radiate_AF07"
+      ],
+      "split": "validation",
+      "shape": [
+        1500,
+        1500
+      ],
+      "processing_ms": 214.89659999997457,
+      "skin": {
+        "tp": 521490,
+        "fp": 279127,
+        "fn": 47308,
+        "precision": 0.6513601384931871,
+        "recall": 0.9168281182423286,
+        "iou": 0.6150190170121178,
+        "dice": 0.761624489289222
+      },
+      "face_baseline": {
+        "tp": 531130,
+        "fp": 79142,
+        "fn": 13628,
+        "precision": 0.8703168423260448,
+        "recall": 0.9749833871186839,
+        "iou": 0.8513062990863921,
+        "dice": 0.9196817398682285
+      }
+    },
+    {
+      "image_id": "radiate_AF10_HC",
+      "subject_ids": [
+        "radiate_AF10"
+      ],
+      "split": "validation",
+      "shape": [
+        1500,
+        1500
+      ],
+      "processing_ms": 205.39549999966766,
+      "skin": {
+        "tp": 479473,
+        "fp": 82813,
+        "fn": 52610,
+        "precision": 0.852720857357288,
+        "recall": 0.9011244486292552,
+        "iou": 0.7797627566287633,
+        "dice": 0.8762547184724714
+      },
+      "face_baseline": {
+        "tp": 488360,
+        "fp": 92089,
+        "fn": 15084,
+        "precision": 0.8413486800735293,
+        "recall": 0.9700383756683961,
+        "iou": 0.820038520115594,
+        "dice": 0.9011221587370709
+      }
+    },
+    {
+      "image_id": "radiate_AF10_NC",
+      "subject_ids": [
+        "radiate_AF10"
+      ],
+      "split": "validation",
+      "shape": [
+        1500,
+        1500
+      ],
+      "processing_ms": 213.12659999966854,
+      "skin": {
+        "tp": 449811,
+        "fp": 68068,
+        "fn": 112307,
+        "precision": 0.8685638923377854,
+        "recall": 0.8002074297567414,
+        "iou": 0.7137749807199779,
+        "dice": 0.8329856471823532
+      },
+      "face_baseline": {
+        "tp": 482582,
+        "fp": 62463,
+        "fn": 58129,
+        "precision": 0.8853984533387151,
+        "recall": 0.8924952516224008,
+        "iou": 0.8000709579656948,
+        "dice": 0.8889326883756572
+      }
+    },
+    {
+      "image_id": "radiate_AM01_HC",
+      "subject_ids": [
+        "radiate_AM01"
+      ],
+      "split": "test",
+      "shape": [
+        1500,
+        1500
+      ],
+      "processing_ms": 203.8828999998259,
+      "skin": {
+        "tp": 543747,
+        "fp": 103944,
+        "fn": 40196,
+        "precision": 0.8395160655312487,
+        "recall": 0.931164514344722,
+        "iou": 0.7904597702820376,
+        "dice": 0.8829684792722513
+      },
+      "face_baseline": {
+        "tp": 561001,
+        "fp": 95355,
+        "fn": 5187,
+        "precision": 0.8547206089378325,
+        "recall": 0.9908387320112754,
+        "iou": 0.8480189496374385,
+        "dice": 0.9177600151814577
+      }
+    },
+    {
+      "image_id": "radiate_AM01_NC",
+      "subject_ids": [
+        "radiate_AM01"
+      ],
+      "split": "test",
+      "shape": [
+        1500,
+        1500
+      ],
+      "processing_ms": 194.32899999992514,
+      "skin": {
+        "tp": 522905,
+        "fp": 91664,
+        "fn": 58814,
+        "precision": 0.8508483180895879,
+        "recall": 0.8988962024620134,
+        "iou": 0.7765343051428385,
+        "dice": 0.8742125641985876
+      },
+      "face_baseline": {
+        "tp": 560299,
+        "fp": 74449,
+        "fn": 13732,
+        "precision": 0.8827109341029826,
+        "recall": 0.9760779470098305,
+        "iou": 0.8640189365901801,
+        "dice": 0.9270495268365847
+      }
+    },
+    {
+      "image_id": "radiate_AM09_HC",
+      "subject_ids": [
+        "radiate_AM09"
+      ],
+      "split": "validation",
+      "shape": [
+        1500,
+        1500
+      ],
+      "processing_ms": 160.63409999969736,
+      "skin": {
+        "tp": 604397,
+        "fp": 130889,
+        "fn": 38760,
+        "precision": 0.8219889947585022,
+        "recall": 0.9397347770451072,
+        "iou": 0.7808282711880172,
+        "dice": 0.8769270836733909
+      },
+      "face_baseline": {
+        "tp": 665452,
+        "fp": 70563,
+        "fn": 58827,
+        "precision": 0.9041283126023247,
+        "recall": 0.9187785370002444,
+        "iou": 0.8372129303685513,
+        "dice": 0.9113945547951303
+      }
+    },
+    {
+      "image_id": "radiate_AM09_NC",
+      "subject_ids": [
+        "radiate_AM09"
+      ],
+      "split": "validation",
+      "shape": [
+        1500,
+        1500
+      ],
+      "processing_ms": 143.28289999957633,
+      "skin": {
+        "tp": 608385,
+        "fp": 121691,
+        "fn": 50721,
+        "precision": 0.8333173532618522,
+        "recall": 0.9230457619866911,
+        "iou": 0.7791846023998555,
+        "dice": 0.8758895522688892
+      },
+      "face_baseline": {
+        "tp": 675682,
+        "fp": 85000,
+        "fn": 71150,
+        "precision": 0.8882581683278953,
+        "recall": 0.9047309167255821,
+        "iou": 0.812281806903317,
+        "dice": 0.8964188723952149
+      }
+    },
+    {
+      "image_id": "radiate_AM10_HC",
+      "subject_ids": [
+        "radiate_AM10"
+      ],
+      "split": "validation",
+      "shape": [
+        1500,
+        1500
+      ],
+      "processing_ms": 139.90710000007311,
+      "skin": {
+        "tp": 622319,
+        "fp": 62618,
+        "fn": 36170,
+        "precision": 0.9085784532008053,
+        "recall": 0.9450712160719466,
+        "iou": 0.8630050741429497,
+        "dice": 0.9264656185007585
+      },
+      "face_baseline": {
+        "tp": 641118,
+        "fp": 69533,
+        "fn": 6043,
+        "precision": 0.9021559105665088,
+        "recall": 0.9906622926906906,
+        "iou": 0.8945491381258948,
+        "dice": 0.9443398644289489
+      }
+    },
+    {
+      "image_id": "radiate_AM10_NC",
+      "subject_ids": [
+        "radiate_AM10"
+      ],
+      "split": "validation",
+      "shape": [
+        1500,
+        1500
+      ],
+      "processing_ms": 138.3888999998817,
+      "skin": {
+        "tp": 609987,
+        "fp": 57430,
+        "fn": 62468,
+        "precision": 0.9139518471959809,
+        "recall": 0.9071045646177067,
+        "iou": 0.8357302862779753,
+        "dice": 0.91051533280791
+      },
+      "face_baseline": {
+        "tp": 642097,
+        "fp": 48383,
+        "fn": 21855,
+        "precision": 0.9299284555671417,
+        "recall": 0.9670834638648577,
+        "iou": 0.9013975166178835,
+        "dice": 0.9481420994187969
+      }
+    }
+  ],
+  "environment": {
+    "python": "3.13.11",
+    "numpy": "2.4.4",
+    "opencv": "5.0.0",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 198 Stepping 2, GenuineIntel"
+  },
+  "timing": {
+    "scope": "distance classification and face baseline only; excludes decoding, truth loading and export",
+    "samples": 18,
+    "median_ms": 206.4570999998523,
+    "p95_ms": 225.24588499998117
+  },
+  "annotation_integrity": {
+    "radiate_AF01_HC": {
+      "skin": "dbfd0d95d9d4abd0e3e7c9a9d3ebfa3d56a290be4193c0f2d41e7561626f79e8",
+      "face": "2afcb4e7fdaaa8d074b093862cad5f759ec8106d0876a8809fa743a2027b9fc7"
+    },
+    "radiate_AF01_NC": {
+      "skin": "c4cc195ac18a63b37d2fc5bef997ec83c177a7fcf577eebeb7599c3fb0519e27",
+      "face": "77a87ed1805ce4e9d24a7b17b9cbaf1ea7a2219c055f7ef427a0d3a84a0bf85c"
+    },
+    "radiate_AF02_HC": {
+      "skin": "262ac063f99331188685e98e74e157660f45ceff6ff093a0cff4e1fa950ef07a",
+      "face": "b0f469aae3c762cfdbbf830d2a440ac7b7a644653730fc9ec2fa9ed41ae690ed"
+    },
+    "radiate_AF02_NC": {
+      "skin": "64c3e7f51cf0d6fee76c64ab4be253eaed114eba6e4df32296fc061f175d55a3",
+      "face": "966559025a4b8711cd2c63774b41696d6061c465b61bbb393ed5cda2fd76938d"
+    },
+    "radiate_AF03_HC": {
+      "skin": "310a27d5f3f7f1c020b7536218b9d4ed2246821572a18e4c9c5833c979dc60d7",
+      "face": "622f410df157e175be299877d2db24633e8ad97d0bbce5b3e1d3bf4fc7d16f1d"
+    },
+    "radiate_AF03_NC": {
+      "skin": "3ea2c9efce117c38fe9a14764003a31e01c9451d3ed4427d8fff1fe8b145192e",
+      "face": "04ead879d8c6fd47baa43df3e11c7bab4a6f3e0da8126477ac3b47a32db0c161"
+    },
+    "radiate_AF05_HC": {
+      "skin": "d8d9e66bf28fc90ba3b5d3a7d782c779111f9d715c0cd224128898e11d4cf48a",
+      "face": "f44f7c0f0949fed8a700f90c9f870017ff022e08a3450af8fe626566ad4c32e9"
+    },
+    "radiate_AF05_NC": {
+      "skin": "0b504f232a15c33c5e0813b5923b98c5e5a23bbd3801ad4b1138fb87dd1828e0",
+      "face": "e9008f201a13b38c40a52ed460d2ca345bdd203d349a4c52a8561b52aab8a068"
+    },
+    "radiate_AF06_HC": {
+      "skin": "08ec3066af7964fbf897f37a8ab75b93280c5fd4e2754564001ab01f2a139ae8",
+      "face": "1a9556744071debcc3ea045a5e62d1c6aa5e7ae84f380786ddb16103fc49f424"
+    },
+    "radiate_AF06_NC": {
+      "skin": "cca5ae67c1252ffc63dca3e58052e83a8e7b3220b213bb5107ca2d32865ee83d",
+      "face": "f18f286b38147fdf675c34fb00adc97bb12f8e32db2fae803e7161c2f0d39427"
+    },
+    "radiate_AF07_HC": {
+      "skin": "c134f6f39c0cadb3eff70211bf7cb6b6c6f0c17b77a5befd1d71b590fdf29593",
+      "face": "9e343b729f3d7e68198c6adf46cf880d32eaecbed5fac46e474d61770dd34b2a"
+    },
+    "radiate_AF07_NC": {
+      "skin": "b31bfd3651237a20f4a1eca382f55d579414e8df084911991148657885bdeb6a",
+      "face": "13d533f22112b46476b1c77beec98f93fde00999bf456f447de67b30e8576b4b"
+    },
+    "radiate_AF08_HC": {
+      "skin": "756a1ae0d4d754b3caf17b4d23ebe545279a05941e56a7cae5686a0af6eba43a",
+      "face": "418c0eb3f2736de8c948493cc4ac732f23fe9448dcfdeebf075819ed08aa4921"
+    },
+    "radiate_AF08_NC": {
+      "skin": "06e5f99e957e68b01afda35c6058e3fcc3e3ccc822a5f3ca99046fe8bdcf4b96",
+      "face": "47eb631dc6d5e7df56c592fe857b06abc6b37d23a33ec401c735239a1faf59bb"
+    },
+    "radiate_AF09_HC": {
+      "skin": "71c2d5f36973e157cefab3d3a9eeb9a5612f20e2b93b3b156ba72b85c9c06a99",
+      "face": "f701e5a276a498e0b6f6c06ca650f9586999b1b516cf8b87bf71a004b57a1db7"
+    },
+    "radiate_AF09_NC": {
+      "skin": "8eed6945bec04e97c263771fad7111886e9b27a5f96d607310f6502b6cb05a29",
+      "face": "3cd0662be3bb416e8ce153231cc625ccfae8b6d2208260b718c1f972122a3ae8"
+    },
+    "radiate_AF10_HC": {
+      "skin": "4ff617753204649862f30d4dc6227963a5f1474fcf7936f13cebbb413f884b7d",
+      "face": "4b0c80e465b322f50d07be317cdeb16a6bd75bb6d8bbbd6dfa1118f1537e21f3"
+    },
+    "radiate_AF10_NC": {
+      "skin": "0d397ff49da8843414245e3c6510e0204992395c729b69aad0a16a6cf4b8933d",
+      "face": "b748183c07289658d1474d535d29990274f6ec1c9dc261648ecfa5eec20d5cf2"
+    },
+    "radiate_AF11_HC": {
+      "skin": "6ff18b0a20fb590b65cd953dc9e17ff82c4bc5fbb8babb1f218dd91c268d683f",
+      "face": "1fd5e17529440d6db849fe20a1aea0df72aeb54efa34f6b594d585f392480acf"
+    },
+    "radiate_AF11_NC": {
+      "skin": "ac8a9c0f5b63671d606915a56b60504af5d32d207b88748f10a6df62cb7dc5aa",
+      "face": "5e458dd759559adc8453d8ef6cbfa2917dd8ab6fec63aff046f21ceec674532c"
+    },
+    "radiate_AF12_HC": {
+      "skin": "e3bd5995723db9155dc99b4b788472f94f9ed5a61406a4ab051bd81dc5bb52a6",
+      "face": "e7f8bcc4b997fb2f672bbef56c64f845d551cc267fa5d074162123c5d96f6656"
+    },
+    "radiate_AF12_NC": {
+      "skin": "ed1c067ac626effe7e7962d25b8eafcd99d4db95b1bfbd272f564699630e9138",
+      "face": "574444716fdac364fbeaec9c41189c83f3a47b7da6462e64d1f943001671e515"
+    },
+    "radiate_AM01_HC": {
+      "skin": "64810afbc8ff2c1f7e92d762b0fef949acc56ff885087e7abaeeb85dd903c1ed",
+      "face": "3ef6f70a1865da2bf5ca63e36b618ad3bc029a4a6dca4acaea12e0799d245b89"
+    },
+    "radiate_AM01_NC": {
+      "skin": "9a701c1dadc1e8d3ef76c3e7efb6d6bc4956b38c80f58cb04252a632d09855ef",
+      "face": "0a4f9920bc32b8441367c4e11e4a2722cc27fa05415623d4733cdad05c3941e8"
+    },
+    "radiate_AM02_HC": {
+      "skin": "d187b64dd8b859394e5de46a064b439a8bd2c8b1bceefaca7993695d6b1cc5b4",
+      "face": "13e8c95a11977363ee8605711c9ec730d74026514fb6149159448cf59c0c0110"
+    },
+    "radiate_AM02_NC": {
+      "skin": "186a89eb70d6ebf4b8e33523b60118bd0130c910a1ed4d8f3aed4742888250fe",
+      "face": "e4c87d232ccb464ca7b111035f9bfbf2bffe0accee9e7a3f32ea2aad852ea4e4"
+    },
+    "radiate_AM03_HC": {
+      "skin": "aec0ea84aef1ba491ff149a6e9ef5420fe1fe4d1ea64b210d2d44e688e91b85b",
+      "face": "06d306b674041993b4e9eaa02427da5ed94c93e28a3bb50891e3c4fe487b245a"
+    },
+    "radiate_AM03_NC": {
+      "skin": "7a16efb815505676f34e7e46134274c86bcdb9b446f534ef5d10f301ed5d7e81",
+      "face": "bd152eb34bc32a58f4a6e4e7bae95b669a82a5673b932f6bc74a6b5e2f4238d6"
+    },
+    "radiate_AM04_HC": {
+      "skin": "9b8d9a40facb1b37b1e5d7f9055e7c1def7b61e50f7fb9b59ddce12411b6f0d1",
+      "face": "708e62b0cf0e93ea6b2c4453acc23643535b423eb1cf712b4f4e1fe77f888b7b"
+    },
+    "radiate_AM04_NC": {
+      "skin": "325790d2a5866b2fe14731031068a6d1f891474d653a816741d4f5bf5a5bb545",
+      "face": "ae5aceef05c66937716d237bfe5d33d10482577cf9bdec056f467267acc7cb72"
+    },
+    "radiate_AM05_HC": {
+      "skin": "6d6b6982b1bb80c25f6707bf45bdbe08fa0e5e9450671f2d9e9bafc84fbe7f14",
+      "face": "223d4b42a8a0d8eb02d843c9d46ebf141c6a505d221871051f40c2ab02b6f60f"
+    },
+    "radiate_AM05_NC": {
+      "skin": "b09dc9979fb107bd47b2b26a5c4523ea348b422c78e9cad0945758e23ba0f9cd",
+      "face": "f49fe4e48fe5adcf2a71279625b0aa6564cf51b455b46ca50b99d7ff6c51a28b"
+    },
+    "radiate_AM06_HC": {
+      "skin": "4f9779cf2875460cbf1243c2426ab2149a2feb3f2539c5abfe03f3d112619a5e",
+      "face": "0d6767a64503664823c87038a931301fbd592a7b76c0c75d8572df913969a954"
+    },
+    "radiate_AM06_NC": {
+      "skin": "54d03b54a2647ed27f2296cec6221d103a6eeef308d33979da7d9a31a4cf4763",
+      "face": "a329d22014221caf842ed30ea77be27dbe5ef0b8814daac7a48baaf3a13f33df"
+    },
+    "radiate_AM07_HC": {
+      "skin": "581f2891ee4055b12486fb88dd55ad4f476c5569b9cd2ee5ff7ae21dd79006ef",
+      "face": "971b8d5241029753e4e88019d4373f30a8ff2a308492f052dc6063e580d2bcad"
+    },
+    "radiate_AM07_NC": {
+      "skin": "7f04345e2c74eb1564d5c0eeb5ffe39ec35ca470bb0e892c4f31b15c91d71c41",
+      "face": "b13904df9a6c02c258ee82376e342a1e643fe6c5bd5092070f68d534a13685db"
+    },
+    "radiate_AM08_HC": {
+      "skin": "14cbccaee87e47dddc08e935cbf451e4e404f8448b2f623fadca105ecb8bd1a5",
+      "face": "f53215901a71147e858f6862be6fec37fb36db20db0792cd4ffff6b3725c239a"
+    },
+    "radiate_AM08_NC": {
+      "skin": "26148af93d5768215e0cb217ca9f59b35a620ea5bb903ab35849b164d42d2411",
+      "face": "0ed6947e5b0f2cc26501535e36e30ecf82e05892ad3e39504c00bfd3ff5c831e"
+    },
+    "radiate_AM09_HC": {
+      "skin": "c67d616bb5c8edb889d783c7d4c91871c827cbfcaffd5ddac970a5a60d353178",
+      "face": "03ad23c39ee7ab8a2669b184124c996ddae53a38b9573bd3a8d2785fbfbaaed3"
+    },
+    "radiate_AM09_NC": {
+      "skin": "aac8258257ec6a2497711cb7cc4249560c1676c476170227ed439a4f7cc83ab8",
+      "face": "022bc2911b58989622fda81eccb602ac8989bcfb6214e8ae574aa05b66862ca3"
+    },
+    "radiate_AM10_HC": {
+      "skin": "fdccde81fd353ea3a9fce733fea6957b15281720d6fcde369e56db6fdd77dcbb",
+      "face": "d66c8060d6568351100b775872238174c208ad09407103a6e36f89b9c2a51c54"
+    },
+    "radiate_AM10_NC": {
+      "skin": "dd421587c9c7a1e8368a216df857739eca54f9264f55f7fc5b85ec4c88e440af",
+      "face": "d79c9ce13a13d7674e7a5ce755103a860f5e34d7099c9b3b8adddfeda3138cce"
+    },
+    "radiate_AM11_HC": {
+      "skin": "57e66936fac7c80e2d2e8311ad8bdc687f1ed012921ffff3593449dd2151b162",
+      "face": "cb63ee4137103b049d41eb6337d9c3d873518e0203996de9461b957fd0059458"
+    },
+    "radiate_AM11_NC": {
+      "skin": "b6dc9eb1499822feb500958841f0fdccbb558a83ffbc646942ebdb23339d7f47",
+      "face": "7dd5610ee20140b080d15f360915ea3861f5ca86a3122982ddb6f1fcdab8606c"
+    }
+  },
+  "test_file_integrity": {
+    "radiate_AF01_HC": "42129350e5a11a2b47101540529d7f8b2659a3144faaffc9b12d97dc8abeaa23",
+    "radiate_AF01_NC": "784787757a3a7fcd4913fa85dc25b8f9948a77802224068a15461c8adb156f96",
+    "radiate_AF02_HC": "4b3e17e855194e329b435c233463a3ccbb3b6dfb07766ca3be0150d02981135a",
+    "radiate_AF02_NC": "0acc55ee8cc78ec10fe9cdc5807821b1dca7ccb775c0d9d3e84057b2f56b38ae",
+    "radiate_AF03_HC": "cbdc3156f90dd593801fe70c33e38fb3499be889f9ff075fd1ab223668fd2dd3",
+    "radiate_AF03_NC": "7ef2e85f0049f91954f119b26bb630106b39196f18760e78eff1017055510c42",
+    "radiate_AM01_HC": "353feeee05540890a3aaba4fde556edc5cad06c55b4f17fe5ed931b82da3de93",
+    "radiate_AM01_NC": "fe33bc4180568f8d239afabd1549c8a616aa46053cbab98bd226946442344e9a"
+  }
+}

@@ -1,91 +1,62 @@
-# A 分支数据与模型工具使用说明
+# A 分支数据与模型使用说明
 
-A 分支负责公开样本采集、标注管理、数据分组校验、肤色均值与协方差训练及模型导出。训练入口是 `python -m src.training`，不包含 B 的分割算法或 C 的产品界面。
+A 分支交付 RADIATE 数据整理、双层多边形标注、人物独立划分、YCrCb 肤色统计模型及独立人物验证结果。唯一数据清单为 `data/manifest.csv`，唯一统计模型为 `models/skin_model.json`。
 
-新增可靠来源已下载：RADIATE 的 44 张彩色图片与 22 个作者匿名人物组，以及 78 对原始肤色图片和人工掩膜。下载、分组、来源许可和用途边界见 [数据来源与命令](DATA_SOURCES.md)。
+## 环境
 
-## 安装与验证
-
-在仓库根目录运行以下 PowerShell 命令。已有 `.venv` 时直接使用该环境；独立安装无需使用系统包。
+在仓库根目录的 PowerShell 中运行：
 
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements-A.txt
 .\.venv\Scripts\python.exe -m unittest discover -s tests/data -v
-.\.venv\Scripts\python.exe -m src.training --help
 ```
 
-工具使用 NumPy、OpenCV、Pillow 和 Matplotlib，测试使用 Python 自带 unittest。当前本地环境为 Python 3.13，项目虚拟环境复用了已安装的数值计算库，并单独安装 OpenCV。
+## 数据与标注
 
-## 获取与恢复公开样本
+当前本地包含 22 个作者匿名人物组、44 张 1500×1500 彩色照片。训练集 13 组 26 张、验证集 5 组 10 张、测试集 4 组 8 张；同一人物的 NC、HC 两张照片始终在同一集合。固定分组见 `data/split.json`，不要重新划分已使用的测试集。
 
-```powershell
-.\.venv\Scripts\python.exe -m src.training collect-fairface --manifest data/manifest.csv --count 200 --pages 20
-.\.venv\Scripts\python.exe -m src.training collect-beans --manifest data/manifest.csv --count 20
-```
+图片位于 `data/images/radiate/`。44 张照片均有完整覆盖的 skin、face 多边形，位于 `data/annotations/polygons/batch_*.json`，每个批次 4 张。它们由 Codex 逐图查看后绘制并检查叠加图，是项目自制的近似多边形参考标注，来源未提供像素真值，也未经过独立专家复核。`complete` 表示覆盖范围已检查，不代表像素边缘完全准确。细则见 [标注规范](annotation_guide.md)。
 
-人脸来自 FairFace 的 Hugging Face 镜像，按上游作者的 East Asian 与 Southeast Asian 标签和成人年龄组筛选，本项目不从照片推断族群。这个子集只覆盖东亚与东南亚来源标签，不代表整个亚洲人群。原始照片及缓存保留在本地并由 Git 忽略，来源、许可、上游行号和下载哈希记录在 `data/sources/`。
-
-叶片来源用于补充候选无脸图片；采集程序不会自动赋予全零真值，必须先查看照片，确定其中是否有脸或手部皮肤，再标注。此类图片不足以代表真实复杂场景负样本。
-
-采集支持重新运行：保留已有图片及标注字段。网络失败时可重试同一条命令；`--pages` 限制 FairFace 元数据查询页数，每页最多 100 条。签名图片地址只存在本地缓存，不写入交付的来源清单；缓存中的图片地址过期后需重新获取相关元数据缓存文件。
-
-FairFace 镜像缺少可靠人物身份字段，所以照片统一放入训练集合中的未核验来源组。它们可训练联调模型，不能直接构成宣称人物独立的验证集或测试集。不得把上游行号当作人物编号。
-
-## 查看和修改标注
+本地数据齐全时，采集命令核对来源 SHA256 后直接复用，不访问网络；在新环境中依据官方 ZIP 成员恢复照片并保留清单现有划分和标注字段。下载只支持这一来源，不会合并其他数据集。
 
 ```powershell
-.\.venv\Scripts\python.exe -m src.training contact-sheet --manifest data/manifest.csv --output data/contact_sheets/first20.png --limit 20
+.\.venv\Scripts\python.exe -m src.training collect-radiate
 .\.venv\Scripts\python.exe -m src.training rasterize --manifest data/manifest.csv --polygons data/annotations/polygons
-.\.venv\Scripts\python.exe -m src.training contact-sheet --manifest data/manifest.csv --output data/contact_sheets/first20_overlay.png --limit 20 --overlays
+.\.venv\Scripts\python.exe -m src.training contact-sheet --manifest data/manifest.csv --output artifacts/radiate_review/overlay_00.png --offset 0 --limit 4 --overlays --tile-size 600 --columns 2
+.\.venv\Scripts\python.exe -m src.training validate --manifest data/manifest.csv --purpose evaluation --report artifacts/radiate_model/dataset_validation.json
 ```
 
-依照 `docs/annotation_guide.md` 编辑对应图片的多边形 JSON，再重新生成掩膜。栅格化命令会更新清单中的状态和掩膜路径。首批人脸皮肤采样仅为正样本，粗略面部轮廓保持 draft 状态。
+对 offset=0、4、8……40 分别生成叠加图即可检查全部照片。源码、多边形、清单、来源摘要和统计模型纳入 Git；原图、可重建 PNG 和本地检查图由 Git 忽略。原图使用条件见 [数据来源](DATA_SOURCES.md)，不随公开仓库重新分发。
 
-批次标注位于 polygons/batches 下，栅格化自动递归处理。目前 200 张人脸均有轮廓草稿，199 张有皮肤采样。1 张面部涂抹照片及 3 张明显去色照片排除出颜色训练，实际用于模型拟合的为 196 张。新增椭圆草稿不能用于正式面部像素指标。
-
-## 校验与训练
+## 训练与验证
 
 ```powershell
-.\.venv\Scripts\python.exe -m src.training validate --manifest data/manifest.csv --purpose train --report artifacts/A/dataset_validation.json
-.\.venv\Scripts\python.exe -m src.training train --manifest data/manifest.csv --output models/skin_model.json --diagnostics artifacts/A --samples-per-image 2000 --seed 42 --regularization 1
+.\.venv\Scripts\python.exe -m src.training train --manifest data/manifest.csv --output models/skin_model.json --diagnostics artifacts/radiate_model --samples-per-image 2000 --seed 42 --regularization 1 --mask-margin 15
+.\.venv\Scripts\python.exe -m src.training assess --manifest data/manifest.csv --model models/skin_model.json --output models/evaluation.json --operating-point models/operating_point.json --previews artifacts/radiate_predictions
 ```
 
-训练只读取 split=train 且已标注的正皮肤像素。每张有效图片抽取相同数量、不重复的像素，数量取请求上限与各图可用像素数最小值。相同图像重复项不会重复进入训练。随机种子与图片编号共同确定抽样，固定数据和参数可以重复得到相同模型。
+训练入口要求人物分组已核验、两类标注完整，并检查跨集合人物及重复图片。只从 `train` 读取正皮肤像素。训练时将肤色区域内缩 15 个原图像素以减小边界误差影响，评估参考掩膜保持原尺寸和完整范围。每图固定无放回抽样 2000 个像素，26 图共 52000 个。模型记录种子、逐图来源哈希、掩膜哈希和内缩参数，重复训练应得到相同版本。
 
-带 exclude_color_training 标签的图片不会进入拟合。标注区域内至少 98% 像素的通道最大差不超过 2 时，也会以缺少颜色信息为由跳过，避免把 RGB 格式保存的纯黑白皮肤混入统计。跳过原因记录在模型 training_info.skipped 中。
+OpenCV 返回 Y、Cr、Cb，实际模型显式取 `[Cb, Cr]`。模型存原始样本协方差，推理时使用 `covariance + regularization_lambda * I`。均值、方差、散点图和训练检查输出到 `artifacts/radiate_model/`；方差为协方差矩阵的对角元素。正则项 λ=1 在测试前固定。
 
-训练输出包含 `models/skin_model.json`、Cb–Cr 分布图、统计摘要和数据检查报告。二维协方差采用样本估计；模型保存原始矩阵，不预先加正则项。图中的二倍标准差轮廓仅用于观察分布，不是 B 校准后的分割阈值。默认 λ=1 只是初始数值设置，后续与 B 在验证集上联合确定。
+评估在预先固定的 T=0.5 至 20、步长 0.25 的网格上，按验证集累计肤色 Dice 选择马氏距离平方阈值，平局取更小值。写出 operating_point 后再运行测试指标，不用测试标签选择参数。当前 T=6.5。评估拒绝清单版本不符或训练图片、训练掩膜已变更的模型。
 
-## 正式分组与评估的前提
+肤色结果为 `d² <= T`。人脸区域评估另使用固定的开闭运算、最大连通区域和填洞作为受控单人照片基线。它用于检查模型交付，B 的完整多人候选算法仍按任务书开发；不能将此基线当作多人检测成品。
 
-只有在有可靠人物标识和采集组、两类完整标注之后，才能生成正式划分。保持一份明确 split 为空的独立清单，使用不同输出文件保留原数据版本。
+## 输出及交接
 
-```powershell
-.\.venv\Scripts\python.exe -m src.training split --manifest data/manifest.unsplit.csv --output data/manifest.verified.csv --seed 42 --ratios 0.6 0.2 0.2
-.\.venv\Scripts\python.exe -m src.training validate --manifest data/manifest.verified.csv --purpose evaluation --report artifacts/A/evaluation_readiness.json
-```
-
-划分按共同人物及采集组的传递关系执行，不能强行拆分关联组。工具拒绝未核验身份、已有划分、少于三个独立组以及不完整评估标注，校验时也检查解码后完全重复和感知哈希相近的跨集合图片。感知哈希只能提示部分近似重复，不能证明人物身份独立；有误报时需复核、合并关联组或选取新的独立样本。
-
-已核验人物编号的数据可使用 split 的 --prepare-only 选项先准备集合，即使像素标注尚未完成。该模式明确记录 evaluation_ready=false，不能代替正式评估校验。粗略哈希相似还会检查 RGB 缩略图差异，避免把统一白底、姿态相近的不同作者人物组直接误判为重复；哈希不是人物识别依据。
-
-输出划分比例受组大小约束，实际各集合数量写入旁边的 split JSON。验证集供 B 调参，测试集在模型及配置冻结后交给 C 评估。
-
-## B 与 C 的交接
-
-| 接收方 | 交付内容与约定 |
+| 文件或目录 | 内容 |
 | --- | --- |
-| B | JSON 模型；OpenCV 返回顺序 Y、Cr、Cb，特征必须显式取 Cb、Cr；推理使用原始 covariance 加 λI；使用马氏距离平方；阈值由 B 校准 |
-| C | 图片、两类标注、清单及状态；PNG 0/255 读取为 0/1；不能用 sampled 或 draft 标注计算正式像素指标 |
-| 三人共用 | 模型版本、数据清单版本、来源与标注规范；模型的 bootstrap_only 标记需保留 |
+| data/manifest.csv、data/split.json | 唯一数据清单、冻结人物分组及清单哈希 |
+| data/sources/radiate_downloads.json | 官方成员路径、作者编号、许可说明和原文件 SHA256 |
+| data/annotations/polygons/ | 可重建两类参考掩膜的逐图多边形及标注来源 |
+| models/skin_model.json | 均值、原始协方差、λ、版本、采样和训练文件哈希 |
+| models/operating_point.json | 验证集选择的距离平方阈值、版本和固定后处理说明 |
+| models/evaluation.json | 验证与测试 Precision、Recall、IoU、Dice、逐图结果、标注哈希、环境和耗时 |
+| artifacts/radiate_model/ | Cb–Cr 分布图、统计摘要和数据校验报告 |
+| artifacts/radiate_predictions/ | 验证与测试预测 PNG，0/255 预览 |
 
-模型字段为 schema_version、model_revision、color_space、feature_order、mean、covariance、regularization_lambda、training_info。`training_info` 记录采样数量、种子、图片及掩膜哈希、数据版本、环境版本和跳过原因；A 不写 B 的阈值或后处理配置。
+算法内部掩膜为二维 uint8 0/1；PNG 预览为 0/255。肤色与面部定义不同，B、C 必须分别读取。原始照片恢复和多边形栅格化足以在新环境重建掩膜，交付不依赖下载缓存。
 
-## 来源
-
-- [FairFace 作者仓库](https://github.com/joojs/fairface)：作者声明 CC BY 4.0，并提供论文引用。
-- [FairFace 镜像及标签定义](https://huggingface.co/datasets/HuggingFaceM4/FairFace)：样本下载入口。
-- [Makerere Beans 数据集](https://huggingface.co/datasets/AI-Lab-Makerere/beans)及[作者许可](https://github.com/AI-Lab-Makerere/ibean/blob/master/LICENSE)：MIT。
-- [Hugging Face 数据行接口](https://huggingface.co/docs/dataset-viewer/rows)：按需下载少量图片，避免下载整个数据集。
-- [OpenCV 颜色转换说明](https://docs.opencv.org/4.x/de/d25/imgproc_color_conversions.html)：核对 YCrCb 通道与 8 位数值范围。
+测试结果已查看。此后若根据测试失败案例修改参数或模型，必须说明测试集已参与开发，另取未使用人物评估，不能继续宣称它是新的独立最终结果。当前结果及覆盖边界见 [交付状态](A_STATUS.md)。

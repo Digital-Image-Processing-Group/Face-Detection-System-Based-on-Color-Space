@@ -79,6 +79,24 @@ def extract_entry(entry: dict, cache: Path) -> bytes:
 def collect_radiate(manifest: Path) -> dict:
     manifest = manifest.resolve()
     root = manifest.parent
+    provenance_path = root / "sources" / "radiate_downloads.json"
+    existing = {row.image_id: row for row in read_manifest(manifest)} if manifest.exists() else {}
+    provenance = {item["image_id"]: item for item in json.loads(provenance_path.read_text(encoding="utf-8"))} if provenance_path.exists() else {}
+    if existing and any(not name.startswith("radiate_") for name in existing):
+        raise ValueError("Only the RADIATE dataset is supported in this manifest")
+    # Reuse a complete local delivery offline, preserving split and annotation fields.
+    if len(existing) == 44 and existing.keys() == provenance.keys():
+        complete = True
+        for image_id, row in existing.items():
+            target = data_path(manifest, row.image_path)
+            if not target.exists():
+                complete = False
+                continue
+            if hashlib.sha256(target.read_bytes()).hexdigest() != provenance[image_id]["sha256"]:
+                raise ValueError(f"Local source image hash mismatch: {image_id}")
+        if complete:
+            return {"photos": 44, "author_participant_groups": len({row.group_id for row in existing.values()}),
+                    "manifest": str(manifest), "status": "verified_local_files_reused"}
     cache = root / "cache" / "radiate_ranges"
     tail = byte_range(ARCHIVE_SIZE - 65536, ARCHIVE_SIZE - 1, cache)
     marker = tail.rfind(b"PK\x05\x06")
@@ -91,9 +109,6 @@ def collect_radiate(manifest: Path) -> dict:
     subjects = {Path(entry["name"]).stem.split("_")[0] for entry in selected}
     if len(subjects) != 22 or len(selected) != 44:
         raise ValueError(f"Expected 22 author-labeled Asian participant codes and 44 photos, got {len(subjects)}, {len(selected)}")
-    existing = {row.image_id: row for row in read_manifest(manifest)} if manifest.exists() else {}
-    provenance_path = root / "sources" / "radiate_downloads.json"
-    provenance = {item["image_id"]: item for item in json.loads(provenance_path.read_text(encoding="utf-8"))} if provenance_path.exists() else {}
     (root / "images" / "radiate").mkdir(parents=True, exist_ok=True)
     targets = {entry["name"]: data_path(manifest, f"images/radiate/{Path(entry['name']).stem}.jpg") for entry in selected}
 
@@ -104,6 +119,8 @@ def collect_radiate(manifest: Path) -> dict:
         target = targets[entry["name"]]
         if not target.exists():
             target.write_bytes(extract_entry(entry, cache))
+        if image_id in provenance and hashlib.sha256(target.read_bytes()).hexdigest() != provenance[image_id]["sha256"]:
+            raise ValueError(f"Source image hash mismatch: {image_id}")
         image = read_bgr(target)
         row = Record(image_id, f"images/radiate/{stem}.jpg", "radiate_" + subject, "radiate_" + subject,
                      "", "", "", "controlled_portrait;author_color_version", SOURCE,
@@ -125,4 +142,4 @@ def collect_radiate(manifest: Path) -> dict:
             write_json(provenance_path, sorted(provenance.values(), key=lambda item: item["image_id"]))
             print(f"RADIATE color photos: {number}/{len(selected)}", flush=True)
     return {"photos": len(selected), "author_participant_groups": len(subjects), "manifest": str(manifest),
-            "annotations": "not supplied by source; not marked complete", "status": "downloaded_with_verified_author_grouping"}
+            "annotations": "Source supplies no masks; existing project annotations are preserved", "status": "downloaded_with_verified_author_grouping"}

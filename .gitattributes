@@ -1,0 +1,2 @@
+# The model records the manifest byte hash; preserve it across Windows checkouts.
+*.csv text eol=lf

@@ -1,69 +1,43 @@
 # 肤色与人脸标注规范
 
-本规范供 A 制作训练样本，供 B、C 读取和解释标注。所有坐标基于经过 EXIF 转正后的原尺寸图片。标注不得由当前肤色模型预测后直接作为真实答案使用。
+坐标以 EXIF 转正后的原尺寸照片为准；当前 RADIATE 全部为 1500×1500。标注独立于肤色模型预测绘制，禁止直接将预测结果当作参考答案。
 
-## 两类标注
+## 两类参考标注
 
-| 标注 | 正像素范围 | 排除范围 | 用途 |
-| --- | --- | --- | --- |
-| skin | 可见皮肤，包括面部及其他可见皮肤 | 头发、眉毛、眼睛、嘴唇、衣服、背景和遮挡物 | 训练皮肤颜色；完整标注还可用于评估肤色分割 |
-| face | 可见面部区域，包含内部眼睛、眉毛和嘴巴 | 头发、耳朵、脖子、背景和外部遮挡物 | 评估最终人脸区域掩膜 |
+| 层 | 包含 | 排除 |
+| --- | --- | --- |
+| skin | 可见面部皮肤、耳部及颈部皮肤 | 头发、浓密胡须、眉毛、眼睛、嘴唇、衣服、饰物、背景和遮挡 |
+| face | 可见面部及内部眼睛、眉毛、嘴巴 | 头发、耳朵、脖子、背景和外部遮挡 |
 
-无脸图片的人脸掩膜应为空；如果图片中存在手部等皮肤，其肤色掩膜仍需标出皮肤，不能因为无脸而全置零。
+稀疏胡茬下仍可见的皮肤计入 skin，明显浓密胡须区扣除。眼睛、眉毛、嘴唇及个别鼻孔通过排除多边形扣除。细小边缘存在近似，需按当前参考标注的精度解释指标。
 
-## 状态定义
+## 本次标注方法与状态
 
-- `skin_status=missing`：未标注；对应 mask 路径必须为空。
-- `skin_status=sampled`：只标出确认属于皮肤的小区域，未标出的像素是未知，不代表非皮肤。只能用于正样本训练，不能用于完整图像指标计算。
-- `skin_status=complete`：整图所有可见皮肤均已检查、标注，可用于完整肤色评估。
-- `face_status=missing`：未标注；对应路径必须为空。
-- `face_status=draft`：粗略轮廓，仅用于联调和预览，不能用于正式指标。
-- `face_status=complete`：逐图复核后的面部标注，可以用于评估。
-- `identity_status=unverified`：人物分组未核实，仅允许放在 bootstrap 训练集。
-- `identity_status=verified`：有可靠人物分组依据；此状态不代表标注质量已完成。
+44 张照片逐图绘制面部边界折线和额外可见皮肤，使用曲线采样点近似眼睛、眉毛、嘴唇区域，并逐批检查原图和叠加图。参考预览为 600×600，顶点换算到原图坐标后栅格化；没有把统一椭圆或模型输出用作答案。
 
-不能将图片编号直接作为已核实的人物编号。多人图片需要列出全部已知人物编号，分组工具会把通过共同人物或共同采集组相连的照片放在同一个集合。无脸图片按采集场景分组。
+标注者为 `codex_visual_polygon_annotation`。它们是项目自制的多边形参考标注，来源不提供像素掩膜，也未经过独立专家审核。`skin_status=complete`、`face_status=complete` 表示整图范围均已处理、叠加图已查看，不等于每个边界像素绝对准确。指标以该参考为准。
 
-## 多边形文件
+当前交付全部 `identity_status=verified`，依据作者匿名编号；此字段仅指分组依据，不表示像素标注质量。编辑工具仍能记录 `missing`、`sampled`、`draft`，便于发现未完成编辑；训练及评估入口均拒绝未核验分组或不完整的两类标注。
 
-每张图片对应 `data/annotations/polygons/<image_id>.json`，记录 `image_id`、`width`、`height`、`annotator`、标注方法及各层状态。每层包含 `include` 与 `exclude` 两个多边形列表，先画正区域，再扣除排除区域。
+## JSON 与掩膜
 
-顶点使用转正后原图的 `[x, y]` 像素坐标，左上角为原点，坐标范围不超过宽高减一。每个多边形至少三个点。空的 include 与 exclude 可以表示经过检查的全背景图，但 skin 的 sampled 标注必须包含正像素。
+`data/annotations/polygons/batch_*.json` 的 `annotations` 列表每批包含 4 张照片。逐图保存 image_id、width、height、annotator、method、review_note，以及 skin/face 的 status、include、exclude。
 
-首批人脸标注由 Codex 根据实际图片查看结果选取保守皮肤区域，记为 `sampled`；面部轮廓记为 `draft`。这批轮廓不是人工精修的像素级真值。可以逐个修改 JSON 后重新栅格化，并用叠加图复核；只有确实完成整图复核后才能升级为 complete。
+每个区域由至少三个 `[x,y]` 顶点组成，坐标为原图像素，不能越界。先填充 include，再扣除 exclude。肤色可包含多个耳颈多边形；面部标注不因眉眼嘴而挖孔。栅格化递归读取 JSON，拒绝重复或未知 image_id，并更新清单。
 
-后续批次放在 polygons/batches 下，每个 JSON 的 `annotations` 列表包含多张图片的标注。栅格化会递归读取并拒绝重复或未知的图片编号。新增皮肤区域根据逐图预览选择，面部椭圆由查看后选定的边界框生成，只是布局草稿，不能当作精确人脸分割答案。
+PNG 是单通道 0/255，读取后转为 uint8 0/1。NPY 仅接受二维 0/1。掩膜尺寸必须与转正后的图片相同，禁止 JPEG、彩色掩膜或混合 1 与 255。
 
-`training_exclusion_reason` 记录不适合颜色训练的原因，并在清单中加入 `exclude_color_training` 场景标签。例如面部涂抹覆盖皮肤、黑白或明显去色的照片均可排除。排除不会把草稿升级为完整标注，也不会为无法确认的皮肤区域伪造正像素。
+```powershell
+.\.venv\Scripts\python.exe -m src.training rasterize --manifest data/manifest.csv --polygons data/annotations/polygons
+.\.venv\Scripts\python.exe -m src.training contact-sheet --manifest data/manifest.csv --output artifacts/radiate_review/overlay_00.png --offset 0 --limit 4 --tile-size 600 --columns 2 --overlays
+```
 
-## 掩膜表示
+检查所有 offset=0、4……40 的批次。训练时的 15 像素内缩只作用于采样区域，不改动保存的完整参考掩膜，不用于缩减评估范围。
 
-PNG 保存为单通道 0/255，工具读取后转换为 uint8 0/1。也支持只含 0/1 的二维 NPY。掩膜大小必须与转正后的原图一致，禁止有损 JPEG、多通道彩色标注、混合 1 和 255、以及改变方向的 EXIF 标记。
+## 清单字段与修改规则
 
-## 数据清单
+`data/manifest.csv` 为 UTF-8 CSV，字段顺序由 `Record` 定义。图片与掩膜路径相对于 data 目录，禁止越出该目录。subject_ids 与 scene_tags 用英文分号分隔；人物代码只能来自可靠来源元数据。
 
-`data/manifest.csv` 使用 UTF-8，字段顺序由训练工具固定。所有文件路径相对于清单所在目录，不能越出此目录；人物编号和场景标签用英文分号分隔。
+清单记录 image_id、image_path、subject_ids、group_id、split、skin_mask_path、face_mask_path、scene_tags、source_url、source_label、license、identity_status、skin_status、face_status。当前照片统一为 controlled_portrait、author_color_version。
 
-| 字段 | 含义 |
-| --- | --- |
-| image_id | 唯一图片编号，仅使用英文字母、数字、下划线及短横线 |
-| image_path | 图片路径 |
-| subject_ids | 有可靠依据的人物编号；未知时留空，不按外观猜测身份 |
-| group_id | 相同人物关联组或采集场景组；未知身份的同一来源保守地放入同组 |
-| split | train、validation 或 test；分组前可在单独清单中留空 |
-| skin_mask_path 与 face_mask_path | 两类掩膜路径 |
-| scene_tags | 场景标签，例如 cropped_face、bootstrap |
-| source_url | 可追溯来源地址 |
-| source_label | 上游作者的人群标签；本项目不根据外观推断族群 |
-| license | 上游声明的使用许可 |
-| identity_status | 人物分组核验状态 |
-| skin_status 与 face_status | 两类标注完成状态 |
-
-## 标注复核清单
-
-1. 图片方向正确，掩膜与图片像素对齐。
-2. 皮肤采样避开毛发、眼镜框、眼睛、嘴唇及背景，保留不同光照下的真实皮肤。
-3. 完整肤色标注涵盖整图皮肤；草稿或少量采样不能升级成完整标注。
-4. 人脸标注排除头发、耳朵、脖子及遮挡物，保留面部内部眼睛和嘴巴。
-5. 存在皮肤但无人脸的图片，两类掩膜可以不同。
-6. 记录标注来源、方法和状态，检查数据集合之间的人物及近似图片重复。
+修改多边形后重新栅格化、检查尺寸与叠加效果，再重训和校验。不得看过测试效果后悄悄修改测试标注或划分；需公开变更、说明测试用途，并另设未使用的最终留出数据。
