@@ -87,16 +87,18 @@ def rasterize(manifest: Path, polygons: Path) -> int:
 
 
 def contact_sheet(manifest: Path, output: Path, offset: int = 0, limit: int = 20,
-                  overlays: bool = False) -> None:
+                  overlays: bool = False, tile_size: int = 224, columns: int = 5) -> None:
     from PIL import ImageFont
     from .dataset import read_mask
 
     if offset < 0 or not 1 <= limit <= 100:
         raise ValueError("offset must be nonnegative and limit must be between 1 and 100")
+    if not 100 <= tile_size <= 1500 or not 1 <= columns <= 5:
+        raise ValueError("tile_size must be 100..1500 and columns must be 1..5")
     records = read_manifest(manifest)[offset:offset + limit]
     if not records:
         raise ValueError("No records at this offset")
-    tile, label_height, columns = 224, 32, 5
+    tile, label_height = tile_size, 32
     sheet = Image.new("RGB", (columns * tile, ((len(records) + columns - 1) // columns) * (tile + label_height)), "white")
     font = ImageFont.load_default()
     draw = ImageDraw.Draw(sheet)
