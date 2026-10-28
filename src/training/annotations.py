@@ -37,27 +37,43 @@ def rasterize(manifest: Path, polygons: Path) -> int:
     import json
 
     records = read_manifest(manifest)
+    specifications = {}
+    paths = sorted(polygons.rglob("*.json")) if polygons.is_dir() else [polygons]
+    for path in paths:
+        content = json.loads(path.read_text(encoding="utf-8"))
+        items = content.get("annotations", [content])
+        if not isinstance(items, list):
+            raise ValueError(f"annotations must be a list: {path}")
+        for spec in items:
+            image_id = spec.get("image_id")
+            if not image_id or image_id in specifications:
+                raise ValueError(f"Missing or duplicate annotation image_id: {path}")
+            specifications[image_id] = spec
+    unknown = set(specifications) - {row.image_id for row in records}
+    if unknown:
+        raise ValueError(f"Annotations reference unknown images: {sorted(unknown)}")
     updated = []
     count = 0
     for row in records:
-        path = polygons / f"{row.image_id}.json"
-        if not path.exists():
+        if row.image_id not in specifications:
             updated.append(row)
             continue
-        spec = json.loads(path.read_text(encoding="utf-8"))
+        spec = specifications[row.image_id]
         if spec.get("image_id") != row.image_id or not spec.get("annotator"):
-            raise ValueError(f"Annotation needs matching image_id and annotator: {path}")
+            raise ValueError(f"Annotation needs matching image_id and annotator: {row.image_id}")
         image = read_bgr(data_path(manifest, row.image_path))
         fields = asdict(row)
+        if spec.get("training_exclusion_reason"):
+            fields["scene_tags"] = ";".join(dict.fromkeys(row.scene_tags.split(";") + ["exclude_color_training"]))
         for kind, allowed in (("skin", ("sampled", "complete")), ("face", ("draft", "complete"))):
             if kind not in spec:
                 continue
             status = spec[kind].get("status")
             if status not in allowed:
-                raise ValueError(f"Invalid {kind} status: {path}")
+                raise ValueError(f"Invalid {kind} status: {row.image_id}")
             mask = polygon_mask(spec, image.shape[:2], kind)
             if kind == "skin" and status == "sampled" and not mask.any():
-                raise ValueError(f"Sampled skin must contain positive pixels: {path}")
+                raise ValueError(f"Sampled skin must contain positive pixels: {row.image_id}")
             relative = f"annotations/{kind}/{row.image_id}.png"
             target = data_path(manifest, relative)
             target.parent.mkdir(parents=True, exist_ok=True)

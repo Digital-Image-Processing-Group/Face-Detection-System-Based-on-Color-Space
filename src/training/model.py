@@ -56,6 +56,9 @@ def fit_model(manifest: Path, samples_per_image: int = 2000, seed: int = 42,
     seen = set()
     skipped = []
     for row in records:
+        if row.split == "train" and "exclude_color_training" in row.scene_tags.split(";"):
+            skipped.append({"image_id": row.image_id, "reason": "explicit visual-review exclusion; see annotation provenance"})
+            continue
         if row.split != "train" or row.skin_status == "missing":
             continue
         image = read_bgr(data_path(manifest, row.image_path))
@@ -66,6 +69,9 @@ def fit_model(manifest: Path, samples_per_image: int = 2000, seed: int = 42,
         seen.add(digest)
         mask_path = data_path(manifest, row.skin_mask_path)
         mask = read_mask(mask_path, image.shape[:2])
+        if mask.any() and np.mean(np.ptp(image[mask.astype(bool)], axis=1) <= 2) >= 0.98:
+            skipped.append({"image_id": row.image_id, "reason": "achromatic skin samples carry no reliable color information"})
+            continue
         # OpenCV returns Y, Cr, Cb, whereas the model contract is Cb, Cr.
         color = cv2.cvtColor(image, cv2.COLOR_BGR2YCrCb)
         features = color[:, :, [2, 1]][mask.astype(bool)].astype(np.float64)

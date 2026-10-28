@@ -230,6 +230,28 @@ class TrainingTests(unittest.TestCase):
         self.assertTrue((diagnostics / "cbcr_distribution.png").exists())
         self.assertTrue((diagnostics / "training_summary.json").exists())
 
+    def test_batch_annotations_and_duplicate_ids(self):
+        row = replace(self.make_record(1), skin_status="missing", skin_mask_path="")
+        write_manifest(self.manifest, [row])
+        polygons = self.root / "polygons"
+        spec = {"image_id": row.image_id, "annotator": "test", "width": 16, "height": 12,
+                "skin": {"status": "sampled", "include": [[[1, 1], [4, 1], [4, 4]]], "exclude": []}}
+        write_json(polygons / "batches" / "one.json", {"annotations": [spec]})
+        self.assertEqual(rasterize(self.manifest, polygons), 1)
+        write_json(polygons / "duplicate.json", spec)
+        with self.assertRaisesRegex(ValueError, "duplicate"):
+            rasterize(self.manifest, polygons)
+
+    def test_colorless_and_review_excluded_samples_do_not_enter_model(self):
+        rows = [self.make_record(i) for i in range(1, 5)]
+        Image.new("RGB", (16, 12), (100, 100, 100)).save(self.root / rows[2].image_path)
+        rows[3] = replace(rows[3], scene_tags="exclude_color_training")
+        write_manifest(self.manifest, rows)
+        model, _, _ = fit_model(self.manifest)
+        self.assertEqual(model["training_info"]["training_image_count"], 2)
+        skipped = {item["image_id"] for item in model["training_info"]["skipped"]}
+        self.assertEqual(skipped, {rows[2].image_id, rows[3].image_id})
+
 
 if __name__ == "__main__":
     unittest.main()
