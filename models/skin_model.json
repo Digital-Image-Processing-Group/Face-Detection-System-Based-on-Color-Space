@@ -6,264 +6,1110 @@
     "Cr"
   ],
   "mean": [
-    102.90846153846154,
-    157.30123076923076
+    113.86623333333333,
+    143.3184875
   ],
   "covariance": [
     [
-      64.08773778193958,
-      -51.98956021343606
+      13.11251944771992,
+      -7.345890096625399
     ],
     [
-      -51.98956021343606,
-      56.094761846011814
+      -7.345890096625399,
+      16.315821194932038
     ]
   ],
   "regularization_lambda": 1.0,
   "training_info": {
     "usage": "verified_subjects",
     "skin_annotation_scope": "complete",
-    "training_image_count": 26,
-    "sampled_pixel_count": 52000,
+    "training_image_count": 120,
+    "sampled_pixel_count": 240000,
     "requested_samples_per_image": 2000,
     "actual_samples_per_image": 2000,
     "random_seed": 42,
-    "manifest_sha256": "17cca2693850e85d95b3bfb351c0f9f01a96aed73df7cb73bc68fe4245083c68",
+    "manifest_sha256": "752cc4196d08655f610435fd7bd61760e38b28baad1d03d4d56f209f39242985",
     "training_mask_margin_pixels": 15,
-    "data_revision": "0729a0526162dcdb97e4d77ad9d5ab1c8cf8aafe377cc221a9176947c31291fb",
+    "data_revision": "ff7ac002d48ac9a59b29324392ed244ae8ae26fd3d0700932ad1053b4eb8a966",
     "opencv_version": "5.0.0",
     "numpy_version": "2.4.4",
     "sources": [
       {
-        "image_id": "radiate_AF06_HC",
-        "image_sha256": "2bad2a8575d11074a68c53b6c26b0d9391269d893ad60e1a8c81a5d7c2c1343c",
-        "skin_mask_sha256": "08ec3066af7964fbf897f37a8ab75b93280c5fd4e2754564001ab01f2a139ae8",
-        "available_pixels": 426402,
+        "image_id": "hfd_10_AFA2",
+        "image_sha256": "7780320ed9a245cf7619b0b6746e5b2ef8e897da66b7ac6c77defcd6e4a9d600",
+        "skin_mask_sha256": "9fe00098c6e6a148a01a404d70f8e209be6b6f1a21fe46a94f96a2ab72d14d5f",
+        "available_pixels": 379882,
         "sampled_pixels": 2000,
         "skin_status": "complete",
         "identity_status": "verified"
       },
       {
-        "image_id": "radiate_AF06_NC",
-        "image_sha256": "eab286c79483fe63d053e40ecd23676c97391a5b030652746c57d78982ce99fa",
-        "skin_mask_sha256": "cca5ae67c1252ffc63dca3e58052e83a8e7b3220b213bb5107ca2d32865ee83d",
-        "available_pixels": 435707,
+        "image_id": "hfd_10_AFA3",
+        "image_sha256": "9e186ad701d93518bf1a595518f9f06bb52d1865236389bae46eb11207b6b71f",
+        "skin_mask_sha256": "7cdb023ba8b12f618236fd302587416585f3abd7de0d7562943788b9a17403af",
+        "available_pixels": 404078,
         "sampled_pixels": 2000,
         "skin_status": "complete",
         "identity_status": "verified"
       },
       {
-        "image_id": "radiate_AF08_HC",
-        "image_sha256": "7e1c9cd5cc0d9b5cc0618f99ec69fe797824da86fe6cab1b37e5014d96940395",
-        "skin_mask_sha256": "756a1ae0d4d754b3caf17b4d23ebe545279a05941e56a7cae5686a0af6eba43a",
-        "available_pixels": 405638,
+        "image_id": "hfd_10_AFA6",
+        "image_sha256": "03bcaa585cf5f0910fdcbde8c9e1aedcd391fad3b3c295deaef5a51c4ac4adba",
+        "skin_mask_sha256": "41eb94f5f4a672fceb7dc6fb0ae574177a2cf6958e5b3495a198b55e31777c1e",
+        "available_pixels": 390651,
         "sampled_pixels": 2000,
         "skin_status": "complete",
         "identity_status": "verified"
       },
       {
-        "image_id": "radiate_AF08_NC",
-        "image_sha256": "daad234dfb9be5ebab7aa48080926dd57370283ffabe0dfa7d48a228a1c2faa7",
-        "skin_mask_sha256": "06e5f99e957e68b01afda35c6058e3fcc3e3ccc822a5f3ca99046fe8bdcf4b96",
-        "available_pixels": 412918,
+        "image_id": "hfd_10_AFA7",
+        "image_sha256": "5713f27604407e0afeedf0ab0cf2042a8e9cef9e06624ffdee2227bb2845554a",
+        "skin_mask_sha256": "ee1532c0ba89758fba20dfc80cbf85f1aec1fb812f572e6dae92ef57abc5dcc8",
+        "available_pixels": 287645,
         "sampled_pixels": 2000,
         "skin_status": "complete",
         "identity_status": "verified"
       },
       {
-        "image_id": "radiate_AF09_HC",
-        "image_sha256": "f69b0717c797e23ad11e45a8eb42c33f0dae9a666254fe69b782cbe6a0879e07",
-        "skin_mask_sha256": "71c2d5f36973e157cefab3d3a9eeb9a5612f20e2b93b3b156ba72b85c9c06a99",
-        "available_pixels": 411296,
+        "image_id": "hfd_10_AFA8",
+        "image_sha256": "667de5898d4aa300cf741206aa4e42ae7f3094b0c7fb1011e8394af9dc28bd44",
+        "skin_mask_sha256": "3a97bb76a9e30500545fcea38652f288a6d8073e1de690c76a3720903a652821",
+        "available_pixels": 237466,
         "sampled_pixels": 2000,
         "skin_status": "complete",
         "identity_status": "verified"
       },
       {
-        "image_id": "radiate_AF09_NC",
-        "image_sha256": "333346b321b68c35a9a5a8518eb87c7b90c7746488ea57a10854687535a4489f",
-        "skin_mask_sha256": "8eed6945bec04e97c263771fad7111886e9b27a5f96d607310f6502b6cb05a29",
-        "available_pixels": 428690,
+        "image_id": "hfd_13_AFA2",
+        "image_sha256": "697d8669d18eb3eb80389834172a0c0bbb88104ddb787d4dfd763a36e40fe23a",
+        "skin_mask_sha256": "9811124c854f8a8351741194bbd944fc6795e951aaeed233d863923c2ea7c6c4",
+        "available_pixels": 452169,
         "sampled_pixels": 2000,
         "skin_status": "complete",
         "identity_status": "verified"
       },
       {
-        "image_id": "radiate_AF11_HC",
-        "image_sha256": "ef29ad2d9ce803b89e36da7abc4536c94c744688ee3081a10e6b0dafcc3adb45",
-        "skin_mask_sha256": "6ff18b0a20fb590b65cd953dc9e17ff82c4bc5fbb8babb1f218dd91c268d683f",
-        "available_pixels": 347363,
+        "image_id": "hfd_13_AFA3",
+        "image_sha256": "b7930fb4db3d1a4a1e94574840db7d0fe5034ec37fb59689f65fa515ff505cb3",
+        "skin_mask_sha256": "172c9f5b600f98699c771ca3569491923c5a2db302a6ad9b5505b6e84dd0c429",
+        "available_pixels": 467251,
         "sampled_pixels": 2000,
         "skin_status": "complete",
         "identity_status": "verified"
       },
       {
-        "image_id": "radiate_AF11_NC",
-        "image_sha256": "61c054915cdb43fd4023eb13b832e8a2e1c2181cdd3aef88c3b9ac7001becc86",
-        "skin_mask_sha256": "ac8a9c0f5b63671d606915a56b60504af5d32d207b88748f10a6df62cb7dc5aa",
-        "available_pixels": 371989,
+        "image_id": "hfd_13_AFA6",
+        "image_sha256": "9fa4619d64b75acd23dbed44e44863c693b5d2c86780d380d76480455d06fd73",
+        "skin_mask_sha256": "e950f718bad50190c1905bb6bd548810c22e1a7e517a0323a6e57ef4923e4c1b",
+        "available_pixels": 482277,
         "sampled_pixels": 2000,
         "skin_status": "complete",
         "identity_status": "verified"
       },
       {
-        "image_id": "radiate_AF12_HC",
-        "image_sha256": "b632e978701d06cfef857276074ebf40ab0ebac927ddfd7ff649ef01dbabef9e",
-        "skin_mask_sha256": "e3bd5995723db9155dc99b4b788472f94f9ed5a61406a4ab051bd81dc5bb52a6",
-        "available_pixels": 417875,
+        "image_id": "hfd_13_AFA7",
+        "image_sha256": "f5dcb9411edef3459d9cf95af5445bc4f1ae57937c30beaf0de4aeae5f539cc8",
+        "skin_mask_sha256": "963d2dcb95930384dbb5845c24a379e0bf339780197c8f1fc9b796bb725dcb8b",
+        "available_pixels": 226529,
         "sampled_pixels": 2000,
         "skin_status": "complete",
         "identity_status": "verified"
       },
       {
-        "image_id": "radiate_AF12_NC",
-        "image_sha256": "802a8b5e1a52f21c984d067d33330abb2e0891e552953e975048dace9b7fbdce",
-        "skin_mask_sha256": "ed1c067ac626effe7e7962d25b8eafcd99d4db95b1bfbd272f564699630e9138",
-        "available_pixels": 409557,
+        "image_id": "hfd_13_AFA8",
+        "image_sha256": "52ad1559a0ee0a0e7a01fd06b3cfc65f2c8ef324edd1a7e4f71f415f86632ea6",
+        "skin_mask_sha256": "55642c9ea423d0c7fd3a58dbde21dd9c317a264a42a83f150f424e6f23f62849",
+        "available_pixels": 287669,
         "sampled_pixels": 2000,
         "skin_status": "complete",
         "identity_status": "verified"
       },
       {
-        "image_id": "radiate_AM02_HC",
-        "image_sha256": "ca20243ce460b230804437ad13d07215108320cd4558b550cdbeb83a9712fc53",
-        "skin_mask_sha256": "d187b64dd8b859394e5de46a064b439a8bd2c8b1bceefaca7993695d6b1cc5b4",
-        "available_pixels": 384993,
+        "image_id": "hfd_16_EAFA2",
+        "image_sha256": "73fd54a9dd89e54e97ea46f58332dee5dfcd5285fee6449f08f41e6367eca78c",
+        "skin_mask_sha256": "a8e0ee26003da85fd8c6210f3fd77a0def4202dbac854b6860e9c08f432a0e00",
+        "available_pixels": 559820,
         "sampled_pixels": 2000,
         "skin_status": "complete",
         "identity_status": "verified"
       },
       {
-        "image_id": "radiate_AM02_NC",
-        "image_sha256": "dead8cd29111b4d66f522ab43d5b016dc416214fdfef5fe7cd7909476cf2b320",
-        "skin_mask_sha256": "186a89eb70d6ebf4b8e33523b60118bd0130c910a1ed4d8f3aed4742888250fe",
-        "available_pixels": 418254,
+        "image_id": "hfd_16_EAFA3",
+        "image_sha256": "8bf77494be3a146d4368d926425d0528c31824e14bf1147f39b8ef3f5ad89b11",
+        "skin_mask_sha256": "ba1b458564263eddc02acdde7aaf66e6cfa57f2544668038b6c4fe1479bc5515",
+        "available_pixels": 571758,
         "sampled_pixels": 2000,
         "skin_status": "complete",
         "identity_status": "verified"
       },
       {
-        "image_id": "radiate_AM03_HC",
-        "image_sha256": "e7261e34945f042ba1226d779000d7ff902f3825d2f77558ac02e1559ffb74c3",
-        "skin_mask_sha256": "aec0ea84aef1ba491ff149a6e9ef5420fe1fe4d1ea64b210d2d44e688e91b85b",
-        "available_pixels": 322350,
+        "image_id": "hfd_16_EAFA6",
+        "image_sha256": "0e72878a2bc71ff71b6df2c9a3b870aea85b5b403935b08990f4b91fee7d6556",
+        "skin_mask_sha256": "fcae8fd2ae082160b6e659d4b5b6ea262ee9c153f7ef5054c0ffe39286bc7106",
+        "available_pixels": 529236,
         "sampled_pixels": 2000,
         "skin_status": "complete",
         "identity_status": "verified"
       },
       {
-        "image_id": "radiate_AM03_NC",
-        "image_sha256": "81e0893d55a6044a9d2ee90709e8dc526a2189f11ff8b6328af3ceedfe856d48",
-        "skin_mask_sha256": "7a16efb815505676f34e7e46134274c86bcdb9b446f534ef5d10f301ed5d7e81",
-        "available_pixels": 323501,
+        "image_id": "hfd_16_EAFA7",
+        "image_sha256": "93a4d31b58d8a28874b3ecbd53c37eb22eb901b8277fb040f83d2dc58429dcc3",
+        "skin_mask_sha256": "85a86c328ae915be619f176358c1224c73e01b3a06faf327e6ec164856e5cd30",
+        "available_pixels": 327070,
         "sampled_pixels": 2000,
         "skin_status": "complete",
         "identity_status": "verified"
       },
       {
-        "image_id": "radiate_AM04_HC",
-        "image_sha256": "1e6811cba2e9102bb69f3905d98942a1b5ec47bb95aae71801778ef233583747",
-        "skin_mask_sha256": "9b8d9a40facb1b37b1e5d7f9055e7c1def7b61e50f7fb9b59ddce12411b6f0d1",
-        "available_pixels": 424975,
+        "image_id": "hfd_16_EAFA8",
+        "image_sha256": "b2ca5d5565068f896846e67299bfef5bda5633870b56b3c8e57b60fe947b2daa",
+        "skin_mask_sha256": "d6aa3b589993fa43a3fe910130217a8bfcf32ed1ad1a56a3ce2c1c0e52a0adb0",
+        "available_pixels": 449427,
         "sampled_pixels": 2000,
         "skin_status": "complete",
         "identity_status": "verified"
       },
       {
-        "image_id": "radiate_AM04_NC",
-        "image_sha256": "854d35f734d0d7f1aae5702c4953ac5b35b4c6b38da25667eae56349f85e99cb",
-        "skin_mask_sha256": "325790d2a5866b2fe14731031068a6d1f891474d653a816741d4f5bf5a5bb545",
-        "available_pixels": 445769,
+        "image_id": "hfd_17_SEAFA2",
+        "image_sha256": "29cf4e55d8242363d2de77193192ba9b3d8aff55acf2528e246c4e1a47ce9a3d",
+        "skin_mask_sha256": "bcb939c5b2ae45c147dfc734e683ce7e843c3024416cf51906faec47b0c1900a",
+        "available_pixels": 526622,
         "sampled_pixels": 2000,
         "skin_status": "complete",
         "identity_status": "verified"
       },
       {
-        "image_id": "radiate_AM05_HC",
-        "image_sha256": "2064a5d1f3d0a7dc09b7ed13197c9da1a04be255910edccdd245253a8cc5e6a0",
-        "skin_mask_sha256": "6d6b6982b1bb80c25f6707bf45bdbe08fa0e5e9450671f2d9e9bafc84fbe7f14",
-        "available_pixels": 359443,
+        "image_id": "hfd_17_SEAFA3",
+        "image_sha256": "3150297f7edf801958bd004e3a775473a54b28b8214f7ef17f4ee76459f67c39",
+        "skin_mask_sha256": "a1a11665a73134371585932cc07c6fae0e2d53a5f25845493a86ad76ec7c603f",
+        "available_pixels": 511055,
         "sampled_pixels": 2000,
         "skin_status": "complete",
         "identity_status": "verified"
       },
       {
-        "image_id": "radiate_AM05_NC",
-        "image_sha256": "d381d6ca22ebf5ce573edaea8e064f3696a33386a296de9ccd5d65fa119a35c7",
-        "skin_mask_sha256": "b09dc9979fb107bd47b2b26a5c4523ea348b422c78e9cad0945758e23ba0f9cd",
-        "available_pixels": 385006,
+        "image_id": "hfd_17_SEAFA6",
+        "image_sha256": "4cf8e5200b167a5bfcc1f021bba6d14794f3ff4357d17088a73ce7edc842f5a1",
+        "skin_mask_sha256": "41a2205d51985f1c42576ddecaf4d5196c6f02124986472759c2ecb27530c0aa",
+        "available_pixels": 472842,
         "sampled_pixels": 2000,
         "skin_status": "complete",
         "identity_status": "verified"
       },
       {
-        "image_id": "radiate_AM06_HC",
-        "image_sha256": "e6d35c531e40a0bb8d5fb9e4a4cfa265941811196a87f8968ea04d70c6500ea3",
-        "skin_mask_sha256": "4f9779cf2875460cbf1243c2426ab2149a2feb3f2539c5abfe03f3d112619a5e",
-        "available_pixels": 628178,
+        "image_id": "hfd_17_SEAFA7",
+        "image_sha256": "391a372542538973c1209cf50ae257ae10dbcfe4fdea1dc2dfcf3ff0f5bbb2ed",
+        "skin_mask_sha256": "50de60c32fd0111df7584853b3f074a7d069e810e750a7194b5dba40fcbdc01f",
+        "available_pixels": 191659,
         "sampled_pixels": 2000,
         "skin_status": "complete",
         "identity_status": "verified"
       },
       {
-        "image_id": "radiate_AM06_NC",
-        "image_sha256": "7c38b7d28b04dabb24c7ab31deb80b50bbe21f5ac4bb308e5832dac06a714f3b",
-        "skin_mask_sha256": "54d03b54a2647ed27f2296cec6221d103a6eeef308d33979da7d9a31a4cf4763",
-        "available_pixels": 639407,
+        "image_id": "hfd_17_SEAFA8",
+        "image_sha256": "cad18727987bec9b2d581c78a32e5d7e186d0a71075fd579f372b7a358e1b578",
+        "skin_mask_sha256": "093bc14d7bfdeeab100e48acedd4d29cbc37364e2673c484c1b10f3fa3287dd4",
+        "available_pixels": 288129,
         "sampled_pixels": 2000,
         "skin_status": "complete",
         "identity_status": "verified"
       },
       {
-        "image_id": "radiate_AM07_HC",
-        "image_sha256": "ea8de053b6872a7d28386bad95f8bced5e133a5674ea3405148dcffaa2d9cf60",
-        "skin_mask_sha256": "581f2891ee4055b12486fb88dd55ad4f476c5569b9cd2ee5ff7ae21dd79006ef",
-        "available_pixels": 411588,
+        "image_id": "hfd_18_AMA2",
+        "image_sha256": "2dd02e8172ac6142620735a11308b6b50afc2b0c9c45f6705d547b8918974bd8",
+        "skin_mask_sha256": "14ed1e6b22f601f9cecb446777a1e0e213c96dfb21e3361fec9e58d9eda06ba9",
+        "available_pixels": 381475,
         "sampled_pixels": 2000,
         "skin_status": "complete",
         "identity_status": "verified"
       },
       {
-        "image_id": "radiate_AM07_NC",
-        "image_sha256": "bb5804b11236ddc8749fb5c31b66956bb60503be60f1f64cc95ac29570f21d5c",
-        "skin_mask_sha256": "7f04345e2c74eb1564d5c0eeb5ffe39ec35ca470bb0e892c4f31b15c91d71c41",
-        "available_pixels": 421891,
+        "image_id": "hfd_18_AMA3",
+        "image_sha256": "632ad05454b73cf77e019dbe814c2d21e588446c8dcacebbef074bc41c271b70",
+        "skin_mask_sha256": "5987de189e0885cdeb70702d5e66891f3c2858b09c7ecb3e2e4c4a162137f7d8",
+        "available_pixels": 406116,
         "sampled_pixels": 2000,
         "skin_status": "complete",
         "identity_status": "verified"
       },
       {
-        "image_id": "radiate_AM08_HC",
-        "image_sha256": "a850fdb868be6a3e5b3bf036cac20a2740fec214dd7956f6a6ba7fc073782227",
-        "skin_mask_sha256": "14cbccaee87e47dddc08e935cbf451e4e404f8448b2f623fadca105ecb8bd1a5",
-        "available_pixels": 492349,
+        "image_id": "hfd_18_AMA6",
+        "image_sha256": "e0268a0a958554d8ba50449b8eefc3dedbec10aafb732a4f5a2b0fcdb1098ad9",
+        "skin_mask_sha256": "af80f536964d06df532ffba6e1fbdcaaf25836b039d4dc00c8c1dc55d18021df",
+        "available_pixels": 384140,
         "sampled_pixels": 2000,
         "skin_status": "complete",
         "identity_status": "verified"
       },
       {
-        "image_id": "radiate_AM08_NC",
-        "image_sha256": "e3f731ea7dd185794561e5637a08c19d9961159f7c01b70bb10e7ac2b034c0a2",
-        "skin_mask_sha256": "26148af93d5768215e0cb217ca9f59b35a620ea5bb903ab35849b164d42d2411",
-        "available_pixels": 516077,
+        "image_id": "hfd_18_AMA7",
+        "image_sha256": "27fb064623d8b41d44a4b93a979539c50a833f1405ce1fe2aa62813c0b2101a0",
+        "skin_mask_sha256": "8ea73fdd8a46d36ec357b2aa3c7d9bf7090f1bc2bda5bfb2094508badd5de41a",
+        "available_pixels": 290292,
         "sampled_pixels": 2000,
         "skin_status": "complete",
         "identity_status": "verified"
       },
       {
-        "image_id": "radiate_AM11_HC",
-        "image_sha256": "891ba4ca4324e74d2cd89061cb4b7d1bfa616eea728f7743af5947b49afbcbaa",
-        "skin_mask_sha256": "57e66936fac7c80e2d2e8311ad8bdc687f1ed012921ffff3593449dd2151b162",
-        "available_pixels": 544664,
+        "image_id": "hfd_18_AMA8",
+        "image_sha256": "743a2a9ed72b70075432ebee9c252d6841466328238cef604205c48926d124f1",
+        "skin_mask_sha256": "dd43cc5a7bda72bc0a9bd627f45b956623dd0a37d2ed996e1af20bcea5ba1912",
+        "available_pixels": 312218,
         "sampled_pixels": 2000,
         "skin_status": "complete",
         "identity_status": "verified"
       },
       {
-        "image_id": "radiate_AM11_NC",
-        "image_sha256": "0a3bde58289f0332c2985a259c6c45857268d51b104a3a212808c821b044e4cb",
-        "skin_mask_sha256": "b6dc9eb1499822feb500958841f0fdccbb558a83ffbc646942ebdb23339d7f47",
-        "available_pixels": 554309,
+        "image_id": "hfd_1_SEAMA2",
+        "image_sha256": "a3116d07d4310633e258f66384a7a26d927e32cd3eb8b5af3056b4f8ee86aa22",
+        "skin_mask_sha256": "f66af84a21c0fcea0514b3959f65276e65e2eb87578a734b4d9302095a4d436c",
+        "available_pixels": 312614,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_1_SEAMA3",
+        "image_sha256": "9f3c4f291553a176eac73970761a6841478842c44368f129de74cd0838cff897",
+        "skin_mask_sha256": "98a4254ce738d98d2396a7a2498e62908dad1c2f17460cdc92cc63c372179b61",
+        "available_pixels": 325014,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_1_SEAMA6",
+        "image_sha256": "d2a4511219ec4c9c1dea8ce0aa51e501e817325b08e6d27fe608414068f75704",
+        "skin_mask_sha256": "2d15d7b0f0f4c9d956b6a20d178a8b02549c79ff978bc1f7bc59ae09891360b6",
+        "available_pixels": 324200,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_1_SEAMA7",
+        "image_sha256": "5c6009bf2ee871ac1086bbceb54dd124a1ff52ac3587d25615e0cd73b90ca5d3",
+        "skin_mask_sha256": "7ba4a6c0a4f95750103366802f6e7d9ea7bf0ab821c4bcd33776860d0d3fd269",
+        "available_pixels": 326579,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_1_SEAMA8",
+        "image_sha256": "333d66f155f8d368c92d34c478bba683bd50a6d742e1aefade0fa2b6b130ee94",
+        "skin_mask_sha256": "bb8c9432895084ab323df86b609b05d8759b704ba261cc6f214457dc90deb60f",
+        "available_pixels": 385905,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_20_EAFA2",
+        "image_sha256": "4f255438c0b5ebf612f7e5a2e4b55b51043b05807c282b498fb098951901bc4d",
+        "skin_mask_sha256": "14a23f7d592f2e4a45ac3a731d8c92e8bb761390c62525d8e10001eec4405385",
+        "available_pixels": 453705,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_20_EAFA3",
+        "image_sha256": "ee4e435ad7fad56f19d260ab71237d2b6cd466289af53cc7cd1d88dfc0fce2c8",
+        "skin_mask_sha256": "2eda9505eef9836f887785c89668677a5fe48a0eba3efa798ed9ca08542610e5",
+        "available_pixels": 488531,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_20_EAFA6",
+        "image_sha256": "624c979ba7a497bfdc38001108d9ea5451cda69b501946d7cce393d971c6cf9c",
+        "skin_mask_sha256": "2d3b2fc0271dfa2451a73ba5093ebc73f9e0677bb84cc91561f9f06e288932dd",
+        "available_pixels": 494562,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_20_EAFA7",
+        "image_sha256": "244f41dae94ef44250fd9bff3b0beeda55d2fa30828dfada7963634c49c6dff5",
+        "skin_mask_sha256": "7d36ba5ff256fb9b3628808d0ffa8b4a035cb2b4ed4f3b8f684bbc5003744b9e",
+        "available_pixels": 551008,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_20_EAFA8",
+        "image_sha256": "28b77838765b70b3dbf49cb9b5e5a1a021c002693021de77c0181678202d9be8",
+        "skin_mask_sha256": "508851d7d848dc105cfc8305eb5d89d65545df06f91a37197afbb5a9b6b6dc90",
+        "available_pixels": 468834,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_20_SEAFA2",
+        "image_sha256": "61d8584ef556a84e2fd0ba65827baf82a2df6f2d215fb121900ac11417f1813a",
+        "skin_mask_sha256": "2b1e5496e52d08ae0a6fedcf6989154387b8919fad8e59b79f7c6efb1892d552",
+        "available_pixels": 390168,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_20_SEAFA3",
+        "image_sha256": "52ce50fdce63812499bd017fabae1dd7ec1f73ca0db2a6cf9520bf1b053c0996",
+        "skin_mask_sha256": "5a4498ac3761820f183df665b16c58841a23a2737c558e484143aa8c661d5fbb",
+        "available_pixels": 399958,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_20_SEAFA6",
+        "image_sha256": "30fd3aadb835d3b157e2d778ebf6b5a9e5a0dc90b06989f34425736fd7517d50",
+        "skin_mask_sha256": "0206f2017496aa724eb900abefe2004d65ebec40b046b19ed94b52cd22831021",
+        "available_pixels": 401851,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_20_SEAFA7",
+        "image_sha256": "ef3da2685bcc2a218d3d167942a457faf29cea6a59bfd22739024153659457de",
+        "skin_mask_sha256": "f9ef04dd4d6b24fce024da7c2324c85fd7430830e15d4d4cf64d741bce68ed3c",
+        "available_pixels": 135491,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_20_SEAFA8",
+        "image_sha256": "9d530eaf62f340bc5ef4506fbef7f156679d09682661a7be07efb0cb52fc77ac",
+        "skin_mask_sha256": "202bad49f40486f9e6b6db4499752723e7df0d88e1dc7679a49fe49d946477b9",
+        "available_pixels": 337898,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_21_SEAFA2",
+        "image_sha256": "ba8f59b54eba8f190663e4e79c139728c0b4043c00933f87fe5d98995ca89442",
+        "skin_mask_sha256": "3c94971d2ae7bf745f540bf6e80d51f612adc326d1f1a49078000284b42744ec",
+        "available_pixels": 476172,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_21_SEAFA3",
+        "image_sha256": "8f4f7d9db3986494d1423a7db3f1fcbc32654ee8ead583c82e58be21fcf7ea20",
+        "skin_mask_sha256": "0cdd81ae247cf81c192fdf245a633ddf8bb079182b61f01d92f9364bb3effd0b",
+        "available_pixels": 475805,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_21_SEAFA6",
+        "image_sha256": "05988358a6b8c6ea99da0ecaad170b2c7045f36382e127004dd049f5f700760c",
+        "skin_mask_sha256": "2aceddb8293a981bb4f6316f26c2265f80310185ebdfade65ff92c433967987c",
+        "available_pixels": 468789,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_21_SEAFA7",
+        "image_sha256": "8fb180967591534ab8538d01a84c453aeb2283e021f3065f07efde6db5ee07ee",
+        "skin_mask_sha256": "994d518b4da7f219655000c41ccc1fea16e7d7796d5fc94febcc10616ce42f6c",
+        "available_pixels": 179826,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_21_SEAFA8",
+        "image_sha256": "c642c2735ea04fb38d1f44ddd92bf53ccec8f361f8e83f4d88bd36f8bda25bed",
+        "skin_mask_sha256": "492ef33a816d9d41a5ec67e7765eba0559fc2b5e899743052c0bac17189cafaa",
+        "available_pixels": 268954,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_22_EAFA2",
+        "image_sha256": "024f32bc1340140b06a4a4f7438e327fa060b627f2f6085c6d2b1d6de9d1f27d",
+        "skin_mask_sha256": "8835203857cc677b542564f09126bf8434734e2fcfab2bc37a417ef7533741d6",
+        "available_pixels": 456989,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_22_EAFA3",
+        "image_sha256": "a33c7de56951069f9ad981bdd245465476c6e160f4b9c652511c69694e35c177",
+        "skin_mask_sha256": "dee8384613641038ca193624f04a511222f52e4c91228bcf38f5cea85111b872",
+        "available_pixels": 458208,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_22_EAFA6",
+        "image_sha256": "3fad65ca35fcda4da782b54e3f07bea415c1a7c8d7d2ce6fdb21f7d03fe92e30",
+        "skin_mask_sha256": "bd0ef67a553c77558628f67675bd5abf1e21d489fe93215bec09c0aec6fe5ce0",
+        "available_pixels": 442317,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_22_EAFA7",
+        "image_sha256": "deff722168f60f0ed4566e89c98441fb8df9f0afb24e809d2a337db96353d417",
+        "skin_mask_sha256": "e148cffc342d7329b368b151eabf64ac47c2488be8d4b03ebbf5be7de6397754",
+        "available_pixels": 396999,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_22_EAFA8",
+        "image_sha256": "5ecf1de073869f66cfd16918d37280639ebd67d947035e4a3f159cd9ba04dfb6",
+        "skin_mask_sha256": "82c070c361abb4cb45a89337756b21d820f6742952a1a0615e807a4ca4fe394d",
+        "available_pixels": 451600,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_23_EAFA2",
+        "image_sha256": "e717ce8c134f53829f39fd7fd3a6b1685a04d75a29bc1da3ceefd501d441ad53",
+        "skin_mask_sha256": "e20e800c528f6314cd9c84cb9de3d17e866810daba5cabb58c1554ff21be597a",
+        "available_pixels": 396490,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_23_EAFA3",
+        "image_sha256": "97bec57cd1d2ba059730369953bea7549310b57c1558e1a299b20436e22b14a2",
+        "skin_mask_sha256": "9c404d5358d1709cf28e6a558fc4eaaf8739d791c44d80da86368c23129c1868",
+        "available_pixels": 406307,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_23_EAFA6",
+        "image_sha256": "c018b2ecda48e7a6f3f872c454a00a5a45f509cf86329ca63c1eecc7a965afd2",
+        "skin_mask_sha256": "ba397c8d51585286899136f2dd2f61eed3d1893f4fedb8d23203548a42c71bdf",
+        "available_pixels": 430957,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_23_EAFA7",
+        "image_sha256": "288c9dc55b741cace0049cc1d8f1dec22824ab6ccad56f781600a7014c7080c3",
+        "skin_mask_sha256": "43d75863b499a7472fc627260b55877cb8d65f13a2fd6f9a377a7aa850eee5fc",
+        "available_pixels": 251000,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_23_EAFA8",
+        "image_sha256": "8dcb6e360244eb8c84d6f6ec7341810317a76614c7a502fbf48cc25b1ae6ec8b",
+        "skin_mask_sha256": "2455ebbcf3798bbcb97636c71314abcf5ac88f2ed7d091e2e83129641f78f809",
+        "available_pixels": 275126,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_27_SEAFA2",
+        "image_sha256": "88f8901ef3fc526fd3aaa7739335c99c15d4c40312da06850904ebd942dacfdf",
+        "skin_mask_sha256": "1a8b05b08ea56d93469ddfe5636b213c6068c622786280140b7796d33861e0ad",
+        "available_pixels": 282358,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_27_SEAFA3",
+        "image_sha256": "423d2accdc1fdc5f48bd742a282f40a554d187780e3c4b7f6120a7207d33b389",
+        "skin_mask_sha256": "7bd0f1c030cf2e150211b0b0187645f75ab7904ab910c65a14531e70e4cc2f94",
+        "available_pixels": 304927,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_27_SEAFA6",
+        "image_sha256": "d38f43cb4184e2adc8bdfe7937c6e09e28216fc77b86e505c21fb2ca89c0c6dd",
+        "skin_mask_sha256": "6ba60ea43a4e88400506aad044f35697c10614e47c96956c0230cbcc221d1801",
+        "available_pixels": 302244,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_27_SEAFA7",
+        "image_sha256": "216dfd55de2d2478caa7ae533c199931dfd1bc7766e55d4787081adaf491cd2a",
+        "skin_mask_sha256": "df78c854c2e7cf7bb188b4696ffa59b50eb8eb2eb0b2ae5800f261e63cbe3ba7",
+        "available_pixels": 44713,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_27_SEAFA8",
+        "image_sha256": "082693b7079d0873cde769ade2046211dcfab677122b7db6c01b0cd1db2815ed",
+        "skin_mask_sha256": "4aff523b46ca7ad24d5033d29daeb64bbc086bfb9015615745d092ba22098183",
+        "available_pixels": 36182,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_2_EAMA2",
+        "image_sha256": "1612990b2d0dde150d6cabaa20917e66b2c3895ce7ccaeeb92beace945aeb893",
+        "skin_mask_sha256": "becc8007fc7acd237b93872dfd8069346f92527b7086dfe43c4bb1b8da436f36",
+        "available_pixels": 339170,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_2_EAMA3",
+        "image_sha256": "4753f3a6ba129952dcfca837a805c67437eb6a7b3e29e1d65db1423d56a58958",
+        "skin_mask_sha256": "b853ea3d2949ad08e133367b54eb9f61637aef15a98e320eee69f6cfdd75c3e1",
+        "available_pixels": 344974,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_2_EAMA6",
+        "image_sha256": "cbc6ad1ed0be60d4ebd02913987f0e4b72c7bebac850bb671448abf5958436ca",
+        "skin_mask_sha256": "52c593e8833540d6d017000f787310a13a713b896bf11812e1ab61a173743132",
+        "available_pixels": 355371,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_2_EAMA7",
+        "image_sha256": "4044da37289a535d62f0d50fd7e228416ac3e229687694ec23ca099a49b25a02",
+        "skin_mask_sha256": "c93e3b2ee358d075d4c5081fb72b612e3095bcd96133d72d5739277c296444f2",
+        "available_pixels": 323840,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_2_EAMA8",
+        "image_sha256": "782c397c844b6f65888e6968cd9e411150f0f5a1d259cc96a0f33f2e240ff08f",
+        "skin_mask_sha256": "94193a878897231df3c17eeb51518881d9266926c4d5fa4ff807b8087915f800",
+        "available_pixels": 295255,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_2_SEAMA2",
+        "image_sha256": "d045f3e4fdfa4037dae4d9d59cc10fb52dc26cf0c45b645c84b587ed18206815",
+        "skin_mask_sha256": "c43ab4d85237c7b37e9c401e272b4c6a9830862c0056120525aeaef53ab19be8",
+        "available_pixels": 405265,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_2_SEAMA3",
+        "image_sha256": "3f518fba9f6b25304b980e1188fb7aacce8b86f2d0b5776616fd9d3b7769d3f2",
+        "skin_mask_sha256": "fe39d0dc5c3fb07decf98e139b7aac5252a34c033bf51d00729f44173d3f023a",
+        "available_pixels": 421344,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_2_SEAMA6",
+        "image_sha256": "0ac4d0d6cb01d5cbaba9bd6a4c45723e177b5795b47475f121b6dd79b7e7e94d",
+        "skin_mask_sha256": "8f55d728859ac81fd8a6a2c0068f055a8bd80a545714d7831825ae8f20979367",
+        "available_pixels": 422319,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_2_SEAMA7",
+        "image_sha256": "817e786b56b8d308ae59f87be8f370ceb12fb6cd217e6398ab772c901e54f0c0",
+        "skin_mask_sha256": "9e0f9ff9c2b357c2485268a5ac580e042420bcc61fe5d8a36b49cc844e119f25",
+        "available_pixels": 420462,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_2_SEAMA8",
+        "image_sha256": "7df3ab0896a73f0dd5f17c4c98f728f8e00a0a6f5f0fd8a536c273daed0be4a3",
+        "skin_mask_sha256": "eb70769bdb0988d73847a52b7527e4cceb241dc1dcfd1e2e6f36b819d5301c84",
+        "available_pixels": 375668,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_3_EAMA2",
+        "image_sha256": "1b1d9acc8c1739fb8b1985d308d9ae1a421d2c25cb848956007582962d784f25",
+        "skin_mask_sha256": "4a434488a1b348aa95c8733d24f6e7afe13f1d887ace747015c9e68daa5b73da",
+        "available_pixels": 301984,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_3_EAMA3",
+        "image_sha256": "7edd755fcef99982312d44edfecbe6d280b922912dcf8a499458a3fdcb0e8f30",
+        "skin_mask_sha256": "d9b9ad42e763e478bd3b729a5a51b77a074796f6251f3241e260f5dd4a551586",
+        "available_pixels": 308466,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_3_EAMA6",
+        "image_sha256": "b0ee4a2f94e723bab8c9e9d6d5dfd44601cb43536b9fec06e802231c0b7e0be5",
+        "skin_mask_sha256": "e8bfe5b2f33fe7eae3f4b91bb3618d38fd97b8a7cfc71fecc31259e92ed406f9",
+        "available_pixels": 324216,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_3_EAMA7",
+        "image_sha256": "e166469bf468a67b83faf36704759f45b50c9febea0cb004c69ac3e3188c7e51",
+        "skin_mask_sha256": "b369b04fcfc2aa027a9ab25dfe7c840f9a9615994fa079d51faa14afbe49eea9",
+        "available_pixels": 217094,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_3_EAMA8",
+        "image_sha256": "52280c7e7886916ae55d1caea46e13c0a1508a7cd686bc6dede23083ca8f6888",
+        "skin_mask_sha256": "7bcad37cc24743a311caecc76255cf780adf57944d50c25f1e4ce5aa9fcd0387",
+        "available_pixels": 254065,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_4_SEAFA2",
+        "image_sha256": "11f3e488f28b0ab900052687654086e5bf755f4df8d19110b858a7fa81e592b7",
+        "skin_mask_sha256": "4e560f9a1acd729d0554932cd81855040bae94c3a0b8da47d51f559ded3335bb",
+        "available_pixels": 447787,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_4_SEAFA3",
+        "image_sha256": "f7c374b6f20f11520cbd156a54ad7a0a23d35ea4a5f41258d8846aecb3210a66",
+        "skin_mask_sha256": "b3c29ca49ecbe7b45a5cfd8fbac9d8dfca9d1764fdd3a5771f05c693bfa16c7e",
+        "available_pixels": 421674,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_4_SEAFA6",
+        "image_sha256": "f51daf3cdb8f20f9aa2571039f53dc99e07b137ffa942ac3201103716c86029c",
+        "skin_mask_sha256": "39591a22d472a2768d21f21a2aba1b99ba5667a15e889fc26208d13174b398c5",
+        "available_pixels": 416022,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_4_SEAFA7",
+        "image_sha256": "e569a356f7fe1579b2c066268c3de508a7a6897affdc3da1d7316d36fea7db43",
+        "skin_mask_sha256": "ed1a3e335eb8fd79b1daa31199b3de7eb6802ccfd4beddb1f67b584b5e01246f",
+        "available_pixels": 282927,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_4_SEAFA8",
+        "image_sha256": "2a9c6c04479c326657d6b08ce277b7dc3660662d15ff1f033643750cc99c3f1d",
+        "skin_mask_sha256": "1123953834454b7bd3d5032dcddaaeec9afd3f5b5bc9950b0d8c6d0ce5db5525",
+        "available_pixels": 273439,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_4_SEAMA2",
+        "image_sha256": "f9dc66d98eb1cf9c2aff03cc105e07bc995ea1c578d61251431a50ded4f2f824",
+        "skin_mask_sha256": "76bd1355ba53b237bb7b8e07e2c42fddd0826629f2c2e8fdc3897ad54ea99e1b",
+        "available_pixels": 316546,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_4_SEAMA3",
+        "image_sha256": "cabd88bd503c1424bdc189148a22d230663c126262c145c46db9002570802b1a",
+        "skin_mask_sha256": "e329a7296c6932679ce392941a2cfc26992fe838369912f0a5289a502505a106",
+        "available_pixels": 324815,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_4_SEAMA6",
+        "image_sha256": "fe97d5a74caac322970eeae5d7b7a7c06cdc433685cca481f7c17455f7255b40",
+        "skin_mask_sha256": "26e2aa1c3212920906c3fb54b634a717980ea14a667f6a4249f7ce682503211b",
+        "available_pixels": 334621,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_4_SEAMA7",
+        "image_sha256": "1bfdf0809282440ac24b3052a477116f7d685c155f0abe580ab796378b2a57b3",
+        "skin_mask_sha256": "5ac257177c96bb2ce73a2ed1a4310383f7f0810722a554c6eb52f9c9867fade5",
+        "available_pixels": 319980,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_4_SEAMA8",
+        "image_sha256": "8b1f6fd357f096ee837bd10cdab994a0b3828e3deeb1f01eba208d196c0df719",
+        "skin_mask_sha256": "aaecd0d5569c27a2fc4997858404313a8d019c417bdb349b545d5127e3f37579",
+        "available_pixels": 244534,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_5_EAMA2",
+        "image_sha256": "791ffbeb5730ce9e74286f4ef75b143d3b4d32136e0091bbb4b787fbf42f18a1",
+        "skin_mask_sha256": "09a4005f23b02563bfca3c84eaf7a59804f1f6a38626d05275b2cb1484afa49a",
+        "available_pixels": 433684,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_5_EAMA3",
+        "image_sha256": "b1bfd3c366b9c74e11b894ed45f81a767aba563071d915c69bf3608ba6dd4663",
+        "skin_mask_sha256": "98fd14e9153448e7470b2a5410438d462ffdfb76ce42b35347f810d4908ac126",
+        "available_pixels": 459966,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_5_EAMA6",
+        "image_sha256": "602450af6de8b24c97c5879ceb85caaa9ac080114adbfce646c2f75ab40444d8",
+        "skin_mask_sha256": "98efe390b43e29390ee912b6a1a1bb1fc45051b261757189709638e0450d7a40",
+        "available_pixels": 448749,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_5_EAMA7",
+        "image_sha256": "2f92429813a42e87d31536906b5b0816e6da707d920cb5100ee95b0497cbf1a2",
+        "skin_mask_sha256": "dd76d6420180f06640dd639f0f94623feb2ac5e0b7fcce2a7484506e613e2fe3",
+        "available_pixels": 282909,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_5_EAMA8",
+        "image_sha256": "f172ea5078f9e58374a87f9e6d7c8a294e6230c914b9bc44e611dc4653e55775",
+        "skin_mask_sha256": "5cfd399cd993ab756042b622cf04c11f8ca44dd2c8a673895380ecd92a07b45e",
+        "available_pixels": 240168,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_6_SEAFA2",
+        "image_sha256": "d89ec48f8ca3032573ecd1f08c10acba702ede27d00ba1c1c7d9f4f0b5e63c9a",
+        "skin_mask_sha256": "404c15ae15726ae0e1410da7b525418b36917a74a98d600139524659a93888d1",
+        "available_pixels": 612872,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_6_SEAFA3",
+        "image_sha256": "82ca75ead82e96240f8fc87fd53306f57f39adde3b601a4b5d94f0d6004f531b",
+        "skin_mask_sha256": "be398205115eac124a10884942afda06f117ddf4b45af268f5ef3b6ad5a1a9ec",
+        "available_pixels": 634617,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_6_SEAFA6",
+        "image_sha256": "14c91555aecc08754d11af468631d9af443dead6b513375e7546cdb5e2d50f6e",
+        "skin_mask_sha256": "ff819881f7b2c06110c422d323cd36b81d1e1251080cb7d599f6d4b4bef437b5",
+        "available_pixels": 628377,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_6_SEAFA7",
+        "image_sha256": "cf74ea6080093caa07786a59ae5d599aefd280c5706a65589b0651f4add14b95",
+        "skin_mask_sha256": "2fa1d43498eeadfed5ec50c556410adee7c2b713106e2135028b1ae1ff24a934",
+        "available_pixels": 357878,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_6_SEAFA8",
+        "image_sha256": "659a17f3c478aaf8c48937f106f1ebbabf88c23dcf51f33cffd13d4fefb5a083",
+        "skin_mask_sha256": "2034484f4a23e236d0db25a6341041080bc53fc65e85a4a2a4a5ef2ed9dc64fa",
+        "available_pixels": 323811,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_7_AFA2",
+        "image_sha256": "2465cc82f1a1c8714a64717750861e9854e3e0d898bc0f523d557b29e0d09263",
+        "skin_mask_sha256": "67d2958f4915b508d0283359fe1d414d03a41f1c1a983fecd9d4dca0257405fb",
+        "available_pixels": 281433,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_7_AFA3",
+        "image_sha256": "5675ca7508d3648c00a0a8fb4b7831c45f8b9d5df0ccb921a4764ebf41b3c49e",
+        "skin_mask_sha256": "285285c1ffb825bff0970aa91b5fe6416ef5371a27ed14defead73c5fd484f23",
+        "available_pixels": 290734,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_7_AFA6",
+        "image_sha256": "5caacf65711e330dde1b8aa51a170521a9beed3cda4e9b872110c28ea6293b5b",
+        "skin_mask_sha256": "6ee33788aba6448be23bde27a4a6a7f6a4c2956454f6e1264968271cc66dd424",
+        "available_pixels": 293997,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_7_AFA7",
+        "image_sha256": "2cfe48e077a7ac53188df110e52e5224a305731377045d622429a88a49852b37",
+        "skin_mask_sha256": "cfe197b396d0ab70b64c1e7dd7208e456cb0f1fdc0952d38005024f694460f8a",
+        "available_pixels": 126919,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_7_AFA8",
+        "image_sha256": "32fab5458126e9f50255a9e6f22f8c8ce2740e7d53568aa4cc0cc3af81937846",
+        "skin_mask_sha256": "11bc1bbf43eb571a8067a93fdd135c4c49de7997f2f8af849fe43adc61322fab",
+        "available_pixels": 49936,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_7_SEAMA2",
+        "image_sha256": "7c07d3fea8b59434af4bd6c80fb09e469cbffd07e1ed62034c7f867b4bebf26d",
+        "skin_mask_sha256": "9c00fe8c1179b2515a3950fd0ddb0254cc5400461ad9d2df3c7de17149b94cd4",
+        "available_pixels": 343262,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_7_SEAMA3",
+        "image_sha256": "548de2c6b1653d49e01f5cce70d199f781f2eadef1bd8f927953ffbdbb190bcf",
+        "skin_mask_sha256": "a9f0c57a304bb8bfef35b08c553598cf3cde35bfbb3199364e8a2ce404166ad7",
+        "available_pixels": 355082,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_7_SEAMA6",
+        "image_sha256": "d38c1a40ffd0b5e6fa7e9f2193e5e5e79ff2d69961828d4c54a9decef302944d",
+        "skin_mask_sha256": "66e0aec579108049ba93fec8e68c85a98594b813eb26148a3b458b1a81693df2",
+        "available_pixels": 349613,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_7_SEAMA7",
+        "image_sha256": "0c17bad2fe5ed9fb6130645beb448cbc5ae55e989113cc23f9dcfb4920b4f92f",
+        "skin_mask_sha256": "f935321b83b29dc3ba84d52e972ed2794a7e70864251e0d1bde91f50f94118bb",
+        "available_pixels": 193637,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_7_SEAMA8",
+        "image_sha256": "2a0dba9d155510a6ea047cf36769c19be8a204b2edcda3ace687bf2205532e35",
+        "skin_mask_sha256": "a1558c52f46d66a3d76ad7a9f903f1c5fa3addb83a6daaaafba54593393acbf9",
+        "available_pixels": 238543,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_8_EAFA2",
+        "image_sha256": "c4d185ccc1d81286714c6e0517ee07cb1aaa0c33bf1eb59d8e8a10286cbd442f",
+        "skin_mask_sha256": "edc73209cdd36f1477eacdab458a78908a91798d320de68521477302a0f694ed",
+        "available_pixels": 397370,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_8_EAFA3",
+        "image_sha256": "dbed0e47b0ed5f235af7d1671e837ba8f57e19a2a2c79348962ebde86fd21198",
+        "skin_mask_sha256": "3ac0df89205c02f22bf57fcc513f9846bbe13943533f008340502022f5b8a9f0",
+        "available_pixels": 394533,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_8_EAFA6",
+        "image_sha256": "041b7ef6b13154109743e19fdb40009f1ba32ca828bb5169464ae124cdd83ba9",
+        "skin_mask_sha256": "0c7c0eea73ed42b8440b8f334f14169b21fae88b784e8929fb3e2a896ba7f5ac",
+        "available_pixels": 366065,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_8_EAFA7",
+        "image_sha256": "fcc5877c8933e6bba93e1c73bd9b2c02a7fadae488655b55943ecaca2a2db777",
+        "skin_mask_sha256": "f6fb9368bfdb92c57d18344fa1a2889e17ff6ce67acbe4857a5da77b20759eac",
+        "available_pixels": 242015,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_8_EAFA8",
+        "image_sha256": "4032af8266481379846331c23b72ea16bceec958e6a8ef23834d36c57f44f370",
+        "skin_mask_sha256": "528f0bca8a1b282c21c8854120fd2927a6fc6c240a28662c90498ee6026675a1",
+        "available_pixels": 205134,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_9_AMA2",
+        "image_sha256": "8cf9812955a82d4e7dbb5e53b416c61da13be7ce854024bda9f3f83784591b5d",
+        "skin_mask_sha256": "060fc1ba0828a7951077a242f1a252ca3fbd9953be21198be9de274b0e168a39",
+        "available_pixels": 472850,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_9_AMA3",
+        "image_sha256": "a465d918bbe9f352c1030b0a2b45bf8de36911b2c5b20a22cfdd1a4faaa7e503",
+        "skin_mask_sha256": "b4defd1559021a78f74f4b2a4d924db39b62b5ead2bea522345cad1df7c25047",
+        "available_pixels": 482139,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_9_AMA6",
+        "image_sha256": "2dba1480a067616f6e6e64c3554128fa7a7a3d7a8ebec2f92b0ae76b8775c930",
+        "skin_mask_sha256": "4b910d08e6bfc1362461427941d4e017a87afd0066c1a69d262de8b2c3b0a27d",
+        "available_pixels": 484458,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_9_AMA7",
+        "image_sha256": "d830e13b909ebe3630453f65aa465bd86901094643b7604c215ec22deaf8e908",
+        "skin_mask_sha256": "78b0a34c50d2b63f7d26bbd25316faeabdea6b8c7cfa78673ceed65ccab8980a",
+        "available_pixels": 490644,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_9_AMA8",
+        "image_sha256": "20073a8f0b1951e205c4feaf17620aac58229ad586e2648aa2b727d1c2c4c736",
+        "skin_mask_sha256": "499080562a926d603c3bd58868b496a9e6b49236d2a690587b910163ecc2ed60",
+        "available_pixels": 548491,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_9_EAMA2",
+        "image_sha256": "aa52074842a935cde04b7881fee5b1e6b16bcb07ff606afe85c9fccb1919f0a8",
+        "skin_mask_sha256": "299b05ee9c67d46a7e0bec5fdf089472f9682c712b1f162d1197f83ea0cefa82",
+        "available_pixels": 307851,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_9_EAMA3",
+        "image_sha256": "1ed501ee2a61796967785b1e3ffe629c0e8bad7278d20e714183a3abe0ee9b9b",
+        "skin_mask_sha256": "ad49981dcfa56408f55ba47b59f573486f46d95adfab0bc37ceb47d2cad3d48b",
+        "available_pixels": 313196,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_9_EAMA6",
+        "image_sha256": "0693b79fe79a01a053ff5424ba20bb2542ff7bc0591899bec4a750f8e39a7aae",
+        "skin_mask_sha256": "0a1cc73a7bd82f9f9a0f36b8b228e5ee0515f659de8540979f8e82c0d71d20c6",
+        "available_pixels": 309502,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_9_EAMA7",
+        "image_sha256": "bbce5afe65499bb545820addd985ccf3c85b688b8425a32f4e524785c3f3373d",
+        "skin_mask_sha256": "8bfd8d8c7fe922b5249ad53f6c65efd987bc20e6610b9919bf0cfa973ddd9785",
+        "available_pixels": 396182,
+        "sampled_pixels": 2000,
+        "skin_status": "complete",
+        "identity_status": "verified"
+      },
+      {
+        "image_id": "hfd_9_EAMA8",
+        "image_sha256": "0a481fc7ad976d3399ed959124f56c4346cdf967afafe36c9b1d5aa2d19fafe5",
+        "skin_mask_sha256": "e4d0f9f9c9a25f112fd318eacc551b7afa88422a2bced9bd465d0aeb71240934",
+        "available_pixels": 314930,
         "sampled_pixels": 2000,
         "skin_status": "complete",
         "identity_status": "verified"
@@ -271,5 +1117,5 @@
     ],
     "skipped": []
   },
-  "model_revision": "skin-ba3957b66e4eb101"
+  "model_revision": "skin-afa4f917e675769e"
 }

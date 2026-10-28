@@ -1,0 +1,31 @@
+{
+  "reviewer": "codex_visual_review",
+  "image_ids": [
+    "bsds_105027",
+    "bsds_100098",
+    "bsds_41085",
+    "bsds_196015",
+    "bsds_65132",
+    "bsds_49024",
+    "bsds_97033",
+    "bsds_27059",
+    "bsds_306051",
+    "bsds_197017",
+    "bsds_28083",
+    "bsds_326038",
+    "bsds_182053",
+    "bsds_16052",
+    "bsds_108069",
+    "bsds_35028",
+    "bsds_42044",
+    "bsds_130026",
+    "bsds_335094",
+    "bsds_123074"
+  ],
+  "reference_sheets": [
+    "artifacts/hawaii_review/backgrounds_00.png",
+    "artifacts/hawaii_review/backgrounds_20.png"
+  ],
+  "decision": "Selected only photos with no visible person or human skin. Animal faces are background for human face detection.",
+  "scope": "No ethnicity label applies to images with no people; never used as positive skin-training data"
+}

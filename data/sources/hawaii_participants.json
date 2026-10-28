@@ -1,0 +1,247 @@
+{
+  "source_url": "https://osf.io/download/njaut/",
+  "sha256": "a535806d6ca4ad56df6aee5ebba50ab9fbaf43d1362be0c54446900c7f2259e2",
+  "identity_basis": "Author filename unique photo number + race/gender/age code; five expression/profile variants grouped. Author categories only, no visual ethnicity inference.",
+  "participants": [
+    {
+      "participant_code": "AFA_007",
+      "neutral_filename": "7_AFA6.jpg",
+      "researcher_categorized_race": "Asian",
+      "self_reported_race": "Chinese, Vietnamese"
+    },
+    {
+      "participant_code": "AFA_010",
+      "neutral_filename": "10_AFA6.jpg",
+      "researcher_categorized_race": "Asian",
+      "self_reported_race": "Japanese, Filipino"
+    },
+    {
+      "participant_code": "AFA_012",
+      "neutral_filename": "12_AFA6.jpg",
+      "researcher_categorized_race": "Asian",
+      "self_reported_race": "Asian "
+    },
+    {
+      "participant_code": "AFA_013",
+      "neutral_filename": "13_AFA6.jpg",
+      "researcher_categorized_race": "Asian",
+      "self_reported_race": "Asian "
+    },
+    {
+      "participant_code": "AFA_015",
+      "neutral_filename": "15_AFA6.jpg",
+      "researcher_categorized_race": "Asian",
+      "self_reported_race": "Asian"
+    },
+    {
+      "participant_code": "AMA_001",
+      "neutral_filename": "1_AMA6.jpg",
+      "researcher_categorized_race": "Asian",
+      "self_reported_race": "Filipino, Chinese"
+    },
+    {
+      "participant_code": "AMA_009",
+      "neutral_filename": "9_AMA6.jpg",
+      "researcher_categorized_race": "Asian",
+      "self_reported_race": "Asian"
+    },
+    {
+      "participant_code": "AMA_018",
+      "neutral_filename": "18_AMA6.jpg",
+      "researcher_categorized_race": "Asian",
+      "self_reported_race": "Filipino, Chinese"
+    },
+    {
+      "participant_code": "EAFA_001",
+      "neutral_filename": "1_EAFA6.jpg",
+      "researcher_categorized_race": "East Asian",
+      "self_reported_race": "Taiwanese (Chinese)"
+    },
+    {
+      "participant_code": "EAFA_003",
+      "neutral_filename": "3_EAFA6.jpg",
+      "researcher_categorized_race": "East Asian",
+      "self_reported_race": "Japanese American"
+    },
+    {
+      "participant_code": "EAFA_006",
+      "neutral_filename": "6_EAFA6.jpg",
+      "researcher_categorized_race": "East Asian",
+      "self_reported_race": "Chinese"
+    },
+    {
+      "participant_code": "EAFA_008",
+      "neutral_filename": "8_EAFA6.jpg",
+      "researcher_categorized_race": "East Asian",
+      "self_reported_race": "Korean, Japanese"
+    },
+    {
+      "participant_code": "EAFA_010",
+      "neutral_filename": "10_EAFA6.jpg",
+      "researcher_categorized_race": "East Asian",
+      "self_reported_race": "Chinese"
+    },
+    {
+      "participant_code": "EAFA_011",
+      "neutral_filename": "11_EAFA6.jpg",
+      "researcher_categorized_race": "East Asian",
+      "self_reported_race": "Japanese"
+    },
+    {
+      "participant_code": "EAFA_016",
+      "neutral_filename": "16_EAFA6.jpg",
+      "researcher_categorized_race": "East Asian",
+      "self_reported_race": "Japanese"
+    },
+    {
+      "participant_code": "EAFA_020",
+      "neutral_filename": "20_EAFA6.jpg",
+      "researcher_categorized_race": "East Asian",
+      "self_reported_race": "Chinese"
+    },
+    {
+      "participant_code": "EAFA_022",
+      "neutral_filename": "22_EAFA6.jpg",
+      "researcher_categorized_race": "East Asian",
+      "self_reported_race": "Chinese"
+    },
+    {
+      "participant_code": "EAFA_023",
+      "neutral_filename": "23_EAFA6.jpg",
+      "researcher_categorized_race": "East Asian",
+      "self_reported_race": "Japanese"
+    },
+    {
+      "participant_code": "EAMA_002",
+      "neutral_filename": "2_EAMA6.jpg",
+      "researcher_categorized_race": "East Asian",
+      "self_reported_race": "Japanese"
+    },
+    {
+      "participant_code": "EAMA_003",
+      "neutral_filename": "3_EAMA6.jpg",
+      "researcher_categorized_race": "East Asian",
+      "self_reported_race": "Chinese"
+    },
+    {
+      "participant_code": "EAMA_005",
+      "neutral_filename": "5_EAMA6.jpg",
+      "researcher_categorized_race": "East Asian",
+      "self_reported_race": "Japanese"
+    },
+    {
+      "participant_code": "EAMA_007",
+      "neutral_filename": "7_EAMA6.jpg",
+      "researcher_categorized_race": "East Asian",
+      "self_reported_race": "Japanese"
+    },
+    {
+      "participant_code": "EAMA_009",
+      "neutral_filename": "9_EAMA6.jpg",
+      "researcher_categorized_race": "East Asian",
+      "self_reported_race": "Chinese"
+    },
+    {
+      "participant_code": "EAMA_012",
+      "neutral_filename": "12_EAMA6.jpg",
+      "researcher_categorized_race": "East Asian",
+      "self_reported_race": "Asian (Chinese)"
+    },
+    {
+      "participant_code": "EAMA_015",
+      "neutral_filename": "15_EAMA6.jpg",
+      "researcher_categorized_race": "East Asian",
+      "self_reported_race": "Chinese"
+    },
+    {
+      "participant_code": "SEAFA_001",
+      "neutral_filename": "1_SEAFA6.jpg",
+      "researcher_categorized_race": "Southeast Asian",
+      "self_reported_race": "Filipino"
+    },
+    {
+      "participant_code": "SEAFA_004",
+      "neutral_filename": "4_SEAFA6.jpg",
+      "researcher_categorized_race": "Southeast Asian",
+      "self_reported_race": "Filipino"
+    },
+    {
+      "participant_code": "SEAFA_006",
+      "neutral_filename": "6_SEAFA6.jpg",
+      "researcher_categorized_race": "Southeast Asian",
+      "self_reported_race": "Filipino"
+    },
+    {
+      "participant_code": "SEAFA_007",
+      "neutral_filename": "7_SEAFA6.jpg",
+      "researcher_categorized_race": "Southeast Asian",
+      "self_reported_race": "Thai"
+    },
+    {
+      "participant_code": "SEAFA_017",
+      "neutral_filename": "17_SEAFA6.jpg",
+      "researcher_categorized_race": "Southeast Asian",
+      "self_reported_race": "Filipino"
+    },
+    {
+      "participant_code": "SEAFA_020",
+      "neutral_filename": "20_SEAFA6.jpg",
+      "researcher_categorized_race": "Southeast Asian",
+      "self_reported_race": "Filipino"
+    },
+    {
+      "participant_code": "SEAFA_021",
+      "neutral_filename": "21_SEAFA6.jpg",
+      "researcher_categorized_race": "Southeast Asian",
+      "self_reported_race": "Filipino"
+    },
+    {
+      "participant_code": "SEAFA_025",
+      "neutral_filename": "25_SEAFA6.jpg",
+      "researcher_categorized_race": "Southeast Asian",
+      "self_reported_race": "Filipino"
+    },
+    {
+      "participant_code": "SEAFA_026",
+      "neutral_filename": "26_SEAFA6.jpg",
+      "researcher_categorized_race": "Southeast Asian",
+      "self_reported_race": "Filipino"
+    },
+    {
+      "participant_code": "SEAFA_027",
+      "neutral_filename": "27_SEAFA6.jpg",
+      "researcher_categorized_race": "Southeast Asian",
+      "self_reported_race": "Filipino"
+    },
+    {
+      "participant_code": "SEAFA_028",
+      "neutral_filename": "28_SEAFA6.jpg",
+      "researcher_categorized_race": "Southeast Asian",
+      "self_reported_race": "Filipino"
+    },
+    {
+      "participant_code": "SEAMA_001",
+      "neutral_filename": "1_SEAMA6.jpg",
+      "researcher_categorized_race": "Southeast Asian",
+      "self_reported_race": "Filipino"
+    },
+    {
+      "participant_code": "SEAMA_002",
+      "neutral_filename": "2_SEAMA6.jpg",
+      "researcher_categorized_race": "Southeast Asian",
+      "self_reported_race": "Filipino"
+    },
+    {
+      "participant_code": "SEAMA_004",
+      "neutral_filename": "4_SEAMA6.jpg",
+      "researcher_categorized_race": "Southeast Asian",
+      "self_reported_race": "Filipino"
+    },
+    {
+      "participant_code": "SEAMA_007",
+      "neutral_filename": "7_SEAMA6.jpg",
+      "researcher_categorized_race": "Southeast Asian",
+      "self_reported_race": "Filipino"
+    }
+  ]
+}

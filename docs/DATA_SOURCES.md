@@ -1,38 +1,40 @@
-# 数据来源与使用范围
+# 数据来源与使用边界
 
-更新日期：2026 年 10 月 28 日。本项目当前唯一数据来源为 RADIATE 官方发布的彩色照片子集，所有训练、验证、测试均使用该子集。
+核验日期：2026-10-28。正式清单只有 `data/manifest.csv`，共 220 张原始照片：200 张 HFD 人像、20 张无人物背景。所有含人的正式样本均来自作者明确分类为 Asian、East Asian、Southeast Asian 的目录及元数据。项目不根据外貌判断族群，不训练族群识别器。
 
-## 来源与下载
+## Hawai‘i Face Database：40 人、200 张
 
-- [作者论文：The Racially Diverse Affective Expression Face Stimulus Set](https://pmc.ncbi.nlm.nih.gov/articles/PMC6446554/)。
-- [官方发布页及使用条件：ABCD Study fMRI Tasks and Tools](https://abcdstudy.org/scientists/abcd-fmri-tasks-and-tools/)。
-- [官方 RADIATE JPEGS 1 文件](https://abcdstudy.org/newsletter/fMRI_files/RADIATE_JPEGS1.zip)。
+- [作者实验室](https://www.diversitysocialcoglab.com/resources)、[作者 OSF](https://osf.io/fkn7y/)、[论文](https://doi.org/10.1080/15298868.2024.2417664)。作者提供参与者自报与分类信息。
+- 只选择 Asian faces、East Asian faces、Southeast Asian faces；不使用 Multiracial、Multiracial Asian 等目录。63 位拥有完整五版本的参与者中，按种子 42 固定选择 40 位。
+- 每人五张原始彩照：露齿笑、闭口笑、中性、右侧面、左侧面，作者编号 2、3、6、7、8。侧面并非统一精确转角。
+- 分组依据作者文件命名中的照片编号和参与者编码；所有表情及侧面同组。`hawaii_participants.json` 保存所选匿名编码、作者分类和自报族群原文，记录官方 norming XLSX 的下载地址及 SHA256。原表一项文件名末尾空格在匹配时去除。
+- `hawaii_selection.json` 固定选择范围；`hawaii_downloads.json` 逐图记录 OSF 文件 ID、原始文件名、作者目录、下载地址和 SHA256。200 张原文件均与 OSF 作者发布 SHA256 一致。
+- 作者允许课堂教育、研究刺激及演示/出版物示例刺激用途，其他用途不在授权内。原图不纳入 Git、不由本项目重新公开分发；恢复工具直接访问作者地址。使用者须遵守上述条件。
 
-本项目仅依据作者 AF、AM 目录标签和匿名参与者编号选取 22 个人物组的彩色 NC、HC 照片，共 44 张，每张 1500×1500。不根据外观推断族群，不识别真实身份。作者标签限定了研究子集，不能据此声称覆盖亚洲全部人群。
+引用：Meyers, C., Garay, M. M., & Pauker, K. (2024). Hawai‘i face database: a racially and ethnically diverse set of facial stimuli. Self and Identity. DOI: 10.1080/15298868.2024.2417664。
 
-`data/sources/radiate_downloads.json` 逐图记录官方 ZIP 成员、作者编号、来源链接、原文件 SHA256、尺寸及使用范围。下载器对所选 ZIP 成员使用有界字节请求，校验长度、CRC，并解码检查；恢复已有照片时核对来源 SHA256。当前本地照片已经齐备，不依赖缓存或重试才能运行训练。
+## BSDS500：20 张无人物背景
 
-```powershell
-.\.venv\Scripts\python.exe -m src.training collect-radiate
-```
+- [UC Berkeley 官方资源页](https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/resources.html)、[官方原始包](https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/BSR/BSR_bsds500.tgz)。
+- 逐图查看后保留 20 张未发现人物、人脸或人体皮肤的自然景物、动物和交通物体照片。两层参考均为空。视觉检查不构成对极小不可辨识物体的保证。
+- 没有人物，故无族群标签，也不虚构人物编号。场景组分配为验证/测试各 10 张，不参与肤色拟合。
+- `bsds_downloads.json` 保存官方包 SHA256、精确成员路径和逐图 SHA256；`bsds_visual_review.json` 保存选择和复核范围。
+- 这里采用本项目负样本划分和空参考，并未复用官方边界分割真值；结果不属于 BSDS 官方基准、不与官方榜单比较。版权仍归原权利人，引用官方说明及 Arbelaez 等 TPAMI 2011 论文。
 
-照片用于研究及教育，遵守来源关于不得识别照片中个人的条件。人物原图保留在本地，由 Git 忽略，不重新发布；清单和脚本供有权使用者从官方来源恢复文件。公开发布或改变用途时应重新核对官方条款。
+## 像素参考的来源
 
-## 人物分组与标注
+HFD 没有本项目需要的官方 skin/face 像素真值。本项目用独立 BiSeNet 和 MediaPipe 多类分割初始化，再由 Codex 逐图查看全部 200 张叠加图，修正 12 张中的明显衣物、发饰、背景误标或漏标。没有使用待评估的 YCrCb 结果生成参考。
 
-唯一清单为 `data/manifest.csv`，冻结划分见 `data/split.json`。分组使用作者匿名参与者编号，不使用文件行号、相似度猜测或人脸识别结果。
+这些属于项目辅助参考（silver-standard），未经过独立人工/专家逐像素审核。细边缘、耳朵、饰物、阴影仍有近似误差。指标仅表示与这套参考的一致程度，不能充当官方真值精度；complete 是整图覆盖状态。`annotations/records/hawaii.json`、`annotations/review.json` 保存方法、原图/辅助模型/草稿/最终参考哈希与复核记录。最终压缩参考 PNG 纳入 Git，可以脱离辅助模型重建掩膜。
 
-| 集合 | 人物组 | 照片 |
-| --- | ---: | ---: |
-| train | 13 | 26 |
-| validation | 5 | 10 |
-| test | 4 | 8 |
-| 合计 | 22 | 44 |
+辅助模型只用于标注。训练、肤色分割和基线评估使用传统颜色统计，不调用神经网络。工具来源：[BiSeNet 实现及 MIT 许可证](https://github.com/yakhyo/face-parsing)、[Google 官方分割说明](https://developers.google.com/edge/mediapipe/solutions/vision/image_segmenter)。固定权重 URL 与 SHA256 在 `src/training/public_sources.py` 及标注记录中。
 
-随机种子 42，目标比例 60/20/20，实际数量受整个人物组约束。同一参与者的两张照片不跨集合。跨集合检查同时涵盖解码后完全重复、粗略感知哈希及 RGB 缩略图差异；哈希只用于重复提示，不作为人物身份依据。
+## 场景缺口及排除来源
 
-来源没有提供皮肤或完整面部像素掩膜。当前 44 对掩膜全部由项目自制：Codex 查看 600 像素预览逐图绘制面部折线和皮肤区域，栅格化到原图并检查叠加图。多边形、方法和复核说明位于 `data/annotations/polygons/`。这些是覆盖完整的近似参考标注，未经过独立专家逐像素复核；指标不能表述成官方像素真值基准成绩。
+已覆盖真实单人、表情、左右侧面、不同服装和脸颈相连，另有真实无人物背景。未覆盖作者明确标注亚洲人的真实多人同框、复杂正样本背景、强偏色光照和完整原始手部干扰场景，不用合成拼接或未知族群图冒充。
 
-## 当前覆盖范围
+[SHAPE 作者页](https://users.soict.hust.edu.vn/linhdt/dataset/)与[作者论文](https://doi.org/10.1007/s00521-022-07651-1)是已核验的亚洲参与者手势候选。完整原图需邮件申请；公开网页 16 张手势说明图已单独保存，不能视为独立原始场景，不纳入 220 张、人物计数、训练或正式指标。部分说明图含口罩遮挡的脸，不能统一标无脸。记录为 `shape_examples.json`。
 
-本次数据是 22 位参与者、44 张受控背景单人照片。没有多人场景和无脸负样本，也不能证明复杂背景、强偏色、遮挡或脸颈分离效果。当前数据规模小于早期扩展目标，完成的是此明确子集上的 A 数据与统计模型交付。后续扩展应单独设立未使用人物与场景，保持测试用途清楚。
+HGR 无明确作者族群标签，已排除并删除；所检查的 NCKU 原图是灰度，未进入彩色统计。被替换的小规模旧来源、标注、模型及探索缓存已经删除，没有归档。Git 既有历史未重写。
+
+完整手部数据尚未获得，也未联系作者。具体申请材料见 [剩余数据申请](DATA_ACCESS_REQUEST.md)。

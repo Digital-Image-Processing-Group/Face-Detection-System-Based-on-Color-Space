@@ -2,3 +2,4 @@ numpy>=2.0,<3
 opencv-python>=4.10,<6
 Pillow>=10,<13
 matplotlib>=3.9,<4
+truststore>=0.10,<1

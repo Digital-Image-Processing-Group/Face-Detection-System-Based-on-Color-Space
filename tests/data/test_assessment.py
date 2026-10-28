@@ -53,6 +53,17 @@ class AssessmentTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "Training files changed"):
             self.run_assessment()
 
+    def test_no_face_images_have_separate_image_false_positive_accounting(self):
+        for kind in ('skin','face'):
+            Image.fromarray(np.zeros((24,24),dtype=np.uint8)).save(self.root / getattr(self.rows[-1],f'{kind}_mask_path'))
+        report=self.run_assessment()
+        result=report['no_face']['test']
+        self.assertEqual(result['images'],1)
+        predicted=np.array(Image.open(self.root/'previews/person_3_face_baseline.png'))
+        self.assertEqual(result['nonempty_predictions'],int(predicted.any()))
+        self.assertEqual(result['false_positive_pixels'],int(np.count_nonzero(predicted)))
+        self.assertIsNone(report['summary']['test']['face_baseline']['mean_positive_image_iou'])
+
     def test_training_margin_uses_only_interior(self):
         model, _, _ = fit_model(self.manifest, samples_per_image=1000, mask_margin=2)
         self.assertEqual(model["training_info"]["sampled_pixel_count"], 2 * 12 * 12)

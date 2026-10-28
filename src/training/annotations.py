@@ -1,4 +1,4 @@
-"""Rasterize explicit reviewed polygons; never treat model predictions as GT."""
+"""Rebuild reviewed project references from polygons or lossless packed masks."""
 
 from __future__ import annotations
 
@@ -8,7 +8,25 @@ from pathlib import Path
 import numpy as np
 from PIL import Image, ImageDraw
 
-from .dataset import Record, data_path, read_bgr, read_manifest, write_manifest
+from .dataset import Record, data_path, fingerprint, read_bgr, read_manifest, write_manifest
+
+
+def reference_mask(manifest: Path, spec: dict, shape: tuple[int,int], kind: str) -> np.ndarray:
+    if spec.get('width') != shape[1] or spec.get('height') != shape[0]:
+        raise ValueError('Reference dimensions do not match image')
+    reference=data_path(manifest,spec['reference_path'])
+    if fingerprint(reference) != spec.get('reference_sha256'):
+        raise ValueError('Reference mask SHA256 mismatch')
+    if spec.get('review_status') != 'visually_reviewed':
+        raise ValueError('Unreviewed reference cannot be rasterized as complete')
+    with Image.open(reference) as image:
+        if image.format != 'PNG' or image.mode != 'L' or image.getexif().get(274,1)!=1:
+            raise ValueError('Packed references must be upright grayscale PNG')
+        packed=np.asarray(image)
+    if packed.shape!=shape or not set(np.unique(packed)).issubset({0,1,2,3}):
+        raise ValueError('Invalid packed reference encoding or dimensions')
+    bit={'skin':1,'face':2}[kind]
+    return ((packed & bit)!=0).astype(np.uint8)
 
 
 def polygon_mask(spec: dict, shape: tuple[int, int], kind: str) -> np.ndarray:
@@ -71,7 +89,8 @@ def rasterize(manifest: Path, polygons: Path) -> int:
             status = spec[kind].get("status")
             if status not in allowed:
                 raise ValueError(f"Invalid {kind} status: {row.image_id}")
-            mask = polygon_mask(spec, image.shape[:2], kind)
+            mask = (reference_mask(manifest,spec,image.shape[:2],kind) if 'reference_path' in spec
+                    else polygon_mask(spec, image.shape[:2], kind))
             if kind == "skin" and status == "sampled" and not mask.any():
                 raise ValueError(f"Sampled skin must contain positive pixels: {row.image_id}")
             relative = f"annotations/{kind}/{row.image_id}.png"

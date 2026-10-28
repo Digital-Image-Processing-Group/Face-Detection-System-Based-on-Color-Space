@@ -1,0 +1,364 @@
+{
+  "annotations": [
+    {
+      "image_id": "bsds_105027",
+      "width": 481,
+      "height": 321,
+      "annotator": "codex_visual_review",
+      "review_status": "visually_reviewed",
+      "method": "Source image visually reviewed: no visible person, skin or face; empty reference masks.",
+      "skin": {
+        "status": "complete",
+        "include": [],
+        "exclude": []
+      },
+      "face": {
+        "status": "complete",
+        "include": [],
+        "exclude": []
+      }
+    },
+    {
+      "image_id": "bsds_100098",
+      "width": 481,
+      "height": 321,
+      "annotator": "codex_visual_review",
+      "review_status": "visually_reviewed",
+      "method": "Source image visually reviewed: no visible person, skin or face; empty reference masks.",
+      "skin": {
+        "status": "complete",
+        "include": [],
+        "exclude": []
+      },
+      "face": {
+        "status": "complete",
+        "include": [],
+        "exclude": []
+      }
+    },
+    {
+      "image_id": "bsds_41085",
+      "width": 481,
+      "height": 321,
+      "annotator": "codex_visual_review",
+      "review_status": "visually_reviewed",
+      "method": "Source image visually reviewed: no visible person, skin or face; empty reference masks.",
+      "skin": {
+        "status": "complete",
+        "include": [],
+        "exclude": []
+      },
+      "face": {
+        "status": "complete",
+        "include": [],
+        "exclude": []
+      }
+    },
+    {
+      "image_id": "bsds_196015",
+      "width": 481,
+      "height": 321,
+      "annotator": "codex_visual_review",
+      "review_status": "visually_reviewed",
+      "method": "Source image visually reviewed: no visible person, skin or face; empty reference masks.",
+      "skin": {
+        "status": "complete",
+        "include": [],
+        "exclude": []
+      },
+      "face": {
+        "status": "complete",
+        "include": [],
+        "exclude": []
+      }
+    },
+    {
+      "image_id": "bsds_65132",
+      "width": 481,
+      "height": 321,
+      "annotator": "codex_visual_review",
+      "review_status": "visually_reviewed",
+      "method": "Source image visually reviewed: no visible person, skin or face; empty reference masks.",
+      "skin": {
+        "status": "complete",
+        "include": [],
+        "exclude": []
+      },
+      "face": {
+        "status": "complete",
+        "include": [],
+        "exclude": []
+      }
+    },
+    {
+      "image_id": "bsds_49024",
+      "width": 481,
+      "height": 321,
+      "annotator": "codex_visual_review",
+      "review_status": "visually_reviewed",
+      "method": "Source image visually reviewed: no visible person, skin or face; empty reference masks.",
+      "skin": {
+        "status": "complete",
+        "include": [],
+        "exclude": []
+      },
+      "face": {
+        "status": "complete",
+        "include": [],
+        "exclude": []
+      }
+    },
+    {
+      "image_id": "bsds_97033",
+      "width": 481,
+      "height": 321,
+      "annotator": "codex_visual_review",
+      "review_status": "visually_reviewed",
+      "method": "Source image visually reviewed: no visible person, skin or face; empty reference masks.",
+      "skin": {
+        "status": "complete",
+        "include": [],
+        "exclude": []
+      },
+      "face": {
+        "status": "complete",
+        "include": [],
+        "exclude": []
+      }
+    },
+    {
+      "image_id": "bsds_27059",
+      "width": 321,
+      "height": 481,
+      "annotator": "codex_visual_review",
+      "review_status": "visually_reviewed",
+      "method": "Source image visually reviewed: no visible person, skin or face; empty reference masks.",
+      "skin": {
+        "status": "complete",
+        "include": [],
+        "exclude": []
+      },
+      "face": {
+        "status": "complete",
+        "include": [],
+        "exclude": []
+      }
+    },
+    {
+      "image_id": "bsds_306051",
+      "width": 321,
+      "height": 481,
+      "annotator": "codex_visual_review",
+      "review_status": "visually_reviewed",
+      "method": "Source image visually reviewed: no visible person, skin or face; empty reference masks.",
+      "skin": {
+        "status": "complete",
+        "include": [],
+        "exclude": []
+      },
+      "face": {
+        "status": "complete",
+        "include": [],
+        "exclude": []
+      }
+    },
+    {
+      "image_id": "bsds_197017",
+      "width": 481,
+      "height": 321,
+      "annotator": "codex_visual_review",
+      "review_status": "visually_reviewed",
+      "method": "Source image visually reviewed: no visible person, skin or face; empty reference masks.",
+      "skin": {
+        "status": "complete",
+        "include": [],
+        "exclude": []
+      },
+      "face": {
+        "status": "complete",
+        "include": [],
+        "exclude": []
+      }
+    },
+    {
+      "image_id": "bsds_28083",
+      "width": 481,
+      "height": 321,
+      "annotator": "codex_visual_review",
+      "review_status": "visually_reviewed",
+      "method": "Source image visually reviewed: no visible person, skin or face; empty reference masks.",
+      "skin": {
+        "status": "complete",
+        "include": [],
+        "exclude": []
+      },
+      "face": {
+        "status": "complete",
+        "include": [],
+        "exclude": []
+      }
+    },
+    {
+      "image_id": "bsds_326038",
+      "width": 481,
+      "height": 321,
+      "annotator": "codex_visual_review",
+      "review_status": "visually_reviewed",
+      "method": "Source image visually reviewed: no visible person, skin or face; empty reference masks.",
+      "skin": {
+        "status": "complete",
+        "include": [],
+        "exclude": []
+      },
+      "face": {
+        "status": "complete",
+        "include": [],
+        "exclude": []
+      }
+    },
+    {
+      "image_id": "bsds_182053",
+      "width": 481,
+      "height": 321,
+      "annotator": "codex_visual_review",
+      "review_status": "visually_reviewed",
+      "method": "Source image visually reviewed: no visible person, skin or face; empty reference masks.",
+      "skin": {
+        "status": "complete",
+        "include": [],
+        "exclude": []
+      },
+      "face": {
+        "status": "complete",
+        "include": [],
+        "exclude": []
+      }
+    },
+    {
+      "image_id": "bsds_16052",
+      "width": 481,
+      "height": 321,
+      "annotator": "codex_visual_review",
+      "review_status": "visually_reviewed",
+      "method": "Source image visually reviewed: no visible person, skin or face; empty reference masks.",
+      "skin": {
+        "status": "complete",
+        "include": [],
+        "exclude": []
+      },
+      "face": {
+        "status": "complete",
+        "include": [],
+        "exclude": []
+      }
+    },
+    {
+      "image_id": "bsds_108069",
+      "width": 481,
+      "height": 321,
+      "annotator": "codex_visual_review",
+      "review_status": "visually_reviewed",
+      "method": "Source image visually reviewed: no visible person, skin or face; empty reference masks.",
+      "skin": {
+        "status": "complete",
+        "include": [],
+        "exclude": []
+      },
+      "face": {
+        "status": "complete",
+        "include": [],
+        "exclude": []
+      }
+    },
+    {
+      "image_id": "bsds_35028",
+      "width": 481,
+      "height": 321,
+      "annotator": "codex_visual_review",
+      "review_status": "visually_reviewed",
+      "method": "Source image visually reviewed: no visible person, skin or face; empty reference masks.",
+      "skin": {
+        "status": "complete",
+        "include": [],
+        "exclude": []
+      },
+      "face": {
+        "status": "complete",
+        "include": [],
+        "exclude": []
+      }
+    },
+    {
+      "image_id": "bsds_42044",
+      "width": 481,
+      "height": 321,
+      "annotator": "codex_visual_review",
+      "review_status": "visually_reviewed",
+      "method": "Source image visually reviewed: no visible person, skin or face; empty reference masks.",
+      "skin": {
+        "status": "complete",
+        "include": [],
+        "exclude": []
+      },
+      "face": {
+        "status": "complete",
+        "include": [],
+        "exclude": []
+      }
+    },
+    {
+      "image_id": "bsds_130026",
+      "width": 481,
+      "height": 321,
+      "annotator": "codex_visual_review",
+      "review_status": "visually_reviewed",
+      "method": "Source image visually reviewed: no visible person, skin or face; empty reference masks.",
+      "skin": {
+        "status": "complete",
+        "include": [],
+        "exclude": []
+      },
+      "face": {
+        "status": "complete",
+        "include": [],
+        "exclude": []
+      }
+    },
+    {
+      "image_id": "bsds_335094",
+      "width": 481,
+      "height": 321,
+      "annotator": "codex_visual_review",
+      "review_status": "visually_reviewed",
+      "method": "Source image visually reviewed: no visible person, skin or face; empty reference masks.",
+      "skin": {
+        "status": "complete",
+        "include": [],
+        "exclude": []
+      },
+      "face": {
+        "status": "complete",
+        "include": [],
+        "exclude": []
+      }
+    },
+    {
+      "image_id": "bsds_123074",
+      "width": 481,
+      "height": 321,
+      "annotator": "codex_visual_review",
+      "review_status": "visually_reviewed",
+      "method": "Source image visually reviewed: no visible person, skin or face; empty reference masks.",
+      "skin": {
+        "status": "complete",
+        "include": [],
+        "exclude": []
+      },
+      "face": {
+        "status": "complete",
+        "include": [],
+        "exclude": []
+      }
+    }
+  ]
+}

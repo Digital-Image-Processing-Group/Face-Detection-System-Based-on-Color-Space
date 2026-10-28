@@ -120,7 +120,8 @@ def assess(manifest: Path, model: dict, output: Path, operating_point: Path, pre
         face = face_proposal(skin)
         elapsed = (time.perf_counter() - started) * 1000
         item = {"image_id": row.image_id, "subject_ids": sorted(row.subjects), "split": row.split,
-                "shape": list(skin.shape), "processing_ms": elapsed}
+                "shape": list(skin.shape), "processing_ms": elapsed,
+                "scene_tags": row.scene_tags.split(';'), "source_population_label":row.source_label}
         for kind, prediction, field in (("skin", skin, "skin_mask_path"), ("face_baseline", face, "face_mask_path")):
             truth = read_mask(data_path(manifest, getattr(row, field)), image.shape[:2])
             counts = confusion(prediction, truth)
@@ -133,15 +134,40 @@ def assess(manifest: Path, model: dict, output: Path, operating_point: Path, pre
         for kind in summary[split]:
             values = [item[kind]["iou"] for item in results if item["split"] == split and item[kind]["iou"] is not None]
             summary[split][kind]["mean_image_iou"] = float(np.mean(values)) if values else None
+            positive_values=[item[kind]['iou'] for item in results if item['split']==split
+                             and item[kind]['tp']+item[kind]['fn']>0]
+            summary[split][kind]['mean_positive_image_iou']=float(np.mean(positive_values)) if positive_values else None
+    no_face={}
+    scene_summary={}
+    for split in ('validation','test'):
+        absent=[item for item in results if item['split']==split and item['face_baseline']['tp']+item['face_baseline']['fn']==0]
+        false_images=sum(item['face_baseline']['fp']>0 for item in absent)
+        no_face[split]={'images':len(absent),'nonempty_predictions':false_images,
+                        'image_false_positive_rate':false_images/len(absent) if absent else None,
+                        'false_positive_pixels':sum(item['face_baseline']['fp'] for item in absent)}
+        scene_summary[split]={}
+        for scene in ('frontal','profile','natural_background'):
+            subset=[item for item in results if item['split']==split and scene in item['scene_tags']]
+            if not subset:
+                continue
+            scene_summary[split][scene]={'images':len(subset)}
+            for kind in ('skin','face_baseline'):
+                counts=[sum(item[kind][key] for item in subset) for key in ('tp','fp','fn')]
+                value=metrics(counts)
+                positives=[item[kind]['iou'] for item in subset if item[kind]['tp']+item[kind]['fn']>0]
+                value['mean_positive_image_iou']=float(np.mean(positives)) if positives else None
+                scene_summary[split][scene][kind]=value
     report = {"model_revision": model["model_revision"], "operating_point": point,
               "dataset": {"manifest_sha256": validation["manifest_sha256"], "images": len(records),
-                          "author_groups": len({row.group_id for row in records}),
+                          "group_count": len({row.group_id for row in records}),
+                          "participant_groups": len({s for row in records for s in row.subjects}),
+                          "background_scene_groups": len({row.group_id for row in records if not row.subjects}),
                           "splits": validation["splits"], "skin_status": validation["skin_status"],
                           "face_status": validation["face_status"], "identity_status": validation["identity_status"],
                           "validation_errors": validation["errors"], "validation_warnings": validation["warnings"]},
-              "annotation_reference": "Project-authored visually traced polygons with curved eye/brow/lip exclusions; not independently expert-reviewed benchmark truth",
-              "scope": "Controlled single-person portraits; no no-face/multi-person test images; no claim of unrestricted scene performance",
-              "summary": summary, "per_image": results,
+              "annotation_reference": "Project silver-standard references: independent part-parsing initialization, visual review and recorded corrections. Background negatives visually checked. Not source-provided or independently expert-reviewed pixel truth; scores measure agreement with these references.",
+              "scope": "Author-labeled Asian single-person portraits with frontal expressions and profiles; person-free natural background negatives. No real multi-person or unconstrained positive-scene performance claim.",
+              "summary": summary, "no_face":no_face,"scene_summary":scene_summary,"per_image": results,
               "environment": {"python": platform.python_version(), "numpy": np.__version__,
                               "opencv": cv2.__version__, "platform": platform.platform(),
                               "processor": os.environ.get("PROCESSOR_IDENTIFIER", platform.processor())},

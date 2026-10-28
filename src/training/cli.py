@@ -17,8 +17,8 @@ from .assessment import assess
 def parser() -> argparse.ArgumentParser:
     root = argparse.ArgumentParser(description="A: dataset preparation and YCrCb skin-model training")
     commands = root.add_subparsers(dest="command", required=True)
-    radiate = commands.add_parser("collect-radiate", help="Download official RADIATE color photos with anonymous author participant codes")
-    radiate.add_argument("--manifest", type=Path, default=Path("data/manifest.csv"))
+    collect = commands.add_parser("collect", help="Restore frozen, source-hash-verified photos; preserve splits and annotations")
+    collect.add_argument("--manifest", type=Path, default=Path("data/manifest.csv"))
     validate = commands.add_parser("validate", help="Check files, masks, provenance and split leakage")
     validate.add_argument("--manifest", type=Path, required=True)
     validate.add_argument("--purpose", choices=("train", "evaluation"), default="train")
@@ -30,9 +30,9 @@ def parser() -> argparse.ArgumentParser:
     split.add_argument("--ratios", nargs=3, type=float, default=(0.6, 0.2, 0.2))
     split.add_argument("--prepare-only", action="store_true",
                        help="Prepare verified subject groups before masks are complete; does not certify evaluation readiness")
-    annotate = commands.add_parser("rasterize", help="Render reviewed polygon annotations and update their manifest")
+    annotate = commands.add_parser("rasterize", help="Rebuild reviewed references and update their manifest")
     annotate.add_argument("--manifest", type=Path, required=True)
-    annotate.add_argument("--polygons", type=Path, default=Path("data/annotations/polygons"))
+    annotate.add_argument("--polygons", type=Path, default=Path("data/annotations/records"))
     sheet = commands.add_parser("contact-sheet", help="Save a labeled image sheet for visual review")
     sheet.add_argument("--manifest", type=Path, required=True)
     sheet.add_argument("--output", type=Path, required=True)
@@ -44,7 +44,7 @@ def parser() -> argparse.ArgumentParser:
     train = commands.add_parser("train", help="Fit a Gaussian using annotated training skin only")
     train.add_argument("--manifest", type=Path, required=True)
     train.add_argument("--output", type=Path, default=Path("models/skin_model.json"))
-    train.add_argument("--diagnostics", type=Path, default=Path("artifacts/radiate_model"))
+    train.add_argument("--diagnostics", type=Path, default=Path("artifacts/model"))
     train.add_argument("--samples-per-image", type=int, default=2000)
     train.add_argument("--seed", type=int, default=42)
     train.add_argument("--regularization", type=float, default=1.0)
@@ -55,16 +55,16 @@ def parser() -> argparse.ArgumentParser:
     evaluation.add_argument("--model", type=Path, default=Path("models/skin_model.json"))
     evaluation.add_argument("--output", type=Path, default=Path("models/evaluation.json"))
     evaluation.add_argument("--operating-point", type=Path, default=Path("models/operating_point.json"))
-    evaluation.add_argument("--previews", type=Path, default=Path("artifacts/radiate_predictions"))
+    evaluation.add_argument("--previews", type=Path, default=Path("artifacts/predictions"))
     return root
 
 
 def main(argv: list[str] | None = None) -> int:
     args = parser().parse_args(argv)
     try:
-        if args.command == "collect-radiate":
-            from .radiate import collect_radiate
-            print(json.dumps(collect_radiate(args.manifest), indent=2))
+        if args.command == "collect":
+            from .public_sources import restore
+            print(json.dumps(restore(args.manifest), indent=2))
         elif args.command == "validate":
             report = validate_dataset(args.manifest, args.purpose)
             if args.report:

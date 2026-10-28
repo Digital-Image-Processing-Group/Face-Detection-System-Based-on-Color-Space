@@ -1,0 +1,3 @@
+# Optional only: rebuilding the initial drafts. Training/inference do not need this.
+-r requirements-A.txt
+mediapipe==0.10.35

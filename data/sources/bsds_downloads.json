@@ -1,0 +1,162 @@
+[
+  {
+    "image_id": "bsds_105027",
+    "archive_url": "https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/BSR/BSR_bsds500.tgz",
+    "archive_member": "BSR/BSDS500/data/images/test/105027.jpg",
+    "archive_sha256": "97e49d31764f3912f0c4122707d53062ac9e783ba0f095e447a4d53c1a41af8e",
+    "sha256": "f6cba0ae618d793b67729ba561461be7b5339aeaad27429f3a2804f588a4e623",
+    "scope": "Visually reviewed person-free background; excluded from color training; no face and no visible human skin"
+  },
+  {
+    "image_id": "bsds_100098",
+    "archive_url": "https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/BSR/BSR_bsds500.tgz",
+    "archive_member": "BSR/BSDS500/data/images/train/100098.jpg",
+    "archive_sha256": "97e49d31764f3912f0c4122707d53062ac9e783ba0f095e447a4d53c1a41af8e",
+    "sha256": "156fd9710dccd7bf3a821977f8d8155da0eccca553086f73771073e17a418aa6",
+    "scope": "Visually reviewed person-free background; excluded from color training; no face and no visible human skin"
+  },
+  {
+    "image_id": "bsds_41085",
+    "archive_url": "https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/BSR/BSR_bsds500.tgz",
+    "archive_member": "BSR/BSDS500/data/images/test/41085.jpg",
+    "archive_sha256": "97e49d31764f3912f0c4122707d53062ac9e783ba0f095e447a4d53c1a41af8e",
+    "sha256": "2ea580f7c07e104624e8da4733319fb25def289b4fa6258b39e9c97eba2cb221",
+    "scope": "Visually reviewed person-free background; excluded from color training; no face and no visible human skin"
+  },
+  {
+    "image_id": "bsds_196015",
+    "archive_url": "https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/BSR/BSR_bsds500.tgz",
+    "archive_member": "BSR/BSDS500/data/images/train/196015.jpg",
+    "archive_sha256": "97e49d31764f3912f0c4122707d53062ac9e783ba0f095e447a4d53c1a41af8e",
+    "sha256": "40595bda6fb918d106541af67cc8e0426a04c6e5863c407ef2a73374c12e76a9",
+    "scope": "Visually reviewed person-free background; excluded from color training; no face and no visible human skin"
+  },
+  {
+    "image_id": "bsds_65132",
+    "archive_url": "https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/BSR/BSR_bsds500.tgz",
+    "archive_member": "BSR/BSDS500/data/images/train/65132.jpg",
+    "archive_sha256": "97e49d31764f3912f0c4122707d53062ac9e783ba0f095e447a4d53c1a41af8e",
+    "sha256": "f2f34b87c0425d5392ebbd6aba9761cb76b5c2e16609a7a57977519b3184fa28",
+    "scope": "Visually reviewed person-free background; excluded from color training; no face and no visible human skin"
+  },
+  {
+    "image_id": "bsds_49024",
+    "archive_url": "https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/BSR/BSR_bsds500.tgz",
+    "archive_member": "BSR/BSDS500/data/images/test/49024.jpg",
+    "archive_sha256": "97e49d31764f3912f0c4122707d53062ac9e783ba0f095e447a4d53c1a41af8e",
+    "sha256": "b730a4fe2ebc1218f00a0f8ee8ae118fdc916533145f0a9ced52f2d1982b3ed4",
+    "scope": "Visually reviewed person-free background; excluded from color training; no face and no visible human skin"
+  },
+  {
+    "image_id": "bsds_97033",
+    "archive_url": "https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/BSR/BSR_bsds500.tgz",
+    "archive_member": "BSR/BSDS500/data/images/val/97033.jpg",
+    "archive_sha256": "97e49d31764f3912f0c4122707d53062ac9e783ba0f095e447a4d53c1a41af8e",
+    "sha256": "0598c9c6d44af64c04e314f41c21453da7c4bb94adfda48f71548d98b4287d3e",
+    "scope": "Visually reviewed person-free background; excluded from color training; no face and no visible human skin"
+  },
+  {
+    "image_id": "bsds_27059",
+    "archive_url": "https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/BSR/BSR_bsds500.tgz",
+    "archive_member": "BSR/BSDS500/data/images/train/27059.jpg",
+    "archive_sha256": "97e49d31764f3912f0c4122707d53062ac9e783ba0f095e447a4d53c1a41af8e",
+    "sha256": "b2ad41923ca24fbe04b6b291dc8d1ed99eb79ad9060f93d99b4c715ac4684b91",
+    "scope": "Visually reviewed person-free background; excluded from color training; no face and no visible human skin"
+  },
+  {
+    "image_id": "bsds_306051",
+    "archive_url": "https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/BSR/BSR_bsds500.tgz",
+    "archive_member": "BSR/BSDS500/data/images/test/306051.jpg",
+    "archive_sha256": "97e49d31764f3912f0c4122707d53062ac9e783ba0f095e447a4d53c1a41af8e",
+    "sha256": "fc1a1310bb2b827c98506ec665c3844c347613a92debd6fb3e29b5dbcd0ce2c4",
+    "scope": "Visually reviewed person-free background; excluded from color training; no face and no visible human skin"
+  },
+  {
+    "image_id": "bsds_197017",
+    "archive_url": "https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/BSR/BSR_bsds500.tgz",
+    "archive_member": "BSR/BSDS500/data/images/val/197017.jpg",
+    "archive_sha256": "97e49d31764f3912f0c4122707d53062ac9e783ba0f095e447a4d53c1a41af8e",
+    "sha256": "59e30cd9332aa9331665ccd9c32b4f5738d64747584d989de33ff5220d91733b",
+    "scope": "Visually reviewed person-free background; excluded from color training; no face and no visible human skin"
+  },
+  {
+    "image_id": "bsds_28083",
+    "archive_url": "https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/BSR/BSR_bsds500.tgz",
+    "archive_member": "BSR/BSDS500/data/images/test/28083.jpg",
+    "archive_sha256": "97e49d31764f3912f0c4122707d53062ac9e783ba0f095e447a4d53c1a41af8e",
+    "sha256": "3f35dfd750653a0122c8c69ccd32a6376cf0393d35cc6441ab20560e703e1bb1",
+    "scope": "Visually reviewed person-free background; excluded from color training; no face and no visible human skin"
+  },
+  {
+    "image_id": "bsds_326038",
+    "archive_url": "https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/BSR/BSR_bsds500.tgz",
+    "archive_member": "BSR/BSDS500/data/images/train/326038.jpg",
+    "archive_sha256": "97e49d31764f3912f0c4122707d53062ac9e783ba0f095e447a4d53c1a41af8e",
+    "sha256": "b63ecef521773f1c7b773b562422acf66aaf3f5fb14d38b6a320746bbd40d054",
+    "scope": "Visually reviewed person-free background; excluded from color training; no face and no visible human skin"
+  },
+  {
+    "image_id": "bsds_182053",
+    "archive_url": "https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/BSR/BSR_bsds500.tgz",
+    "archive_member": "BSR/BSDS500/data/images/val/182053.jpg",
+    "archive_sha256": "97e49d31764f3912f0c4122707d53062ac9e783ba0f095e447a4d53c1a41af8e",
+    "sha256": "61ce1ee72993d333bde9191794d63650f21f40cbfb4c630992c3d5e5680b9b65",
+    "scope": "Visually reviewed person-free background; excluded from color training; no face and no visible human skin"
+  },
+  {
+    "image_id": "bsds_16052",
+    "archive_url": "https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/BSR/BSR_bsds500.tgz",
+    "archive_member": "BSR/BSDS500/data/images/train/16052.jpg",
+    "archive_sha256": "97e49d31764f3912f0c4122707d53062ac9e783ba0f095e447a4d53c1a41af8e",
+    "sha256": "be60accfd2bfa991b779640994308a61cc7bea0c672a45fa2d5649e004a7f15e",
+    "scope": "Visually reviewed person-free background; excluded from color training; no face and no visible human skin"
+  },
+  {
+    "image_id": "bsds_108069",
+    "archive_url": "https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/BSR/BSR_bsds500.tgz",
+    "archive_member": "BSR/BSDS500/data/images/test/108069.jpg",
+    "archive_sha256": "97e49d31764f3912f0c4122707d53062ac9e783ba0f095e447a4d53c1a41af8e",
+    "sha256": "a6d8ba350cac0701edc115fa583bf666231c4e1526801d0a53cea495a15b433a",
+    "scope": "Visually reviewed person-free background; excluded from color training; no face and no visible human skin"
+  },
+  {
+    "image_id": "bsds_35028",
+    "archive_url": "https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/BSR/BSR_bsds500.tgz",
+    "archive_member": "BSR/BSDS500/data/images/test/35028.jpg",
+    "archive_sha256": "97e49d31764f3912f0c4122707d53062ac9e783ba0f095e447a4d53c1a41af8e",
+    "sha256": "2b1a0220ce00cf61497b330addd15896d0f457cd2493b2c76ce0c8c70137c9c0",
+    "scope": "Visually reviewed person-free background; excluded from color training; no face and no visible human skin"
+  },
+  {
+    "image_id": "bsds_42044",
+    "archive_url": "https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/BSR/BSR_bsds500.tgz",
+    "archive_member": "BSR/BSDS500/data/images/train/42044.jpg",
+    "archive_sha256": "97e49d31764f3912f0c4122707d53062ac9e783ba0f095e447a4d53c1a41af8e",
+    "sha256": "a8ef1539007cfeda438d7c20cd4e009c5ca5e31fbdbd73dd40683897361222b8",
+    "scope": "Visually reviewed person-free background; excluded from color training; no face and no visible human skin"
+  },
+  {
+    "image_id": "bsds_130026",
+    "archive_url": "https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/BSR/BSR_bsds500.tgz",
+    "archive_member": "BSR/BSDS500/data/images/val/130026.jpg",
+    "archive_sha256": "97e49d31764f3912f0c4122707d53062ac9e783ba0f095e447a4d53c1a41af8e",
+    "sha256": "ab2865a5f0e54ad3a1b2f911b701560b1537e9c4ced6064d9759d33be0906761",
+    "scope": "Visually reviewed person-free background; excluded from color training; no face and no visible human skin"
+  },
+  {
+    "image_id": "bsds_335094",
+    "archive_url": "https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/BSR/BSR_bsds500.tgz",
+    "archive_member": "BSR/BSDS500/data/images/test/335094.jpg",
+    "archive_sha256": "97e49d31764f3912f0c4122707d53062ac9e783ba0f095e447a4d53c1a41af8e",
+    "sha256": "ddfbe0893c856b7ab627a242b98d712429cd26f4176f8e7bb781bab11562661a",
+    "scope": "Visually reviewed person-free background; excluded from color training; no face and no visible human skin"
+  },
+  {
+    "image_id": "bsds_123074",
+    "archive_url": "https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/BSR/BSR_bsds500.tgz",
+    "archive_member": "BSR/BSDS500/data/images/val/123074.jpg",
+    "archive_sha256": "97e49d31764f3912f0c4122707d53062ac9e783ba0f095e447a4d53c1a41af8e",
+    "sha256": "f47e336f7f3c4da54d5d95b6217e4381ea62a8ff12d061f39da48539794aa82a",
+    "scope": "Visually reviewed person-free background; excluded from color training; no face and no visible human skin"
+  }
+]
