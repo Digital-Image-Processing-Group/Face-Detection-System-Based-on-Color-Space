@@ -29,15 +29,9 @@ HFD 没有本项目需要的官方 skin/face 像素真值。本项目用独立 B
 
 辅助模型只用于标注。训练、肤色分割和基线评估使用传统颜色统计，不调用神经网络。工具来源：[BiSeNet 实现及 MIT 许可证](https://github.com/yakhyo/face-parsing)、[Google 官方分割说明](https://developers.google.com/edge/mediapipe/solutions/vision/image_segmenter)。固定权重 URL 与 SHA256 在 `src/training/public_sources.py` 及标注记录中。
 
-## 场景覆盖与排除来源
+## 场景覆盖
 
 已补入 33 张真实多人/复杂背景/手脸干扰/红色及暖色光场景，见下节。仍不能声称覆盖任意复杂场景。纯手部测试取自两张真实原图的裁剪，不作为新的独立原始场景。
-
-[SHAPE 作者页](https://users.soict.hust.edu.vn/linhdt/dataset/)与[作者论文](https://doi.org/10.1007/s00521-022-07651-1)是已核验的亚洲参与者手势候选。完整原图需邮件申请；公开网页说明图未纳入本轮交付，也不作为独立原始场景。
-
-HGR 无明确作者族群标签，已排除并删除；所检查的 NCKU 原图是灰度，未进入彩色统计。被替换的小规模旧来源、标注、模型及探索缓存已经删除，没有归档。Git 既有历史未重写。
-
-完整 SHAPE 手部数据尚未获得，也未联系作者；这属于可选扩展，不是当前 A 交付的阻塞项。具体申请材料见 [可选数据申请](DATA_ACCESS_REQUEST.md)。
 
 ## 本轮补全（2026-10-29）
 

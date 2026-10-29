@@ -2,7 +2,7 @@
 
 - 版本：V1.3
 - 更新日期：2026 年 10 月 29 日
-- 当前阶段：A完成本轮277张原始照片、双层参考修正、48人主数据、33张外部场景及新人物留出训练评估，详见docs/A_STATUS.md；B/C继续完整系统。
+- 当前阶段：A完成本轮277张原始照片、双层参考修正、48人主数据、33张外部场景及新人物留出训练评估，详见[交付与使用说明](docs/A_GUIDE.md)；B/C继续完整系统。
 - 团队规模：3 人，以成员 A、成员 B、成员 C 代称
 
 本项目通过目标亚洲人群照片中的皮肤样本，统计 YCbCr 颜色空间中 Cb、Cr 分量的均值、方差及协方差，建立二维高斯肤色模型。系统输入一张彩色照片，先生成肤色掩膜，再通过区域筛选生成近似人脸区域掩膜，输出与原图同尺寸的二值结果。
@@ -152,7 +152,7 @@
 
 ### 分割入口约定
 
-以下是 B 待实现、C 待接入的接口，尚非可调用的现有 API：`segment_image(image_bgr, model, config) -> dict`。完整字段说明见 [共用交接](docs/A_HANDOFF.md)。
+以下是 B 待实现、C 待接入的接口，尚非可调用的现有 API：`segment_image(image_bgr, model, config) -> dict`。完整字段说明见 [交付与使用说明](docs/A_GUIDE.md)。
 
 | 项目 | 约定 |
 | --- | --- |
@@ -207,4 +207,4 @@
 - [OpenCV 颜色转换文档](https://docs.opencv.org/4.x/de/d25/imgproc_color_conversions.html)：用于核对 YCrCb 转换、通道顺序及数值表示。
 - [Statistical Color Models with Application to Skin Detection](https://sites.cc.gatech.edu/fac/Jim.Rehg/Papers/SkinDetect-IJCV-lowres.pdf)：统计肤色建模的研究参考，不作为本项目模型参数或准确率来源。
 
-施工顺序：三人先统一接口约定，随后按各自所有权并行开发。A 的工具与模型使用说明见 docs/A_GUIDE.md，交付状态见 docs/A_STATUS.md。
+施工顺序：三人先统一接口约定，随后按各自所有权并行开发。A 的交付、接口和工具使用说明见 [A_GUIDE](docs/A_GUIDE.md)；后续工作见 [B 交接](docs/HANDOFF_B.md)和 [C 交接](docs/HANDOFF_C.md)。
