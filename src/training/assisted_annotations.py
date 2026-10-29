@@ -97,11 +97,13 @@ def prepare(manifest: Path, models: Path, offset: int = 0, limit: int = 500) -> 
             print(f'Annotation draft: {row.image_id}',flush=True)
 
 
-def finalize(manifest: Path, review: Path, output: Path) -> dict:
+def finalize(manifest: Path, review: Path, output: Path, record_name: str = 'hawaii.json') -> dict:
     """Materialize only an explicitly reviewed set; never promote drafts implicitly."""
     from .annotations import rasterize
     if output.resolve().parent != manifest.resolve().parent:
         raise ValueError('Output manifest must remain beside source manifest')
+    if Path(record_name).name != record_name or not record_name.endswith('.json'):
+        raise ValueError('Record name must be a JSON filename')
     rows=read_manifest(manifest)
     ledger=json.loads(review.read_text(encoding='utf-8'))
     reviewed=ledger.get('reviewed_image_ids',[])
@@ -148,7 +150,7 @@ def finalize(manifest: Path, review: Path, output: Path) -> dict:
                       'review_corrections':corrections.get(row.image_id,[]),
                       'skin':{'status':'complete'},'face':{'status':'complete'}})
     write_manifest(output,rows)
-    spec_path=manifest.parent/'annotations/records/hawaii.json'
+    spec_path=manifest.parent/'annotations/records'/record_name
     write_json(spec_path,{'annotations':specs})
     rasterize(output,spec_path)
     return {'reviewed_images':len(specs),'reference_type':'project-assisted silver-standard, not official pixel ground truth'}
@@ -160,9 +162,10 @@ if __name__=='__main__':
     p.add_argument('--models',type=Path,default=Path('data/cache/annotation_models'))
     p.add_argument('--offset',type=int,default=0);p.add_argument('--limit',type=int,default=500)
     p.add_argument('--finalize-review',type=Path)
+    p.add_argument('--record-name',default='hawaii.json')
     p.add_argument('--output',type=Path,default=Path('data/hawaii.annotated.csv'))
     args=p.parse_args()
     if args.finalize_review:
-        print(json.dumps(finalize(args.manifest,args.finalize_review,args.output),indent=2))
+        print(json.dumps(finalize(args.manifest,args.finalize_review,args.output,args.record_name),indent=2))
     else:
         prepare(args.manifest,args.models,args.offset,args.limit)

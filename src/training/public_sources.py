@@ -92,23 +92,26 @@ def annotation_assets(directory: Path) -> None:
         checked(content,sha256)
         print(f"Annotation helper asset verified: {name}",flush=True)
 
-def restore_stress(root: Path) -> dict:
-    sources=json.loads((root/"sources/shape_examples.json").read_text())
+def restore_scenes(root: Path) -> dict:
+    sources=json.loads((root/'sources/wider_fair_downloads.json').read_text(encoding='utf-8'))['records']
+    restored=0
     for source in sources:
-        target=data_path(root/"manifest.csv",source["file"])
-        content=fetch(source["source_url"],target,4_000_000)
-        checked(content,source["sha256"])
-    return {"public_examples":len(sources),"role":"qualitative hand illustrations only; excluded from original-photo counts and independent metrics"}
+        target=data_path(root/'manifest.csv',source['image_path'])
+        was_missing=not target.exists()
+        content=fetch(source['download_url'],target,5_000_000)
+        checked(content,source['sha256']);read_bgr(target)
+        restored+=int(was_missing)
+    return {'external_scene_originals':len(sources),'restored':restored,'identity_status':'unknown; external stress only'}
 
 if __name__=="__main__":
     p=argparse.ArgumentParser(description=__doc__)
-    p.add_argument("command",choices=("restore","annotation-assets","restore-stress"))
+    p.add_argument("command",choices=("restore","annotation-assets","restore-scenes"))
     p.add_argument("--manifest",type=Path,default=Path("data/manifest.csv"))
     p.add_argument("--directory",type=Path,default=Path("data/cache/annotation_models"))
     args=p.parse_args()
     try:
         if args.command=="restore": print(json.dumps(restore(args.manifest),indent=2))
-        elif args.command=="restore-stress": print(json.dumps(restore_stress(args.manifest.resolve().parent),indent=2))
+        elif args.command=="restore-scenes": print(json.dumps(restore_scenes(args.manifest.resolve().parent),indent=2))
         else: annotation_assets(args.directory)
     except (OSError,ValueError,KeyError) as error:
         p.exit(1,f"Error: {error}\n")

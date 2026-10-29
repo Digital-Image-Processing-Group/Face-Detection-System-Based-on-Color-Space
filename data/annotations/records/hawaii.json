@@ -322,7 +322,7 @@
       "annotator": "codex_assisted_visual_review",
       "review_status": "visually_reviewed",
       "reference_path": "annotations/reference/hfd_10_AFA8.png",
-      "reference_sha256": "f8df2789646ef0322821491ab248fd3cb2b95316baee2d4b23c06124e2a4a970",
+      "reference_sha256": "20700fc78eab5205264f38d59257790a3311be2c3e21897e43c23734153d9055",
       "method": "Independent BiSeNet part parsing and multiclass skin initialization, followed by project visual review and explicit corrections; no evaluated YCrCb predictions used as references",
       "reference_limitations": "Project silver-standard: independent neural initialization followed by Codex visual inspection of every image at 600-pixel width and explicit local corrections. No independent human/expert review or official pixel truth; fine boundaries, ears, shadows and jewelry remain approximate. Not suitable for claiming certified segmentation accuracy.",
       "initialization": {
@@ -348,6 +348,13 @@
       },
       "face": {
         "status": "complete"
+      },
+      "refinement_20261029": {
+        "reviewer": "codex_visual_review",
+        "reviewed_at_width": 600,
+        "before_sha256": "f8df2789646ef0322821491ab248fd3cb2b95316baee2d4b23c06124e2a4a970",
+        "action": "Removed visually reviewed disconnected face false fragments on ears, posterior neck and hair; retained primary visible face. Skin layer unchanged.",
+        "removed_face_pixels": 5238
       }
     },
     {
@@ -462,7 +469,7 @@
       "annotator": "codex_assisted_visual_review",
       "review_status": "visually_reviewed",
       "reference_path": "annotations/reference/hfd_12_AFA7.png",
-      "reference_sha256": "a65ebda9b8a5a25d78c89297a575d201d279990e5f2bf9ef7d7eec394a2e9d92",
+      "reference_sha256": "785a1f5bc30edf4e12594c5995df90db06425b00d53063b949b944bcb0841df0",
       "method": "Independent BiSeNet part parsing and multiclass skin initialization, followed by project visual review and explicit corrections; no evaluated YCrCb predictions used as references",
       "reference_limitations": "Project silver-standard: independent neural initialization followed by Codex visual inspection of every image at 600-pixel width and explicit local corrections. No independent human/expert review or official pixel truth; fine boundaries, ears, shadows and jewelry remain approximate. Not suitable for claiming certified segmentation accuracy.",
       "initialization": {
@@ -488,6 +495,13 @@
       },
       "face": {
         "status": "complete"
+      },
+      "refinement_20261029": {
+        "reviewer": "codex_visual_review",
+        "reviewed_at_width": 600,
+        "before_sha256": "a65ebda9b8a5a25d78c89297a575d201d279990e5f2bf9ef7d7eec394a2e9d92",
+        "action": "Removed visually reviewed disconnected face false fragments on ears, posterior neck and hair; retained primary visible face. Skin layer unchanged.",
+        "removed_face_pixels": 6760
       }
     },
     {
@@ -497,7 +511,7 @@
       "annotator": "codex_assisted_visual_review",
       "review_status": "visually_reviewed",
       "reference_path": "annotations/reference/hfd_12_AFA8.png",
-      "reference_sha256": "ce5abc78cfe111a1093a84b20cd6ec8270f960fe2fabe57fc087da7d8cb945b3",
+      "reference_sha256": "da8ea8e1091959e943e0b952cbb7fcffeb00d9d8bea0ba3d882b468902cb1b6b",
       "method": "Independent BiSeNet part parsing and multiclass skin initialization, followed by project visual review and explicit corrections; no evaluated YCrCb predictions used as references",
       "reference_limitations": "Project silver-standard: independent neural initialization followed by Codex visual inspection of every image at 600-pixel width and explicit local corrections. No independent human/expert review or official pixel truth; fine boundaries, ears, shadows and jewelry remain approximate. Not suitable for claiming certified segmentation accuracy.",
       "initialization": {
@@ -523,6 +537,13 @@
       },
       "face": {
         "status": "complete"
+      },
+      "refinement_20261029": {
+        "reviewer": "codex_visual_review",
+        "reviewed_at_width": 600,
+        "before_sha256": "ce5abc78cfe111a1093a84b20cd6ec8270f960fe2fabe57fc087da7d8cb945b3",
+        "action": "Removed visually reviewed disconnected face false fragments on ears, posterior neck and hair; retained primary visible face. Skin layer unchanged.",
+        "removed_face_pixels": 14948
       }
     },
     {
@@ -637,7 +658,7 @@
       "annotator": "codex_assisted_visual_review",
       "review_status": "visually_reviewed",
       "reference_path": "annotations/reference/hfd_13_AFA7.png",
-      "reference_sha256": "500b7f798571f9a6330dfae82082719e8f20808df8d7048261b28370465917aa",
+      "reference_sha256": "bfe65a5c43b63011bb4a33659bca247b5c5abd0a6d0c87db4b46c8e03dcc0d73",
       "method": "Independent BiSeNet part parsing and multiclass skin initialization, followed by project visual review and explicit corrections; no evaluated YCrCb predictions used as references",
       "reference_limitations": "Project silver-standard: independent neural initialization followed by Codex visual inspection of every image at 600-pixel width and explicit local corrections. No independent human/expert review or official pixel truth; fine boundaries, ears, shadows and jewelry remain approximate. Not suitable for claiming certified segmentation accuracy.",
       "initialization": {
@@ -663,6 +684,13 @@
       },
       "face": {
         "status": "complete"
+      },
+      "refinement_20261029": {
+        "reviewer": "codex_visual_review",
+        "reviewed_at_width": 600,
+        "before_sha256": "500b7f798571f9a6330dfae82082719e8f20808df8d7048261b28370465917aa",
+        "action": "Removed visually reviewed disconnected face false fragments on ears, posterior neck and hair; retained primary visible face. Skin layer unchanged.",
+        "removed_face_pixels": 65770
       }
     },
     {
@@ -672,7 +700,7 @@
       "annotator": "codex_assisted_visual_review",
       "review_status": "visually_reviewed",
       "reference_path": "annotations/reference/hfd_13_AFA8.png",
-      "reference_sha256": "88d203cb2eebd07aee86f0b16a001780ca1a09c9357ba4cd3aae7d0bd03464e6",
+      "reference_sha256": "1ed493a78f3c46a0db0724d205f0e60663d547b3df7d5f359b056cd5d5b241fb",
       "method": "Independent BiSeNet part parsing and multiclass skin initialization, followed by project visual review and explicit corrections; no evaluated YCrCb predictions used as references",
       "reference_limitations": "Project silver-standard: independent neural initialization followed by Codex visual inspection of every image at 600-pixel width and explicit local corrections. No independent human/expert review or official pixel truth; fine boundaries, ears, shadows and jewelry remain approximate. Not suitable for claiming certified segmentation accuracy.",
       "initialization": {
@@ -698,6 +726,13 @@
       },
       "face": {
         "status": "complete"
+      },
+      "refinement_20261029": {
+        "reviewer": "codex_visual_review",
+        "reviewed_at_width": 600,
+        "before_sha256": "88d203cb2eebd07aee86f0b16a001780ca1a09c9357ba4cd3aae7d0bd03464e6",
+        "action": "Removed visually reviewed disconnected face false fragments on ears, posterior neck and hair; retained primary visible face. Skin layer unchanged.",
+        "removed_face_pixels": 3962
       }
     },
     {
@@ -1364,7 +1399,7 @@
       "annotator": "codex_assisted_visual_review",
       "review_status": "visually_reviewed",
       "reference_path": "annotations/reference/hfd_18_AMA7.png",
-      "reference_sha256": "89637b6c09b674f6d83b1708219e9e8267aa68261b0b2719db85eafb2d749cce",
+      "reference_sha256": "32b8ed7b7e6808aa2bc31816646ce361291cb757f6d22fd7b70738e646d6104f",
       "method": "Independent BiSeNet part parsing and multiclass skin initialization, followed by project visual review and explicit corrections; no evaluated YCrCb predictions used as references",
       "reference_limitations": "Project silver-standard: independent neural initialization followed by Codex visual inspection of every image at 600-pixel width and explicit local corrections. No independent human/expert review or official pixel truth; fine boundaries, ears, shadows and jewelry remain approximate. Not suitable for claiming certified segmentation accuracy.",
       "initialization": {
@@ -1390,6 +1425,13 @@
       },
       "face": {
         "status": "complete"
+      },
+      "refinement_20261029": {
+        "reviewer": "codex_visual_review",
+        "reviewed_at_width": 600,
+        "before_sha256": "89637b6c09b674f6d83b1708219e9e8267aa68261b0b2719db85eafb2d749cce",
+        "action": "Removed visually reviewed disconnected face false fragments on ears, posterior neck and hair; retained primary visible face. Skin layer unchanged.",
+        "removed_face_pixels": 2845
       }
     },
     {
@@ -1399,7 +1441,7 @@
       "annotator": "codex_assisted_visual_review",
       "review_status": "visually_reviewed",
       "reference_path": "annotations/reference/hfd_18_AMA8.png",
-      "reference_sha256": "6ecea260f4e5924f69e967e1fc25ed58d688e188955922952a76c1581ad0e7bb",
+      "reference_sha256": "6d2419c5e0e1d3e3acec42bc086aec33f6aca105f44034e52e7b5366e7c72d2d",
       "method": "Independent BiSeNet part parsing and multiclass skin initialization, followed by project visual review and explicit corrections; no evaluated YCrCb predictions used as references",
       "reference_limitations": "Project silver-standard: independent neural initialization followed by Codex visual inspection of every image at 600-pixel width and explicit local corrections. No independent human/expert review or official pixel truth; fine boundaries, ears, shadows and jewelry remain approximate. Not suitable for claiming certified segmentation accuracy.",
       "initialization": {
@@ -1425,6 +1467,13 @@
       },
       "face": {
         "status": "complete"
+      },
+      "refinement_20261029": {
+        "reviewer": "codex_visual_review",
+        "reviewed_at_width": 600,
+        "before_sha256": "6ecea260f4e5924f69e967e1fc25ed58d688e188955922952a76c1581ad0e7bb",
+        "action": "Removed visually reviewed disconnected face false fragments on ears, posterior neck and hair; retained primary visible face. Skin layer unchanged.",
+        "removed_face_pixels": 4213
       }
     },
     {
@@ -1539,7 +1588,7 @@
       "annotator": "codex_assisted_visual_review",
       "review_status": "visually_reviewed",
       "reference_path": "annotations/reference/hfd_1_EAFA7.png",
-      "reference_sha256": "cdd0c4c1e059be3a23bb5c0966dd3079313311fcb6f843d5462dd19251f86689",
+      "reference_sha256": "3e5b3c0068bed9c7797aace3250a1dcfe410e7f48ead6443917083da8ce8fd23",
       "method": "Independent BiSeNet part parsing and multiclass skin initialization, followed by project visual review and explicit corrections; no evaluated YCrCb predictions used as references",
       "reference_limitations": "Project silver-standard: independent neural initialization followed by Codex visual inspection of every image at 600-pixel width and explicit local corrections. No independent human/expert review or official pixel truth; fine boundaries, ears, shadows and jewelry remain approximate. Not suitable for claiming certified segmentation accuracy.",
       "initialization": {
@@ -1592,6 +1641,13 @@
       },
       "face": {
         "status": "complete"
+      },
+      "refinement_20261029": {
+        "reviewer": "codex_visual_review",
+        "reviewed_at_width": 600,
+        "before_sha256": "cdd0c4c1e059be3a23bb5c0966dd3079313311fcb6f843d5462dd19251f86689",
+        "action": "Removed visually reviewed disconnected face false fragments on ears, posterior neck and hair; retained primary visible face. Skin layer unchanged.",
+        "removed_face_pixels": 25737
       }
     },
     {
@@ -1601,7 +1657,7 @@
       "annotator": "codex_assisted_visual_review",
       "review_status": "visually_reviewed",
       "reference_path": "annotations/reference/hfd_1_EAFA8.png",
-      "reference_sha256": "88716bd7731d7f7de69710e128313aa16a19468044c58921c0a458954bda142b",
+      "reference_sha256": "59857850ffb583abf328b53c8856550fd9538a5afe2263172cdc8634933533d5",
       "method": "Independent BiSeNet part parsing and multiclass skin initialization, followed by project visual review and explicit corrections; no evaluated YCrCb predictions used as references",
       "reference_limitations": "Project silver-standard: independent neural initialization followed by Codex visual inspection of every image at 600-pixel width and explicit local corrections. No independent human/expert review or official pixel truth; fine boundaries, ears, shadows and jewelry remain approximate. Not suitable for claiming certified segmentation accuracy.",
       "initialization": {
@@ -1654,6 +1710,13 @@
       },
       "face": {
         "status": "complete"
+      },
+      "refinement_20261029": {
+        "reviewer": "codex_visual_review",
+        "reviewed_at_width": 600,
+        "before_sha256": "88716bd7731d7f7de69710e128313aa16a19468044c58921c0a458954bda142b",
+        "action": "Removed visually reviewed disconnected face false fragments on ears, posterior neck and hair; retained primary visible face. Skin layer unchanged.",
+        "removed_face_pixels": 15880
       }
     },
     {
@@ -1768,7 +1831,7 @@
       "annotator": "codex_assisted_visual_review",
       "review_status": "visually_reviewed",
       "reference_path": "annotations/reference/hfd_3_EAFA7.png",
-      "reference_sha256": "eb8132258b8ff4c266138c9d0367e89698ee3e9c7c80dffb6446d1990e4d5132",
+      "reference_sha256": "ab93a063eb1b7e2f2982e556be043e6f346f463c564cfe5af0043379490b5c75",
       "method": "Independent BiSeNet part parsing and multiclass skin initialization, followed by project visual review and explicit corrections; no evaluated YCrCb predictions used as references",
       "reference_limitations": "Project silver-standard: independent neural initialization followed by Codex visual inspection of every image at 600-pixel width and explicit local corrections. No independent human/expert review or official pixel truth; fine boundaries, ears, shadows and jewelry remain approximate. Not suitable for claiming certified segmentation accuracy.",
       "initialization": {
@@ -1833,6 +1896,13 @@
       },
       "face": {
         "status": "complete"
+      },
+      "refinement_20261029": {
+        "reviewer": "codex_visual_review",
+        "reviewed_at_width": 600,
+        "before_sha256": "eb8132258b8ff4c266138c9d0367e89698ee3e9c7c80dffb6446d1990e4d5132",
+        "action": "Removed visually reviewed disconnected face false fragments on ears, posterior neck and hair; retained primary visible face. Skin layer unchanged.",
+        "removed_face_pixels": 1770
       }
     },
     {
@@ -2157,7 +2227,7 @@
       "annotator": "codex_assisted_visual_review",
       "review_status": "visually_reviewed",
       "reference_path": "annotations/reference/hfd_8_EAFA7.png",
-      "reference_sha256": "6e2bb1085584baa0f58b9c47289d9347f6289708a419e15cdf55688c89fd3785",
+      "reference_sha256": "06bdcdf2df870732a8125a9d07d99f60ca2c5cfd40eab69b5e3c1337ec2b4315",
       "method": "Independent BiSeNet part parsing and multiclass skin initialization, followed by project visual review and explicit corrections; no evaluated YCrCb predictions used as references",
       "reference_limitations": "Project silver-standard: independent neural initialization followed by Codex visual inspection of every image at 600-pixel width and explicit local corrections. No independent human/expert review or official pixel truth; fine boundaries, ears, shadows and jewelry remain approximate. Not suitable for claiming certified segmentation accuracy.",
       "initialization": {
@@ -2183,6 +2253,13 @@
       },
       "face": {
         "status": "complete"
+      },
+      "refinement_20261029": {
+        "reviewer": "codex_visual_review",
+        "reviewed_at_width": 600,
+        "before_sha256": "6e2bb1085584baa0f58b9c47289d9347f6289708a419e15cdf55688c89fd3785",
+        "action": "Removed visually reviewed disconnected face false fragments on ears, posterior neck and hair; retained primary visible face. Skin layer unchanged.",
+        "removed_face_pixels": 47460
       }
     },
     {
@@ -2192,7 +2269,7 @@
       "annotator": "codex_assisted_visual_review",
       "review_status": "visually_reviewed",
       "reference_path": "annotations/reference/hfd_8_EAFA8.png",
-      "reference_sha256": "c068d1b414ae2b1c1b165d7e7303a62502299007f300f23aea4d34a2f5ad2a56",
+      "reference_sha256": "b1e574d97944257d30a7ab2f830191b29b018a991d145306ef301f9215d32340",
       "method": "Independent BiSeNet part parsing and multiclass skin initialization, followed by project visual review and explicit corrections; no evaluated YCrCb predictions used as references",
       "reference_limitations": "Project silver-standard: independent neural initialization followed by Codex visual inspection of every image at 600-pixel width and explicit local corrections. No independent human/expert review or official pixel truth; fine boundaries, ears, shadows and jewelry remain approximate. Not suitable for claiming certified segmentation accuracy.",
       "initialization": {
@@ -2218,6 +2295,13 @@
       },
       "face": {
         "status": "complete"
+      },
+      "refinement_20261029": {
+        "reviewer": "codex_visual_review",
+        "reviewed_at_width": 600,
+        "before_sha256": "c068d1b414ae2b1c1b165d7e7303a62502299007f300f23aea4d34a2f5ad2a56",
+        "action": "Removed visually reviewed disconnected face false fragments on ears, posterior neck and hair; retained primary visible face. Skin layer unchanged.",
+        "removed_face_pixels": 5763
       }
     },
     {
@@ -2507,7 +2591,7 @@
       "annotator": "codex_assisted_visual_review",
       "review_status": "visually_reviewed",
       "reference_path": "annotations/reference/hfd_11_EAFA7.png",
-      "reference_sha256": "311bdf110bdb70c2c347d61beb9190dac3fc2e70870e67113cd4c233652a00b3",
+      "reference_sha256": "856484b4f501a37fae4fe314abcdcae87fc2a49966c031388e43717092af85cc",
       "method": "Independent BiSeNet part parsing and multiclass skin initialization, followed by project visual review and explicit corrections; no evaluated YCrCb predictions used as references",
       "reference_limitations": "Project silver-standard: independent neural initialization followed by Codex visual inspection of every image at 600-pixel width and explicit local corrections. No independent human/expert review or official pixel truth; fine boundaries, ears, shadows and jewelry remain approximate. Not suitable for claiming certified segmentation accuracy.",
       "initialization": {
@@ -2533,6 +2617,13 @@
       },
       "face": {
         "status": "complete"
+      },
+      "refinement_20261029": {
+        "reviewer": "codex_visual_review",
+        "reviewed_at_width": 600,
+        "before_sha256": "311bdf110bdb70c2c347d61beb9190dac3fc2e70870e67113cd4c233652a00b3",
+        "action": "Removed visually reviewed disconnected face false fragments on ears, posterior neck and hair; retained primary visible face. Skin layer unchanged.",
+        "removed_face_pixels": 4410
       }
     },
     {
@@ -2542,7 +2633,7 @@
       "annotator": "codex_assisted_visual_review",
       "review_status": "visually_reviewed",
       "reference_path": "annotations/reference/hfd_11_EAFA8.png",
-      "reference_sha256": "03de2918d4c138de3725069c5389c0b2fe659f36d6ff6ad74f7985a4e13cfdbf",
+      "reference_sha256": "37442432b2fcb989344bf80d1fa5ea40364090bd937818f032627d5c550ab118",
       "method": "Independent BiSeNet part parsing and multiclass skin initialization, followed by project visual review and explicit corrections; no evaluated YCrCb predictions used as references",
       "reference_limitations": "Project silver-standard: independent neural initialization followed by Codex visual inspection of every image at 600-pixel width and explicit local corrections. No independent human/expert review or official pixel truth; fine boundaries, ears, shadows and jewelry remain approximate. Not suitable for claiming certified segmentation accuracy.",
       "initialization": {
@@ -2568,6 +2659,13 @@
       },
       "face": {
         "status": "complete"
+      },
+      "refinement_20261029": {
+        "reviewer": "codex_visual_review",
+        "reviewed_at_width": 600,
+        "before_sha256": "03de2918d4c138de3725069c5389c0b2fe659f36d6ff6ad74f7985a4e13cfdbf",
+        "action": "Removed visually reviewed disconnected face false fragments on ears, posterior neck and hair; retained primary visible face. Skin layer unchanged.",
+        "removed_face_pixels": 39087
       }
     },
     {
@@ -2682,7 +2780,7 @@
       "annotator": "codex_assisted_visual_review",
       "review_status": "visually_reviewed",
       "reference_path": "annotations/reference/hfd_16_EAFA7.png",
-      "reference_sha256": "ab71db09d1547ded3f9775f7186ff17ef423621b25cdc10cfdfc7d7ca5d5bdf4",
+      "reference_sha256": "2457d3477f3e3f186bfb59a4252858eacfa6e283fcef61875a5ed3b0564e255b",
       "method": "Independent BiSeNet part parsing and multiclass skin initialization, followed by project visual review and explicit corrections; no evaluated YCrCb predictions used as references",
       "reference_limitations": "Project silver-standard: independent neural initialization followed by Codex visual inspection of every image at 600-pixel width and explicit local corrections. No independent human/expert review or official pixel truth; fine boundaries, ears, shadows and jewelry remain approximate. Not suitable for claiming certified segmentation accuracy.",
       "initialization": {
@@ -2708,6 +2806,13 @@
       },
       "face": {
         "status": "complete"
+      },
+      "refinement_20261029": {
+        "reviewer": "codex_visual_review",
+        "reviewed_at_width": 600,
+        "before_sha256": "ab71db09d1547ded3f9775f7186ff17ef423621b25cdc10cfdfc7d7ca5d5bdf4",
+        "action": "Removed visually reviewed disconnected face false fragments on ears, posterior neck and hair; retained primary visible face. Skin layer unchanged.",
+        "removed_face_pixels": 19901
       }
     },
     {
@@ -2857,7 +2962,7 @@
       "annotator": "codex_assisted_visual_review",
       "review_status": "visually_reviewed",
       "reference_path": "annotations/reference/hfd_20_EAFA7.png",
-      "reference_sha256": "c4bf940367e8f2a44d4b2a0ec4e84c70049d8a8ad0d499814e5ece1141b19c5b",
+      "reference_sha256": "ccf5380fdc4df63b0520fd03299ac0379d6fbcc82593c6b3979a2591e79b661d",
       "method": "Independent BiSeNet part parsing and multiclass skin initialization, followed by project visual review and explicit corrections; no evaluated YCrCb predictions used as references",
       "reference_limitations": "Project silver-standard: independent neural initialization followed by Codex visual inspection of every image at 600-pixel width and explicit local corrections. No independent human/expert review or official pixel truth; fine boundaries, ears, shadows and jewelry remain approximate. Not suitable for claiming certified segmentation accuracy.",
       "initialization": {
@@ -2883,6 +2988,13 @@
       },
       "face": {
         "status": "complete"
+      },
+      "refinement_20261029": {
+        "reviewer": "codex_visual_review",
+        "reviewed_at_width": 600,
+        "before_sha256": "c4bf940367e8f2a44d4b2a0ec4e84c70049d8a8ad0d499814e5ece1141b19c5b",
+        "action": "Removed visually reviewed disconnected face false fragments on ears, posterior neck and hair; retained primary visible face. Skin layer unchanged.",
+        "removed_face_pixels": 2703
       }
     },
     {
@@ -2892,7 +3004,7 @@
       "annotator": "codex_assisted_visual_review",
       "review_status": "visually_reviewed",
       "reference_path": "annotations/reference/hfd_20_EAFA8.png",
-      "reference_sha256": "10f9ef56a85ea23d71818a9eeb15abf5dea8d1bb8126224eed83716a86fa41c0",
+      "reference_sha256": "bcef6df4ab30cf73af444affcd062f556e4b7c9514515424f732c3c091469c7f",
       "method": "Independent BiSeNet part parsing and multiclass skin initialization, followed by project visual review and explicit corrections; no evaluated YCrCb predictions used as references",
       "reference_limitations": "Project silver-standard: independent neural initialization followed by Codex visual inspection of every image at 600-pixel width and explicit local corrections. No independent human/expert review or official pixel truth; fine boundaries, ears, shadows and jewelry remain approximate. Not suitable for claiming certified segmentation accuracy.",
       "initialization": {
@@ -2918,6 +3030,13 @@
       },
       "face": {
         "status": "complete"
+      },
+      "refinement_20261029": {
+        "reviewer": "codex_visual_review",
+        "reviewed_at_width": 600,
+        "before_sha256": "10f9ef56a85ea23d71818a9eeb15abf5dea8d1bb8126224eed83716a86fa41c0",
+        "action": "Removed visually reviewed disconnected face false fragments on ears, posterior neck and hair; retained primary visible face. Skin layer unchanged.",
+        "removed_face_pixels": 14588
       }
     },
     {
@@ -3444,7 +3563,7 @@
       "annotator": "codex_assisted_visual_review",
       "review_status": "visually_reviewed",
       "reference_path": "annotations/reference/hfd_2_EAMA8.png",
-      "reference_sha256": "8358bd957ce61c12df4b8b90b3e4d03aafb7fe423850721b23946aa184c59d09",
+      "reference_sha256": "5a87699b6f7c2f676abbcd7763d7dbf1ac427f993e14e78ed23b4c77ad8c7aa8",
       "method": "Independent BiSeNet part parsing and multiclass skin initialization, followed by project visual review and explicit corrections; no evaluated YCrCb predictions used as references",
       "reference_limitations": "Project silver-standard: independent neural initialization followed by Codex visual inspection of every image at 600-pixel width and explicit local corrections. No independent human/expert review or official pixel truth; fine boundaries, ears, shadows and jewelry remain approximate. Not suitable for claiming certified segmentation accuracy.",
       "initialization": {
@@ -3470,6 +3589,13 @@
       },
       "face": {
         "status": "complete"
+      },
+      "refinement_20261029": {
+        "reviewer": "codex_visual_review",
+        "reviewed_at_width": 600,
+        "before_sha256": "8358bd957ce61c12df4b8b90b3e4d03aafb7fe423850721b23946aa184c59d09",
+        "action": "Removed visually reviewed disconnected face false fragments on ears, posterior neck and hair; retained primary visible face. Skin layer unchanged.",
+        "removed_face_pixels": 14928
       }
     },
     {
@@ -4023,7 +4149,7 @@
       "annotator": "codex_assisted_visual_review",
       "review_status": "visually_reviewed",
       "reference_path": "annotations/reference/hfd_7_EAMA8.png",
-      "reference_sha256": "4e366473ac1dfee9882f5d113624e11b1d7302c241a3f4eb7882ba069e501d9d",
+      "reference_sha256": "9bc66dc23c8c886b0384d4c2fe58043d3e44a32200c958eb362316f90b7871f3",
       "method": "Independent BiSeNet part parsing and multiclass skin initialization, followed by project visual review and explicit corrections; no evaluated YCrCb predictions used as references",
       "reference_limitations": "Project silver-standard: independent neural initialization followed by Codex visual inspection of every image at 600-pixel width and explicit local corrections. No independent human/expert review or official pixel truth; fine boundaries, ears, shadows and jewelry remain approximate. Not suitable for claiming certified segmentation accuracy.",
       "initialization": {
@@ -4049,6 +4175,13 @@
       },
       "face": {
         "status": "complete"
+      },
+      "refinement_20261029": {
+        "reviewer": "codex_visual_review",
+        "reviewed_at_width": 600,
+        "before_sha256": "4e366473ac1dfee9882f5d113624e11b1d7302c241a3f4eb7882ba069e501d9d",
+        "action": "Removed visually reviewed disconnected face false fragments on ears, posterior neck and hair; retained primary visible face. Skin layer unchanged.",
+        "removed_face_pixels": 3599
       }
     },
     {
@@ -4198,7 +4331,7 @@
       "annotator": "codex_assisted_visual_review",
       "review_status": "visually_reviewed",
       "reference_path": "annotations/reference/hfd_9_EAMA8.png",
-      "reference_sha256": "d25241ef5c1b375eca6d90bb640e454261acd2e090d73c1ab601a802c495342d",
+      "reference_sha256": "21fcaf5a2b3a28fe7eb1a4f9f5f508cf523f19a07ce08e4bbc0c32bb20987e6b",
       "method": "Independent BiSeNet part parsing and multiclass skin initialization, followed by project visual review and explicit corrections; no evaluated YCrCb predictions used as references",
       "reference_limitations": "Project silver-standard: independent neural initialization followed by Codex visual inspection of every image at 600-pixel width and explicit local corrections. No independent human/expert review or official pixel truth; fine boundaries, ears, shadows and jewelry remain approximate. Not suitable for claiming certified segmentation accuracy.",
       "initialization": {
@@ -4224,6 +4357,13 @@
       },
       "face": {
         "status": "complete"
+      },
+      "refinement_20261029": {
+        "reviewer": "codex_visual_review",
+        "reviewed_at_width": 600,
+        "before_sha256": "d25241ef5c1b375eca6d90bb640e454261acd2e090d73c1ab601a802c495342d",
+        "action": "Removed visually reviewed disconnected face false fragments on ears, posterior neck and hair; retained primary visible face. Skin layer unchanged.",
+        "removed_face_pixels": 4305
       }
     },
     {
@@ -4373,7 +4513,7 @@
       "annotator": "codex_assisted_visual_review",
       "review_status": "visually_reviewed",
       "reference_path": "annotations/reference/hfd_12_EAMA8.png",
-      "reference_sha256": "99d2932906ac7cce267bdd010c3ac67c5a7290951a8d8502acd2e6ade28bb18c",
+      "reference_sha256": "0244426d8fa512c10642ffb6e32249e86b3d1e84aad9bbec1477b671d37a0b12",
       "method": "Independent BiSeNet part parsing and multiclass skin initialization, followed by project visual review and explicit corrections; no evaluated YCrCb predictions used as references",
       "reference_limitations": "Project silver-standard: independent neural initialization followed by Codex visual inspection of every image at 600-pixel width and explicit local corrections. No independent human/expert review or official pixel truth; fine boundaries, ears, shadows and jewelry remain approximate. Not suitable for claiming certified segmentation accuracy.",
       "initialization": {
@@ -4437,6 +4577,13 @@
       },
       "face": {
         "status": "complete"
+      },
+      "refinement_20261029": {
+        "reviewer": "codex_visual_review",
+        "reviewed_at_width": 600,
+        "before_sha256": "99d2932906ac7cce267bdd010c3ac67c5a7290951a8d8502acd2e6ade28bb18c",
+        "action": "Removed visually reviewed disconnected face false fragments on ears, posterior neck and hair; retained primary visible face. Skin layer unchanged.",
+        "removed_face_pixels": 4236
       }
     },
     {
@@ -4586,7 +4733,7 @@
       "annotator": "codex_assisted_visual_review",
       "review_status": "visually_reviewed",
       "reference_path": "annotations/reference/hfd_15_EAMA8.png",
-      "reference_sha256": "4a15331637f1cf9687daaf1656f508ca37ca1efef9c12262645aca8ba0fd9cea",
+      "reference_sha256": "ae01da4c22893d8f3593d76e7198ece2e87dd168a5e549465ceaa35768080519",
       "method": "Independent BiSeNet part parsing and multiclass skin initialization, followed by project visual review and explicit corrections; no evaluated YCrCb predictions used as references",
       "reference_limitations": "Project silver-standard: independent neural initialization followed by Codex visual inspection of every image at 600-pixel width and explicit local corrections. No independent human/expert review or official pixel truth; fine boundaries, ears, shadows and jewelry remain approximate. Not suitable for claiming certified segmentation accuracy.",
       "initialization": {
@@ -4612,6 +4759,13 @@
       },
       "face": {
         "status": "complete"
+      },
+      "refinement_20261029": {
+        "reviewer": "codex_visual_review",
+        "reviewed_at_width": 600,
+        "before_sha256": "4a15331637f1cf9687daaf1656f508ca37ca1efef9c12262645aca8ba0fd9cea",
+        "action": "Removed visually reviewed disconnected face false fragments on ears, posterior neck and hair; retained primary visible face. Skin layer unchanged.",
+        "removed_face_pixels": 1780
       }
     },
     {
@@ -5159,7 +5313,7 @@
       "annotator": "codex_assisted_visual_review",
       "review_status": "visually_reviewed",
       "reference_path": "annotations/reference/hfd_6_SEAFA7.png",
-      "reference_sha256": "6d076db40ffc35746fd31f2f255b907ede67078d3a05371dcabca15f058964a5",
+      "reference_sha256": "60400f593d349a922e7412e08c6cc54cf8d31d9dc9494ce97d47bf7a1fad1451",
       "method": "Independent BiSeNet part parsing and multiclass skin initialization, followed by project visual review and explicit corrections; no evaluated YCrCb predictions used as references",
       "reference_limitations": "Project silver-standard: independent neural initialization followed by Codex visual inspection of every image at 600-pixel width and explicit local corrections. No independent human/expert review or official pixel truth; fine boundaries, ears, shadows and jewelry remain approximate. Not suitable for claiming certified segmentation accuracy.",
       "initialization": {
@@ -5185,6 +5339,13 @@
       },
       "face": {
         "status": "complete"
+      },
+      "refinement_20261029": {
+        "reviewer": "codex_visual_review",
+        "reviewed_at_width": 600,
+        "before_sha256": "6d076db40ffc35746fd31f2f255b907ede67078d3a05371dcabca15f058964a5",
+        "action": "Removed visually reviewed disconnected face false fragments on ears, posterior neck and hair; retained primary visible face. Skin layer unchanged.",
+        "removed_face_pixels": 21623
       }
     },
     {
@@ -5194,7 +5355,7 @@
       "annotator": "codex_assisted_visual_review",
       "review_status": "visually_reviewed",
       "reference_path": "annotations/reference/hfd_6_SEAFA8.png",
-      "reference_sha256": "fe74ed03eac5e3b6af1c815ea6fa486cd3410562f2dae5faf4b48df52d58971f",
+      "reference_sha256": "d0d94f4f00966b28f628358a1aa22a379e54401d4b6ecef33a636f473ebc6165",
       "method": "Independent BiSeNet part parsing and multiclass skin initialization, followed by project visual review and explicit corrections; no evaluated YCrCb predictions used as references",
       "reference_limitations": "Project silver-standard: independent neural initialization followed by Codex visual inspection of every image at 600-pixel width and explicit local corrections. No independent human/expert review or official pixel truth; fine boundaries, ears, shadows and jewelry remain approximate. Not suitable for claiming certified segmentation accuracy.",
       "initialization": {
@@ -5220,6 +5381,13 @@
       },
       "face": {
         "status": "complete"
+      },
+      "refinement_20261029": {
+        "reviewer": "codex_visual_review",
+        "reviewed_at_width": 600,
+        "before_sha256": "fe74ed03eac5e3b6af1c815ea6fa486cd3410562f2dae5faf4b48df52d58971f",
+        "action": "Removed visually reviewed disconnected face false fragments on ears, posterior neck and hair; retained primary visible face. Skin layer unchanged.",
+        "removed_face_pixels": 9023
       }
     },
     {
@@ -5894,7 +6062,7 @@
       "annotator": "codex_assisted_visual_review",
       "review_status": "visually_reviewed",
       "reference_path": "annotations/reference/hfd_21_SEAFA7.png",
-      "reference_sha256": "792e0273e9c06a5b7e3b0d7b34f801f597d18d8bdf76cb12a24ccfb614286fa0",
+      "reference_sha256": "6cfcdba102c5f1acb5481650111f24233be92772c290fbf9b052dc279a8a877d",
       "method": "Independent BiSeNet part parsing and multiclass skin initialization, followed by project visual review and explicit corrections; no evaluated YCrCb predictions used as references",
       "reference_limitations": "Project silver-standard: independent neural initialization followed by Codex visual inspection of every image at 600-pixel width and explicit local corrections. No independent human/expert review or official pixel truth; fine boundaries, ears, shadows and jewelry remain approximate. Not suitable for claiming certified segmentation accuracy.",
       "initialization": {
@@ -5920,6 +6088,13 @@
       },
       "face": {
         "status": "complete"
+      },
+      "refinement_20261029": {
+        "reviewer": "codex_visual_review",
+        "reviewed_at_width": 600,
+        "before_sha256": "792e0273e9c06a5b7e3b0d7b34f801f597d18d8bdf76cb12a24ccfb614286fa0",
+        "action": "Removed visually reviewed disconnected face false fragments on ears, posterior neck and hair; retained primary visible face. Skin layer unchanged.",
+        "removed_face_pixels": 8620
       }
     },
     {
@@ -6454,7 +6629,7 @@
       "annotator": "codex_assisted_visual_review",
       "review_status": "visually_reviewed",
       "reference_path": "annotations/reference/hfd_27_SEAFA8.png",
-      "reference_sha256": "49f3e1305e2194023758f78b72953ef61c69a60c3aec3ce5b926b8be88d249cb",
+      "reference_sha256": "076e2e606a4723f2dcb90359158ea2d4730eeac9ddf4d026fdc118632e0cdd6d",
       "method": "Independent BiSeNet part parsing and multiclass skin initialization, followed by project visual review and explicit corrections; no evaluated YCrCb predictions used as references",
       "reference_limitations": "Project silver-standard: independent neural initialization followed by Codex visual inspection of every image at 600-pixel width and explicit local corrections. No independent human/expert review or official pixel truth; fine boundaries, ears, shadows and jewelry remain approximate. Not suitable for claiming certified segmentation accuracy.",
       "initialization": {
@@ -6480,6 +6655,13 @@
       },
       "face": {
         "status": "complete"
+      },
+      "refinement_20261029": {
+        "reviewer": "codex_visual_review",
+        "reviewed_at_width": 600,
+        "before_sha256": "49f3e1305e2194023758f78b72953ef61c69a60c3aec3ce5b926b8be88d249cb",
+        "action": "Removed visually reviewed disconnected face false fragments on ears, posterior neck and hair; retained primary visible face. Skin layer unchanged.",
+        "removed_face_pixels": 4905
       }
     },
     {
@@ -6804,7 +6986,7 @@
       "annotator": "codex_assisted_visual_review",
       "review_status": "visually_reviewed",
       "reference_path": "annotations/reference/hfd_1_SEAMA8.png",
-      "reference_sha256": "923f9c25bf5051c34ef8c03bf04f8ca3513866a13dfc8d73dbb3de0baaf19a6b",
+      "reference_sha256": "0ce5b8791b551779b2fd5f9467261f7ad189d5a17b0f252656ffae6e3f8872d0",
       "method": "Independent BiSeNet part parsing and multiclass skin initialization, followed by project visual review and explicit corrections; no evaluated YCrCb predictions used as references",
       "reference_limitations": "Project silver-standard: independent neural initialization followed by Codex visual inspection of every image at 600-pixel width and explicit local corrections. No independent human/expert review or official pixel truth; fine boundaries, ears, shadows and jewelry remain approximate. Not suitable for claiming certified segmentation accuracy.",
       "initialization": {
@@ -6830,6 +7012,13 @@
       },
       "face": {
         "status": "complete"
+      },
+      "refinement_20261029": {
+        "reviewer": "codex_visual_review",
+        "reviewed_at_width": 600,
+        "before_sha256": "923f9c25bf5051c34ef8c03bf04f8ca3513866a13dfc8d73dbb3de0baaf19a6b",
+        "action": "Removed visually reviewed disconnected face false fragments on ears, posterior neck and hair; retained primary visible face. Skin layer unchanged.",
+        "removed_face_pixels": 10555
       }
     },
     {
@@ -7154,7 +7343,7 @@
       "annotator": "codex_assisted_visual_review",
       "review_status": "visually_reviewed",
       "reference_path": "annotations/reference/hfd_4_SEAMA8.png",
-      "reference_sha256": "7a7c5798fb258be6796fe4cc46226881a956e580816dfb9053551b3da681844e",
+      "reference_sha256": "b1c812422ad80c8634783c885cebfed929e408ee21dd2b3796d302eab112be2a",
       "method": "Independent BiSeNet part parsing and multiclass skin initialization, followed by project visual review and explicit corrections; no evaluated YCrCb predictions used as references",
       "reference_limitations": "Project silver-standard: independent neural initialization followed by Codex visual inspection of every image at 600-pixel width and explicit local corrections. No independent human/expert review or official pixel truth; fine boundaries, ears, shadows and jewelry remain approximate. Not suitable for claiming certified segmentation accuracy.",
       "initialization": {
@@ -7180,6 +7369,13 @@
       },
       "face": {
         "status": "complete"
+      },
+      "refinement_20261029": {
+        "reviewer": "codex_visual_review",
+        "reviewed_at_width": 600,
+        "before_sha256": "7a7c5798fb258be6796fe4cc46226881a956e580816dfb9053551b3da681844e",
+        "action": "Removed visually reviewed disconnected face false fragments on ears, posterior neck and hair; retained primary visible face. Skin layer unchanged.",
+        "removed_face_pixels": 9951
       }
     },
     {
@@ -7294,7 +7490,7 @@
       "annotator": "codex_assisted_visual_review",
       "review_status": "visually_reviewed",
       "reference_path": "annotations/reference/hfd_7_SEAMA7.png",
-      "reference_sha256": "1b15a2cf1b919eeb6e6a9b36f609ee1f4c57d83073bc09b850a06e1699a5e62a",
+      "reference_sha256": "4275c0840fd3dbcbb79aba5edffd4c7f65453c83b685554c90bf4f1cba86cd95",
       "method": "Independent BiSeNet part parsing and multiclass skin initialization, followed by project visual review and explicit corrections; no evaluated YCrCb predictions used as references",
       "reference_limitations": "Project silver-standard: independent neural initialization followed by Codex visual inspection of every image at 600-pixel width and explicit local corrections. No independent human/expert review or official pixel truth; fine boundaries, ears, shadows and jewelry remain approximate. Not suitable for claiming certified segmentation accuracy.",
       "initialization": {
@@ -7373,6 +7569,13 @@
       },
       "face": {
         "status": "complete"
+      },
+      "refinement_20261029": {
+        "reviewer": "codex_visual_review",
+        "reviewed_at_width": 600,
+        "before_sha256": "1b15a2cf1b919eeb6e6a9b36f609ee1f4c57d83073bc09b850a06e1699a5e62a",
+        "action": "Removed visually reviewed disconnected face false fragments on ears, posterior neck and hair; retained primary visible face. Skin layer unchanged.",
+        "removed_face_pixels": 19020
       }
     },
     {
@@ -7382,7 +7585,7 @@
       "annotator": "codex_assisted_visual_review",
       "review_status": "visually_reviewed",
       "reference_path": "annotations/reference/hfd_7_SEAMA8.png",
-      "reference_sha256": "8bf34896574fbf2a7d9377d50fca75aa21e198f14d037814effb44087e7d02cf",
+      "reference_sha256": "b7848327532ed89416276d6a0b0172baa415332a64abb10b4d1af534baef3dbb",
       "method": "Independent BiSeNet part parsing and multiclass skin initialization, followed by project visual review and explicit corrections; no evaluated YCrCb predictions used as references",
       "reference_limitations": "Project silver-standard: independent neural initialization followed by Codex visual inspection of every image at 600-pixel width and explicit local corrections. No independent human/expert review or official pixel truth; fine boundaries, ears, shadows and jewelry remain approximate. Not suitable for claiming certified segmentation accuracy.",
       "initialization": {
@@ -7461,6 +7664,13 @@
       },
       "face": {
         "status": "complete"
+      },
+      "refinement_20261029": {
+        "reviewer": "codex_visual_review",
+        "reviewed_at_width": 600,
+        "before_sha256": "8bf34896574fbf2a7d9377d50fca75aa21e198f14d037814effb44087e7d02cf",
+        "action": "Removed visually reviewed disconnected face false fragments on ears, posterior neck and hair; retained primary visible face. Skin layer unchanged.",
+        "removed_face_pixels": 28613
       }
     }
   ]

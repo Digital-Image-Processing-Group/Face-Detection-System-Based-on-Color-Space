@@ -65,7 +65,7 @@ def audit(manifest: Path, model_path: Path, output: Path) -> dict:
         'original_file_hashes_verified':len(rows),'masks_reconstructed_identically':len(rows)*2,
         'author_population_and_identity_verified':True,'fit_reproduced_exactly':True,
         'dataset_valid':validation['valid'],'duplicate_check_warning_count':len(validation['warnings']),
-        'split_counts':validation['splits'],'limitations':'Project silver-standard references; no independent expert pixel-truth review. Real multi-person, strong color-cast and full hand-interference original scenes still absent.'}
+        'split_counts':validation['splits'],'limitations':'Project silver-standard references; no independent expert pixel-truth review. New real scenes have author-perceived population labels but no verified subject identities; evaluated separately as external stress data.'}
     write_json(output,report)
     return report
 

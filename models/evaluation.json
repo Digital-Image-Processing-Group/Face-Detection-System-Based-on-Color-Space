@@ -1,10 +1,10 @@
 {
-  "model_revision": "skin-afa4f917e675769e",
+  "model_revision": "skin-d239a8aaf4ae7f05",
   "operating_point": {
     "schema_version": 1,
-    "model_revision": "skin-afa4f917e675769e",
-    "manifest_sha256": "752cc4196d08655f610435fd7bd61760e38b28baad1d03d4d56f209f39242985",
-    "distance_squared_threshold": 5.0,
+    "model_revision": "skin-d239a8aaf4ae7f05",
+    "manifest_sha256": "b3efdfe0bc9d8955f6b2ff7b191fb305ec83b94569db6c20ee700ff3a1270afe",
+    "distance_squared_threshold": 4.0,
     "selection": "validation_skin_micro_dice",
     "candidate_grid": {
       "min": 0.5,
@@ -14,24 +14,24 @@
     "face_baseline": "fixed scale-aware opening/closing, largest component and hole fill for single portraits"
   },
   "dataset": {
-    "manifest_sha256": "752cc4196d08655f610435fd7bd61760e38b28baad1d03d4d56f209f39242985",
-    "images": 220,
-    "group_count": 60,
-    "participant_groups": 40,
+    "manifest_sha256": "b3efdfe0bc9d8955f6b2ff7b191fb305ec83b94569db6c20ee700ff3a1270afe",
+    "images": 244,
+    "group_count": 68,
+    "participant_groups": 48,
     "background_scene_groups": 20,
     "splits": {
       "train": 120,
-      "test": 50,
-      "validation": 50
+      "validation": 100,
+      "test": 24
     },
     "skin_status": {
-      "complete": 220
+      "complete": 244
     },
     "face_status": {
-      "complete": 220
+      "complete": 244
     },
     "identity_status": {
-      "verified": 220
+      "verified": 244
     },
     "validation_errors": [],
     "validation_warnings": [
@@ -47,7 +47,6 @@
       "hfd_6_EAFA6: coarse hash resembles hfd_7_AFA3, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
       "hfd_6_EAFA6: coarse hash resembles hfd_7_AFA6, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
       "hfd_10_EAFA6: coarse hash resembles hfd_7_AFA3, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
-      "hfd_11_EAFA6: coarse hash resembles hfd_15_AFA2, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
       "hfd_16_EAFA6: coarse hash resembles hfd_1_EAFA2, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
       "hfd_16_EAFA6: coarse hash resembles hfd_1_EAFA3, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
       "hfd_22_EAFA7: coarse hash resembles hfd_6_EAFA3, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
@@ -68,7 +67,6 @@
       "hfd_7_EAMA2: coarse hash resembles hfd_9_AMA2, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
       "hfd_7_EAMA3: coarse hash resembles hfd_10_AFA3, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
       "hfd_7_EAMA3: coarse hash resembles hfd_9_AMA2, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
-      "hfd_7_EAMA7: coarse hash resembles hfd_6_EAFA7, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
       "hfd_7_EAMA8: coarse hash resembles hfd_9_AMA7, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
       "hfd_7_EAMA8: coarse hash resembles hfd_18_AMA8, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
       "hfd_7_EAMA8: coarse hash resembles hfd_3_EAMA8, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
@@ -77,41 +75,15 @@
       "hfd_15_EAMA7: coarse hash resembles hfd_18_AMA7, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
       "hfd_15_EAMA7: coarse hash resembles hfd_16_EAFA7, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
       "hfd_15_EAMA7: coarse hash resembles hfd_5_EAMA7, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
-      "hfd_15_EAMA7: coarse hash resembles hfd_7_EAMA7, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
       "hfd_15_EAMA8: coarse hash resembles hfd_9_AMA2, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
       "hfd_15_EAMA8: coarse hash resembles hfd_9_AMA3, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
       "hfd_15_EAMA8: coarse hash resembles hfd_9_AMA7, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
       "hfd_15_EAMA8: coarse hash resembles hfd_9_AMA8, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
       "hfd_15_EAMA8: coarse hash resembles hfd_5_EAMA8, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
-      "hfd_15_EAMA8: coarse hash resembles hfd_7_EAMA8, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
       "hfd_15_EAMA8: coarse hash resembles hfd_9_EAMA8, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
       "hfd_1_SEAFA2: coarse hash resembles hfd_7_AFA3, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
-      "hfd_1_SEAFA2: coarse hash resembles hfd_3_EAFA2, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
-      "hfd_1_SEAFA2: coarse hash resembles hfd_3_EAFA3, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
-      "hfd_1_SEAFA2: coarse hash resembles hfd_3_EAFA6, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
-      "hfd_1_SEAFA2: coarse hash resembles hfd_6_EAFA2, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
-      "hfd_1_SEAFA2: coarse hash resembles hfd_6_EAFA3, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
-      "hfd_1_SEAFA2: coarse hash resembles hfd_10_EAFA2, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
-      "hfd_1_SEAFA2: coarse hash resembles hfd_10_EAFA3, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
-      "hfd_1_SEAFA2: coarse hash resembles hfd_10_EAFA6, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
       "hfd_1_SEAFA3: coarse hash resembles hfd_7_AFA3, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
-      "hfd_1_SEAFA3: coarse hash resembles hfd_3_EAFA2, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
-      "hfd_1_SEAFA3: coarse hash resembles hfd_3_EAFA3, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
-      "hfd_1_SEAFA3: coarse hash resembles hfd_3_EAFA6, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
-      "hfd_1_SEAFA3: coarse hash resembles hfd_6_EAFA2, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
-      "hfd_1_SEAFA3: coarse hash resembles hfd_6_EAFA3, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
-      "hfd_1_SEAFA3: coarse hash resembles hfd_10_EAFA2, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
-      "hfd_1_SEAFA3: coarse hash resembles hfd_10_EAFA3, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
-      "hfd_1_SEAFA3: coarse hash resembles hfd_10_EAFA6, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
       "hfd_1_SEAFA6: coarse hash resembles hfd_7_AFA3, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
-      "hfd_1_SEAFA6: coarse hash resembles hfd_3_EAFA2, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
-      "hfd_1_SEAFA6: coarse hash resembles hfd_3_EAFA3, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
-      "hfd_1_SEAFA6: coarse hash resembles hfd_3_EAFA6, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
-      "hfd_1_SEAFA6: coarse hash resembles hfd_6_EAFA2, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
-      "hfd_1_SEAFA6: coarse hash resembles hfd_6_EAFA3, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
-      "hfd_1_SEAFA6: coarse hash resembles hfd_10_EAFA2, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
-      "hfd_1_SEAFA6: coarse hash resembles hfd_10_EAFA3, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
-      "hfd_1_SEAFA6: coarse hash resembles hfd_10_EAFA6, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
       "hfd_1_SEAFA7: coarse hash resembles hfd_9_AMA2, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
       "hfd_1_SEAFA7: coarse hash resembles hfd_9_AMA6, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
       "hfd_1_SEAFA8: coarse hash resembles hfd_9_AMA8, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
@@ -119,13 +91,7 @@
       "hfd_6_SEAFA8: coarse hash resembles hfd_15_AFA8, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
       "hfd_6_SEAFA8: coarse hash resembles hfd_10_EAFA7, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
       "hfd_7_SEAFA2: coarse hash resembles hfd_7_AFA3, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
-      "hfd_7_SEAFA2: coarse hash resembles hfd_6_EAFA2, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
-      "hfd_7_SEAFA2: coarse hash resembles hfd_6_EAFA3, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
-      "hfd_7_SEAFA2: coarse hash resembles hfd_6_EAFA6, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
       "hfd_7_SEAFA3: coarse hash resembles hfd_7_AFA3, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
-      "hfd_7_SEAFA3: coarse hash resembles hfd_6_EAFA2, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
-      "hfd_7_SEAFA3: coarse hash resembles hfd_6_EAFA3, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
-      "hfd_7_SEAFA3: coarse hash resembles hfd_6_EAFA6, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
       "hfd_7_SEAFA8: coarse hash resembles hfd_18_AMA8, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
       "hfd_7_SEAFA8: coarse hash resembles hfd_3_EAMA8, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
       "hfd_7_SEAFA8: coarse hash resembles hfd_9_EAMA8, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
@@ -138,29 +104,16 @@
       "hfd_20_SEAFA8: coarse hash resembles hfd_7_SEAFA8, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
       "hfd_21_SEAFA6: coarse hash resembles hfd_1_EAFA2, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
       "hfd_21_SEAFA6: coarse hash resembles hfd_1_EAFA3, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
-      "hfd_25_SEAFA2: coarse hash resembles hfd_10_EAFA6, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
-      "hfd_25_SEAFA6: coarse hash resembles hfd_3_EAFA6, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
-      "hfd_25_SEAFA6: coarse hash resembles hfd_10_EAFA2, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
-      "hfd_25_SEAFA6: coarse hash resembles hfd_10_EAFA3, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
       "hfd_25_SEAFA6: coarse hash resembles hfd_20_SEAFA2, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
       "hfd_25_SEAFA6: coarse hash resembles hfd_20_SEAFA6, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
       "hfd_25_SEAFA8: coarse hash resembles hfd_9_AMA7, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
       "hfd_25_SEAFA8: coarse hash resembles hfd_9_EAMA8, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
-      "hfd_25_SEAFA8: coarse hash resembles hfd_15_EAMA8, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
-      "hfd_26_SEAFA6: coarse hash resembles hfd_10_EAFA2, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
-      "hfd_26_SEAFA6: coarse hash resembles hfd_10_EAFA3, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
       "hfd_27_SEAFA3: coarse hash resembles hfd_6_EAFA3, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
       "hfd_28_SEAFA3: coarse hash resembles hfd_7_AFA2, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
       "hfd_28_SEAFA3: coarse hash resembles hfd_7_AFA3, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
       "hfd_28_SEAFA3: coarse hash resembles hfd_7_AFA6, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
-      "hfd_28_SEAFA3: coarse hash resembles hfd_6_EAFA2, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
-      "hfd_28_SEAFA3: coarse hash resembles hfd_6_EAFA3, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
-      "hfd_28_SEAFA3: coarse hash resembles hfd_6_EAFA6, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
       "hfd_28_SEAFA3: coarse hash resembles hfd_22_EAFA7, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
       "hfd_28_SEAFA6: coarse hash resembles hfd_7_AFA3, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
-      "hfd_28_SEAFA6: coarse hash resembles hfd_6_EAFA3, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
-      "hfd_28_SEAFA6: coarse hash resembles hfd_10_EAFA6, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
-      "hfd_28_SEAFA8: coarse hash resembles hfd_15_EAMA8, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
       "hfd_2_SEAMA3: coarse hash resembles hfd_7_EAMA2, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
       "hfd_2_SEAMA3: coarse hash resembles hfd_7_EAMA3, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
       "hfd_2_SEAMA6: coarse hash resembles hfd_7_EAMA2, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
@@ -181,7 +134,73 @@
       "hfd_4_SEAMA8: coarse hash resembles hfd_15_EAMA8, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
       "hfd_7_SEAMA8: coarse hash resembles hfd_10_EAFA7, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
       "hfd_7_SEAMA8: coarse hash resembles hfd_7_EAMA8, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
-      "hfd_7_SEAMA8: coarse hash resembles hfd_7_SEAFA8, but RGB pixels differ; hash alone is not evidence of duplicate subjects"
+      "hfd_7_SEAMA8: coarse hash resembles hfd_7_SEAFA8, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "hfd_12_SEAFA7: coarse hash resembles hfd_1_SEAFA7, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "hfd_12_SEAFA7: coarse hash resembles hfd_7_SEAFA7, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "hfd_12_SEAFA7: coarse hash resembles hfd_28_SEAFA7, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "hfd_12_SEAFA8: coarse hash resembles hfd_9_AMA8, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "hfd_12_SEAFA8: coarse hash resembles hfd_1_EAFA2, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "hfd_12_SEAFA8: coarse hash resembles hfd_1_EAFA3, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "hfd_12_SEAFA8: coarse hash resembles hfd_9_EAMA8, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "hfd_12_SEAFA8: coarse hash resembles hfd_1_SEAFA8, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "hfd_12_SEAFA8: coarse hash resembles hfd_7_SEAFA8, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "hfd_12_SEAFA8: coarse hash resembles hfd_17_SEAFA8, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "hfd_12_SEAFA8: coarse hash resembles hfd_20_SEAFA8, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "hfd_12_SEAFA8: coarse hash resembles hfd_2_SEAMA2, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "hfd_12_SEAFA8: coarse hash resembles hfd_2_SEAMA8, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "hfd_5_AFA7: coarse hash resembles hfd_17_SEAFA7, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "hfd_5_AFA8: coarse hash resembles hfd_20_EAFA8, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "hfd_24_SEAFA6: coarse hash resembles hfd_27_SEAFA2, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "hfd_24_SEAFA8: coarse hash resembles hfd_9_AMA7, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "hfd_24_SEAFA8: coarse hash resembles hfd_9_AMA8, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "hfd_24_SEAFA8: coarse hash resembles hfd_3_EAMA8, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "hfd_24_SEAFA8: coarse hash resembles hfd_5_EAMA8, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "hfd_24_SEAFA8: coarse hash resembles hfd_7_EAMA8, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "hfd_24_SEAFA8: coarse hash resembles hfd_9_EAMA8, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "hfd_24_SEAFA8: coarse hash resembles hfd_15_EAMA8, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "hfd_24_SEAFA8: coarse hash resembles hfd_2_SEAMA8, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "hfd_24_SEAFA8: coarse hash resembles hfd_4_SEAMA8, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "hfd_24_SEAFA8: coarse hash resembles hfd_7_SEAMA8, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "hfd_17_AMA6: coarse hash resembles hfd_12_EAMA2, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "hfd_17_AMA6: coarse hash resembles hfd_12_EAMA3, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "hfd_17_AMA6: coarse hash resembles hfd_12_EAMA6, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "hfd_17_AMA8: coarse hash resembles hfd_12_EAMA8, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "hfd_8_SEAMA7: coarse hash resembles hfd_4_SEAMA7, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "hfd_8_SEAMA8: coarse hash resembles hfd_9_AMA7, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "hfd_8_SEAMA8: coarse hash resembles hfd_9_EAMA8, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "hfd_8_SEAMA8: coarse hash resembles hfd_15_EAMA8, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "hfd_8_SEAMA8: coarse hash resembles hfd_20_SEAFA8, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "hfd_8_SEAMA8: coarse hash resembles hfd_2_SEAMA8, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "hfd_13_EAMA6: coarse hash resembles hfd_9_AMA2, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "hfd_13_EAMA6: coarse hash resembles hfd_9_AMA3, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "hfd_13_EAMA6: coarse hash resembles hfd_8_EAFA3, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "hfd_13_EAMA6: coarse hash resembles hfd_8_EAFA6, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "hfd_13_EAMA6: coarse hash resembles hfd_7_EAMA2, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "hfd_13_EAMA6: coarse hash resembles hfd_7_EAMA3, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "hfd_13_EAMA6: coarse hash resembles hfd_7_EAMA6, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "hfd_13_EAMA6: coarse hash resembles hfd_4_SEAMA6, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "hfd_13_EAMA7: coarse hash resembles hfd_18_AMA7, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "hfd_13_EAMA7: coarse hash resembles hfd_15_EAMA7, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "hfd_13_EAMA8: coarse hash resembles hfd_9_AMA3, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "hfd_13_EAMA8: coarse hash resembles hfd_9_AMA7, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "hfd_13_EAMA8: coarse hash resembles hfd_9_AMA8, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "hfd_13_EAMA8: coarse hash resembles hfd_5_EAMA8, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "hfd_13_EAMA8: coarse hash resembles hfd_7_EAMA8, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "hfd_13_EAMA8: coarse hash resembles hfd_9_EAMA8, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "hfd_13_EAMA8: coarse hash resembles hfd_15_EAMA8, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "hfd_13_EAMA8: coarse hash resembles hfd_7_SEAFA8, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "hfd_13_EAMA8: coarse hash resembles hfd_2_SEAMA2, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "hfd_13_EAMA8: coarse hash resembles hfd_2_SEAMA8, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "hfd_13_EAMA8: coarse hash resembles hfd_4_SEAMA8, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "hfd_19_EAFA6: coarse hash resembles hfd_6_EAFA2, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "hfd_19_EAFA8: coarse hash resembles hfd_16_EAFA8, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "hfd_14_AFA7: coarse hash resembles hfd_6_EAFA7, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "hfd_14_AFA8: coarse hash resembles hfd_9_AMA7, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "hfd_14_AFA8: coarse hash resembles hfd_9_AMA8, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "hfd_14_AFA8: coarse hash resembles hfd_7_EAMA8, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "hfd_14_AFA8: coarse hash resembles hfd_9_EAMA8, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "hfd_14_AFA8: coarse hash resembles hfd_15_EAMA8, but RGB pixels differ; hash alone is not evidence of duplicate subjects",
+      "hfd_14_AFA8: coarse hash resembles hfd_2_SEAMA8, but RGB pixels differ; hash alone is not evidence of duplicate subjects"
     ]
   },
   "annotation_reference": "Project silver-standard references: independent part-parsing initialization, visual review and recorded corrections. Background negatives visually checked. Not source-provided or independently expert-reviewed pixel truth; scores measure agreement with these references.",
@@ -189,120 +208,120 @@
   "summary": {
     "validation": {
       "skin": {
-        "tp": 14116162,
-        "fp": 3965051,
-        "fn": 2122652,
-        "precision": 0.7807087942606505,
-        "recall": 0.8692852815482707,
-        "iou": 0.6986862167214045,
-        "dice": 0.82261951600446,
-        "mean_image_iou": 0.579233075660732,
-        "mean_positive_image_iou": 0.724041344575915
+        "tp": 25365495,
+        "fp": 7599627,
+        "fn": 6623258,
+        "precision": 0.7694646177860346,
+        "recall": 0.7929504160415382,
+        "iou": 0.6407308154564546,
+        "dice": 0.7810310008448302,
+        "mean_image_iou": 0.5763574456105632,
+        "mean_positive_image_iou": 0.6988334028028078
       },
       "face_baseline": {
-        "tp": 10895663,
-        "fp": 5842113,
-        "fn": 852904,
-        "precision": 0.6509624098207552,
-        "recall": 0.9274035718568912,
-        "iou": 0.6193997616919868,
-        "dice": 0.7649745002368328,
-        "mean_image_iou": 0.5311775229358934,
-        "mean_positive_image_iou": 0.6506924655964694
+        "tp": 19141256,
+        "fp": 12290265,
+        "fn": 3732327,
+        "precision": 0.6089828105995889,
+        "recall": 0.8368280561904097,
+        "iou": 0.5443447486179556,
+        "dice": 0.7049523742740645,
+        "mean_image_iou": 0.487417339864559,
+        "mean_positive_image_iou": 0.5849008078374708
       }
     },
     "test": {
       "skin": {
-        "tp": 13189163,
-        "fp": 6824501,
-        "fn": 2560776,
-        "precision": 0.659007915791931,
-        "recall": 0.8374104179070154,
-        "iou": 0.5842520567509094,
-        "dice": 0.7375746230042873,
-        "mean_image_iou": 0.6045727504444619,
-        "mean_positive_image_iou": 0.7254873005333543
+        "tp": 7159952,
+        "fp": 492823,
+        "fn": 1386236,
+        "precision": 0.9356020528501099,
+        "recall": 0.837794815653482,
+        "iou": 0.7921167481707899,
+        "dice": 0.8840012783534353,
+        "mean_image_iou": 0.7827769222167728,
+        "mean_positive_image_iou": 0.7827769222167728
       },
       "face_baseline": {
-        "tp": 9541129,
-        "fp": 9373590,
-        "fn": 1702094,
-        "precision": 0.5044287996031027,
-        "recall": 0.8486115591587928,
-        "iou": 0.4627838939025154,
-        "dice": 0.6327440380381394,
-        "mean_image_iou": 0.45861665435674737,
-        "mean_positive_image_iou": 0.5503399852280968
+        "tp": 4984325,
+        "fp": 2390947,
+        "fn": 739554,
+        "precision": 0.675815752964772,
+        "recall": 0.8707949626468344,
+        "iou": 0.6142245070935594,
+        "dice": 0.7610149695961211,
+        "mean_image_iou": 0.615985035740175,
+        "mean_positive_image_iou": 0.615985035740175
       }
     }
   },
   "no_face": {
     "validation": {
-      "images": 10,
-      "nonempty_predictions": 9,
-      "image_false_positive_rate": 0.9,
-      "false_positive_pixels": 321439
+      "images": 20,
+      "nonempty_predictions": 16,
+      "image_false_positive_rate": 0.8,
+      "false_positive_pixels": 351476
     },
     "test": {
-      "images": 10,
-      "nonempty_predictions": 8,
-      "image_false_positive_rate": 0.8,
-      "false_positive_pixels": 112315
+      "images": 0,
+      "nonempty_predictions": 0,
+      "image_false_positive_rate": null,
+      "false_positive_pixels": 0
     }
   },
   "scene_summary": {
     "validation": {
       "frontal": {
-        "images": 24,
+        "images": 48,
         "skin": {
-          "tp": 10617935,
-          "fp": 1778124,
-          "fn": 1516469,
-          "precision": 0.8565573139011359,
-          "recall": 0.8750273190178932,
-          "iou": 0.7631923544017306,
-          "dice": 0.8656938109973709,
-          "mean_positive_image_iou": 0.7632728344049612
+          "tp": 18172550,
+          "fp": 2505059,
+          "fn": 5071920,
+          "precision": 0.878851611905419,
+          "recall": 0.7818010047120885,
+          "iou": 0.7057430060177023,
+          "dice": 0.8274904291301876,
+          "mean_positive_image_iou": 0.7068674838715494
         },
         "face_baseline": {
-          "tp": 8435261,
-          "fp": 3348075,
-          "fn": 434588,
-          "precision": 0.7158635720817942,
-          "recall": 0.9510039009683254,
-          "iou": 0.6904005132132104,
-          "dice": 0.8168484425041465,
-          "mean_positive_image_iou": 0.7044953132341337
+          "tp": 14790710,
+          "fp": 5584530,
+          "fn": 2435847,
+          "precision": 0.7259158665124926,
+          "recall": 0.858599312677513,
+          "iou": 0.6484000521325441,
+          "dice": 0.7867022951057365,
+          "mean_positive_image_iou": 0.6454347979292286
         }
       },
       "profile": {
-        "images": 16,
+        "images": 32,
         "skin": {
-          "tp": 3498227,
-          "fp": 1857876,
-          "fn": 606183,
-          "precision": 0.6531291500555535,
-          "recall": 0.8523093453139428,
-          "iou": 0.5867257961124307,
-          "dice": 0.7395427710949712,
-          "mean_positive_image_iou": 0.665194109832346
+          "tp": 7192945,
+          "fp": 4665117,
+          "fn": 1551338,
+          "precision": 0.6065868942159351,
+          "recall": 0.8225883128439462,
+          "iou": 0.5364106522290334,
+          "dice": 0.6982646878304387,
+          "mean_positive_image_iou": 0.6867822811996954
         },
         "face_baseline": {
-          "tp": 2460402,
-          "fp": 2172599,
-          "fn": 418316,
-          "precision": 0.5310601055341884,
-          "recall": 0.8546867042898957,
-          "iou": 0.4870812898893496,
-          "dice": 0.6550836100232184,
-          "mean_positive_image_iou": 0.5699881941399731
+          "tp": 4350546,
+          "fp": 6354259,
+          "fn": 1296480,
+          "precision": 0.4064105791744922,
+          "recall": 0.7704136655294309,
+          "iou": 0.3625066815761812,
+          "dice": 0.532117290106533,
+          "mean_positive_image_iou": 0.4940998226998341
         }
       },
       "natural_background": {
-        "images": 10,
+        "images": 20,
         "skin": {
           "tp": 0,
-          "fp": 329051,
+          "fp": 429451,
           "fn": 0,
           "precision": 0.0,
           "recall": null,
@@ -312,7 +331,7 @@
         },
         "face_baseline": {
           "tp": 0,
-          "fp": 321439,
+          "fp": 351476,
           "fn": 0,
           "precision": 0.0,
           "recall": null,
@@ -324,72 +343,49 @@
     },
     "test": {
       "frontal": {
-        "images": 24,
+        "images": 8,
         "skin": {
-          "tp": 9165662,
-          "fp": 2460275,
-          "fn": 1944404,
-          "precision": 0.7883804978471842,
-          "recall": 0.8249871782939904,
-          "iou": 0.675418694342316,
-          "dice": 0.8062685424522508,
-          "mean_positive_image_iou": 0.727398322621867
+          "tp": 3598702,
+          "fp": 179508,
+          "fn": 584312,
+          "precision": 0.9524886123322949,
+          "recall": 0.860313161753702,
+          "iou": 0.8249132038761066,
+          "dice": 0.9040574665403209,
+          "mean_positive_image_iou": 0.8292959531160891
         },
         "face_baseline": {
-          "tp": 7270180,
-          "fp": 3700510,
-          "fn": 1086528,
-          "precision": 0.6626912254379624,
-          "recall": 0.8699813371485517,
-          "iou": 0.6029732563515067,
-          "dice": 0.7523185480011328,
-          "mean_positive_image_iou": 0.6232259457958406
+          "tp": 2673162,
+          "fp": 1036117,
+          "fn": 138941,
+          "precision": 0.7206688954915497,
+          "recall": 0.9505917813109975,
+          "iou": 0.6946489545815988,
+          "dice": 0.81981457304602,
+          "mean_positive_image_iou": 0.7134520631605767
         }
       },
       "profile": {
         "images": 16,
         "skin": {
-          "tp": 4023501,
-          "fp": 4198983,
-          "fn": 616372,
-          "precision": 0.489329137034502,
-          "recall": 0.867157570907652,
-          "iou": 0.4552060809679443,
-          "dice": 0.6256242149086672,
-          "mean_positive_image_iou": 0.7226207674005856
+          "tp": 3561250,
+          "fp": 313315,
+          "fn": 801924,
+          "precision": 0.9191354384298625,
+          "recall": 0.8162062755232773,
+          "iou": 0.7615221590385437,
+          "dice": 0.8646183133503016,
+          "mean_positive_image_iou": 0.7595174067671147
         },
         "face_baseline": {
-          "tp": 2270949,
-          "fp": 5560765,
-          "fn": 615566,
-          "precision": 0.2899683262182455,
-          "recall": 0.7867442227045416,
-          "iou": 0.26883789811631675,
-          "dice": 0.4237545213859491,
-          "mean_positive_image_iou": 0.4410110443764811
-        }
-      },
-      "natural_background": {
-        "images": 10,
-        "skin": {
-          "tp": 0,
-          "fp": 165243,
-          "fn": 0,
-          "precision": 0.0,
-          "recall": null,
-          "iou": 0.0,
-          "dice": 0.0,
-          "mean_positive_image_iou": null
-        },
-        "face_baseline": {
-          "tp": 0,
-          "fp": 112315,
-          "fn": 0,
-          "precision": 0.0,
-          "recall": null,
-          "iou": 0.0,
-          "dice": 0.0,
-          "mean_positive_image_iou": null
+          "tp": 2311163,
+          "fp": 1354830,
+          "fn": 600613,
+          "precision": 0.6304330095556647,
+          "recall": 0.7937296687657293,
+          "iou": 0.5416865302303517,
+          "dice": 0.7027194174803038,
+          "mean_positive_image_iou": 0.5672515220299742
         }
       }
     }
@@ -400,12 +396,12 @@
       "subject_ids": [
         "hfd_AFA_012"
       ],
-      "split": "test",
+      "split": "validation",
       "shape": [
         1500,
         2000
       ],
-      "processing_ms": 142.93629999883706,
+      "processing_ms": 271.30060000001777,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_2",
@@ -414,22 +410,22 @@
       ],
       "source_population_label": "Asian faces",
       "skin": {
-        "tp": 311014,
-        "fp": 146316,
-        "fn": 32235,
-        "precision": 0.6800647235038156,
-        "recall": 0.9060885829237667,
-        "iou": 0.6352864277470816,
-        "dice": 0.7769726660329587
+        "tp": 286148,
+        "fp": 112120,
+        "fn": 57101,
+        "precision": 0.718481022828849,
+        "recall": 0.8336455459447806,
+        "iou": 0.6283870882734661,
+        "dice": 0.7717908018292231
       },
       "face_baseline": {
-        "tp": 290798,
-        "fp": 200158,
-        "fn": 726,
-        "precision": 0.5923096978140607,
-        "recall": 0.9975096390005626,
-        "iou": 0.5914351145659186,
-        "dice": 0.743272671505981
+        "tp": 290339,
+        "fp": 175470,
+        "fn": 1185,
+        "precision": 0.6233005373447057,
+        "recall": 0.995935154567034,
+        "iou": 0.6217189085941147,
+        "dice": 0.766740654375288
       }
     },
     {
@@ -437,12 +433,12 @@
       "subject_ids": [
         "hfd_AFA_012"
       ],
-      "split": "test",
+      "split": "validation",
       "shape": [
         1500,
         2000
       ],
-      "processing_ms": 135.28859999860288,
+      "processing_ms": 264.9294999999938,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_3",
@@ -451,22 +447,22 @@
       ],
       "source_population_label": "Asian faces",
       "skin": {
-        "tp": 325471,
-        "fp": 139094,
-        "fn": 23820,
-        "precision": 0.7005930278863023,
-        "recall": 0.9318047129757137,
-        "iou": 0.6664230064395917,
-        "dice": 0.7998245389847836
+        "tp": 303817,
+        "fp": 108541,
+        "fn": 45474,
+        "precision": 0.7367796914331721,
+        "recall": 0.8698105591040136,
+        "iou": 0.6635993115378567,
+        "dice": 0.7977874322686697
       },
       "face_baseline": {
-        "tp": 289254,
-        "fp": 204287,
-        "fn": 1044,
-        "precision": 0.5860789681100456,
-        "recall": 0.9964036955128868,
-        "iou": 0.5848418370957469,
-        "dice": 0.7380444198362164
+        "tp": 288520,
+        "fp": 179629,
+        "fn": 1778,
+        "precision": 0.6162995114803193,
+        "recall": 0.9938752592163914,
+        "iou": 0.6139677013663825,
+        "dice": 0.7608178290638634
       }
     },
     {
@@ -474,12 +470,12 @@
       "subject_ids": [
         "hfd_AFA_012"
       ],
-      "split": "test",
+      "split": "validation",
       "shape": [
         1500,
         2000
       ],
-      "processing_ms": 147.18269999866607,
+      "processing_ms": 258.7851999999202,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_6",
@@ -488,22 +484,22 @@
       ],
       "source_population_label": "Asian faces",
       "skin": {
-        "tp": 339165,
-        "fp": 143847,
-        "fn": 16765,
-        "precision": 0.7021875232913468,
-        "recall": 0.9528980417497822,
-        "iou": 0.6786326701708962,
-        "dice": 0.8085541074353173
+        "tp": 321109,
+        "fp": 112734,
+        "fn": 34821,
+        "precision": 0.7401502386808131,
+        "recall": 0.9021689658078835,
+        "iou": 0.6851582370312207,
+        "dice": 0.8131678343017551
       },
       "face_baseline": {
-        "tp": 289690,
-        "fp": 208797,
-        "fn": 1255,
-        "precision": 0.5811385251771861,
-        "recall": 0.9956864699513653,
-        "iou": 0.5796791144230423,
-        "dice": 0.7339200843137851
+        "tp": 288916,
+        "fp": 180546,
+        "fn": 2029,
+        "precision": 0.6154193523650476,
+        "recall": 0.9930261733317294,
+        "iou": 0.6127709754799138,
+        "dice": 0.7598983176114896
       }
     },
     {
@@ -511,12 +507,12 @@
       "subject_ids": [
         "hfd_AFA_012"
       ],
-      "split": "test",
+      "split": "validation",
       "shape": [
         1500,
         2000
       ],
-      "processing_ms": 128.9096000000427,
+      "processing_ms": 209.26220000001194,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_7",
@@ -525,22 +521,22 @@
       ],
       "source_population_label": "Asian faces",
       "skin": {
-        "tp": 342224,
-        "fp": 135881,
-        "fn": 28355,
-        "precision": 0.7157925560284875,
-        "recall": 0.9234846011241867,
-        "iou": 0.6757177269675789,
-        "dice": 0.8064815643985276
+        "tp": 332812,
+        "fp": 94583,
+        "fn": 37767,
+        "precision": 0.7786988617087238,
+        "recall": 0.8980865078701168,
+        "iou": 0.7154754687614208,
+        "dice": 0.8341424657946249
       },
       "face_baseline": {
-        "tp": 183181,
-        "fp": 208553,
-        "fn": 19301,
-        "precision": 0.46761578009567717,
-        "recall": 0.9046779466816803,
-        "iou": 0.4456579123432311,
-        "dice": 0.6165468449183462
+        "tp": 172219,
+        "fp": 195700,
+        "fn": 23503,
+        "precision": 0.4680894436003577,
+        "recall": 0.8799164120538314,
+        "iou": 0.43998293402006017,
+        "dice": 0.6110946506730348
       }
     },
     {
@@ -548,12 +544,12 @@
       "subject_ids": [
         "hfd_AFA_012"
       ],
-      "split": "test",
+      "split": "validation",
       "shape": [
         1500,
         2000
       ],
-      "processing_ms": 126.33319999804371,
+      "processing_ms": 171.4296000000104,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_8",
@@ -562,22 +558,22 @@
       ],
       "source_population_label": "Asian faces",
       "skin": {
-        "tp": 244459,
-        "fp": 115309,
-        "fn": 43766,
-        "precision": 0.6794906717662493,
-        "recall": 0.8481533524156475,
-        "iou": 0.6057952985374219,
-        "dice": 0.7545112370041034
+        "tp": 229482,
+        "fp": 91767,
+        "fn": 58743,
+        "precision": 0.714343079667174,
+        "recall": 0.7961904761904762,
+        "iou": 0.6039127139518726,
+        "dice": 0.7530493507516317
       },
       "face_baseline": {
-        "tp": 131700,
-        "fp": 187376,
-        "fn": 29260,
-        "precision": 0.4127543281224536,
-        "recall": 0.8182157057654076,
-        "iou": 0.37808322998484223,
-        "dice": 0.5487088468364872
+        "tp": 116550,
+        "fp": 175918,
+        "fn": 29462,
+        "precision": 0.39850513560457895,
+        "recall": 0.7982220639399501,
+        "iou": 0.36203522504892366,
+        "dice": 0.5316091954022989
       }
     },
     {
@@ -590,7 +586,7 @@
         1500,
         2000
       ],
-      "processing_ms": 137.05230000050506,
+      "processing_ms": 160.60930000003282,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_2",
@@ -599,22 +595,22 @@
       ],
       "source_population_label": "Asian faces",
       "skin": {
-        "tp": 480648,
-        "fp": 37335,
-        "fn": 109470,
-        "precision": 0.9279223449418225,
-        "recall": 0.8144947281730095,
-        "iou": 0.7660302843400223,
-        "dice": 0.8675165891917794
+        "tp": 408433,
+        "fp": 30817,
+        "fn": 181685,
+        "precision": 0.9298417757541263,
+        "recall": 0.6921208978543274,
+        "iou": 0.6577709422081216,
+        "dice": 0.7935607090952895
       },
       "face_baseline": {
-        "tp": 358397,
-        "fp": 155491,
-        "fn": 61381,
-        "precision": 0.6974223955414409,
-        "recall": 0.8537774728546994,
-        "iou": 0.623007671193824,
-        "dice": 0.7677199341091997
+        "tp": 334255,
+        "fp": 140120,
+        "fn": 85523,
+        "precision": 0.7046218708827404,
+        "recall": 0.796266121616664,
+        "iou": 0.5969926665214021,
+        "dice": 0.7476460963615846
       }
     },
     {
@@ -627,7 +623,7 @@
         1500,
         2000
       ],
-      "processing_ms": 144.32880000094883,
+      "processing_ms": 165.35650000002988,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_3",
@@ -636,22 +632,22 @@
       ],
       "source_population_label": "Asian faces",
       "skin": {
-        "tp": 500409,
-        "fp": 24453,
-        "fn": 117014,
-        "precision": 0.9534106107891217,
-        "recall": 0.8104800112726607,
-        "iou": 0.779603848718444,
-        "dice": 0.8761543747838761
+        "tp": 433245,
+        "fp": 19617,
+        "fn": 184178,
+        "precision": 0.9566821680776926,
+        "recall": 0.7016988353203557,
+        "iou": 0.6800907321361296,
+        "dice": 0.8095881003657904
       },
       "face_baseline": {
-        "tp": 377028,
-        "fp": 159462,
-        "fn": 46019,
-        "precision": 0.7027679919476598,
-        "recall": 0.8912201244778949,
-        "iou": 0.6472483686947326,
-        "dice": 0.785854010840645
+        "tp": 283597,
+        "fp": 139586,
+        "fn": 139450,
+        "precision": 0.6701521563956965,
+        "recall": 0.6703675950899073,
+        "iou": 0.5040532638505029,
+        "dice": 0.6702598584309231
       }
     },
     {
@@ -664,7 +660,7 @@
         1500,
         2000
       ],
-      "processing_ms": 159.09079999983078,
+      "processing_ms": 164.7482000000764,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_6",
@@ -673,22 +669,22 @@
       ],
       "source_population_label": "Asian faces",
       "skin": {
-        "tp": 483646,
-        "fp": 24160,
-        "fn": 130135,
-        "precision": 0.9524227756269127,
-        "recall": 0.7879781224899435,
-        "iou": 0.758135940470984,
-        "dice": 0.8624315367421341
+        "tp": 422403,
+        "fp": 19233,
+        "fn": 191378,
+        "precision": 0.9564505610955628,
+        "recall": 0.6881982335719092,
+        "iou": 0.6672885591787859,
+        "dice": 0.8004475955949165
       },
       "face_baseline": {
-        "tp": 355851,
-        "fp": 166911,
-        "fn": 43139,
-        "precision": 0.6807132117483673,
-        "recall": 0.89187949572671,
-        "iou": 0.6288220024350549,
-        "dice": 0.7721187477759744
+        "tp": 249403,
+        "fp": 148743,
+        "fn": 149587,
+        "precision": 0.6264109145891206,
+        "recall": 0.6250858417504198,
+        "iou": 0.455336815565248,
+        "dice": 0.6257476766825234
       }
     },
     {
@@ -701,7 +697,7 @@
         1500,
         2000
       ],
-      "processing_ms": 203.9801000028092,
+      "processing_ms": 186.57439999992675,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_7",
@@ -710,22 +706,22 @@
       ],
       "source_population_label": "Asian faces",
       "skin": {
-        "tp": 334526,
-        "fp": 9724,
-        "fn": 17677,
-        "precision": 0.9717530864197531,
-        "recall": 0.9498101946888584,
-        "iou": 0.9242913626228494,
-        "dice": 0.9606563544130042
+        "tp": 328019,
+        "fp": 7245,
+        "fn": 24184,
+        "precision": 0.9783901641691324,
+        "recall": 0.9313350539319654,
+        "iou": 0.912563152389219,
+        "dice": 0.9542828964881224
       },
       "face_baseline": {
-        "tp": 197302,
-        "fp": 146177,
-        "fn": 9423,
-        "precision": 0.5744223082051596,
-        "recall": 0.9544177046801307,
-        "iou": 0.5590843917008121,
-        "dice": 0.7171958037382498
+        "tp": 194102,
+        "fp": 141209,
+        "fn": 12623,
+        "precision": 0.5788715550638064,
+        "recall": 0.9389382029265932,
+        "iou": 0.5578701707795156,
+        "dice": 0.7161959722232472
       }
     },
     {
@@ -738,7 +734,7 @@
         1500,
         2000
       ],
-      "processing_ms": 257.1133999990707,
+      "processing_ms": 184.69219999997222,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_8",
@@ -747,22 +743,22 @@
       ],
       "source_population_label": "Asian faces",
       "skin": {
-        "tp": 339814,
-        "fp": 4247,
-        "fn": 34658,
-        "precision": 0.9876562586285571,
-        "recall": 0.9074483539490269,
-        "iou": 0.897272119962294,
-        "dice": 0.9458549572531811
+        "tp": 322510,
+        "fp": 2891,
+        "fn": 51962,
+        "precision": 0.9911155773952753,
+        "recall": 0.8612392915892243,
+        "iou": 0.8546412870366199,
+        "dice": 0.9216243518466922
       },
       "face_baseline": {
-        "tp": 177034,
-        "fp": 165941,
-        "fn": 14333,
-        "precision": 0.5161717326335739,
-        "recall": 0.9251020290854745,
-        "iou": 0.495466096476989,
-        "dice": 0.6626243117703643
+        "tp": 169531,
+        "fp": 154815,
+        "fn": 21836,
+        "precision": 0.5226856505090243,
+        "recall": 0.8858946422319418,
+        "iou": 0.4897163919556765,
+        "dice": 0.6574625809316422
       }
     },
     {
@@ -770,12 +766,12 @@
       "subject_ids": [
         "hfd_AMA_001"
       ],
-      "split": "test",
+      "split": "validation",
       "shape": [
         1500,
         2000
       ],
-      "processing_ms": 251.84010000157286,
+      "processing_ms": 169.49399999998604,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_2",
@@ -784,22 +780,22 @@
       ],
       "source_population_label": "Asian faces",
       "skin": {
-        "tp": 158814,
-        "fp": 27331,
-        "fn": 241482,
-        "precision": 0.8531736012248516,
-        "recall": 0.3967414113555969,
-        "iou": 0.3713844074391935,
-        "dice": 0.541619702578776
+        "tp": 125672,
+        "fp": 17765,
+        "fn": 274624,
+        "precision": 0.8761477164190551,
+        "recall": 0.31394767871774887,
+        "iou": 0.30060684923970427,
+        "dice": 0.4622562912311741
       },
       "face_baseline": {
-        "tp": 48732,
-        "fp": 49610,
-        "fn": 260911,
-        "precision": 0.49553598665880294,
-        "recall": 0.15738124226932307,
-        "iou": 0.13564813655000793,
-        "dice": 0.2388911357035185
+        "tp": 27035,
+        "fp": 45354,
+        "fn": 282608,
+        "precision": 0.3734683446379975,
+        "recall": 0.0873102250010496,
+        "iou": 0.07615557314568855,
+        "dice": 0.14153264647987604
       }
     },
     {
@@ -807,12 +803,12 @@
       "subject_ids": [
         "hfd_AMA_001"
       ],
-      "split": "test",
+      "split": "validation",
       "shape": [
         1500,
         2000
       ],
-      "processing_ms": 255.44490000174847,
+      "processing_ms": 162.0312999999669,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_3",
@@ -821,17 +817,17 @@
       ],
       "source_population_label": "Asian faces",
       "skin": {
-        "tp": 129802,
-        "fp": 804357,
-        "fn": 291319,
-        "precision": 0.13895064972879348,
-        "recall": 0.3082297012022673,
-        "iou": 0.10591948611072577,
-        "dice": 0.19155008559116934
+        "tp": 105276,
+        "fp": 236643,
+        "fn": 315845,
+        "precision": 0.3078974844919411,
+        "recall": 0.24998990788870656,
+        "iou": 0.16005132539938335,
+        "dice": 0.27593835185573495
       },
       "face_baseline": {
         "tp": 0,
-        "fp": 420610,
+        "fp": 108330,
         "fn": 317576,
         "precision": 0.0,
         "recall": 0.0,
@@ -844,12 +840,12 @@
       "subject_ids": [
         "hfd_AMA_001"
       ],
-      "split": "test",
+      "split": "validation",
       "shape": [
         1500,
         2000
       ],
-      "processing_ms": 233.5239999993064,
+      "processing_ms": 226.48149999997713,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_6",
@@ -858,22 +854,22 @@
       ],
       "source_population_label": "Asian faces",
       "skin": {
-        "tp": 128978,
-        "fp": 558873,
-        "fn": 301429,
-        "precision": 0.18750863195663015,
-        "recall": 0.29966520061244356,
-        "iou": 0.13037562671842148,
-        "dice": 0.23067664170522367
+        "tp": 106945,
+        "fp": 74271,
+        "fn": 323462,
+        "precision": 0.5901520837012184,
+        "recall": 0.24847411868301397,
+        "iou": 0.2119073944178268,
+        "dice": 0.3497088892994541
       },
       "face_baseline": {
-        "tp": 0,
-        "fp": 346855,
-        "fn": 335045,
-        "precision": 0.0,
-        "recall": 0.0,
-        "iou": 0.0,
-        "dice": 0.0
+        "tp": 17506,
+        "fp": 38281,
+        "fn": 317539,
+        "precision": 0.3138007062577303,
+        "recall": 0.05224969780178782,
+        "iou": 0.04689199252128167,
+        "dice": 0.08958324804519589
       }
     },
     {
@@ -881,12 +877,12 @@
       "subject_ids": [
         "hfd_AMA_001"
       ],
-      "split": "test",
+      "split": "validation",
       "shape": [
         1500,
         2000
       ],
-      "processing_ms": 247.4618999985978,
+      "processing_ms": 234.72669999989648,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_7",
@@ -895,22 +891,22 @@
       ],
       "source_population_label": "Asian faces",
       "skin": {
-        "tp": 134575,
-        "fp": 1704066,
-        "fn": 64522,
-        "precision": 0.0731926460902373,
-        "recall": 0.6759268095450961,
-        "iou": 0.07071123177573334,
-        "dice": 0.13208273094970993
+        "tp": 113320,
+        "fp": 1404226,
+        "fn": 85777,
+        "precision": 0.07467318947827611,
+        "recall": 0.56916980165447,
+        "iou": 0.07067821019220706,
+        "dice": 0.13202512112302908
       },
       "face_baseline": {
-        "tp": 96821,
-        "fp": 1740698,
-        "fn": 27660,
-        "precision": 0.05269115584655179,
-        "recall": 0.7777974148665258,
-        "iou": 0.05190976308440101,
-        "dice": 0.09869622833843017
+        "tp": 0,
+        "fp": 1433325,
+        "fn": 124481,
+        "precision": 0.0,
+        "recall": 0.0,
+        "iou": 0.0,
+        "dice": 0.0
       }
     },
     {
@@ -918,12 +914,12 @@
       "subject_ids": [
         "hfd_AMA_001"
       ],
-      "split": "test",
+      "split": "validation",
       "shape": [
         1500,
         2000
       ],
-      "processing_ms": 201.9081999969785,
+      "processing_ms": 238.32229999993615,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_8",
@@ -932,17 +928,17 @@
       ],
       "source_population_label": "Asian faces",
       "skin": {
-        "tp": 81077,
-        "fp": 2029997,
-        "fn": 144758,
-        "precision": 0.03840556986633344,
-        "recall": 0.35900989660592914,
-        "iou": 0.03594106298696002,
-        "dice": 0.06938823890874656
+        "tp": 64887,
+        "fp": 1873207,
+        "fn": 160948,
+        "precision": 0.03347980025736626,
+        "recall": 0.2873203887794186,
+        "iou": 0.030912673495813805,
+        "dice": 0.0599714685648189
       },
       "face_baseline": {
         "tp": 0,
-        "fp": 2025952,
+        "fp": 1866203,
         "fn": 148485,
         "precision": 0.0,
         "recall": 0.0,
@@ -960,7 +956,7 @@
         1500,
         2000
       ],
-      "processing_ms": 216.29749999920023,
+      "processing_ms": 249.73710000006122,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_2",
@@ -969,22 +965,22 @@
       ],
       "source_population_label": "East Asian faces",
       "skin": {
-        "tp": 467917,
-        "fp": 45143,
-        "fn": 67855,
-        "precision": 0.9120122402837875,
-        "recall": 0.873350977654674,
-        "iou": 0.8054827298313867,
-        "dice": 0.8922630125701733
+        "tp": 410085,
+        "fp": 36118,
+        "fn": 125687,
+        "precision": 0.919054779999238,
+        "recall": 0.7654095398789037,
+        "iou": 0.7170697162041652,
+        "dice": 0.8352249293515619
       },
       "face_baseline": {
-        "tp": 355831,
-        "fp": 222021,
-        "fn": 6795,
-        "precision": 0.6157822418197046,
-        "recall": 0.9812616855934213,
-        "iou": 0.6086253756540271,
-        "dice": 0.7567024428003633
+        "tp": 352827,
+        "fp": 210203,
+        "fn": 9799,
+        "precision": 0.6266575493312967,
+        "recall": 0.9729776684517933,
+        "iou": 0.615937740582268,
+        "dice": 0.7623285540200679
       }
     },
     {
@@ -997,7 +993,7 @@
         1500,
         2000
       ],
-      "processing_ms": 204.2414000025019,
+      "processing_ms": 226.92159999996875,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_3",
@@ -1006,22 +1002,22 @@
       ],
       "source_population_label": "East Asian faces",
       "skin": {
-        "tp": 512040,
-        "fp": 41426,
-        "fn": 59918,
-        "precision": 0.9251516805006992,
-        "recall": 0.8952405596215107,
-        "iou": 0.8347788660936705,
-        "dice": 0.909950383144486
+        "tp": 451305,
+        "fp": 33709,
+        "fn": 120653,
+        "precision": 0.9304989134334266,
+        "recall": 0.7890526926802318,
+        "iou": 0.7451371793411231,
+        "dice": 0.8539582883936376
       },
       "face_baseline": {
-        "tp": 375978,
-        "fp": 229667,
-        "fn": 5833,
-        "precision": 0.6207894063353945,
-        "recall": 0.9847228078813863,
-        "iou": 0.6148675831346344,
-        "dice": 0.7615083608788644
+        "tp": 372634,
+        "fp": 182421,
+        "fn": 9177,
+        "precision": 0.6713460828206214,
+        "recall": 0.9759645479045915,
+        "iou": 0.660426916587503,
+        "dice": 0.7954904970401316
       }
     },
     {
@@ -1034,7 +1030,7 @@
         1500,
         2000
       ],
-      "processing_ms": 194.59199999982957,
+      "processing_ms": 245.50150000004578,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_6",
@@ -1043,22 +1039,22 @@
       ],
       "source_population_label": "East Asian faces",
       "skin": {
-        "tp": 433365,
-        "fp": 32910,
-        "fn": 47999,
-        "precision": 0.9294193340839634,
-        "recall": 0.9002854388778554,
-        "iou": 0.8426733608932203,
-        "dice": 0.9146204409062945
+        "tp": 383258,
+        "fp": 24857,
+        "fn": 98106,
+        "precision": 0.9390931477647232,
+        "recall": 0.7961916553792971,
+        "iou": 0.7570962089680199,
+        "dice": 0.8617584001421057
       },
       "face_baseline": {
-        "tp": 318079,
-        "fp": 189062,
-        "fn": 7259,
-        "precision": 0.6272003249589365,
-        "recall": 0.9776878200517616,
-        "iou": 0.618349533437014,
-        "dice": 0.7641730301905514
+        "tp": 315523,
+        "fp": 152713,
+        "fn": 9815,
+        "precision": 0.6738546374050692,
+        "recall": 0.9698313753696156,
+        "iou": 0.6600195376643915,
+        "dice": 0.79519490305882
       }
     },
     {
@@ -1071,7 +1067,7 @@
         1500,
         2000
       ],
-      "processing_ms": 181.13760000051116,
+      "processing_ms": 257.68809999999576,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_7",
@@ -1080,22 +1076,22 @@
       ],
       "source_population_label": "East Asian faces",
       "skin": {
-        "tp": 243023,
-        "fp": 52024,
-        "fn": 23601,
-        "precision": 0.8236755499971191,
-        "recall": 0.9114820871339414,
-        "iou": 0.7626691521679094,
-        "dice": 0.8653571218738372
+        "tp": 235046,
+        "fp": 42736,
+        "fn": 31578,
+        "precision": 0.8461527384783751,
+        "recall": 0.8815635501680269,
+        "iou": 0.759781484354797,
+        "dice": 0.8634952590529862
       },
       "face_baseline": {
-        "tp": 215478,
-        "fp": 60622,
-        "fn": 22264,
-        "precision": 0.7804346251358204,
-        "recall": 0.9063522642191956,
-        "iou": 0.722198388545535,
-        "dice": 0.8386936062057987
+        "tp": 195135,
+        "fp": 69039,
+        "fn": 16870,
+        "precision": 0.7386608826001044,
+        "recall": 0.9204264050376171,
+        "iou": 0.6943218855410541,
+        "dice": 0.8195867520407242
       }
     },
     {
@@ -1108,7 +1104,7 @@
         1500,
         2000
       ],
-      "processing_ms": 189.21190000037313,
+      "processing_ms": 282.8249000000369,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_8",
@@ -1117,22 +1113,22 @@
       ],
       "source_population_label": "East Asian faces",
       "skin": {
-        "tp": 136048,
-        "fp": 88398,
-        "fn": 17417,
-        "precision": 0.6061502544041774,
-        "recall": 0.8865083243736357,
-        "iou": 0.5625002584107532,
-        "dice": 0.720000211690054
+        "tp": 130176,
+        "fp": 67810,
+        "fn": 23289,
+        "precision": 0.6575010354267473,
+        "recall": 0.8482455282963542,
+        "iou": 0.5882996271607728,
+        "dice": 0.7407917462178227
       },
       "face_baseline": {
-        "tp": 116298,
-        "fp": 55476,
-        "fn": 11316,
-        "precision": 0.6770407628628314,
-        "recall": 0.9113263435046312,
-        "iou": 0.6351958053416352,
-        "dice": 0.7769048859673734
+        "tp": 104720,
+        "fp": 57006,
+        "fn": 7014,
+        "precision": 0.6475149326638883,
+        "recall": 0.9372259115399073,
+        "iou": 0.6205997392438071,
+        "dice": 0.7658889782783588
       }
     },
     {
@@ -1140,12 +1136,12 @@
       "subject_ids": [
         "hfd_EAFA_003"
       ],
-      "split": "test",
+      "split": "validation",
       "shape": [
         1500,
         2000
       ],
-      "processing_ms": 186.9879999976547,
+      "processing_ms": 233.62680000002456,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_2",
@@ -1154,22 +1150,22 @@
       ],
       "source_population_label": "East Asian faces",
       "skin": {
-        "tp": 483531,
-        "fp": 36237,
-        "fn": 113568,
-        "precision": 0.930282356743778,
-        "recall": 0.809800384860802,
-        "iou": 0.7634667854030088,
-        "dice": 0.8658703319195571
+        "tp": 411533,
+        "fp": 26122,
+        "fn": 185566,
+        "precision": 0.9403137174258263,
+        "recall": 0.6892207154927408,
+        "iou": 0.6603323700581335,
+        "dice": 0.79542190704264
       },
       "face_baseline": {
-        "tp": 223787,
-        "fp": 175030,
-        "fn": 43177,
-        "precision": 0.561127033200691,
-        "recall": 0.8382665827602224,
-        "iou": 0.5063123028819396,
-        "dice": 0.6722540895579777
+        "tp": 190530,
+        "fp": 132090,
+        "fn": 76434,
+        "precision": 0.590570950344058,
+        "recall": 0.7136917337169056,
+        "iou": 0.47745417913365107,
+        "dice": 0.6463201172352031
       }
     },
     {
@@ -1177,12 +1173,12 @@
       "subject_ids": [
         "hfd_EAFA_003"
       ],
-      "split": "test",
+      "split": "validation",
       "shape": [
         1500,
         2000
       ],
-      "processing_ms": 177.3057999998855,
+      "processing_ms": 242.02809999997044,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_3",
@@ -1191,22 +1187,22 @@
       ],
       "source_population_label": "East Asian faces",
       "skin": {
-        "tp": 492582,
-        "fp": 27602,
-        "fn": 113577,
-        "precision": 0.9469380065515279,
-        "recall": 0.8126283697841655,
-        "iou": 0.7772362136515185,
-        "dice": 0.8746571870202949
+        "tp": 428410,
+        "fp": 20286,
+        "fn": 177749,
+        "precision": 0.9547889885356678,
+        "recall": 0.7067617572287139,
+        "iou": 0.6838748812744934,
+        "dice": 0.812263296851226
       },
       "face_baseline": {
-        "tp": 223939,
-        "fp": 171212,
-        "fn": 41911,
-        "precision": 0.5667175332973977,
-        "recall": 0.8423509497837126,
-        "iou": 0.5123735305288495,
-        "dice": 0.677575374318647
+        "tp": 189132,
+        "fp": 131977,
+        "fn": 76718,
+        "precision": 0.5889962598370024,
+        "recall": 0.7114237351890164,
+        "iou": 0.47541267938073584,
+        "dice": 0.6444470567790936
       }
     },
     {
@@ -1214,12 +1210,12 @@
       "subject_ids": [
         "hfd_EAFA_003"
       ],
-      "split": "test",
+      "split": "validation",
       "shape": [
         1500,
         2000
       ],
-      "processing_ms": 192.41719999990892,
+      "processing_ms": 235.02200000007178,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_6",
@@ -1228,22 +1224,22 @@
       ],
       "source_population_label": "East Asian faces",
       "skin": {
-        "tp": 488449,
-        "fp": 13180,
-        "fn": 94828,
-        "precision": 0.9737256019887207,
-        "recall": 0.837422013897342,
-        "iou": 0.8189173737587119,
-        "dice": 0.9004448311650963
+        "tp": 445312,
+        "fp": 8114,
+        "fn": 137965,
+        "precision": 0.9821051285104957,
+        "recall": 0.7634657289761125,
+        "iou": 0.7529908300937959,
+        "dice": 0.8590927199014569
       },
       "face_baseline": {
-        "tp": 320344,
-        "fp": 156342,
-        "fn": 14371,
-        "precision": 0.6720230927696639,
-        "recall": 0.9570649657171026,
-        "iou": 0.6523560401338337,
-        "dice": 0.7896071116500966
+        "tp": 238227,
+        "fp": 145431,
+        "fn": 96488,
+        "precision": 0.6209358334766901,
+        "recall": 0.7117308755209656,
+        "iou": 0.49615533608527407,
+        "dice": 0.6632404057502161
       }
     },
     {
@@ -1251,12 +1247,12 @@
       "subject_ids": [
         "hfd_EAFA_003"
       ],
-      "split": "test",
+      "split": "validation",
       "shape": [
         1500,
         2000
       ],
-      "processing_ms": 206.86990000103833,
+      "processing_ms": 226.5429999999924,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_7",
@@ -1265,22 +1261,22 @@
       ],
       "source_population_label": "East Asian faces",
       "skin": {
-        "tp": 191704,
-        "fp": 4466,
-        "fn": 37579,
-        "precision": 0.9772340317071927,
-        "recall": 0.8361021096199893,
-        "iou": 0.8201275727382791,
-        "dice": 0.9011759230749342
+        "tp": 184256,
+        "fp": 3712,
+        "fn": 45027,
+        "precision": 0.9802519577800477,
+        "recall": 0.8036182359791175,
+        "iou": 0.7908152535462134,
+        "dice": 0.8831902140438249
       },
       "face_baseline": {
-        "tp": 1746,
-        "fp": 97670,
-        "fn": 106248,
-        "precision": 0.017562565381829886,
-        "recall": 0.016167564864714705,
-        "iou": 0.008489575229500545,
-        "dice": 0.016836218118702086
+        "tp": 0,
+        "fp": 98625,
+        "fn": 106224,
+        "precision": 0.0,
+        "recall": 0.0,
+        "iou": 0.0,
+        "dice": 0.0
       }
     },
     {
@@ -1288,12 +1284,12 @@
       "subject_ids": [
         "hfd_EAFA_003"
       ],
-      "split": "test",
+      "split": "validation",
       "shape": [
         1500,
         2000
       ],
-      "processing_ms": 209.63560000018333,
+      "processing_ms": 223.51639999999406,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_8",
@@ -1302,17 +1298,17 @@
       ],
       "source_population_label": "East Asian faces",
       "skin": {
-        "tp": 183141,
-        "fp": 4625,
-        "fn": 21030,
-        "precision": 0.9753682775369342,
-        "recall": 0.8969981045300263,
-        "iou": 0.8771288722006169,
-        "dice": 0.9345430515618581
+        "tp": 174574,
+        "fp": 2723,
+        "fn": 29597,
+        "precision": 0.9846415901002273,
+        "recall": 0.8550381787815116,
+        "iou": 0.8437847400117935,
+        "dice": 0.9152746757264043
       },
       "face_baseline": {
         "tp": 0,
-        "fp": 138789,
+        "fp": 137175,
         "fn": 43040,
         "precision": 0.0,
         "recall": 0.0,
@@ -1325,12 +1321,12 @@
       "subject_ids": [
         "hfd_EAFA_006"
       ],
-      "split": "test",
+      "split": "validation",
       "shape": [
         1500,
         2000
       ],
-      "processing_ms": 188.55819999953383,
+      "processing_ms": 210.0105000000667,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_2",
@@ -1339,22 +1335,22 @@
       ],
       "source_population_label": "East Asian faces",
       "skin": {
-        "tp": 314881,
-        "fp": 91241,
-        "fn": 27885,
-        "precision": 0.7753359827834986,
-        "recall": 0.9186471236937153,
-        "iou": 0.7255205561200626,
-        "dice": 0.8409294847827713
+        "tp": 294785,
+        "fp": 68759,
+        "fn": 47981,
+        "precision": 0.8108647096362476,
+        "recall": 0.8600182048394531,
+        "iou": 0.716323431140271,
+        "dice": 0.8347184663957752
       },
       "face_baseline": {
-        "tp": 315990,
-        "fp": 39131,
-        "fn": 3408,
-        "precision": 0.8898093889125115,
-        "recall": 0.9893299269250277,
-        "iou": 0.8813512993370132,
-        "dice": 0.9369343191222189
+        "tp": 313750,
+        "fp": 34237,
+        "fn": 5648,
+        "precision": 0.9016141407581317,
+        "recall": 0.9823167333546234,
+        "iou": 0.887214218049684,
+        "dice": 0.9402368947459113
       }
     },
     {
@@ -1362,12 +1358,12 @@
       "subject_ids": [
         "hfd_EAFA_006"
       ],
-      "split": "test",
+      "split": "validation",
       "shape": [
         1500,
         2000
       ],
-      "processing_ms": 162.80489999917336,
+      "processing_ms": 214.14920000006532,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_3",
@@ -1376,22 +1372,22 @@
       ],
       "source_population_label": "East Asian faces",
       "skin": {
-        "tp": 343486,
-        "fp": 68349,
-        "fn": 35119,
-        "precision": 0.834037903529326,
-        "recall": 0.907241055981828,
-        "iou": 0.7685041413657782,
-        "dice": 0.8691007540104245
+        "tp": 324838,
+        "fp": 50501,
+        "fn": 53767,
+        "precision": 0.865452297789465,
+        "recall": 0.8579865559091929,
+        "iou": 0.7570110881693568,
+        "dice": 0.861703256475282
       },
       "face_baseline": {
-        "tp": 342261,
-        "fp": 35221,
-        "fn": 5047,
-        "precision": 0.9066948887629079,
-        "recall": 0.9854682299284785,
-        "iou": 0.8947321640973626,
-        "dice": 0.9444418383255839
+        "tp": 338336,
+        "fp": 27299,
+        "fn": 8972,
+        "precision": 0.9253381104106554,
+        "recall": 0.9741670217789398,
+        "iou": 0.9031758616363282,
+        "dice": 0.9491249651094127
       }
     },
     {
@@ -1399,12 +1395,12 @@
       "subject_ids": [
         "hfd_EAFA_006"
       ],
-      "split": "test",
+      "split": "validation",
       "shape": [
         1500,
         2000
       ],
-      "processing_ms": 138.43980000092415,
+      "processing_ms": 224.67700000004243,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_6",
@@ -1413,22 +1409,22 @@
       ],
       "source_population_label": "East Asian faces",
       "skin": {
-        "tp": 362592,
-        "fp": 72537,
-        "fn": 36161,
-        "precision": 0.8332977117130782,
-        "recall": 0.9093147888542531,
-        "iou": 0.7693606908697405,
-        "dice": 0.8696482236095755
+        "tp": 342560,
+        "fp": 51451,
+        "fn": 56193,
+        "precision": 0.8694173512922228,
+        "recall": 0.8590781762143482,
+        "iou": 0.7608995033362653,
+        "dice": 0.8642168413298283
       },
       "face_baseline": {
-        "tp": 353094,
-        "fp": 46683,
-        "fn": 2986,
-        "precision": 0.8832273992750959,
-        "recall": 0.9916142439901146,
-        "iou": 0.8766793374763819,
-        "dice": 0.9342878348682356
+        "tp": 350845,
+        "fp": 37023,
+        "fn": 5235,
+        "precision": 0.9045474233502119,
+        "recall": 0.9852982475848124,
+        "iou": 0.8925014563613098,
+        "dice": 0.9431976428460054
       }
     },
     {
@@ -1436,12 +1432,12 @@
       "subject_ids": [
         "hfd_EAFA_006"
       ],
-      "split": "test",
+      "split": "validation",
       "shape": [
         1500,
         2000
       ],
-      "processing_ms": 129.5816999991075,
+      "processing_ms": 212.51250000000255,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_7",
@@ -1450,22 +1446,22 @@
       ],
       "source_population_label": "East Asian faces",
       "skin": {
-        "tp": 230585,
-        "fp": 62619,
-        "fn": 19849,
-        "precision": 0.7864319722786866,
-        "recall": 0.9207415925952547,
-        "iou": 0.7365685682616042,
-        "dice": 0.8483034666450837
+        "tp": 220908,
+        "fp": 32288,
+        "fn": 29526,
+        "precision": 0.8724782382028152,
+        "recall": 0.8821006732312705,
+        "iou": 0.7813611958036516,
+        "dice": 0.8772630701109941
       },
       "face_baseline": {
-        "tp": 241030,
-        "fp": 19733,
-        "fn": 18620,
-        "precision": 0.924325920471846,
-        "recall": 0.9282880801078375,
-        "iou": 0.8627224992214988,
-        "dice": 0.9263027633821599
+        "tp": 233603,
+        "fp": 670,
+        "fn": 26047,
+        "precision": 0.9971400886999355,
+        "recall": 0.899684190256114,
+        "iou": 0.8973686232329441,
+        "dice": 0.9459085727937351
       }
     },
     {
@@ -1473,12 +1469,12 @@
       "subject_ids": [
         "hfd_EAFA_006"
       ],
-      "split": "test",
+      "split": "validation",
       "shape": [
         1500,
         2000
       ],
-      "processing_ms": 124.60080000164453,
+      "processing_ms": 220.0186999999687,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_8",
@@ -1487,22 +1483,22 @@
       ],
       "source_population_label": "East Asian faces",
       "skin": {
-        "tp": 198129,
-        "fp": 24021,
-        "fn": 19432,
-        "precision": 0.8918703578663065,
-        "recall": 0.9106825212239326,
-        "iou": 0.8201314667483505,
-        "dice": 0.9011782739117283
+        "tp": 187424,
+        "fp": 18576,
+        "fn": 30137,
+        "precision": 0.9098252427184466,
+        "recall": 0.8614779303275862,
+        "iou": 0.7937087368773212,
+        "dice": 0.8849917721414389
       },
       "face_baseline": {
-        "tp": 193835,
-        "fp": 30349,
-        "fn": 23030,
-        "precision": 0.8646245940834315,
-        "recall": 0.8938049016669356,
-        "iou": 0.7840777625862613,
-        "dice": 0.8789726311588961
+        "tp": 181852,
+        "fp": 24492,
+        "fn": 35013,
+        "precision": 0.8813050052339783,
+        "recall": 0.8385493279229014,
+        "iou": 0.7534564980506055,
+        "dice": 0.8593957122840015
       }
     },
     {
@@ -1510,12 +1506,12 @@
       "subject_ids": [
         "hfd_EAFA_010"
       ],
-      "split": "test",
+      "split": "validation",
       "shape": [
         1500,
         2000
       ],
-      "processing_ms": 131.35029999830294,
+      "processing_ms": 239.82740000008107,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_2",
@@ -1524,22 +1520,22 @@
       ],
       "source_population_label": "East Asian faces",
       "skin": {
-        "tp": 399771,
-        "fp": 23638,
-        "fn": 44547,
-        "precision": 0.9441721833971408,
-        "recall": 0.8997407262366143,
-        "iou": 0.854291856499329,
-        "dice": 0.9214211382151298
+        "tp": 371462,
+        "fp": 19005,
+        "fn": 72856,
+        "precision": 0.951327512952439,
+        "recall": 0.8360273497810127,
+        "iou": 0.8017344271706779,
+        "dice": 0.8899584923064022
       },
       "face_baseline": {
-        "tp": 396589,
-        "fp": 71301,
-        "fn": 2366,
-        "precision": 0.847611618115369,
-        "recall": 0.9940695065859558,
-        "iou": 0.8433470280017692,
-        "dice": 0.9150171022501139
+        "tp": 394221,
+        "fp": 63593,
+        "fn": 4734,
+        "precision": 0.8610942435137414,
+        "recall": 0.9881340000751965,
+        "iou": 0.8522812767539801,
+        "dice": 0.920250382541852
       }
     },
     {
@@ -1547,12 +1543,12 @@
       "subject_ids": [
         "hfd_EAFA_010"
       ],
-      "split": "test",
+      "split": "validation",
       "shape": [
         1500,
         2000
       ],
-      "processing_ms": 145.67589999933261,
+      "processing_ms": 233.7112000000161,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_3",
@@ -1561,22 +1557,22 @@
       ],
       "source_population_label": "East Asian faces",
       "skin": {
-        "tp": 430090,
-        "fp": 18139,
-        "fn": 34405,
-        "precision": 0.9595318464445629,
-        "recall": 0.9259303114134706,
-        "iou": 0.8911307533244653,
-        "dice": 0.9424316660896394
+        "tp": 408044,
+        "fp": 14315,
+        "fn": 56451,
+        "precision": 0.9661070321693157,
+        "recall": 0.878468013649232,
+        "iou": 0.8522044234665107,
+        "dice": 0.9202055806254468
       },
       "face_baseline": {
-        "tp": 406266,
-        "fp": 74469,
-        "fn": 2945,
-        "precision": 0.8450934506536866,
-        "recall": 0.992803223764757,
-        "iou": 0.8399478994376447,
-        "dice": 0.9130126996469449
+        "tp": 403518,
+        "fp": 66943,
+        "fn": 5693,
+        "precision": 0.8577076527066005,
+        "recall": 0.9860878617632468,
+        "iou": 0.8474527148779597,
+        "dice": 0.9174283141898344
       }
     },
     {
@@ -1584,12 +1580,12 @@
       "subject_ids": [
         "hfd_EAFA_010"
       ],
-      "split": "test",
+      "split": "validation",
       "shape": [
         1500,
         2000
       ],
-      "processing_ms": 120.53159999777563,
+      "processing_ms": 221.72039999998105,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_6",
@@ -1598,22 +1594,22 @@
       ],
       "source_population_label": "East Asian faces",
       "skin": {
-        "tp": 419000,
-        "fp": 19299,
-        "fn": 42993,
-        "precision": 0.9559684142560215,
-        "recall": 0.9069401484438075,
-        "iou": 0.8705733733367685,
-        "dice": 0.9308091152648252
+        "tp": 392028,
+        "fp": 14790,
+        "fn": 69965,
+        "precision": 0.9636446764892409,
+        "recall": 0.8485583114895681,
+        "iou": 0.8222356921282847,
+        "dice": 0.902447137524732
       },
       "face_baseline": {
-        "tp": 404267,
-        "fp": 69594,
-        "fn": 2972,
-        "precision": 0.8531341469333834,
-        "recall": 0.9927020742119492,
-        "iou": 0.847816740871542,
-        "dice": 0.9176415843831575
+        "tp": 400443,
+        "fp": 61851,
+        "fn": 6796,
+        "precision": 0.8662085166582305,
+        "recall": 0.9833120108830441,
+        "iou": 0.8536592125178537,
+        "dice": 0.9210530250145768
       }
     },
     {
@@ -1621,12 +1617,12 @@
       "subject_ids": [
         "hfd_EAFA_010"
       ],
-      "split": "test",
+      "split": "validation",
       "shape": [
         1500,
         2000
       ],
-      "processing_ms": 132.58459999997285,
+      "processing_ms": 211.87659999998232,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_7",
@@ -1635,22 +1631,22 @@
       ],
       "source_population_label": "East Asian faces",
       "skin": {
-        "tp": 97587,
-        "fp": 3289,
-        "fn": 16092,
-        "precision": 0.9673956144177009,
-        "recall": 0.8584435119942997,
-        "iou": 0.8343051090896656,
-        "dice": 0.9096688494791545
+        "tp": 90019,
+        "fp": 2742,
+        "fn": 23660,
+        "precision": 0.9704401634307521,
+        "recall": 0.7918700903421036,
+        "iou": 0.7732196081462966,
+        "dice": 0.8721081185816703
       },
       "face_baseline": {
-        "tp": 96702,
-        "fp": 1834,
-        "fn": 17533,
-        "precision": 0.9813875131931477,
-        "recall": 0.8465181424257014,
-        "iou": 0.8331423549785042,
-        "dice": 0.9089772572390035
+        "tp": 90147,
+        "fp": 1547,
+        "fn": 24088,
+        "precision": 0.9831286670883591,
+        "recall": 0.7891364292904977,
+        "iou": 0.7785925273358553,
+        "dice": 0.8755153475226899
       }
     },
     {
@@ -1658,12 +1654,12 @@
       "subject_ids": [
         "hfd_EAFA_010"
       ],
-      "split": "test",
+      "split": "validation",
       "shape": [
         1500,
         2000
       ],
-      "processing_ms": 145.0842999984161,
+      "processing_ms": 196.5304999999944,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_8",
@@ -1672,22 +1668,22 @@
       ],
       "source_population_label": "East Asian faces",
       "skin": {
-        "tp": 188659,
-        "fp": 6801,
-        "fn": 35840,
-        "precision": 0.9652051570653842,
-        "recall": 0.8403556363280015,
-        "iou": 0.8156463467358409,
-        "dice": 0.8984638976662007
+        "tp": 182105,
+        "fp": 5626,
+        "fn": 42394,
+        "precision": 0.970031587750558,
+        "recall": 0.8111617423685629,
+        "iou": 0.7913307984790875,
+        "dice": 0.8835116318560027
       },
       "face_baseline": {
-        "tp": 193820,
-        "fp": 535,
-        "fn": 33313,
-        "precision": 0.9972473051889583,
-        "recall": 0.8533326289002479,
-        "iou": 0.8513273714355992,
-        "dice": 0.9196940363663971
+        "tp": 187310,
+        "fp": 174,
+        "fn": 39823,
+        "precision": 0.9990719208039086,
+        "recall": 0.8246710077355558,
+        "iou": 0.824039734807991,
+        "dice": 0.9035326578504982
       }
     },
     {
@@ -1695,12 +1691,12 @@
       "subject_ids": [
         "hfd_EAFA_011"
       ],
-      "split": "test",
+      "split": "validation",
       "shape": [
         1500,
         2000
       ],
-      "processing_ms": 147.4199000003864,
+      "processing_ms": 157.47099999998682,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_2",
@@ -1709,22 +1705,22 @@
       ],
       "source_population_label": "East Asian faces",
       "skin": {
-        "tp": 482972,
-        "fp": 53702,
-        "fn": 90043,
-        "precision": 0.899935528831283,
-        "recall": 0.8428610071289583,
-        "iou": 0.7706381030034289,
-        "dice": 0.8704637064979467
+        "tp": 432973,
+        "fp": 40826,
+        "fn": 140042,
+        "precision": 0.9138326589967476,
+        "recall": 0.7556050016142684,
+        "iou": 0.705350408330496,
+        "dice": 0.8272204995347788
       },
       "face_baseline": {
-        "tp": 469395,
-        "fp": 150223,
-        "fn": 2534,
-        "precision": 0.7575554615908512,
-        "recall": 0.9946305482392479,
-        "iou": 0.7544699687536165,
-        "dice": 0.8600545830825425
+        "tp": 467634,
+        "fp": 142082,
+        "fn": 4295,
+        "precision": 0.7669701959600863,
+        "recall": 0.9908990547306904,
+        "iou": 0.7616052481144474,
+        "dice": 0.8646718655381387
       }
     },
     {
@@ -1732,12 +1728,12 @@
       "subject_ids": [
         "hfd_EAFA_011"
       ],
-      "split": "test",
+      "split": "validation",
       "shape": [
         1500,
         2000
       ],
-      "processing_ms": 159.61310000056983,
+      "processing_ms": 152.20220000003337,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_3",
@@ -1746,22 +1742,22 @@
       ],
       "source_population_label": "East Asian faces",
       "skin": {
-        "tp": 476633,
-        "fp": 48559,
-        "fn": 112277,
-        "precision": 0.9075404804338223,
-        "recall": 0.809347778098521,
-        "iou": 0.7476959663920912,
-        "dice": 0.8556361984809291
+        "tp": 427024,
+        "fp": 36538,
+        "fn": 161886,
+        "precision": 0.9211799068948706,
+        "recall": 0.7251090998624578,
+        "iou": 0.6827490055128483,
+        "dice": 0.8114686186425862
       },
       "face_baseline": {
-        "tp": 478203,
-        "fp": 166693,
-        "fn": 2121,
-        "precision": 0.7415195628442416,
-        "recall": 0.9955842306443151,
-        "iou": 0.7390887720106273,
-        "dice": 0.8499724498320328
+        "tp": 476780,
+        "fp": 148769,
+        "fn": 3544,
+        "precision": 0.7621785024034887,
+        "recall": 0.9926216470549046,
+        "iou": 0.7578847642558414,
+        "dice": 0.8622689947218171
       }
     },
     {
@@ -1769,12 +1765,12 @@
       "subject_ids": [
         "hfd_EAFA_011"
       ],
-      "split": "test",
+      "split": "validation",
       "shape": [
         1500,
         2000
       ],
-      "processing_ms": 142.61039999837521,
+      "processing_ms": 143.96160000001146,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_6",
@@ -1783,22 +1779,22 @@
       ],
       "source_population_label": "East Asian faces",
       "skin": {
-        "tp": 482910,
-        "fp": 44568,
-        "fn": 80292,
-        "precision": 0.9155073766109677,
-        "recall": 0.8574365858075788,
-        "iou": 0.7945604422725702,
-        "dice": 0.8855209594014744
+        "tp": 436582,
+        "fp": 32728,
+        "fn": 126620,
+        "precision": 0.9302635784449511,
+        "recall": 0.7751783551905,
+        "iou": 0.7326061785780209,
+        "dice": 0.8456695902807909
       },
       "face_baseline": {
-        "tp": 442670,
-        "fp": 160856,
-        "fn": 1882,
-        "precision": 0.7334729572545342,
-        "recall": 0.9957665245010707,
-        "iou": 0.7311928484592208,
-        "dice": 0.8447272054179173
+        "tp": 441729,
+        "fp": 153751,
+        "fn": 2823,
+        "precision": 0.7418032511587291,
+        "recall": 0.9936497867516061,
+        "iou": 0.7383031674586288,
+        "dice": 0.8494527091474109
       }
     },
     {
@@ -1806,12 +1802,12 @@
       "subject_ids": [
         "hfd_EAFA_011"
       ],
-      "split": "test",
+      "split": "validation",
       "shape": [
         1500,
         2000
       ],
-      "processing_ms": 136.43840000077034,
+      "processing_ms": 147.03850000000784,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_7",
@@ -1820,22 +1816,22 @@
       ],
       "source_population_label": "East Asian faces",
       "skin": {
-        "tp": 391381,
-        "fp": 52622,
-        "fn": 16302,
-        "precision": 0.8814827827739903,
-        "recall": 0.960013049354523,
-        "iou": 0.8502644985390122,
-        "dice": 0.9190734613460829
+        "tp": 383697,
+        "fp": 41096,
+        "fn": 23986,
+        "precision": 0.9032564095924368,
+        "recall": 0.9411650718818297,
+        "iou": 0.8549798453136176,
+        "dice": 0.9218211696193044
       },
       "face_baseline": {
-        "tp": 244105,
-        "fp": 200316,
-        "fn": 10610,
-        "precision": 0.5492652237405523,
-        "recall": 0.9583456019472744,
-        "iou": 0.5364579556118154,
-        "dice": 0.6983047647381911
+        "tp": 240127,
+        "fp": 176308,
+        "fn": 10178,
+        "precision": 0.5766254037244708,
+        "recall": 0.9593376081180959,
+        "iou": 0.5628684545477985,
+        "dice": 0.7203017668056514
       }
     },
     {
@@ -1843,12 +1839,12 @@
       "subject_ids": [
         "hfd_EAFA_011"
       ],
-      "split": "test",
+      "split": "validation",
       "shape": [
         1500,
         2000
       ],
-      "processing_ms": 143.58659999925294,
+      "processing_ms": 136.56570000000556,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_8",
@@ -1857,22 +1853,22 @@
       ],
       "source_population_label": "East Asian faces",
       "skin": {
-        "tp": 329472,
-        "fp": 25606,
-        "fn": 18696,
-        "precision": 0.9278862672426903,
-        "recall": 0.9463017853450059,
-        "iou": 0.8814738317807017,
-        "dice": 0.9370035520998342
+        "tp": 317619,
+        "fp": 18963,
+        "fn": 30549,
+        "precision": 0.9436600887748008,
+        "recall": 0.9122578755083752,
+        "iou": 0.8651380569878326,
+        "dice": 0.9276933187294633
       },
       "face_baseline": {
-        "tp": 209181,
-        "fp": 143763,
-        "fn": 14574,
-        "precision": 0.5926747586019312,
-        "recall": 0.9348662599718442,
-        "iou": 0.5691721221817707,
-        "dice": 0.7254425618910385
+        "tp": 162624,
+        "fp": 171799,
+        "fn": 22044,
+        "precision": 0.4862823430206654,
+        "recall": 0.8806290207290922,
+        "iou": 0.456210532812294,
+        "dice": 0.6265722195144975
       }
     },
     {
@@ -1885,7 +1881,7 @@
         1500,
         2000
       ],
-      "processing_ms": 132.19540000136476,
+      "processing_ms": 139.5025000000487,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_2",
@@ -1894,22 +1890,22 @@
       ],
       "source_population_label": "East Asian faces",
       "skin": {
-        "tp": 382288,
-        "fp": 23872,
-        "fn": 50383,
-        "precision": 0.9412251329525311,
-        "recall": 0.8835535545483751,
-        "iou": 0.8373537651436995,
-        "dice": 0.911477997355844
+        "tp": 352999,
+        "fp": 19107,
+        "fn": 79672,
+        "precision": 0.9486517282709765,
+        "recall": 0.8158600876878737,
+        "iou": 0.781355001792916,
+        "dice": 0.8772591662038055
       },
       "face_baseline": {
-        "tp": 325996,
-        "fp": 103839,
-        "fn": 26991,
-        "precision": 0.7584212546674887,
-        "recall": 0.92353542765031,
-        "iou": 0.713610871535333,
-        "dice": 0.8328738844845954
+        "tp": 308233,
+        "fp": 93313,
+        "fn": 44754,
+        "precision": 0.7676156654530241,
+        "recall": 0.8732134611189647,
+        "iou": 0.6906408245574726,
+        "dice": 0.817016618226108
       }
     },
     {
@@ -1922,7 +1918,7 @@
         1500,
         2000
       ],
-      "processing_ms": 142.9878999988432,
+      "processing_ms": 142.3674000000119,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_3",
@@ -1931,22 +1927,22 @@
       ],
       "source_population_label": "East Asian faces",
       "skin": {
-        "tp": 399624,
-        "fp": 17796,
-        "fn": 52361,
-        "precision": 0.9573666810406785,
-        "recall": 0.8841532351737337,
-        "iou": 0.8506602012427067,
-        "dice": 0.9193045818692094
+        "tp": 368062,
+        "fp": 13381,
+        "fn": 83923,
+        "precision": 0.964920053585988,
+        "recall": 0.8143234841864221,
+        "iou": 0.790908661139834,
+        "dice": 0.8832484629746061
       },
       "face_baseline": {
-        "tp": 345581,
-        "fp": 96779,
-        "fn": 17388,
-        "precision": 0.7812211773216385,
-        "recall": 0.9520950825001584,
-        "iou": 0.7516748305593499,
-        "dice": 0.8582355782543531
+        "tp": 311195,
+        "fp": 76506,
+        "fn": 51774,
+        "precision": 0.8026675195575972,
+        "recall": 0.8573597194250748,
+        "iou": 0.7081062631549008,
+        "dice": 0.8291126593576406
       }
     },
     {
@@ -1959,7 +1955,7 @@
         1500,
         2000
       ],
-      "processing_ms": 131.9828999985475,
+      "processing_ms": 137.9661999999371,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_6",
@@ -1968,22 +1964,22 @@
       ],
       "source_population_label": "East Asian faces",
       "skin": {
-        "tp": 412139,
-        "fp": 15445,
-        "fn": 48132,
-        "precision": 0.9638784425984134,
-        "recall": 0.8954268246315757,
-        "iou": 0.8663551362577673,
-        "dice": 0.9283925866273209
+        "tp": 384155,
+        "fp": 11576,
+        "fn": 76116,
+        "precision": 0.9707478059590985,
+        "recall": 0.834627860543028,
+        "iou": 0.81415162118229,
+        "dice": 0.8975563141207614
       },
       "face_baseline": {
-        "tp": 366225,
-        "fp": 113909,
-        "fn": 5514,
-        "precision": 0.7627558140019245,
-        "recall": 0.9851670123393026,
-        "iou": 0.7540955589233355,
-        "dice": 0.859811262946472
+        "tp": 332677,
+        "fp": 108631,
+        "fn": 39062,
+        "precision": 0.7538431209042211,
+        "recall": 0.8949208988026546,
+        "iou": 0.692543247913067,
+        "dice": 0.8183462948636425
       }
     },
     {
@@ -1996,7 +1992,7 @@
         1500,
         2000
       ],
-      "processing_ms": 133.35759999972652,
+      "processing_ms": 143.51199999998698,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_7",
@@ -2005,22 +2001,22 @@
       ],
       "source_population_label": "East Asian faces",
       "skin": {
-        "tp": 374797,
-        "fp": 7441,
-        "fn": 37737,
-        "precision": 0.98053307101858,
-        "recall": 0.9085239034843189,
-        "iou": 0.8924269301744151,
-        "dice": 0.9431560246208975
+        "tp": 363948,
+        "fp": 5849,
+        "fn": 48586,
+        "precision": 0.9841832140336455,
+        "recall": 0.8822254650525775,
+        "iou": 0.8698919411161543,
+        "dice": 0.9304194771778186
       },
       "face_baseline": {
-        "tp": 216106,
-        "fp": 167132,
-        "fn": 28814,
-        "precision": 0.5638950208486633,
-        "recall": 0.8823534215253961,
-        "iou": 0.5244629318629688,
-        "dice": 0.6880625575094165
+        "tp": 211184,
+        "fp": 159706,
+        "fn": 33736,
+        "precision": 0.5693979346976192,
+        "recall": 0.8622570635309489,
+        "iou": 0.5219239495237578,
+        "dice": 0.6858738896737631
       }
     },
     {
@@ -2033,7 +2029,7 @@
         1500,
         2000
       ],
-      "processing_ms": 167.24479999902542,
+      "processing_ms": 153.02870000004987,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_8",
@@ -2042,22 +2038,22 @@
       ],
       "source_population_label": "East Asian faces",
       "skin": {
-        "tp": 324853,
-        "fp": 7526,
-        "fn": 46668,
-        "precision": 0.9773571735879824,
-        "recall": 0.8743866430161418,
-        "iou": 0.8570256458961554,
-        "dice": 0.9230089501349623
+        "tp": 310334,
+        "fp": 6340,
+        "fn": 61187,
+        "precision": 0.9799794110031136,
+        "recall": 0.8353067525119711,
+        "iou": 0.8212914272708748,
+        "dice": 0.9018781014102107
       },
       "face_baseline": {
-        "tp": 196160,
-        "fp": 139274,
-        "fn": 31804,
-        "precision": 0.5847946242778013,
-        "recall": 0.8604867435209068,
-        "iou": 0.5341495161176131,
-        "dice": 0.6963460999151577
+        "tp": 183709,
+        "fp": 134729,
+        "fn": 40656,
+        "precision": 0.5769066505881836,
+        "recall": 0.8187952666414102,
+        "iou": 0.5115902799824001,
+        "dice": 0.676890142464209
       }
     },
     {
@@ -2065,12 +2061,12 @@
       "subject_ids": [
         "hfd_EAMA_012"
       ],
-      "split": "test",
+      "split": "validation",
       "shape": [
         1500,
         2000
       ],
-      "processing_ms": 193.50690000283066,
+      "processing_ms": 151.57160000001113,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_2",
@@ -2079,22 +2075,22 @@
       ],
       "source_population_label": "East Asian faces",
       "skin": {
-        "tp": 430525,
-        "fp": 27245,
-        "fn": 16531,
-        "precision": 0.9404832120934093,
-        "recall": 0.9630225296159766,
-        "iou": 0.9077041794134948,
-        "dice": 0.9516194273816181
+        "tp": 421936,
+        "fp": 22427,
+        "fn": 25120,
+        "precision": 0.9495300013727516,
+        "recall": 0.9438101714326617,
+        "iou": 0.8987247674569686,
+        "dice": 0.9466614465251469
       },
       "face_baseline": {
-        "tp": 324522,
-        "fp": 152040,
-        "fn": 10738,
-        "precision": 0.6809649111763002,
-        "recall": 0.9679711268865955,
-        "iou": 0.6659593679458239,
-        "dice": 0.799490528711959
+        "tp": 321246,
+        "fp": 148825,
+        "fn": 14014,
+        "precision": 0.683398890805857,
+        "recall": 0.9581996062757263,
+        "iou": 0.6636148610264726,
+        "dice": 0.7977986691186605
       }
     },
     {
@@ -2102,12 +2098,12 @@
       "subject_ids": [
         "hfd_EAMA_012"
       ],
-      "split": "test",
+      "split": "validation",
       "shape": [
         1500,
         2000
       ],
-      "processing_ms": 195.17049999922165,
+      "processing_ms": 145.80590000002758,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_3",
@@ -2116,22 +2112,22 @@
       ],
       "source_population_label": "East Asian faces",
       "skin": {
-        "tp": 437507,
-        "fp": 19974,
-        "fn": 17682,
-        "precision": 0.956339170369917,
-        "recall": 0.9611545973211127,
-        "iou": 0.9207514053072314,
-        "dice": 0.9587408373234575
+        "tp": 429020,
+        "fp": 16058,
+        "fn": 26169,
+        "precision": 0.9639209307132682,
+        "recall": 0.9425095949155186,
+        "iou": 0.9103930635102186,
+        "dice": 0.9530950262533227
       },
       "face_baseline": {
-        "tp": 323499,
-        "fp": 152089,
-        "fn": 11879,
-        "precision": 0.6802084997939393,
-        "recall": 0.9645802646565964,
-        "iou": 0.6636326151308704,
-        "dice": 0.7978114988791145
+        "tp": 320380,
+        "fp": 148468,
+        "fn": 14998,
+        "precision": 0.6833344708732895,
+        "recall": 0.9552803105749333,
+        "iou": 0.6621528337528884,
+        "dice": 0.796741214534223
       }
     },
     {
@@ -2139,12 +2135,12 @@
       "subject_ids": [
         "hfd_EAMA_012"
       ],
-      "split": "test",
+      "split": "validation",
       "shape": [
         1500,
         2000
       ],
-      "processing_ms": 197.60889999815845,
+      "processing_ms": 148.64119999992909,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_6",
@@ -2153,22 +2149,22 @@
       ],
       "source_population_label": "East Asian faces",
       "skin": {
-        "tp": 451594,
-        "fp": 17909,
-        "fn": 19595,
-        "precision": 0.9618554088046296,
-        "recall": 0.958413715090972,
-        "iou": 0.9233200708242519,
-        "dice": 0.9601314776781348
+        "tp": 441540,
+        "fp": 13662,
+        "fn": 29649,
+        "precision": 0.9699869508481949,
+        "recall": 0.9370762050896774,
+        "iou": 0.9106715258914594,
+        "dice": 0.9532476027940686
       },
       "face_baseline": {
-        "tp": 335465,
-        "fp": 152348,
-        "fn": 11343,
-        "precision": 0.6876917999315312,
-        "recall": 0.9672931420267122,
-        "iou": 0.6720644447827934,
-        "dice": 0.8038738541206129
+        "tp": 331960,
+        "fp": 149056,
+        "fn": 14848,
+        "precision": 0.6901225738852762,
+        "recall": 0.9571866854282485,
+        "iou": 0.6694577545456012,
+        "dice": 0.8020062235451014
       }
     },
     {
@@ -2176,12 +2172,12 @@
       "subject_ids": [
         "hfd_EAMA_012"
       ],
-      "split": "test",
+      "split": "validation",
       "shape": [
         1500,
         2000
       ],
-      "processing_ms": 190.36370000321767,
+      "processing_ms": 142.6466000000346,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_7",
@@ -2190,22 +2186,22 @@
       ],
       "source_population_label": "East Asian faces",
       "skin": {
-        "tp": 293908,
-        "fp": 4202,
-        "fn": 35195,
-        "precision": 0.9859045318842038,
-        "recall": 0.8930577964953221,
-        "iou": 0.8817989529109974,
-        "dice": 0.9371872075355581
+        "tp": 280412,
+        "fp": 2196,
+        "fn": 48691,
+        "precision": 0.9922295193342014,
+        "recall": 0.8520493584075503,
+        "iou": 0.8464015888970386,
+        "dice": 0.9168120239786435
       },
       "face_baseline": {
-        "tp": 156693,
-        "fp": 142009,
-        "fn": 28776,
-        "precision": 0.5245796814216175,
-        "recall": 0.844847386894845,
-        "iou": 0.4784840508370028,
-        "dice": 0.6472630537558012
+        "tp": 146992,
+        "fp": 136563,
+        "fn": 38477,
+        "precision": 0.5183897303874028,
+        "recall": 0.7925421499010616,
+        "iou": 0.45645153276693,
+        "dice": 0.6267994814764276
       }
     },
     {
@@ -2213,12 +2209,12 @@
       "subject_ids": [
         "hfd_EAMA_012"
       ],
-      "split": "test",
+      "split": "validation",
       "shape": [
         1500,
         2000
       ],
-      "processing_ms": 199.02920000095037,
+      "processing_ms": 142.9304000000684,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_8",
@@ -2227,22 +2223,22 @@
       ],
       "source_population_label": "East Asian faces",
       "skin": {
-        "tp": 448073,
-        "fp": 6346,
-        "fn": 34269,
-        "precision": 0.9860349149133288,
-        "recall": 0.9289529006389657,
-        "iou": 0.9168897128638314,
-        "dice": 0.9566431565788925
+        "tp": 433147,
+        "fp": 3897,
+        "fn": 49195,
+        "precision": 0.9910832776562543,
+        "recall": 0.8980080523777735,
+        "iou": 0.8908108975215892,
+        "dice": 0.9422527643448998
       },
       "face_baseline": {
-        "tp": 209674,
-        "fp": 245109,
-        "fn": 23105,
-        "precision": 0.46104185952421267,
-        "recall": 0.9007427645964627,
-        "iou": 0.4387513392259274,
-        "dice": 0.6099057248655394
+        "tp": 196519,
+        "fp": 239370,
+        "fn": 32024,
+        "precision": 0.4508464310868134,
+        "recall": 0.8598775722730515,
+        "iou": 0.419990468313554,
+        "dice": 0.5915398415488718
       }
     },
     {
@@ -2250,12 +2246,12 @@
       "subject_ids": [
         "hfd_EAMA_015"
       ],
-      "split": "test",
+      "split": "validation",
       "shape": [
         1500,
         2000
       ],
-      "processing_ms": 194.31400000030408,
+      "processing_ms": 141.39249999993808,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_2",
@@ -2264,22 +2260,22 @@
       ],
       "source_population_label": "East Asian faces",
       "skin": {
-        "tp": 416768,
-        "fp": 21502,
-        "fn": 52192,
-        "precision": 0.9509389189312524,
-        "recall": 0.8887069259638348,
-        "iou": 0.8497457499255804,
-        "dice": 0.9187703228508758
+        "tp": 392175,
+        "fp": 17454,
+        "fn": 76785,
+        "precision": 0.957390712083373,
+        "recall": 0.8362653531218014,
+        "iou": 0.8062576323872257,
+        "dice": 0.8927382427961197
       },
       "face_baseline": {
-        "tp": 323200,
-        "fp": 166406,
-        "fn": 3593,
-        "precision": 0.6601226292161452,
-        "recall": 0.9890052724507563,
-        "iou": 0.6553135752505581,
-        "dice": 0.7917697106439375
+        "tp": 321404,
+        "fp": 163229,
+        "fn": 5389,
+        "precision": 0.6631904967263889,
+        "recall": 0.9835094386966673,
+        "iou": 0.6558970821718209,
+        "dice": 0.7921954682250754
       }
     },
     {
@@ -2287,12 +2283,12 @@
       "subject_ids": [
         "hfd_EAMA_015"
       ],
-      "split": "test",
+      "split": "validation",
       "shape": [
         1500,
         2000
       ],
-      "processing_ms": 184.42900000081863,
+      "processing_ms": 142.64539999999215,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_3",
@@ -2301,22 +2297,22 @@
       ],
       "source_population_label": "East Asian faces",
       "skin": {
-        "tp": 427512,
-        "fp": 17801,
-        "fn": 45259,
-        "precision": 0.9600258694446379,
-        "recall": 0.9042686628409949,
-        "iou": 0.8714561776864558,
-        "dice": 0.931313474584025
+        "tp": 400594,
+        "fp": 14180,
+        "fn": 72177,
+        "precision": 0.9658127076431985,
+        "recall": 0.8473320064047922,
+        "iou": 0.8226577212080887,
+        "dice": 0.9027012714848262
       },
       "face_baseline": {
-        "tp": 328398,
-        "fp": 162373,
-        "fn": 2982,
-        "precision": 0.6691471174947174,
-        "recall": 0.9910012674271229,
-        "iou": 0.665105832268361,
-        "dice": 0.798875145806549
+        "tp": 327223,
+        "fp": 158753,
+        "fn": 4157,
+        "precision": 0.6733316048529145,
+        "recall": 0.9874554891665158,
+        "iou": 0.6676208294483335,
+        "dice": 0.8006866041235398
       }
     },
     {
@@ -2324,12 +2320,12 @@
       "subject_ids": [
         "hfd_EAMA_015"
       ],
-      "split": "test",
+      "split": "validation",
       "shape": [
         1500,
         2000
       ],
-      "processing_ms": 216.57479999703355,
+      "processing_ms": 185.60100000001967,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_6",
@@ -2338,22 +2334,22 @@
       ],
       "source_population_label": "East Asian faces",
       "skin": {
-        "tp": 431615,
-        "fp": 18975,
-        "fn": 60400,
-        "precision": 0.9578885461284095,
-        "recall": 0.8772395150554353,
-        "iou": 0.844664279144406,
-        "dice": 0.915791874645265
+        "tp": 401310,
+        "fp": 15137,
+        "fn": 90705,
+        "precision": 0.9636520373540931,
+        "recall": 0.8156458644553519,
+        "iou": 0.7913012272454807,
+        "dice": 0.8834932005961724
       },
       "face_baseline": {
-        "tp": 339817,
-        "fp": 168182,
-        "fn": 3716,
-        "precision": 0.6689324191583055,
-        "recall": 0.989182989698224,
-        "iou": 0.6640747290972514,
-        "dice": 0.7981308981929041
+        "tp": 337143,
+        "fp": 164589,
+        "fn": 6390,
+        "precision": 0.6719583363229772,
+        "recall": 0.9813991668922636,
+        "iou": 0.6635079764308571,
+        "dice": 0.7977214246419762
       }
     },
     {
@@ -2361,12 +2357,12 @@
       "subject_ids": [
         "hfd_EAMA_015"
       ],
-      "split": "test",
+      "split": "validation",
       "shape": [
         1500,
         2000
       ],
-      "processing_ms": 207.9645999983768,
+      "processing_ms": 211.42730000008214,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_7",
@@ -2375,22 +2371,22 @@
       ],
       "source_population_label": "East Asian faces",
       "skin": {
-        "tp": 348956,
-        "fp": 12044,
-        "fn": 28658,
-        "precision": 0.9666371191135734,
-        "recall": 0.9241076866853454,
-        "iou": 0.8955442978201397,
-        "dice": 0.9448940854086166
+        "tp": 341352,
+        "fp": 9551,
+        "fn": 36262,
+        "precision": 0.972781651909502,
+        "recall": 0.9039707214245235,
+        "iou": 0.8816706055557708,
+        "dice": 0.9371147138639181
       },
       "face_baseline": {
-        "tp": 194659,
-        "fp": 167433,
-        "fn": 22343,
-        "precision": 0.5375954177391381,
-        "recall": 0.8970378153196745,
-        "iou": 0.5063508785620456,
-        "dice": 0.6722880913979423
+        "tp": 188583,
+        "fp": 161383,
+        "fn": 28419,
+        "precision": 0.5388609179177406,
+        "recall": 0.8690380733818122,
+        "iou": 0.4983892067603103,
+        "dice": 0.6652333112274414
       }
     },
     {
@@ -2398,12 +2394,12 @@
       "subject_ids": [
         "hfd_EAMA_015"
       ],
-      "split": "test",
+      "split": "validation",
       "shape": [
         1500,
         2000
       ],
-      "processing_ms": 201.7402999990736,
+      "processing_ms": 223.25439999997343,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_8",
@@ -2412,22 +2408,22 @@
       ],
       "source_population_label": "East Asian faces",
       "skin": {
-        "tp": 319571,
-        "fp": 7089,
-        "fn": 52029,
-        "precision": 0.9782985367048307,
-        "recall": 0.85998654467169,
-        "iou": 0.8438877284526353,
-        "dice": 0.9153352619368144
+        "tp": 307454,
+        "fp": 4882,
+        "fn": 64146,
+        "precision": 0.9843693970595768,
+        "recall": 0.8273789020452099,
+        "iou": 0.8166499327989121,
+        "dice": 0.8990724278295045
       },
       "face_baseline": {
-        "tp": 117802,
-        "fp": 210646,
-        "fn": 49668,
-        "precision": 0.358662558456742,
-        "recall": 0.7034215083298502,
-        "iou": 0.3115498947412963,
-        "dice": 0.47508660706003814
+        "tp": 108545,
+        "fp": 198589,
+        "fn": 57145,
+        "precision": 0.3534125170121185,
+        "recall": 0.6551089383789004,
+        "iou": 0.29797215870253296,
+        "dice": 0.45913490008967395
       }
     },
     {
@@ -2440,7 +2436,7 @@
         1500,
         2000
       ],
-      "processing_ms": 203.91129999916302,
+      "processing_ms": 229.14330000003247,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_2",
@@ -2449,22 +2445,22 @@
       ],
       "source_population_label": "Southeast Asian faces",
       "skin": {
-        "tp": 293786,
-        "fp": 120942,
-        "fn": 66743,
-        "precision": 0.7083823614513609,
-        "recall": 0.8148748089612764,
-        "iou": 0.6101842063177222,
-        "dice": 0.7579060879166521
+        "tp": 258338,
+        "fp": 87072,
+        "fn": 102191,
+        "precision": 0.7479169682406416,
+        "recall": 0.7165526212870532,
+        "iou": 0.5771613557610461,
+        "dice": 0.7318989317773915
       },
       "face_baseline": {
-        "tp": 294013,
-        "fp": 101061,
-        "fn": 26114,
-        "precision": 0.7441972896216911,
-        "recall": 0.9184261246317867,
-        "iou": 0.6980564498513728,
-        "dice": 0.8221828548897443
+        "tp": 282757,
+        "fp": 59405,
+        "fn": 37370,
+        "precision": 0.8263834090284718,
+        "recall": 0.8832650791717037,
+        "iou": 0.7450149131035064,
+        "dice": 0.8538779898201541
       }
     },
     {
@@ -2477,7 +2473,7 @@
         1500,
         2000
       ],
-      "processing_ms": 197.73009999698843,
+      "processing_ms": 218.45909999990454,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_3",
@@ -2486,22 +2482,22 @@
       ],
       "source_population_label": "Southeast Asian faces",
       "skin": {
-        "tp": 280835,
-        "fp": 157159,
-        "fn": 89260,
-        "precision": 0.6411845824372023,
-        "recall": 0.7588186816898363,
-        "iou": 0.532637021245927,
-        "dice": 0.6950595788335195
+        "tp": 235953,
+        "fp": 118332,
+        "fn": 134142,
+        "precision": 0.665997713705068,
+        "recall": 0.6375471162809548,
+        "iou": 0.48308754430037654,
+        "dice": 0.6514619398658162
       },
       "face_baseline": {
-        "tp": 301993,
-        "fp": 118736,
-        "fn": 14463,
-        "precision": 0.717785082559082,
-        "recall": 0.9542969638749147,
-        "iou": 0.6939304950458648,
-        "dice": 0.8193140120865183
+        "tp": 191548,
+        "fp": 101424,
+        "fn": 124908,
+        "precision": 0.6538099204019496,
+        "recall": 0.605291098920545,
+        "iou": 0.4583803962860151,
+        "dice": 0.6286156855280689
       }
     },
     {
@@ -2514,7 +2510,7 @@
         1500,
         2000
       ],
-      "processing_ms": 187.37000000328408,
+      "processing_ms": 221.39370000002145,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_6",
@@ -2523,22 +2519,22 @@
       ],
       "source_population_label": "Southeast Asian faces",
       "skin": {
-        "tp": 303152,
-        "fp": 148544,
-        "fn": 93831,
-        "precision": 0.671141652793029,
-        "recall": 0.7636397528357638,
-        "iou": 0.5557048505390201,
-        "dice": 0.7144090993178811
+        "tp": 251982,
+        "fp": 111927,
+        "fn": 145001,
+        "precision": 0.6924313495956407,
+        "recall": 0.6347425456505694,
+        "iou": 0.495140594604154,
+        "dice": 0.6623331563480757
       },
       "face_baseline": {
-        "tp": 318853,
-        "fp": 122864,
-        "fn": 14231,
-        "precision": 0.721849057201783,
-        "recall": 0.9572750417312149,
-        "iou": 0.6993187819663645,
-        "dice": 0.8230577916135885
+        "tp": 102049,
+        "fp": 89900,
+        "fn": 231035,
+        "precision": 0.5316464269154828,
+        "recall": 0.30637616937469225,
+        "iou": 0.24125971667959073,
+        "dice": 0.3887336605508606
       }
     },
     {
@@ -2551,7 +2547,7 @@
         1500,
         2000
       ],
-      "processing_ms": 187.7922000021499,
+      "processing_ms": 216.26839999998992,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_7",
@@ -2560,22 +2556,22 @@
       ],
       "source_population_label": "Southeast Asian faces",
       "skin": {
-        "tp": 35778,
-        "fp": 999554,
-        "fn": 3064,
-        "precision": 0.034557030981366366,
-        "recall": 0.9211163173883941,
-        "iou": 0.0344550633862226,
-        "dice": 0.0666149059649554
+        "tp": 33813,
+        "fp": 488092,
+        "fn": 5029,
+        "precision": 0.06478765292534082,
+        "recall": 0.8705267493949848,
+        "iou": 0.06416932670884778,
+        "dice": 0.12059984270981387
       },
       "face_baseline": {
-        "tp": 31239,
-        "fp": 1022042,
-        "fn": 7603,
-        "precision": 0.02965875203293328,
-        "recall": 0.8042582771227023,
-        "iou": 0.029446197699277206,
-        "dice": 0.057207841973843605
+        "tp": 0,
+        "fp": 293145,
+        "fn": 38842,
+        "precision": 0.0,
+        "recall": 0.0,
+        "iou": 0.0,
+        "dice": 0.0
       }
     },
     {
@@ -2588,7 +2584,7 @@
         1500,
         2000
       ],
-      "processing_ms": 196.6898000027868,
+      "processing_ms": 210.22579999998925,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_8",
@@ -2597,22 +2593,22 @@
       ],
       "source_population_label": "Southeast Asian faces",
       "skin": {
-        "tp": 96573,
-        "fp": 308615,
-        "fn": 26828,
-        "precision": 0.23834121444860162,
-        "recall": 0.7825949546600108,
-        "iou": 0.22354033183956148,
-        "dice": 0.365399204296722
+        "tp": 82377,
+        "fp": 143522,
+        "fn": 41024,
+        "precision": 0.36466296884891036,
+        "recall": 0.6675553682709217,
+        "iou": 0.3086170918204876,
+        "dice": 0.4716690523904953
       },
       "face_baseline": {
-        "tp": 95425,
-        "fp": 131991,
-        "fn": 702,
-        "precision": 0.4196054807049636,
-        "recall": 0.9926971610473644,
-        "iou": 0.41831420580576717,
-        "dice": 0.5898752252405399
+        "tp": 94400,
+        "fp": 107830,
+        "fn": 1727,
+        "precision": 0.46679523315037336,
+        "recall": 0.9820341839441572,
+        "iou": 0.46284265801124747,
+        "dice": 0.6327989623169559
       }
     },
     {
@@ -2625,7 +2621,7 @@
         1500,
         2000
       ],
-      "processing_ms": 194.6977000006882,
+      "processing_ms": 216.45069999999578,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_2",
@@ -2634,22 +2630,22 @@
       ],
       "source_population_label": "Southeast Asian faces",
       "skin": {
-        "tp": 548890,
-        "fp": 89055,
-        "fn": 42390,
-        "precision": 0.8604033263055593,
-        "recall": 0.928308077391422,
-        "iou": 0.8067937119213329,
-        "dice": 0.8930667697126238
+        "tp": 523633,
+        "fp": 72538,
+        "fn": 67647,
+        "precision": 0.8783268558853081,
+        "recall": 0.8855922743877689,
+        "iou": 0.7888201284086903,
+        "dice": 0.8819446023456968
       },
       "face_baseline": {
-        "tp": 380766,
-        "fp": 130561,
-        "fn": 6426,
-        "precision": 0.7446624175918737,
-        "recall": 0.9834035827186512,
-        "iou": 0.735420171394468,
-        "dice": 0.8475413430322564
+        "tp": 375462,
+        "fp": 122227,
+        "fn": 11730,
+        "precision": 0.7544108871202699,
+        "recall": 0.9697049525816649,
+        "iou": 0.7370396471274138,
+        "dice": 0.8486158025768437
       }
     },
     {
@@ -2662,7 +2658,7 @@
         1500,
         2000
       ],
-      "processing_ms": 202.11870000275667,
+      "processing_ms": 231.10640000004423,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_3",
@@ -2671,22 +2667,22 @@
       ],
       "source_population_label": "Southeast Asian faces",
       "skin": {
-        "tp": 553704,
-        "fp": 82621,
-        "fn": 45170,
-        "precision": 0.8701591168035202,
-        "recall": 0.9245751193072332,
-        "iou": 0.8124843175665265,
-        "dice": 0.8965421766047414
+        "tp": 526017,
+        "fp": 67947,
+        "fn": 72857,
+        "precision": 0.8856041780309918,
+        "recall": 0.8783433577012861,
+        "iou": 0.788842882872615,
+        "dice": 0.8819588242493951
       },
       "face_baseline": {
-        "tp": 376781,
-        "fp": 134205,
-        "fn": 7483,
-        "precision": 0.7373607104695628,
-        "recall": 0.9805264089271959,
-        "iou": 0.7267184730427471,
-        "dice": 0.8417335939681653
+        "tp": 364493,
+        "fp": 126459,
+        "fn": 19771,
+        "precision": 0.7424208476592417,
+        "recall": 0.9485483938125872,
+        "iou": 0.7136804099286698,
+        "dice": 0.832921244584194
       }
     },
     {
@@ -2699,7 +2695,7 @@
         1500,
         2000
       ],
-      "processing_ms": 191.45810000190977,
+      "processing_ms": 217.22809999994297,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_6",
@@ -2708,22 +2704,22 @@
       ],
       "source_population_label": "Southeast Asian faces",
       "skin": {
-        "tp": 582317,
-        "fp": 87653,
-        "fn": 45718,
-        "precision": 0.8691687687508396,
-        "recall": 0.9272046940059073,
-        "iou": 0.8136464492907524,
-        "dice": 0.8972492401801225
+        "tp": 551990,
+        "fp": 71414,
+        "fn": 76045,
+        "precision": 0.885445072537231,
+        "recall": 0.8789159839817845,
+        "iou": 0.7891783389496589,
+        "dice": 0.8821684476830273
       },
       "face_baseline": {
-        "tp": 400887,
-        "fp": 137444,
-        "fn": 6009,
-        "precision": 0.7446849614828052,
-        "recall": 0.9852320986197948,
-        "iou": 0.7364643421391043,
-        "dice": 0.8482343394761258
+        "tp": 395951,
+        "fp": 126081,
+        "fn": 10945,
+        "precision": 0.7584803230453305,
+        "recall": 0.9731012347135386,
+        "iou": 0.7429044780544001,
+        "dice": 0.8524901822315616
       }
     },
     {
@@ -2736,7 +2732,7 @@
         1500,
         2000
       ],
-      "processing_ms": 193.9561999970465,
+      "processing_ms": 216.8872999999394,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_7",
@@ -2745,22 +2741,22 @@
       ],
       "source_population_label": "Southeast Asian faces",
       "skin": {
-        "tp": 200299,
-        "fp": 31778,
-        "fn": 13952,
-        "precision": 0.8630713082295962,
-        "recall": 0.9348801172456604,
-        "iou": 0.8141276028435672,
-        "dice": 0.8975417181982757
+        "tp": 194574,
+        "fp": 22568,
+        "fn": 19677,
+        "precision": 0.8960680107947795,
+        "recall": 0.908159121777728,
+        "iou": 0.8216148197568607,
+        "dice": 0.9020730517185026
       },
       "face_baseline": {
-        "tp": 130928,
-        "fp": 1914,
-        "fn": 14457,
-        "precision": 0.9855919061742521,
-        "recall": 0.9005605805275647,
-        "iou": 0.8888587159451184,
-        "dice": 0.9411595567648
+        "tp": 125981,
+        "fp": 1080,
+        "fn": 19404,
+        "precision": 0.9915001455993578,
+        "recall": 0.866533686418819,
+        "iou": 0.8601440617212304,
+        "dice": 0.9248144586450159
       }
     },
     {
@@ -2773,7 +2769,7 @@
         1500,
         2000
       ],
-      "processing_ms": 199.11839999986114,
+      "processing_ms": 221.94650000005822,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_8",
@@ -2782,17 +2778,17 @@
       ],
       "source_population_label": "Southeast Asian faces",
       "skin": {
-        "tp": 184507,
-        "fp": 18461,
-        "fn": 7980,
-        "precision": 0.9090447755311182,
-        "recall": 0.9585426548286378,
-        "iou": 0.8746563134042513,
-        "dice": 0.933137778002554
+        "tp": 180830,
+        "fp": 13828,
+        "fn": 11657,
+        "precision": 0.9289625908002753,
+        "recall": 0.9394400660823848,
+        "iou": 0.8764752926350483,
+        "dice": 0.9341719510777615
       },
       "face_baseline": {
         "tp": 0,
-        "fp": 108619,
+        "fp": 107869,
         "fn": 84721,
         "precision": 0.0,
         "recall": 0.0,
@@ -2810,7 +2806,7 @@
         1500,
         2000
       ],
-      "processing_ms": 194.26190000012866,
+      "processing_ms": 222.1309999999903,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_2",
@@ -2819,22 +2815,22 @@
       ],
       "source_population_label": "Southeast Asian faces",
       "skin": {
-        "tp": 334594,
-        "fp": 26872,
-        "fn": 62126,
-        "precision": 0.9256582915128947,
-        "recall": 0.8434008872756604,
-        "iou": 0.7898968819052296,
-        "dice": 0.8826171941977299
+        "tp": 314053,
+        "fp": 23045,
+        "fn": 82667,
+        "precision": 0.9316370906976607,
+        "recall": 0.7916238152853398,
+        "iou": 0.7481638535847438,
+        "dice": 0.8559424816507636
       },
       "face_baseline": {
-        "tp": 337623,
-        "fp": 926,
-        "fn": 27905,
-        "precision": 0.997264797710228,
-        "recall": 0.9236583791118601,
-        "iou": 0.9213243681335175,
-        "dice": 0.9590513537581827
+        "tp": 331936,
+        "fp": 528,
+        "fn": 33592,
+        "precision": 0.9984118581259925,
+        "recall": 0.90810006346983,
+        "iou": 0.9067902178901589,
+        "dice": 0.9511169182454813
       }
     },
     {
@@ -2847,7 +2843,7 @@
         1500,
         2000
       ],
-      "processing_ms": 186.95070000103442,
+      "processing_ms": 219.2026000000169,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_3",
@@ -2856,22 +2852,22 @@
       ],
       "source_population_label": "Southeast Asian faces",
       "skin": {
-        "tp": 334496,
-        "fp": 20300,
-        "fn": 80510,
-        "precision": 0.9427840223677831,
-        "recall": 0.8060028047787261,
-        "iou": 0.7684157810827326,
-        "dice": 0.869044247741627
+        "tp": 312921,
+        "fp": 18000,
+        "fn": 102085,
+        "precision": 0.9456063531779488,
+        "recall": 0.7540156045936686,
+        "iou": 0.72267127938181,
+        "dice": 0.8390123966554368
       },
       "face_baseline": {
-        "tp": 337120,
-        "fp": 1412,
-        "fn": 32441,
-        "precision": 0.9958290501341085,
-        "recall": 0.9122174688346444,
-        "iou": 0.9087453803915649,
-        "dice": 0.9521913082038659
+        "tp": 329064,
+        "fp": 653,
+        "fn": 40497,
+        "precision": 0.9980195137041766,
+        "recall": 0.8904186318361516,
+        "iou": 0.8888480716558531,
+        "dice": 0.9411535898455264
       }
     },
     {
@@ -2884,7 +2880,7 @@
         1500,
         2000
       ],
-      "processing_ms": 204.50939999864204,
+      "processing_ms": 209.99300000005405,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_6",
@@ -2893,22 +2889,22 @@
       ],
       "source_population_label": "Southeast Asian faces",
       "skin": {
-        "tp": 315488,
-        "fp": 16630,
-        "fn": 82431,
-        "precision": 0.9499274354295763,
-        "recall": 0.7928447749416339,
-        "iou": 0.7610391051480042,
-        "dice": 0.864306877596615
+        "tp": 294081,
+        "fp": 13951,
+        "fn": 103838,
+        "precision": 0.9547092509869104,
+        "recall": 0.7390473940676369,
+        "iou": 0.7140141306722995,
+        "dice": 0.8331484763106788
       },
       "face_baseline": {
-        "tp": 325418,
-        "fp": 498,
-        "fn": 34053,
-        "precision": 0.9984719989199671,
-        "recall": 0.9052691315850235,
-        "iou": 0.9040167347743834,
-        "dice": 0.9495890642804722
+        "tp": 317956,
+        "fp": 248,
+        "fn": 41515,
+        "precision": 0.9992206257620897,
+        "recall": 0.8845108506666741,
+        "iou": 0.8839010449823335,
+        "dice": 0.9383731139558048
       }
     },
     {
@@ -2921,7 +2917,7 @@
         1500,
         2000
       ],
-      "processing_ms": 198.3789000005345,
+      "processing_ms": 204.51909999997042,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_7",
@@ -2930,22 +2926,22 @@
       ],
       "source_population_label": "Southeast Asian faces",
       "skin": {
-        "tp": 319164,
-        "fp": 12862,
-        "fn": 119219,
-        "precision": 0.9612620698379043,
-        "recall": 0.728048304792841,
-        "iou": 0.7072964797393877,
-        "dice": 0.8285572987854504
+        "tp": 310009,
+        "fp": 10605,
+        "fn": 128374,
+        "precision": 0.9669228417973015,
+        "recall": 0.7071647395086033,
+        "iou": 0.690461660445268,
+        "dice": 0.8168912393593124
       },
       "face_baseline": {
-        "tp": 340741,
-        "fp": 409,
-        "fn": 32525,
-        "precision": 0.9988011138795251,
-        "recall": 0.9128637486403798,
-        "iou": 0.9118645882116813,
-        "dice": 0.953900808492531
+        "tp": 333013,
+        "fp": 163,
+        "fn": 40253,
+        "precision": 0.9995107690830072,
+        "recall": 0.8921600145740571,
+        "iou": 0.8917705909289316,
+        "dice": 0.9427893585035997
       }
     },
     {
@@ -2958,7 +2954,7 @@
         1500,
         2000
       ],
-      "processing_ms": 202.48480000009295,
+      "processing_ms": 212.60960000006435,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_8",
@@ -2967,22 +2963,22 @@
       ],
       "source_population_label": "Southeast Asian faces",
       "skin": {
-        "tp": 253319,
-        "fp": 7821,
-        "fn": 133325,
-        "precision": 0.970050547598989,
-        "recall": 0.6551737515647469,
-        "iou": 0.6421837171865692,
-        "dice": 0.7821094685882949
+        "tp": 230582,
+        "fp": 5911,
+        "fn": 156062,
+        "precision": 0.9750056027028284,
+        "recall": 0.5963677181076132,
+        "iou": 0.5873877545821604,
+        "dice": 0.7400683958744225
       },
       "face_baseline": {
-        "tp": 256451,
-        "fp": 301,
-        "fn": 46081,
-        "precision": 0.9988276624914314,
-        "recall": 0.8476822286568032,
-        "iou": 0.8468396773138991,
-        "dice": 0.9170689667503451
+        "tp": 247848,
+        "fp": 179,
+        "fn": 54684,
+        "precision": 0.9992783043781523,
+        "recall": 0.8192455674110507,
+        "iou": 0.8187611286012071,
+        "dice": 0.9003503711682127
       }
     },
     {
@@ -2995,7 +2991,7 @@
         1500,
         2000
       ],
-      "processing_ms": 199.4845000008354,
+      "processing_ms": 207.6032000001078,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_2",
@@ -3004,22 +3000,22 @@
       ],
       "source_population_label": "Southeast Asian faces",
       "skin": {
-        "tp": 466113,
-        "fp": 206605,
-        "fn": 21474,
-        "precision": 0.6928802261869015,
-        "recall": 0.9559586289216079,
-        "iou": 0.6714468043423145,
-        "dice": 0.803431856279168
+        "tp": 448631,
+        "fp": 151108,
+        "fn": 38956,
+        "precision": 0.7480437323569086,
+        "recall": 0.9201045146814825,
+        "iou": 0.7024182121356829,
+        "dice": 0.8252005378331797
       },
       "face_baseline": {
-        "tp": 400076,
-        "fp": 275468,
-        "fn": 1105,
-        "precision": 0.5922278933718603,
-        "recall": 0.9972456322707207,
-        "iou": 0.5912607570542482,
-        "dice": 0.7431349694675985
+        "tp": 398971,
+        "fp": 165530,
+        "fn": 2210,
+        "precision": 0.706767569942303,
+        "recall": 0.9944912645414414,
+        "iou": 0.7040113920499161,
+        "dice": 0.826298926561746
       }
     },
     {
@@ -3032,7 +3028,7 @@
         1500,
         2000
       ],
-      "processing_ms": 200.01810000030673,
+      "processing_ms": 213.49580000003243,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_3",
@@ -3041,22 +3037,22 @@
       ],
       "source_population_label": "Southeast Asian faces",
       "skin": {
-        "tp": 453362,
-        "fp": 202387,
-        "fn": 17731,
-        "precision": 0.6913651412354422,
-        "recall": 0.9623619964635433,
-        "iou": 0.673163271366633,
-        "dice": 0.8046593932423534
+        "tp": 434873,
+        "fp": 145096,
+        "fn": 36220,
+        "precision": 0.7498211111283534,
+        "recall": 0.9231149688065838,
+        "iou": 0.7057461265942755,
+        "dice": 0.8274925741773559
       },
       "face_baseline": {
-        "tp": 364425,
-        "fp": 246723,
-        "fn": 809,
-        "precision": 0.5962958235975574,
-        "recall": 0.9977849816829758,
-        "iou": 0.5955075274896766,
-        "dice": 0.7464803734603874
+        "tp": 363436,
+        "fp": 192325,
+        "fn": 1798,
+        "precision": 0.6539429718889954,
+        "recall": 0.9950771286353406,
+        "iou": 0.6518341556678307,
+        "dice": 0.7892246972024821
       }
     },
     {
@@ -3069,7 +3065,7 @@
         1500,
         2000
       ],
-      "processing_ms": 192.52599999890663,
+      "processing_ms": 204.64320000007774,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_6",
@@ -3078,22 +3074,22 @@
       ],
       "source_population_label": "Southeast Asian faces",
       "skin": {
-        "tp": 501146,
-        "fp": 182908,
-        "fn": 20999,
-        "precision": 0.7326117528733112,
-        "recall": 0.9597832019841231,
-        "iou": 0.7107919546473811,
-        "dice": 0.8309507800951584
+        "tp": 482762,
+        "fp": 132963,
+        "fn": 39383,
+        "precision": 0.7840545698160705,
+        "recall": 0.9245745913491463,
+        "iou": 0.7369197140013555,
+        "dice": 0.8485363002803483
       },
       "face_baseline": {
-        "tp": 379584,
-        "fp": 282083,
-        "fn": 368,
-        "precision": 0.5736783004139544,
-        "recall": 0.9990314566050449,
-        "iou": 0.5733594145324643,
-        "dice": 0.7288346314727362
+        "tp": 378611,
+        "fp": 238599,
+        "fn": 1341,
+        "precision": 0.6134233081123118,
+        "recall": 0.9964706068134922,
+        "iou": 0.6120934247943985,
+        "dice": 0.7593771122445501
       }
     },
     {
@@ -3106,7 +3102,7 @@
         1500,
         2000
       ],
-      "processing_ms": 195.89279999854625,
+      "processing_ms": 212.4033000000054,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_7",
@@ -3115,22 +3111,22 @@
       ],
       "source_population_label": "Southeast Asian faces",
       "skin": {
-        "tp": 194179,
-        "fp": 138340,
-        "fn": 42516,
-        "precision": 0.5839636231313098,
-        "recall": 0.8203764338072203,
-        "iou": 0.5177623421813964,
-        "dice": 0.682270639864796
+        "tp": 186072,
+        "fp": 102132,
+        "fn": 50623,
+        "precision": 0.6456260149061082,
+        "recall": 0.7861256046811297,
+        "iou": 0.5491652082035965,
+        "dice": 0.708982108939053
       },
       "face_baseline": {
-        "tp": 159264,
-        "fp": 6810,
-        "fn": 42874,
-        "precision": 0.9589941833158713,
-        "recall": 0.7878973770394483,
-        "iou": 0.7622183509772766,
-        "dice": 0.8650668636546337
+        "tp": 152040,
+        "fp": 5355,
+        "fn": 50098,
+        "precision": 0.9659773182121414,
+        "recall": 0.752159415844621,
+        "iou": 0.7327476107627727,
+        "dice": 0.8457638102761081
       }
     },
     {
@@ -3143,7 +3139,7 @@
         1500,
         2000
       ],
-      "processing_ms": 202.88179999988643,
+      "processing_ms": 214.684899999952,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_8",
@@ -3152,22 +3148,22 @@
       ],
       "source_population_label": "Southeast Asian faces",
       "skin": {
-        "tp": 87541,
-        "fp": 138580,
-        "fn": 6983,
-        "precision": 0.3871422822294258,
-        "recall": 0.9261245821167111,
-        "iou": 0.3755448211956895,
-        "dice": 0.5460306569570709
+        "tp": 84770,
+        "fp": 111691,
+        "fn": 9754,
+        "precision": 0.4314851293640977,
+        "recall": 0.8968092759510812,
+        "iou": 0.4110758189268482,
+        "dice": 0.5826417169269894
       },
       "face_baseline": {
-        "tp": 79116,
-        "fp": 134926,
-        "fn": 3749,
-        "precision": 0.36962839068967773,
-        "recall": 0.9547577384903155,
-        "iou": 0.36326569968455996,
-        "dice": 0.5329345552647798
+        "tp": 77072,
+        "fp": 100583,
+        "fn": 5793,
+        "precision": 0.43382961357687655,
+        "recall": 0.9300911120497194,
+        "iou": 0.42012995508263923,
+        "dice": 0.5916781820973438
       }
     },
     {
@@ -3180,7 +3176,7 @@
         1500,
         2000
       ],
-      "processing_ms": 191.3630999988527,
+      "processing_ms": 215.55790000002162,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_2",
@@ -3189,22 +3185,22 @@
       ],
       "source_population_label": "Southeast Asian faces",
       "skin": {
-        "tp": 572825,
-        "fp": 70570,
-        "fn": 51874,
-        "precision": 0.8903162132127231,
-        "recall": 0.916961608710755,
-        "iou": 0.8238897462708679,
-        "dice": 0.9034424892791859
+        "tp": 537159,
+        "fp": 56773,
+        "fn": 87540,
+        "precision": 0.9044116161446092,
+        "recall": 0.8598685126757046,
+        "iou": 0.7882334123779113,
+        "dice": 0.8815777704653829
       },
       "face_baseline": {
-        "tp": 387885,
-        "fp": 130389,
-        "fn": 4112,
-        "precision": 0.748416860579539,
-        "recall": 0.9895101238019679,
-        "iou": 0.7425256419582454,
-        "dice": 0.8522407063391012
+        "tp": 383931,
+        "fp": 112650,
+        "fn": 8066,
+        "precision": 0.7731487914358383,
+        "recall": 0.9794233119131014,
+        "iou": 0.7607912065265423,
+        "dice": 0.8641469854081465
       }
     },
     {
@@ -3217,7 +3213,7 @@
         1500,
         2000
       ],
-      "processing_ms": 165.74490000130027,
+      "processing_ms": 201.13790000004883,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_3",
@@ -3226,22 +3222,22 @@
       ],
       "source_population_label": "Southeast Asian faces",
       "skin": {
-        "tp": 445402,
-        "fp": 47797,
-        "fn": 43443,
-        "precision": 0.9030878002591246,
-        "recall": 0.9111313401998589,
-        "iou": 0.8299797630450095,
-        "dice": 0.9070917392703381
+        "tp": 415325,
+        "fp": 37964,
+        "fn": 73520,
+        "precision": 0.9162476918698667,
+        "recall": 0.8496046804201741,
+        "iou": 0.7883787103105679,
+        "dice": 0.8816686373700556
       },
       "face_baseline": {
-        "tp": 290728,
-        "fp": 106749,
-        "fn": 4452,
-        "precision": 0.7314335169078966,
-        "recall": 0.9849176773494139,
-        "iou": 0.7233317327189628,
-        "dice": 0.839457336026345
+        "tp": 286909,
+        "fp": 88654,
+        "fn": 8271,
+        "precision": 0.7639437324763089,
+        "recall": 0.9719798089301444,
+        "iou": 0.7474819843995061,
+        "dice": 0.8554960692843607
       }
     },
     {
@@ -3254,7 +3250,7 @@
         1500,
         2000
       ],
-      "processing_ms": 139.835400001175,
+      "processing_ms": 148.27730000001793,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_6",
@@ -3263,22 +3259,22 @@
       ],
       "source_population_label": "Southeast Asian faces",
       "skin": {
-        "tp": 559749,
-        "fp": 55541,
-        "fn": 69502,
-        "precision": 0.9097319962944302,
-        "recall": 0.889548049983234,
-        "iou": 0.8174000280377107,
-        "dice": 0.8995268134999168
+        "tp": 519794,
+        "fp": 44087,
+        "fn": 109457,
+        "precision": 0.9218150638166563,
+        "recall": 0.8260519252253871,
+        "iou": 0.7719659368697445,
+        "dice": 0.8713101316534968
       },
       "face_baseline": {
-        "tp": 360143,
-        "fp": 121815,
-        "fn": 34298,
-        "precision": 0.7472497603525619,
-        "recall": 0.9130465646319729,
-        "iou": 0.6976054515589165,
-        "dice": 0.8218699473641572
+        "tp": 350475,
+        "fp": 102035,
+        "fn": 43966,
+        "precision": 0.774513270424963,
+        "recall": 0.8885359280602169,
+        "iou": 0.7059253619510308,
+        "dice": 0.8276157652567858
       }
     },
     {
@@ -3291,7 +3287,7 @@
         1500,
         2000
       ],
-      "processing_ms": 132.34809999994468,
+      "processing_ms": 138.84380000001784,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_7",
@@ -3300,22 +3296,22 @@
       ],
       "source_population_label": "Southeast Asian faces",
       "skin": {
-        "tp": 203362,
-        "fp": 12314,
-        "fn": 49812,
-        "precision": 0.9429050983883233,
-        "recall": 0.8032499387772836,
-        "iou": 0.7659931898993552,
-        "dice": 0.8674928015356724
+        "tp": 196501,
+        "fp": 8901,
+        "fn": 56673,
+        "precision": 0.9566654657695641,
+        "recall": 0.7761499996050147,
+        "iou": 0.7497891824859296,
+        "dice": 0.8570051638114511
       },
       "face_baseline": {
-        "tp": 111232,
-        "fp": 1305,
-        "fn": 50540,
-        "precision": 0.988403813856776,
-        "recall": 0.6875849961674455,
-        "iou": 0.6820826971308033,
-        "dice": 0.8109978163312177
+        "tp": 104830,
+        "fp": 694,
+        "fn": 56942,
+        "precision": 0.9934232970698609,
+        "recall": 0.6480107806048018,
+        "iou": 0.6452426969335122,
+        "dice": 0.784373877648749
       }
     },
     {
@@ -3328,7 +3324,7 @@
         1500,
         2000
       ],
-      "processing_ms": 164.9704000010388,
+      "processing_ms": 132.71499999996195,
       "scene_tags": [
         "controlled_portrait",
         "author_variant_8",
@@ -3337,22 +3333,22 @@
       ],
       "source_population_label": "Southeast Asian faces",
       "skin": {
-        "tp": 170444,
-        "fp": 20191,
-        "fn": 24746,
-        "precision": 0.8940855561675453,
-        "recall": 0.8732209641887392,
-        "iou": 0.7913604264071575,
-        "dice": 0.883530097842286
+        "tp": 159916,
+        "fp": 14961,
+        "fn": 35274,
+        "precision": 0.9144484409041783,
+        "recall": 0.8192837747835442,
+        "iou": 0.7609575971563305,
+        "dice": 0.8642543107058992
       },
       "face_baseline": {
-        "tp": 137628,
-        "fp": 29660,
-        "fn": 17110,
-        "precision": 0.8227009707809287,
-        "recall": 0.8894259974925358,
-        "iou": 0.7463638434256337,
-        "dice": 0.8547632799836038
+        "tp": 131910,
+        "fp": 3016,
+        "fn": 22828,
+        "precision": 0.9776470065072707,
+        "recall": 0.8524732127854826,
+        "iou": 0.8361753109271397,
+        "dice": 0.9107793857711003
       }
     },
     {
@@ -3363,7 +3359,7 @@
         321,
         481
       ],
-      "processing_ms": 10.268599999108119,
+      "processing_ms": 7.438100000058512,
       "scene_tags": [
         "no_face",
         "no_person",
@@ -3373,7 +3369,7 @@
       "source_population_label": "",
       "skin": {
         "tp": 0,
-        "fp": 139097,
+        "fp": 133811,
         "fn": 0,
         "precision": 0.0,
         "recall": null,
@@ -3382,7 +3378,7 @@
       },
       "face_baseline": {
         "tp": 0,
-        "fp": 148267,
+        "fp": 147734,
         "fn": 0,
         "precision": 0.0,
         "recall": null,
@@ -3393,12 +3389,12 @@
     {
       "image_id": "bsds_100098",
       "subject_ids": [],
-      "split": "test",
+      "split": "validation",
       "shape": [
         321,
         481
       ],
-      "processing_ms": 7.28240000171354,
+      "processing_ms": 7.221500000014203,
       "scene_tags": [
         "no_face",
         "no_person",
@@ -3408,7 +3404,7 @@
       "source_population_label": "",
       "skin": {
         "tp": 0,
-        "fp": 1670,
+        "fp": 1073,
         "fn": 0,
         "precision": 0.0,
         "recall": null,
@@ -3417,7 +3413,7 @@
       },
       "face_baseline": {
         "tp": 0,
-        "fp": 40,
+        "fp": 32,
         "fn": 0,
         "precision": 0.0,
         "recall": null,
@@ -3433,7 +3429,7 @@
         321,
         481
       ],
-      "processing_ms": 7.779100000334438,
+      "processing_ms": 6.701399999997193,
       "scene_tags": [
         "no_face",
         "no_person",
@@ -3443,7 +3439,7 @@
       "source_population_label": "",
       "skin": {
         "tp": 0,
-        "fp": 40976,
+        "fp": 32443,
         "fn": 0,
         "precision": 0.0,
         "recall": null,
@@ -3452,7 +3448,7 @@
       },
       "face_baseline": {
         "tp": 0,
-        "fp": 14994,
+        "fp": 12653,
         "fn": 0,
         "precision": 0.0,
         "recall": null,
@@ -3463,12 +3459,12 @@
     {
       "image_id": "bsds_196015",
       "subject_ids": [],
-      "split": "test",
+      "split": "validation",
       "shape": [
         321,
         481
       ],
-      "processing_ms": 6.500799998320872,
+      "processing_ms": 6.6145000000688015,
       "scene_tags": [
         "no_face",
         "no_person",
@@ -3478,7 +3474,7 @@
       "source_population_label": "",
       "skin": {
         "tp": 0,
-        "fp": 347,
+        "fp": 161,
         "fn": 0,
         "precision": 0.0,
         "recall": null,
@@ -3487,7 +3483,7 @@
       },
       "face_baseline": {
         "tp": 0,
-        "fp": 25,
+        "fp": 15,
         "fn": 0,
         "precision": 0.0,
         "recall": null,
@@ -3503,7 +3499,7 @@
         321,
         481
       ],
-      "processing_ms": 6.993499999225605,
+      "processing_ms": 7.0194999999557695,
       "scene_tags": [
         "no_face",
         "no_person",
@@ -3513,7 +3509,7 @@
       "source_population_label": "",
       "skin": {
         "tp": 0,
-        "fp": 17981,
+        "fp": 13201,
         "fn": 0,
         "precision": 0.0,
         "recall": null,
@@ -3522,7 +3518,7 @@
       },
       "face_baseline": {
         "tp": 0,
-        "fp": 12589,
+        "fp": 5902,
         "fn": 0,
         "precision": 0.0,
         "recall": null,
@@ -3533,12 +3529,12 @@
     {
       "image_id": "bsds_49024",
       "subject_ids": [],
-      "split": "test",
+      "split": "validation",
       "shape": [
         321,
         481
       ],
-      "processing_ms": 7.122099999833154,
+      "processing_ms": 5.974700000024313,
       "scene_tags": [
         "no_face",
         "no_person",
@@ -3573,7 +3569,7 @@
         321,
         481
       ],
-      "processing_ms": 7.205599998997059,
+      "processing_ms": 6.091099999935068,
       "scene_tags": [
         "no_face",
         "no_person",
@@ -3583,7 +3579,7 @@
       "source_population_label": "",
       "skin": {
         "tp": 0,
-        "fp": 12035,
+        "fp": 11203,
         "fn": 0,
         "precision": 0.0,
         "recall": null,
@@ -3592,7 +3588,7 @@
       },
       "face_baseline": {
         "tp": 0,
-        "fp": 11719,
+        "fp": 11000,
         "fn": 0,
         "precision": 0.0,
         "recall": null,
@@ -3603,12 +3599,12 @@
     {
       "image_id": "bsds_27059",
       "subject_ids": [],
-      "split": "test",
+      "split": "validation",
       "shape": [
         481,
         321
       ],
-      "processing_ms": 11.063499998272164,
+      "processing_ms": 7.365099999901759,
       "scene_tags": [
         "no_face",
         "no_person",
@@ -3618,7 +3614,7 @@
       "source_population_label": "",
       "skin": {
         "tp": 0,
-        "fp": 115,
+        "fp": 48,
         "fn": 0,
         "precision": 0.0,
         "recall": null,
@@ -3627,12 +3623,12 @@
       },
       "face_baseline": {
         "tp": 0,
-        "fp": 5,
+        "fp": 0,
         "fn": 0,
-        "precision": 0.0,
+        "precision": null,
         "recall": null,
-        "iou": 0.0,
-        "dice": 0.0
+        "iou": null,
+        "dice": null
       }
     },
     {
@@ -3643,7 +3639,7 @@
         481,
         321
       ],
-      "processing_ms": 7.9144000010273885,
+      "processing_ms": 7.769600000074206,
       "scene_tags": [
         "no_face",
         "no_person",
@@ -3653,7 +3649,7 @@
       "source_population_label": "",
       "skin": {
         "tp": 0,
-        "fp": 2521,
+        "fp": 1754,
         "fn": 0,
         "precision": 0.0,
         "recall": null,
@@ -3662,7 +3658,7 @@
       },
       "face_baseline": {
         "tp": 0,
-        "fp": 232,
+        "fp": 124,
         "fn": 0,
         "precision": 0.0,
         "recall": null,
@@ -3673,12 +3669,12 @@
     {
       "image_id": "bsds_197017",
       "subject_ids": [],
-      "split": "test",
+      "split": "validation",
       "shape": [
         321,
         481
       ],
-      "processing_ms": 7.324200003495207,
+      "processing_ms": 6.853199999909521,
       "scene_tags": [
         "no_face",
         "no_person",
@@ -3688,7 +3684,7 @@
       "source_population_label": "",
       "skin": {
         "tp": 0,
-        "fp": 15208,
+        "fp": 12113,
         "fn": 0,
         "precision": 0.0,
         "recall": null,
@@ -3697,7 +3693,7 @@
       },
       "face_baseline": {
         "tp": 0,
-        "fp": 4117,
+        "fp": 2996,
         "fn": 0,
         "precision": 0.0,
         "recall": null,
@@ -3713,7 +3709,7 @@
         321,
         481
       ],
-      "processing_ms": 7.451299999956973,
+      "processing_ms": 6.283899999971254,
       "scene_tags": [
         "no_face",
         "no_person",
@@ -3723,7 +3719,7 @@
       "source_population_label": "",
       "skin": {
         "tp": 0,
-        "fp": 1000,
+        "fp": 621,
         "fn": 0,
         "precision": 0.0,
         "recall": null,
@@ -3732,7 +3728,7 @@
       },
       "face_baseline": {
         "tp": 0,
-        "fp": 183,
+        "fp": 128,
         "fn": 0,
         "precision": 0.0,
         "recall": null,
@@ -3743,12 +3739,12 @@
     {
       "image_id": "bsds_326038",
       "subject_ids": [],
-      "split": "test",
+      "split": "validation",
       "shape": [
         321,
         481
       ],
-      "processing_ms": 7.397099998343037,
+      "processing_ms": 6.825000000048931,
       "scene_tags": [
         "no_face",
         "no_person",
@@ -3758,7 +3754,7 @@
       "source_population_label": "",
       "skin": {
         "tp": 0,
-        "fp": 109560,
+        "fp": 100790,
         "fn": 0,
         "precision": 0.0,
         "recall": null,
@@ -3767,7 +3763,7 @@
       },
       "face_baseline": {
         "tp": 0,
-        "fp": 91751,
+        "fp": 87097,
         "fn": 0,
         "precision": 0.0,
         "recall": null,
@@ -3783,7 +3779,7 @@
         321,
         481
       ],
-      "processing_ms": 7.048300001770258,
+      "processing_ms": 6.235199999991892,
       "scene_tags": [
         "no_face",
         "no_person",
@@ -3793,7 +3789,7 @@
       "source_population_label": "",
       "skin": {
         "tp": 0,
-        "fp": 496,
+        "fp": 286,
         "fn": 0,
         "precision": 0.0,
         "recall": null,
@@ -3802,7 +3798,7 @@
       },
       "face_baseline": {
         "tp": 0,
-        "fp": 15,
+        "fp": 11,
         "fn": 0,
         "precision": 0.0,
         "recall": null,
@@ -3813,12 +3809,12 @@
     {
       "image_id": "bsds_16052",
       "subject_ids": [],
-      "split": "test",
+      "split": "validation",
       "shape": [
         321,
         481
       ],
-      "processing_ms": 7.632299999386305,
+      "processing_ms": 6.374800000003233,
       "scene_tags": [
         "no_face",
         "no_person",
@@ -3828,7 +3824,7 @@
       "source_population_label": "",
       "skin": {
         "tp": 0,
-        "fp": 145,
+        "fp": 79,
         "fn": 0,
         "precision": 0.0,
         "recall": null,
@@ -3837,7 +3833,7 @@
       },
       "face_baseline": {
         "tp": 0,
-        "fp": 26,
+        "fp": 17,
         "fn": 0,
         "precision": 0.0,
         "recall": null,
@@ -3853,7 +3849,7 @@
         321,
         481
       ],
-      "processing_ms": 7.417000000714324,
+      "processing_ms": 6.241299999942385,
       "scene_tags": [
         "no_face",
         "no_person",
@@ -3863,7 +3859,7 @@
       "source_population_label": "",
       "skin": {
         "tp": 0,
-        "fp": 75359,
+        "fp": 65887,
         "fn": 0,
         "precision": 0.0,
         "recall": null,
@@ -3872,7 +3868,7 @@
       },
       "face_baseline": {
         "tp": 0,
-        "fp": 83481,
+        "fp": 67456,
         "fn": 0,
         "precision": 0.0,
         "recall": null,
@@ -3883,12 +3879,12 @@
     {
       "image_id": "bsds_35028",
       "subject_ids": [],
-      "split": "test",
+      "split": "validation",
       "shape": [
         321,
         481
       ],
-      "processing_ms": 7.022800000413554,
+      "processing_ms": 5.734800000027462,
       "scene_tags": [
         "no_face",
         "no_person",
@@ -3923,7 +3919,7 @@
         321,
         481
       ],
-      "processing_ms": 7.221300002129283,
+      "processing_ms": 6.467499999985193,
       "scene_tags": [
         "no_face",
         "no_person",
@@ -3933,7 +3929,7 @@
       "source_population_label": "",
       "skin": {
         "tp": 0,
-        "fp": 39584,
+        "fp": 26534,
         "fn": 0,
         "precision": 0.0,
         "recall": null,
@@ -3942,7 +3938,7 @@
       },
       "face_baseline": {
         "tp": 0,
-        "fp": 49959,
+        "fp": 6465,
         "fn": 0,
         "precision": 0.0,
         "recall": null,
@@ -3953,12 +3949,12 @@
     {
       "image_id": "bsds_130026",
       "subject_ids": [],
-      "split": "test",
+      "split": "validation",
       "shape": [
         321,
         481
       ],
-      "processing_ms": 8.741000001464272,
+      "processing_ms": 6.7741999999952895,
       "scene_tags": [
         "no_face",
         "no_person",
@@ -3968,7 +3964,7 @@
       "source_population_label": "",
       "skin": {
         "tp": 0,
-        "fp": 32110,
+        "fp": 25105,
         "fn": 0,
         "precision": 0.0,
         "recall": null,
@@ -3977,7 +3973,7 @@
       },
       "face_baseline": {
         "tp": 0,
-        "fp": 13359,
+        "fp": 8125,
         "fn": 0,
         "precision": 0.0,
         "recall": null,
@@ -3993,7 +3989,7 @@
         321,
         481
       ],
-      "processing_ms": 6.584099999599857,
+      "processing_ms": 5.908200000021679,
       "scene_tags": [
         "no_face",
         "no_person",
@@ -4003,12 +3999,12 @@
       "source_population_label": "",
       "skin": {
         "tp": 0,
-        "fp": 2,
+        "fp": 0,
         "fn": 0,
-        "precision": 0.0,
+        "precision": null,
         "recall": null,
-        "iou": 0.0,
-        "dice": 0.0
+        "iou": null,
+        "dice": null
       },
       "face_baseline": {
         "tp": 0,
@@ -4023,12 +4019,12 @@
     {
       "image_id": "bsds_123074",
       "subject_ids": [],
-      "split": "test",
+      "split": "validation",
       "shape": [
         321,
         481
       ],
-      "processing_ms": 7.068299997627037,
+      "processing_ms": 6.653000000028442,
       "scene_tags": [
         "no_face",
         "no_person",
@@ -4038,7 +4034,7 @@
       "source_population_label": "",
       "skin": {
         "tp": 0,
-        "fp": 6088,
+        "fp": 4342,
         "fn": 0,
         "precision": 0.0,
         "recall": null,
@@ -4047,12 +4043,876 @@
       },
       "face_baseline": {
         "tp": 0,
-        "fp": 2992,
+        "fp": 1721,
         "fn": 0,
         "precision": 0.0,
         "recall": null,
         "iou": 0.0,
         "dice": 0.0
+      }
+    },
+    {
+      "image_id": "hfd_12_SEAFA6",
+      "subject_ids": [
+        "hfd_SEAFA_012"
+      ],
+      "split": "test",
+      "shape": [
+        1500,
+        2000
+      ],
+      "processing_ms": 133.82100000001174,
+      "scene_tags": [
+        "controlled_portrait",
+        "fresh_holdout",
+        "frontal"
+      ],
+      "source_population_label": "Southeast Asian faces",
+      "skin": {
+        "tp": 495153,
+        "fp": 26567,
+        "fn": 123622,
+        "precision": 0.9490780495284827,
+        "recall": 0.8002149408104723,
+        "iou": 0.7672722370464033,
+        "dice": 0.8683124432812068
+      },
+      "face_baseline": {
+        "tp": 391970,
+        "fp": 19794,
+        "fn": 31556,
+        "precision": 0.9519287747350424,
+        "recall": 0.9254921775758749,
+        "iou": 0.8841694487052242,
+        "dice": 0.9385243448383196
+      }
+    },
+    {
+      "image_id": "hfd_12_SEAFA7",
+      "subject_ids": [
+        "hfd_SEAFA_012"
+      ],
+      "split": "test",
+      "shape": [
+        1500,
+        2000
+      ],
+      "processing_ms": 136.01999999991676,
+      "scene_tags": [
+        "controlled_portrait",
+        "fresh_holdout",
+        "profile"
+      ],
+      "source_population_label": "Southeast Asian faces",
+      "skin": {
+        "tp": 106725,
+        "fp": 2184,
+        "fn": 45351,
+        "precision": 0.9799465608902845,
+        "recall": 0.7017872642626055,
+        "iou": 0.6918514196810579,
+        "dice": 0.8178630955802058
+      },
+      "face_baseline": {
+        "tp": 109304,
+        "fp": 0,
+        "fn": 45367,
+        "precision": 1.0,
+        "recall": 0.7066870971287442,
+        "iou": 0.7066870971287442,
+        "dice": 0.8281390283170755
+      }
+    },
+    {
+      "image_id": "hfd_12_SEAFA8",
+      "subject_ids": [
+        "hfd_SEAFA_012"
+      ],
+      "split": "test",
+      "shape": [
+        1500,
+        2000
+      ],
+      "processing_ms": 133.93659999996999,
+      "scene_tags": [
+        "controlled_portrait",
+        "fresh_holdout",
+        "profile"
+      ],
+      "source_population_label": "Southeast Asian faces",
+      "skin": {
+        "tp": 194532,
+        "fp": 8621,
+        "fn": 39992,
+        "precision": 0.9575640034850581,
+        "recall": 0.8294758745373608,
+        "iou": 0.8000658043554257,
+        "dice": 0.8889295073764443
+      },
+      "face_baseline": {
+        "tp": 164153,
+        "fp": 126,
+        "fn": 44101,
+        "precision": 0.9992330121318002,
+        "recall": 0.7882345597203415,
+        "iou": 0.7877579422209425,
+        "dice": 0.8812803161062241
+      }
+    },
+    {
+      "image_id": "hfd_5_AFA6",
+      "subject_ids": [
+        "hfd_AFA_005"
+      ],
+      "split": "test",
+      "shape": [
+        1500,
+        2000
+      ],
+      "processing_ms": 135.78180000001794,
+      "scene_tags": [
+        "controlled_portrait",
+        "fresh_holdout",
+        "frontal"
+      ],
+      "source_population_label": "Asian faces",
+      "skin": {
+        "tp": 654060,
+        "fp": 23961,
+        "fn": 53551,
+        "precision": 0.964660386625193,
+        "recall": 0.9243214138841821,
+        "iou": 0.8940473391545877,
+        "dice": 0.9440601833675897
+      },
+      "face_baseline": {
+        "tp": 303297,
+        "fp": 291668,
+        "fn": 5586,
+        "precision": 0.5097728437807266,
+        "recall": 0.9819154825613582,
+        "iou": 0.5050312130027258,
+        "dice": 0.671123905789469
+      }
+    },
+    {
+      "image_id": "hfd_5_AFA7",
+      "subject_ids": [
+        "hfd_AFA_005"
+      ],
+      "split": "test",
+      "shape": [
+        1500,
+        2000
+      ],
+      "processing_ms": 140.47229999994215,
+      "scene_tags": [
+        "controlled_portrait",
+        "fresh_holdout",
+        "profile"
+      ],
+      "source_population_label": "Asian faces",
+      "skin": {
+        "tp": 232785,
+        "fp": 8708,
+        "fn": 72113,
+        "precision": 0.9639409837966317,
+        "recall": 0.7634848375522306,
+        "iou": 0.7422849052632922,
+        "dice": 0.8520821170187649
+      },
+      "face_baseline": {
+        "tp": 154609,
+        "fp": 74815,
+        "fn": 43816,
+        "precision": 0.673900725294651,
+        "recall": 0.779181050774852,
+        "iou": 0.5658358951837212,
+        "dice": 0.7227269433842314
+      }
+    },
+    {
+      "image_id": "hfd_5_AFA8",
+      "subject_ids": [
+        "hfd_AFA_005"
+      ],
+      "split": "test",
+      "shape": [
+        1500,
+        2000
+      ],
+      "processing_ms": 193.60690000007708,
+      "scene_tags": [
+        "controlled_portrait",
+        "fresh_holdout",
+        "profile"
+      ],
+      "source_population_label": "Asian faces",
+      "skin": {
+        "tp": 174952,
+        "fp": 18115,
+        "fn": 9832,
+        "precision": 0.9061724686248815,
+        "recall": 0.9467919300372326,
+        "iou": 0.8622615192780645,
+        "dice": 0.926036982831857
+      },
+      "face_baseline": {
+        "tp": 108198,
+        "fp": 55052,
+        "fn": 8006,
+        "precision": 0.6627748851454824,
+        "recall": 0.9311039206911982,
+        "iou": 0.6317910029429625,
+        "dice": 0.7743528451909796
+      }
+    },
+    {
+      "image_id": "hfd_24_SEAFA6",
+      "subject_ids": [
+        "hfd_SEAFA_024"
+      ],
+      "split": "test",
+      "shape": [
+        1500,
+        2000
+      ],
+      "processing_ms": 203.8135999999895,
+      "scene_tags": [
+        "controlled_portrait",
+        "fresh_holdout",
+        "frontal"
+      ],
+      "source_population_label": "Southeast Asian faces",
+      "skin": {
+        "tp": 392740,
+        "fp": 19857,
+        "fn": 47734,
+        "precision": 0.9518731352869749,
+        "recall": 0.8916303799997276,
+        "iou": 0.8531686981758778,
+        "dice": 0.9207674390525525
+      },
+      "face_baseline": {
+        "tp": 340877,
+        "fp": 3602,
+        "fn": 6922,
+        "precision": 0.9895436296552185,
+        "recall": 0.9800977001083959,
+        "iou": 0.9700513089035034,
+        "dice": 0.984798014670407
+      }
+    },
+    {
+      "image_id": "hfd_24_SEAFA7",
+      "subject_ids": [
+        "hfd_SEAFA_024"
+      ],
+      "split": "test",
+      "shape": [
+        1500,
+        2000
+      ],
+      "processing_ms": 200.79450000002907,
+      "scene_tags": [
+        "controlled_portrait",
+        "fresh_holdout",
+        "profile"
+      ],
+      "source_population_label": "Southeast Asian faces",
+      "skin": {
+        "tp": 86710,
+        "fp": 3328,
+        "fn": 32892,
+        "precision": 0.9630378284724228,
+        "recall": 0.7249878764569154,
+        "iou": 0.7053607744244692,
+        "dice": 0.827227628315207
+      },
+      "face_baseline": {
+        "tp": 87492,
+        "fp": 0,
+        "fn": 31516,
+        "precision": 1.0,
+        "recall": 0.7351774670610379,
+        "iou": 0.7351774670610379,
+        "dice": 0.8473801452784504
+      }
+    },
+    {
+      "image_id": "hfd_24_SEAFA8",
+      "subject_ids": [
+        "hfd_SEAFA_024"
+      ],
+      "split": "test",
+      "shape": [
+        1500,
+        2000
+      ],
+      "processing_ms": 204.53229999998257,
+      "scene_tags": [
+        "controlled_portrait",
+        "fresh_holdout",
+        "profile"
+      ],
+      "source_population_label": "Southeast Asian faces",
+      "skin": {
+        "tp": 198396,
+        "fp": 5160,
+        "fn": 37987,
+        "precision": 0.974650710369628,
+        "recall": 0.8392989343565316,
+        "iou": 0.8213692800039745,
+        "dice": 0.9019250396077638
+      },
+      "face_baseline": {
+        "tp": 172266,
+        "fp": 31009,
+        "fn": 22345,
+        "precision": 0.8474529578157668,
+        "recall": 0.885181207639856,
+        "iou": 0.76352273734598,
+        "dice": 0.8659063148741096
+      }
+    },
+    {
+      "image_id": "hfd_17_AMA6",
+      "subject_ids": [
+        "hfd_AMA_017"
+      ],
+      "split": "test",
+      "shape": [
+        1500,
+        2000
+      ],
+      "processing_ms": 213.9699000000519,
+      "scene_tags": [
+        "controlled_portrait",
+        "fresh_holdout",
+        "frontal"
+      ],
+      "source_population_label": "Asian faces",
+      "skin": {
+        "tp": 340232,
+        "fp": 12476,
+        "fn": 43156,
+        "precision": 0.9646279642083536,
+        "recall": 0.887435183156489,
+        "iou": 0.8594668876179699,
+        "dice": 0.924422901360692
+      },
+      "face_baseline": {
+        "tp": 255596,
+        "fp": 92675,
+        "fn": 39440,
+        "precision": 0.7338997504816651,
+        "recall": 0.8663213980666766,
+        "iou": 0.659243611865539,
+        "dice": 0.7946314900972631
+      }
+    },
+    {
+      "image_id": "hfd_17_AMA7",
+      "subject_ids": [
+        "hfd_AMA_017"
+      ],
+      "split": "test",
+      "shape": [
+        1500,
+        2000
+      ],
+      "processing_ms": 222.45359999999437,
+      "scene_tags": [
+        "controlled_portrait",
+        "fresh_holdout",
+        "profile"
+      ],
+      "source_population_label": "Asian faces",
+      "skin": {
+        "tp": 167412,
+        "fp": 884,
+        "fn": 193187,
+        "precision": 0.9947473499073062,
+        "recall": 0.46426085485539337,
+        "iou": 0.4631255135096256,
+        "dice": 0.6330632734285633
+      },
+      "face_baseline": {
+        "tp": 0,
+        "fp": 70905,
+        "fn": 197468,
+        "precision": 0.0,
+        "recall": 0.0,
+        "iou": 0.0,
+        "dice": 0.0
+      }
+    },
+    {
+      "image_id": "hfd_17_AMA8",
+      "subject_ids": [
+        "hfd_AMA_017"
+      ],
+      "split": "test",
+      "shape": [
+        1500,
+        2000
+      ],
+      "processing_ms": 223.70149999994737,
+      "scene_tags": [
+        "controlled_portrait",
+        "fresh_holdout",
+        "profile"
+      ],
+      "source_population_label": "Asian faces",
+      "skin": {
+        "tp": 361756,
+        "fp": 7061,
+        "fn": 43578,
+        "precision": 0.9808550039721596,
+        "recall": 0.892488663669961,
+        "iou": 0.8772075316141078,
+        "dice": 0.9345876967154987
+      },
+      "face_baseline": {
+        "tp": 190452,
+        "fp": 168123,
+        "fn": 26771,
+        "precision": 0.5311357456599037,
+        "recall": 0.8767579860327865,
+        "iou": 0.4942363486321384,
+        "dice": 0.6615236593388654
+      }
+    },
+    {
+      "image_id": "hfd_8_SEAMA6",
+      "subject_ids": [
+        "hfd_SEAMA_008"
+      ],
+      "split": "test",
+      "shape": [
+        1500,
+        2000
+      ],
+      "processing_ms": 206.21440000002167,
+      "scene_tags": [
+        "controlled_portrait",
+        "fresh_holdout",
+        "frontal"
+      ],
+      "source_population_label": "Southeast Asian faces",
+      "skin": {
+        "tp": 397364,
+        "fp": 19533,
+        "fn": 150719,
+        "precision": 0.9531467005039614,
+        "recall": 0.7250069788699887,
+        "iou": 0.7000577855451573,
+        "dice": 0.8235694004020808
+      },
+      "face_baseline": {
+        "tp": 416015,
+        "fp": 102328,
+        "fn": 9811,
+        "precision": 0.8025863183258962,
+        "recall": 0.9769600728936232,
+        "iou": 0.7876774577111979,
+        "dice": 0.881229949299331
+      }
+    },
+    {
+      "image_id": "hfd_8_SEAMA7",
+      "subject_ids": [
+        "hfd_SEAMA_008"
+      ],
+      "split": "test",
+      "shape": [
+        1500,
+        2000
+      ],
+      "processing_ms": 217.8063999999722,
+      "scene_tags": [
+        "controlled_portrait",
+        "fresh_holdout",
+        "profile"
+      ],
+      "source_population_label": "Southeast Asian faces",
+      "skin": {
+        "tp": 283472,
+        "fp": 9223,
+        "fn": 48447,
+        "precision": 0.9684893831462785,
+        "recall": 0.8540396904063944,
+        "iou": 0.8309501615163187,
+        "dice": 0.9076709775957631
+      },
+      "face_baseline": {
+        "tp": 159490,
+        "fp": 141332,
+        "fn": 34987,
+        "precision": 0.5301806383841607,
+        "recall": 0.8200969780488181,
+        "iou": 0.4749426013001438,
+        "dice": 0.6440150293055306
+      }
+    },
+    {
+      "image_id": "hfd_8_SEAMA8",
+      "subject_ids": [
+        "hfd_SEAMA_008"
+      ],
+      "split": "test",
+      "shape": [
+        1500,
+        2000
+      ],
+      "processing_ms": 219.23889999993662,
+      "scene_tags": [
+        "controlled_portrait",
+        "fresh_holdout",
+        "profile"
+      ],
+      "source_population_label": "Southeast Asian faces",
+      "skin": {
+        "tp": 262003,
+        "fp": 6305,
+        "fn": 59483,
+        "precision": 0.9765008870402672,
+        "recall": 0.8149748356071493,
+        "iou": 0.7992989435341422,
+        "dice": 0.8884559693723572
+      },
+      "face_baseline": {
+        "tp": 139446,
+        "fp": 136241,
+        "fn": 37217,
+        "precision": 0.5058127514173683,
+        "recall": 0.7893333635226392,
+        "iou": 0.44565106230664997,
+        "dice": 0.6165402895987621
+      }
+    },
+    {
+      "image_id": "hfd_13_EAMA6",
+      "subject_ids": [
+        "hfd_EAMA_013"
+      ],
+      "split": "test",
+      "shape": [
+        1500,
+        2000
+      ],
+      "processing_ms": 209.58540000003723,
+      "scene_tags": [
+        "controlled_portrait",
+        "fresh_holdout",
+        "frontal"
+      ],
+      "source_population_label": "East Asian faces",
+      "skin": {
+        "tp": 382507,
+        "fp": 16046,
+        "fn": 25299,
+        "precision": 0.9597393571243975,
+        "recall": 0.9379631491444461,
+        "iou": 0.902454158527033,
+        "dice": 0.9487263117296391
+      },
+      "face_baseline": {
+        "tp": 297722,
+        "fp": 132870,
+        "fn": 3800,
+        "precision": 0.6914248290725327,
+        "recall": 0.9873972711775592,
+        "iou": 0.6853763421057478,
+        "dice": 0.8133214226199745
+      }
+    },
+    {
+      "image_id": "hfd_13_EAMA7",
+      "subject_ids": [
+        "hfd_EAMA_013"
+      ],
+      "split": "test",
+      "shape": [
+        1500,
+        2000
+      ],
+      "processing_ms": 212.5892000000249,
+      "scene_tags": [
+        "controlled_portrait",
+        "fresh_holdout",
+        "profile"
+      ],
+      "source_population_label": "East Asian faces",
+      "skin": {
+        "tp": 301098,
+        "fp": 5765,
+        "fn": 19368,
+        "precision": 0.981213114647253,
+        "recall": 0.9395630113647001,
+        "iou": 0.922959498024406,
+        "dice": 0.959936492653775
+      },
+      "face_baseline": {
+        "tp": 162384,
+        "fp": 145949,
+        "fn": 11924,
+        "precision": 0.5266513801636542,
+        "recall": 0.9315923537646006,
+        "iou": 0.5070427812662955,
+        "dice": 0.6728976609944037
+      }
+    },
+    {
+      "image_id": "hfd_13_EAMA8",
+      "subject_ids": [
+        "hfd_EAMA_013"
+      ],
+      "split": "test",
+      "shape": [
+        1500,
+        2000
+      ],
+      "processing_ms": 218.01010000001497,
+      "scene_tags": [
+        "controlled_portrait",
+        "fresh_holdout",
+        "profile"
+      ],
+      "source_population_label": "East Asian faces",
+      "skin": {
+        "tp": 378973,
+        "fp": 7653,
+        "fn": 28742,
+        "precision": 0.9802056768039398,
+        "recall": 0.9295046785131771,
+        "iou": 0.91237890256351,
+        "dice": 0.9541821459549488
+      },
+      "face_baseline": {
+        "tp": 232838,
+        "fp": 161179,
+        "fn": 14581,
+        "precision": 0.5909338937152457,
+        "recall": 0.9410675817136114,
+        "iou": 0.5698461568583302,
+        "dice": 0.725989810362998
+      }
+    },
+    {
+      "image_id": "hfd_19_EAFA6",
+      "subject_ids": [
+        "hfd_EAFA_019"
+      ],
+      "split": "test",
+      "shape": [
+        1500,
+        2000
+      ],
+      "processing_ms": 214.92269999998825,
+      "scene_tags": [
+        "controlled_portrait",
+        "fresh_holdout",
+        "frontal"
+      ],
+      "source_population_label": "East Asian faces",
+      "skin": {
+        "tp": 473102,
+        "fp": 45120,
+        "fn": 101506,
+        "precision": 0.9129330672954834,
+        "recall": 0.8233473950936987,
+        "iou": 0.7634026540675909,
+        "dice": 0.8658290859511544
+      },
+      "face_baseline": {
+        "tp": 330193,
+        "fp": 216311,
+        "fn": 37521,
+        "precision": 0.6041913691391096,
+        "recall": 0.8979614591775129,
+        "iou": 0.5653747699156714,
+        "dice": 0.7223506865977262
+      }
+    },
+    {
+      "image_id": "hfd_19_EAFA7",
+      "subject_ids": [
+        "hfd_EAFA_019"
+      ],
+      "split": "test",
+      "shape": [
+        1500,
+        2000
+      ],
+      "processing_ms": 212.58430000000317,
+      "scene_tags": [
+        "controlled_portrait",
+        "fresh_holdout",
+        "profile"
+      ],
+      "source_population_label": "East Asian faces",
+      "skin": {
+        "tp": 291244,
+        "fp": 68207,
+        "fn": 52943,
+        "precision": 0.8102467373856241,
+        "recall": 0.8461795477458475,
+        "iou": 0.7062275396829246,
+        "dice": 0.8278233978267234
+      },
+      "face_baseline": {
+        "tp": 172736,
+        "fp": 152689,
+        "fn": 12116,
+        "precision": 0.5308012598909119,
+        "recall": 0.9344556726462251,
+        "iou": 0.5117482024405924,
+        "dice": 0.6770283591069164
+      }
+    },
+    {
+      "image_id": "hfd_19_EAFA8",
+      "subject_ids": [
+        "hfd_EAFA_019"
+      ],
+      "split": "test",
+      "shape": [
+        1500,
+        2000
+      ],
+      "processing_ms": 210.7840999999553,
+      "scene_tags": [
+        "controlled_portrait",
+        "fresh_holdout",
+        "profile"
+      ],
+      "source_population_label": "East Asian faces",
+      "skin": {
+        "tp": 130331,
+        "fp": 154662,
+        "fn": 9721,
+        "precision": 0.45731298663475944,
+        "recall": 0.9305900665467112,
+        "iou": 0.4422287370128328,
+        "dice": 0.6132574198026092
+      },
+      "face_baseline": {
+        "tp": 136643,
+        "fp": 149987,
+        "fn": 9113,
+        "precision": 0.4767226040540069,
+        "recall": 0.9374777024616482,
+        "iou": 0.4620329137122434,
+        "dice": 0.6320417404818842
+      }
+    },
+    {
+      "image_id": "hfd_14_AFA6",
+      "subject_ids": [
+        "hfd_AFA_014"
+      ],
+      "split": "test",
+      "shape": [
+        1500,
+        2000
+      ],
+      "processing_ms": 217.27720000001227,
+      "scene_tags": [
+        "controlled_portrait",
+        "fresh_holdout",
+        "frontal"
+      ],
+      "source_population_label": "Asian faces",
+      "skin": {
+        "tp": 463544,
+        "fp": 15948,
+        "fn": 38725,
+        "precision": 0.9667397996212659,
+        "recall": 0.9228998803430034,
+        "iou": 0.8944978647940921,
+        "dice": 0.9443112936855304
+      },
+      "face_baseline": {
+        "tp": 337492,
+        "fp": 176869,
+        "fn": 4305,
+        "precision": 0.656138393074125,
+        "recall": 0.9874048046062429,
+        "iou": 0.650692353075004,
+        "dice": 0.7883871902148902
+      }
+    },
+    {
+      "image_id": "hfd_14_AFA7",
+      "subject_ids": [
+        "hfd_AFA_014"
+      ],
+      "split": "test",
+      "shape": [
+        1500,
+        2000
+      ],
+      "processing_ms": 207.50300000008792,
+      "scene_tags": [
+        "controlled_portrait",
+        "fresh_holdout",
+        "profile"
+      ],
+      "source_population_label": "Asian faces",
+      "skin": {
+        "tp": 228289,
+        "fp": 3618,
+        "fn": 83759,
+        "precision": 0.9843989185319978,
+        "recall": 0.731582961595652,
+        "iou": 0.7231979370600572,
+        "dice": 0.8393672270684156
+      },
+      "face_baseline": {
+        "tp": 194776,
+        "fp": 26493,
+        "fn": 44895,
+        "precision": 0.8802679091964983,
+        "recall": 0.8126807164821777,
+        "iou": 0.7317894230624727,
+        "dice": 0.8451251789820801
+      }
+    },
+    {
+      "image_id": "hfd_14_AFA8",
+      "subject_ids": [
+        "hfd_AFA_014"
+      ],
+      "split": "test",
+      "shape": [
+        1500,
+        2000
+      ],
+      "processing_ms": 216.59939999995004,
+      "scene_tags": [
+        "controlled_portrait",
+        "fresh_holdout",
+        "profile"
+      ],
+      "source_population_label": "Asian faces",
+      "skin": {
+        "tp": 162572,
+        "fp": 3821,
+        "fn": 24529,
+        "precision": 0.9770362935940815,
+        "recall": 0.8688996851967654,
+        "iou": 0.8515100407496256,
+        "dice": 0.9198006189638297
+      },
+      "face_baseline": {
+        "tp": 126376,
+        "fp": 40930,
+        "fn": 16390,
+        "precision": 0.755358445004961,
+        "recall": 0.8851967555300282,
+        "iou": 0.687962721017333,
+        "dice": 0.8151397094868289
       }
     }
   ],
@@ -4065,9 +4925,9 @@
   },
   "timing": {
     "scope": "distance classification and face baseline only; excludes decoding, truth loading and export",
-    "samples": 100,
-    "median_ms": 166.49485000016284,
-    "p95_ms": 217.42225999714714
+    "samples": 124,
+    "median_ms": 205.4288000000497,
+    "p95_ms": 244.98049000003445
   },
   "annotation_integrity": {
     "hfd_7_AFA2": {
@@ -4108,7 +4968,7 @@
     },
     "hfd_10_AFA8": {
       "skin": "3a97bb76a9e30500545fcea38652f288a6d8073e1de690c76a3720903a652821",
-      "face": "2d9dfa4c7fa77654049ac9ae8d24ae0b872b532bc6aa7740af2c3d46f665053c"
+      "face": "5abfcda53d7784da06c1fd40e9d89368dd5d53a53497bb9c6fac894f0ca7908f"
     },
     "hfd_12_AFA2": {
       "skin": "185f5573386f1fe8b6155f67e5f8e0669363ba3385a53fb89fba498d8bd39878",
@@ -4124,11 +4984,11 @@
     },
     "hfd_12_AFA7": {
       "skin": "da9098206b6b6845251b66efa50459b7f6c06dbae26105cb77617008566a415e",
-      "face": "2d067b2015c9c7081b5382d1a1abaf1a54d07aaded5d7fee9301c65d65e84242"
+      "face": "2c8c34933e79ea75d117d7882d2d3253b49cb727262ab53dcdb4d6323e0163fd"
     },
     "hfd_12_AFA8": {
       "skin": "4020f41cbf1918acc564a542b7d11295c323ede58b41b42d01498d56f4225b83",
-      "face": "28eb7c7e27fcb4561fd1dd8424c004705b19066916850cc893bc76020d721388"
+      "face": "56ce48f0890987efa5d60e46cdc52849a026a28e4476ca341bde36af91e7a6ce"
     },
     "hfd_13_AFA2": {
       "skin": "9811124c854f8a8351741194bbd944fc6795e951aaeed233d863923c2ea7c6c4",
@@ -4144,11 +5004,11 @@
     },
     "hfd_13_AFA7": {
       "skin": "963d2dcb95930384dbb5845c24a379e0bf339780197c8f1fc9b796bb725dcb8b",
-      "face": "50967ba5f7c6c12359bb41a1b9e27b79ba2056531306c6b5d0c23fca61e9b7c7"
+      "face": "1d7e0c38d95ec9d9aa31553068afbc296686d8bd8245f25a8f699b5f95c5ab3f"
     },
     "hfd_13_AFA8": {
       "skin": "55642c9ea423d0c7fd3a58dbde21dd9c317a264a42a83f150f424e6f23f62849",
-      "face": "54cd89020aac6badf6be41340e1f255ab115329a2880c281daede893e1222e38"
+      "face": "c4facd62f6e5414851e8f59231f253e9798d87708e1c8bdfb9b1e7c2c9c45686"
     },
     "hfd_15_AFA2": {
       "skin": "563fe38b6c3ce754a5593e58d2eb37a3f632401a0d5eb6e8aa6e8dd3fc3689aa",
@@ -4224,11 +5084,11 @@
     },
     "hfd_18_AMA7": {
       "skin": "8ea73fdd8a46d36ec357b2aa3c7d9bf7090f1bc2bda5bfb2094508badd5de41a",
-      "face": "cd3da495d85ddc62a513cd4d1e27e2f6c0b105ce522251a75e167a264ce30b0f"
+      "face": "a41c9d18abfd3565fffcafaff67737b4bc6127f1c6b667555d9bba529833b397"
     },
     "hfd_18_AMA8": {
       "skin": "dd43cc5a7bda72bc0a9bd627f45b956623dd0a37d2ed996e1af20bcea5ba1912",
-      "face": "791a4025713147c081743c1f5027d5682a424d7f99ecdfbcf4eb7475644420fc"
+      "face": "3154df60acef2227e4a11ad734c25e1b830b09b5544fa58a27d4ebf765c4af18"
     },
     "hfd_1_EAFA2": {
       "skin": "cbe025c729e2f608ea33e58de1dd60ba0cd1749c470daf71d3132da84c8a6551",
@@ -4244,11 +5104,11 @@
     },
     "hfd_1_EAFA7": {
       "skin": "e3333bd4a982a1c8a16bbd606452f091a0577a8d38051fdaec2279700d2f8a4c",
-      "face": "bb7d389734bf55942b57e8aaa97616e8c6904421cfbeb7493049ff5d0be00f20"
+      "face": "65e001fcae71516f84d0ce0e02bce602040196393cb4e5b0546581b545cfb052"
     },
     "hfd_1_EAFA8": {
       "skin": "552b9061a0b1ee305b82447742ba2bf536e2ba1f0d36e18ed86b9230043d4ec2",
-      "face": "3b3b4b7d4f7189aaac51a614effcb627f3095f11e85fff74f7c44758c7b8197c"
+      "face": "d249e443fbc6a21578aa3fddec3fb4aefa3f0520304d84259c9c9756839e848a"
     },
     "hfd_3_EAFA2": {
       "skin": "344a7962364cec9bc3dae6e700e40a582b70f36a522244dcfc59e7fe4cc4b390",
@@ -4264,7 +5124,7 @@
     },
     "hfd_3_EAFA7": {
       "skin": "a736f5589350e07b1024535ea917471db21015781c4784ecc0b611789c00f5b1",
-      "face": "e7e526e55757ddf28aa9fc22af03eaa23fee61fb5c64e30085b7826863ebe565"
+      "face": "9647cce1648e06842996cec650f8a8f6aab66acd5a1c428c3435dbbc53e89d30"
     },
     "hfd_3_EAFA8": {
       "skin": "522e9c5c842632694fe93f5befa110279e1a794fa1682d0b79a7a59ae286f014",
@@ -4304,11 +5164,11 @@
     },
     "hfd_8_EAFA7": {
       "skin": "f6fb9368bfdb92c57d18344fa1a2889e17ff6ce67acbe4857a5da77b20759eac",
-      "face": "d0bfc8f1b7c184a7171b7c193ab27427a7f9de530eb4300faff1cba267fabbaa"
+      "face": "eee7823d879e1bc1d974024a0f66f55386b558cfa6feb388dcc4399e9d98d76f"
     },
     "hfd_8_EAFA8": {
       "skin": "528f0bca8a1b282c21c8854120fd2927a6fc6c240a28662c90498ee6026675a1",
-      "face": "7f69afec7576dd455ee7065ac6872bb1bce3d3efdf175cd884af7eb442fa8a11"
+      "face": "c8740439e69b008fe48b499637a2ed17d7474fbd7bbd77d5a147a25c09df8ba1"
     },
     "hfd_10_EAFA2": {
       "skin": "5fa45e7cf125b261d560accad577b0dbc9eb37e55e54efa398b0d05e188fcbfa",
@@ -4344,11 +5204,11 @@
     },
     "hfd_11_EAFA7": {
       "skin": "a0c64b3dfef3ecafb165af892c4755ffbd9916a27c9e6dec0c02f7ffdfcc0bcc",
-      "face": "9e34e9c220d2da8c430713bfcfb5cf60bdfa99c556218d0a63a803882e18fc0d"
+      "face": "fa85cae12a4951b4642c6acb9616a6cd1a86de0d3cf8a5ed293133a6b1e50619"
     },
     "hfd_11_EAFA8": {
       "skin": "0cce851188fa8a800dcc24cf5756598e24c1a7233d9e1477e924cbcfbc0b77ac",
-      "face": "e95fc964974cca14c825da0d636bcbc5d3c7fb584877a3d64d3924e9155ee0a0"
+      "face": "4ab7bb9eed085f7828fa1072ec409177c26a8874af3962e7bb96d43cb8903de7"
     },
     "hfd_16_EAFA2": {
       "skin": "a8e0ee26003da85fd8c6210f3fd77a0def4202dbac854b6860e9c08f432a0e00",
@@ -4364,7 +5224,7 @@
     },
     "hfd_16_EAFA7": {
       "skin": "85a86c328ae915be619f176358c1224c73e01b3a06faf327e6ec164856e5cd30",
-      "face": "f976cb06fbdb1467e7d71f4afc9cbf4028c13897fd94e7cd9dc8c0e023e60479"
+      "face": "8109c3fd51c9dea63b2468131247c95138e4458145fd856c9f86fa7e2ce6b925"
     },
     "hfd_16_EAFA8": {
       "skin": "d6aa3b589993fa43a3fe910130217a8bfcf32ed1ad1a56a3ce2c1c0e52a0adb0",
@@ -4384,11 +5244,11 @@
     },
     "hfd_20_EAFA7": {
       "skin": "7d36ba5ff256fb9b3628808d0ffa8b4a035cb2b4ed4f3b8f684bbc5003744b9e",
-      "face": "a7888facb6183c715699c1aaf85d6fcb2d52746f063a0d526dc55f87aae9e541"
+      "face": "e667c2843ba1446ae01827f0ec5306e88a7422548367cd323c2713b2a5cf6594"
     },
     "hfd_20_EAFA8": {
       "skin": "508851d7d848dc105cfc8305eb5d89d65545df06f91a37197afbb5a9b6b6dc90",
-      "face": "3cf790319d13751c67b5b2706e6d170b5df2ab6d89fdcb94d8ac90f20ee26add"
+      "face": "e4c06de2fd4cac8977da720d1524d3b52fbdd7bf35a4ef3c7204e94534386996"
     },
     "hfd_22_EAFA2": {
       "skin": "8835203857cc677b542564f09126bf8434734e2fcfab2bc37a417ef7533741d6",
@@ -4448,7 +5308,7 @@
     },
     "hfd_2_EAMA8": {
       "skin": "94193a878897231df3c17eeb51518881d9266926c4d5fa4ff807b8087915f800",
-      "face": "1c049b585d2684d132f17015fac89885c8b48407f589f662ca7cea6f9542ee13"
+      "face": "311ba309cd94ad9de4095dea38b57623ee740c483531beda943a7c3fc08fe2fa"
     },
     "hfd_3_EAMA2": {
       "skin": "4a434488a1b348aa95c8733d24f6e7afe13f1d887ace747015c9e68daa5b73da",
@@ -4508,7 +5368,7 @@
     },
     "hfd_7_EAMA8": {
       "skin": "dd9744b951b326f52be6a1bae551acaba9198470e10901bc8fbb7868eea11ad7",
-      "face": "29e33d52bbf776f82a24ad3680b867b1eb89888e0db8ace45a603ee12860f7b1"
+      "face": "ddc55a0ed7166b89aec742b41d8edf38938034422b3045146d3786c713eb478c"
     },
     "hfd_9_EAMA2": {
       "skin": "299b05ee9c67d46a7e0bec5fdf089472f9682c712b1f162d1197f83ea0cefa82",
@@ -4528,7 +5388,7 @@
     },
     "hfd_9_EAMA8": {
       "skin": "e4d0f9f9c9a25f112fd318eacc551b7afa88422a2bced9bd465d0aeb71240934",
-      "face": "8ebd998b0fa97826b1dbddb905b7147a517229636e73b49156ca56430d647f22"
+      "face": "4a09bf95b6f4d5fe27aa73d82b26a97a3f2f6342f4f257a60c701152df7ec878"
     },
     "hfd_12_EAMA2": {
       "skin": "e9fee9af489177f414125d18dbcec431ba9f7dbc11426614cc204cc899441ac8",
@@ -4548,7 +5408,7 @@
     },
     "hfd_12_EAMA8": {
       "skin": "d26d33655f463fc009645437c18178c1c1d87d9680b4586c75868a13d26759b6",
-      "face": "c664a974bcf3e8be04bc358d389451e4307c0981789be5ed6b68c8d89643d3ac"
+      "face": "364c40676c535083816a6ab55cbaef4cc6a2bc2da81d6ae2111881044055a6e9"
     },
     "hfd_15_EAMA2": {
       "skin": "0d535bdbcaced1cefd069d0506be753b3c0964f87d914cb17cbef00eefcac188",
@@ -4568,7 +5428,7 @@
     },
     "hfd_15_EAMA8": {
       "skin": "70a5469886c7eda10bb48503cd40197c1053487b3a15890b67b3aefb566989c3",
-      "face": "2203d6defcf90d4c94556769b1e10cc1eb54f2bbbd9320a9699b1694954b411d"
+      "face": "ca61db82a7c356134873c594262423b93981f48fafb3411d5d29b1cb3777f982"
     },
     "hfd_1_SEAFA2": {
       "skin": "a38069f5161764143ff31a15b77ace84de92cbc7533683fea41f5812b2dbb08b",
@@ -4624,11 +5484,11 @@
     },
     "hfd_6_SEAFA7": {
       "skin": "2fa1d43498eeadfed5ec50c556410adee7c2b713106e2135028b1ae1ff24a934",
-      "face": "11932d506ad4806ebf9044ae90b287b54dc3076f6095f13bf02ecaba815257b0"
+      "face": "95890cb089d0c3082a7ee78da26fb155072f46bac4fe8d1dadc92494ca26c142"
     },
     "hfd_6_SEAFA8": {
       "skin": "2034484f4a23e236d0db25a6341041080bc53fc65e85a4a2a4a5ef2ed9dc64fa",
-      "face": "325b18e8c2b48e8b14b3d7af1ae8df786448b44bba0098292021a366eb72b380"
+      "face": "82180547a014acdbc48f230580bb998f843e7f812b529e1a96ff6ff4200a786a"
     },
     "hfd_7_SEAFA2": {
       "skin": "a52b20722c7f82fefaa0048a03a67a2517428e2c9a8983b8a8ba7f61e5e66d34",
@@ -4704,7 +5564,7 @@
     },
     "hfd_21_SEAFA7": {
       "skin": "994d518b4da7f219655000c41ccc1fea16e7d7796d5fc94febcc10616ce42f6c",
-      "face": "8e9533e8a3c5b3610c0f4212ae7a9c9a1507ef5d1a01618648fd68ea773d9edb"
+      "face": "489adf3633b456dbd754cfa22e56ccf61dfdf77b247ac4a5c03a2c459676b9eb"
     },
     "hfd_21_SEAFA8": {
       "skin": "492ef33a816d9d41a5ec67e7765eba0559fc2b5e899743052c0bac17189cafaa",
@@ -4768,7 +5628,7 @@
     },
     "hfd_27_SEAFA8": {
       "skin": "4aff523b46ca7ad24d5033d29daeb64bbc086bfb9015615745d092ba22098183",
-      "face": "d20354c199ce8f5e6af29514a9e11f9f7001e78a25147723d8046128f892ac4c"
+      "face": "62be8a828766365da0da7a7196c09f404fcfb8ee9e8170296cf70726a07749ee"
     },
     "hfd_28_SEAFA2": {
       "skin": "e3dd7c7d0ea9b93508afa21dea3fdca5410eff2d6767cb4a54b4451d45040ad7",
@@ -4808,7 +5668,7 @@
     },
     "hfd_1_SEAMA8": {
       "skin": "bb8c9432895084ab323df86b609b05d8759b704ba261cc6f214457dc90deb60f",
-      "face": "7feb21b1714d39edecfd018c66182777aae72ad67cf77ced46c46ec133d80e02"
+      "face": "011a264a5d92ee9498ee256bbbfedb822a6a69faed1e30075fe452778cc52566"
     },
     "hfd_2_SEAMA2": {
       "skin": "c43ab4d85237c7b37e9c401e272b4c6a9830862c0056120525aeaef53ab19be8",
@@ -4848,7 +5708,7 @@
     },
     "hfd_4_SEAMA8": {
       "skin": "aaecd0d5569c27a2fc4997858404313a8d019c417bdb349b545d5127e3f37579",
-      "face": "6977d3bb6d3753e249b35b877df8d5b5b1b95f4c032f2edc4e7653b67c713b05"
+      "face": "79c92816ed41463d8f51f9e9c5bf966f63d956561564251d3f6f0a7ba1af96a6"
     },
     "hfd_7_SEAMA2": {
       "skin": "9c00fe8c1179b2515a3950fd0ddb0254cc5400461ad9d2df3c7de17149b94cd4",
@@ -4864,11 +5724,11 @@
     },
     "hfd_7_SEAMA7": {
       "skin": "f935321b83b29dc3ba84d52e972ed2794a7e70864251e0d1bde91f50f94118bb",
-      "face": "482af1f34f39e2f64acaa047ac46828cd6ee17e0ebcac89ea057d4efd5cdfef2"
+      "face": "d9c17d7359ebf716235d2d1cd64e99f6937bf7e1523d754619d065c236f5ddf8"
     },
     "hfd_7_SEAMA8": {
       "skin": "a1558c52f46d66a3d76ad7a9f903f1c5fa3addb83a6daaaafba54593393acbf9",
-      "face": "fd1061ed1a5e9408cac40937524493bd025808fcf2c64651e8bc0edb8905a3c8"
+      "face": "701d5f5c98d5e8f1767d8b33ea4dafca96ea49d79512318b3e3ab4174757b7f7"
     },
     "bsds_105027": {
       "skin": "e633da78e97cb7aa406f1ea7d72c3b87c2819f317d8c945d9c96af9a21976849",
@@ -4949,58 +5809,128 @@
     "bsds_123074": {
       "skin": "e633da78e97cb7aa406f1ea7d72c3b87c2819f317d8c945d9c96af9a21976849",
       "face": "e633da78e97cb7aa406f1ea7d72c3b87c2819f317d8c945d9c96af9a21976849"
+    },
+    "hfd_12_SEAFA6": {
+      "skin": "be34be5b3e652f5750005020f58e2a7e9fc80f424e14602fcc7403b0e7913e2f",
+      "face": "1146f1e78b7e5242cd84bfda43400ba4b1d00bc915010776c93251ef24922e3f"
+    },
+    "hfd_12_SEAFA7": {
+      "skin": "3c95a6c0170564acfeddd850425b9e39e0a8611376ee6f283e33b02909d77ed5",
+      "face": "c15af6aa850a59b4b0ce0eed2cb813e3b48a5163dea704bcc93db43f6b37667b"
+    },
+    "hfd_12_SEAFA8": {
+      "skin": "b8132c84a0b0c0e6efafc238c844bb2ed8a95d29280d591937b3ccf616b08840",
+      "face": "02431b74a187a8d0d4638cec59b7fb5da3e28417f443aea5cdcbc97359c52b36"
+    },
+    "hfd_5_AFA6": {
+      "skin": "82003969f6ff9f195de140a0cd65a33eb6c5f17a705a2b359f6f6e82cd04f940",
+      "face": "953bb6e2b89e9d6477ad8249ef42bd0c75520e302550d4b0407fa082eaaadfc3"
+    },
+    "hfd_5_AFA7": {
+      "skin": "19e8a15f71efcaea94182b75b598dc1cc648c3276034eb4ff9ccf11c6761fd47",
+      "face": "2eff783fab11c45bec3955f7b942115dc9d62354a92e57fc37983f11ac057321"
+    },
+    "hfd_5_AFA8": {
+      "skin": "5dbc1c291078194170091473cf11efcb88ac76508df8f8ee5e4cb8024ea72594",
+      "face": "3e2657a40e9efbda55beb4c111065d5a8d0f72a2b70b8d2a1691fe4d7918456e"
+    },
+    "hfd_24_SEAFA6": {
+      "skin": "d0e9f77f73150e0feb47891ff265245c347cd33ceef46f8889e5d4e68b7c4060",
+      "face": "7bc885f4eab41f259c0ee42e47f8b95c21223a6250b2eee803c52a63b17a0a8c"
+    },
+    "hfd_24_SEAFA7": {
+      "skin": "0e48c01b772ba0f230b38d34a6095aba6735ef0bcd23c754de32c65bd07555d6",
+      "face": "dc43c4e2f6c6833a3b0c13392f344546c7a3a5e44efc04501f64ec4af60c171a"
+    },
+    "hfd_24_SEAFA8": {
+      "skin": "b1086ec18aecf2a855b4ee9b1d7fabef36aea272f54851cb108225ad54fdb2a1",
+      "face": "a27496c3b21f17e3876031c48ce4d463d53b3b343656f3664e6ac04c880c05a4"
+    },
+    "hfd_17_AMA6": {
+      "skin": "d7e30684657042e7d7a0aa4b1dcd53feda546ec7c352c6346e42d743ff4dbf5c",
+      "face": "58401f46aba222dda34d75150248217ff027ee0dc14ada7fe2313bbb64c7ba55"
+    },
+    "hfd_17_AMA7": {
+      "skin": "2d48c55e8016fd890d2be70cf45007e04d3ed24935f639f523eeec8438d92fdf",
+      "face": "32fd23677488baad30bd73793c981d36f7b5c8da23ce59086707715e31ef6833"
+    },
+    "hfd_17_AMA8": {
+      "skin": "22084839ffef6b344931070751fcb713a0bb51fca5ecdfb1690aae423a873092",
+      "face": "7cc52cfd89d51b6581a17d26637e1ce8663775208a16936e813cbb39d478ac87"
+    },
+    "hfd_8_SEAMA6": {
+      "skin": "6a5d9d96498334fa2bb0337ab9e5504fcb78daf3f39db396fa1cb1328531aa97",
+      "face": "c32686e26758a9285ed299a89e4c72455d621f92dc56ac78b3ef7fd4a1d916fc"
+    },
+    "hfd_8_SEAMA7": {
+      "skin": "b09ee23ee25fcb11de91ba54f26eba2a5c5aa3f6aa59b1f939206dfb3755a328",
+      "face": "948792a6fc11ad4023270ede84bf92eba7e1e4e72c43884c735e628fcf086561"
+    },
+    "hfd_8_SEAMA8": {
+      "skin": "724b4784346b9c28c8d6cea3d63f6eee8cace3783d9b82a7940b44c47f12b403",
+      "face": "a2fba9213869ad929615985cc0414c780723532779e7165944e336d530e055ae"
+    },
+    "hfd_13_EAMA6": {
+      "skin": "1e3f7c35a114d89142457c23d8bbaf269311a145d9af581e1f4d1d9f2c719b22",
+      "face": "3e6ebdc4c27df7861748ca06d6e78706af67f9d4d3f1803ca841b5aff737aecc"
+    },
+    "hfd_13_EAMA7": {
+      "skin": "205e1adb17be5513aab75f2d91307e531ff71c25f22ef60c6769d4289c9f3ec7",
+      "face": "610fdf134cc4c8a400923e95388a54c797c0e0318685337655af5571bf37e2ca"
+    },
+    "hfd_13_EAMA8": {
+      "skin": "59d90dc40a75ae2493b34db6ce7f84c9ace8d9a657ec88a1b579b08a2fdf23ce",
+      "face": "d3d8333c6d6716717a183f1b75dcc77da71cf4d891796c3643e3be8ecb19fe09"
+    },
+    "hfd_19_EAFA6": {
+      "skin": "9fb4c1d31a269e6fd88ec1849c652cb70d8dd3ad91837b3f86b3711256824559",
+      "face": "879fea97169e30379b84ac444a190d8affc89f58bc80f9508b99152d28f68bd9"
+    },
+    "hfd_19_EAFA7": {
+      "skin": "fae325764d7825c96e845307abd33f8fbfdfba56ea1da7e73f95dedc90328bee",
+      "face": "61d8abc79706bc271d310e10d6804e0032b79371c9f8c511c25a151c4463d359"
+    },
+    "hfd_19_EAFA8": {
+      "skin": "eb30c23a6181db78ab5617ddc67b88dc4d514a85c61932513692d4fe902b74dc",
+      "face": "56043f3ade60ff74f747c0a54b450879af7892be79225cc31d824e5a67244604"
+    },
+    "hfd_14_AFA6": {
+      "skin": "47beea451f0872486cb859ce5a014ad514c7bd3a46214998f1c8e8e507f770cd",
+      "face": "0f0b4ad787712d7084bb4aac720209242cb362f6d18083c1627275e7e7deab95"
+    },
+    "hfd_14_AFA7": {
+      "skin": "e4bbf41deea9adec4f4e522969800038392b11f8d39bb8185fcab5467cf45515",
+      "face": "10051ea30a298b22335fdaabc6787dcf72cf89098239cef34765fb016c42e008"
+    },
+    "hfd_14_AFA8": {
+      "skin": "e0c2b3cd1e10fd49011b327ab96ed995c382c4ad6c3051836f7bdf3d4c9936f0",
+      "face": "8a2eeded5119878ebb9f708b84dd6a3e5cc01bf9a0ea830f5e65a7602fdcc327"
     }
   },
   "test_file_integrity": {
-    "hfd_12_AFA2": "d30daf0afe178b77b3b73a2db026a228eebac65a0cee6525a801c23136599986",
-    "hfd_12_AFA3": "651de61989a41180bdb824270fc239d13e2307b2be12ba99188a5859a3401293",
-    "hfd_12_AFA6": "3c9f84c0c9962f10928d4f99e112de36ca8f79b73017ce7150ec2fb623069da8",
-    "hfd_12_AFA7": "4ad76505861d0cf31e094ea2ff2b33a9dc7c27024ffc3e1ba6a7b9a2a4f2fdec",
-    "hfd_12_AFA8": "51b5b68b358ca0ee4f523b1197432bbde85f95dd1468d171be4ee6af1b9ac130",
-    "hfd_1_AMA2": "33892bb925e8be6f81260348d932b87636e4f767dfe716eaa634861cd475be54",
-    "hfd_1_AMA3": "314f753258765821aa4125922e6a4a787436d3d033d5d0e2e685a853e98b39e1",
-    "hfd_1_AMA6": "eec9324a527d1332fdb872d0c75ef2c1908938df9dc2e67a3263fc90e704094c",
-    "hfd_1_AMA7": "dfe01e7a6fa7833be331862958faf7581bfbcb25d713783ea07195b43d3592f2",
-    "hfd_1_AMA8": "dd438374e099462f6f3c60012df0d7b69d132b276ef4a62f5155c55b0186326e",
-    "hfd_3_EAFA2": "62c35796d9a8628fcc54d91d6f1c2d7cb90897c7c3c1c026bed8409dd49f5fc9",
-    "hfd_3_EAFA3": "6ffa938583dd54d058c0c8dc88379185cacc21eb86cda2b23d17321069380da4",
-    "hfd_3_EAFA6": "564878d1e07618cbfd29db5d859f91355b02d3737d8b457a703968879c2e0289",
-    "hfd_3_EAFA7": "7773bfb49ae1ea55ec711203fd09b70abced597da6295cc8b57384847c881f37",
-    "hfd_3_EAFA8": "f2e6a1ca988724e9cf19f01fda64723ce0c1d47f79f41df1ecef685f3435015d",
-    "hfd_6_EAFA2": "d6f19c640baa29aa4e912b2c155340672df2a0fe13f7e011c928c03ebb305891",
-    "hfd_6_EAFA3": "33903a2a3a2db4537572ad9c754ef47610cd1a8cf68be8fbe25f5c819aa6d9f0",
-    "hfd_6_EAFA6": "533073fa0a4630c472f685004bb74ba1765b79d2c6fde95b54f458aeccfcd21c",
-    "hfd_6_EAFA7": "20969bddde5747852828ce93ae0cf97a58acc49329328e7d4cf4fda50c925493",
-    "hfd_6_EAFA8": "9b17d36873837840869ca2436e1ec1a533614a48a80e75045e747864ba7c14ee",
-    "hfd_10_EAFA2": "d97dec6ea984e52cf6c79e51ad7912f675c7b472c00be5bbff10645d6edc1dfc",
-    "hfd_10_EAFA3": "9951cce786db7209317a7bae1e553104250074d947fbb15f297877c6d916e28c",
-    "hfd_10_EAFA6": "a2f86275b0fda8f806dee5e28015c1d207e6853d25003a17dd8635f541858122",
-    "hfd_10_EAFA7": "37fb60e7914f3bf8d6f1f3e3fd4d38fd9bee450e5897c4d9c72d8f918aa367a3",
-    "hfd_10_EAFA8": "c4e89a94ee84315c622a7a21a6f85abcfb753d0a15ad9095365a53539b4b4303",
-    "hfd_11_EAFA2": "b0a5ca7d54531eb8b84695dc4def5be8245ce6af2db5e477c3590705513878dc",
-    "hfd_11_EAFA3": "1df56fd7db7296adfe083e882691984b0f3b725799d7db1a90349b8070f0b458",
-    "hfd_11_EAFA6": "2b3e1d77ba39dc5802887370600d58c9e2348caa598336994872d7d3643034b8",
-    "hfd_11_EAFA7": "d8a1eba41729da0672f797920408505f2dc7173912643b35a116b672ace2e165",
-    "hfd_11_EAFA8": "212054c5c301c729982ba9490f16827fdaf177c22210f7f1639a3886beebd5a9",
-    "hfd_12_EAMA2": "9db06c7fe77d0a7c20c039744d4b24df5d739ad119c528306e126c66b322353a",
-    "hfd_12_EAMA3": "aa0a2403544ea00eb30e5395ff63a2a48a3e338e4ed026a948bba5432a7e90c8",
-    "hfd_12_EAMA6": "afb3e1e764350e7735d01bce1b7f5fe028802b127b778ec9f14691ea6e808fa8",
-    "hfd_12_EAMA7": "41b303fb301d8f3e6266d43ac4dba73383cf3f753e62e4bc3220c4d16df26813",
-    "hfd_12_EAMA8": "1facd4932b27f4720bd11459a04dea8575c7ffb8769a5b231228302cdbe90771",
-    "hfd_15_EAMA2": "39a55e37f9b81b3d09d9beb402472fe814581c2bd21bb45e48ae1968cf1527ef",
-    "hfd_15_EAMA3": "f6525e38f8d2d2f8e3d2f47c0cacfb50adcd4eb90063b5d1afb6d7722cb68cac",
-    "hfd_15_EAMA6": "4fa0470cb4fc583d252e81969f0037c2c059aa73f9bc59748b356f47df0d7d70",
-    "hfd_15_EAMA7": "93f8599f78d0fcbc2f3968e7258efecb6f214396cef1d07fa8ced15276feb7c5",
-    "hfd_15_EAMA8": "435ccb92cddba74a190f947af362cde6152c0aed065eb5cafa5d9b304db582e3",
-    "bsds_100098": "156fd9710dccd7bf3a821977f8d8155da0eccca553086f73771073e17a418aa6",
-    "bsds_196015": "40595bda6fb918d106541af67cc8e0426a04c6e5863c407ef2a73374c12e76a9",
-    "bsds_49024": "b730a4fe2ebc1218f00a0f8ee8ae118fdc916533145f0a9ced52f2d1982b3ed4",
-    "bsds_27059": "b2ad41923ca24fbe04b6b291dc8d1ed99eb79ad9060f93d99b4c715ac4684b91",
-    "bsds_197017": "59e30cd9332aa9331665ccd9c32b4f5738d64747584d989de33ff5220d91733b",
-    "bsds_326038": "b63ecef521773f1c7b773b562422acf66aaf3f5fb14d38b6a320746bbd40d054",
-    "bsds_16052": "be60accfd2bfa991b779640994308a61cc7bea0c672a45fa2d5649e004a7f15e",
-    "bsds_35028": "2b1a0220ce00cf61497b330addd15896d0f457cd2493b2c76ce0c8c70137c9c0",
-    "bsds_130026": "ab2865a5f0e54ad3a1b2f911b701560b1537e9c4ced6064d9759d33be0906761",
-    "bsds_123074": "f47e336f7f3c4da54d5d95b6217e4381ea62a8ff12d061f39da48539794aa82a"
+    "hfd_12_SEAFA6": "ee58d5ad71e6d54b2f5c6c2cbdfb6f99644aa9a1e7c284810fee50618225d383",
+    "hfd_12_SEAFA7": "e0097be6cb317fa8fd0a46c982cfcde12f1ced357f4469abe5606a2bc29ae20d",
+    "hfd_12_SEAFA8": "1e98b8e41d592d89f6b3a4489c2b695672dd82bbb3ff7e0cda158f186b0548a3",
+    "hfd_5_AFA6": "c24d03d560e30ca2661205af7c95f196954d84ba337afc8b308b19f52e49056f",
+    "hfd_5_AFA7": "b8599c117e4144e251382518551fdbe439e8b9380797e4bc9bf7392ea265e0b9",
+    "hfd_5_AFA8": "a8127fefc9a79c15d10eeae4bc6bfe07934ac89972457ed289785dff26b6569d",
+    "hfd_24_SEAFA6": "3a6119573ec74c48c8b94a966962cab2c71a086abcfb9f4b46b05b97c80dd9c5",
+    "hfd_24_SEAFA7": "96ed9d82f620603474d08b87379e77377efd94d5abb8484598312db4937b0370",
+    "hfd_24_SEAFA8": "16aed41e6246f9e77172d846fe0e1a695e0c443cfbdaa36dbea3d27cd49da446",
+    "hfd_17_AMA6": "aab1fb7859a3f453e39a890bf6e7e4f89e8eeaaca22db853492af8e9588e1ab7",
+    "hfd_17_AMA7": "03a3553a0982c634b3b8ed81b2d380e6e67fc7f7c1a70c8dec8ac7ad16bdf0b4",
+    "hfd_17_AMA8": "5140f93c5ff56ec4fa3e0d33a5346c1b81cd70ffc67df6e0973cb4a74acbe9fe",
+    "hfd_8_SEAMA6": "dee49c52a68e72ef675684a936f2c38e7da3fce3d4375fbe4fa1c5aea2602343",
+    "hfd_8_SEAMA7": "395d0d22503434bf3614f7399a52aff137e7a8d38c72c9936ae620ef3dc2f888",
+    "hfd_8_SEAMA8": "d4b0be2bb06f823a77cf943f7c4360f8e921d298f7485aeabbbdce800bef8a66",
+    "hfd_13_EAMA6": "41f09cc8cdf7bd02a61e5ab12799231f9cbe3afd221ca4d220b67602f8c6e6c0",
+    "hfd_13_EAMA7": "fc65ea1697051818fc9e5ab3b42ed839891a51b8badaeb9f0e8eaf6c3e2532d1",
+    "hfd_13_EAMA8": "d0818429fc674829e1041ae76eee667039b2e3b45a9b5facb5ff5a9eb2f2275b",
+    "hfd_19_EAFA6": "4a2ba303f5a4a7de226e9a046c6be9f2ca5bf5b8b6af50962f8b5de3ad655753",
+    "hfd_19_EAFA7": "e23a0a2c959f41ddb2ff28f0aa0372ac92bd5ba786cd408e257894f9b321dfed",
+    "hfd_19_EAFA8": "31cd324633a3ba6f9e9cd6f1ce12add4c9826c56db040672a493935271bdeafa",
+    "hfd_14_AFA6": "48b0483d9b372b6831d36df253629ad11f5fed81c62b6bf231d59968da0f5e65",
+    "hfd_14_AFA7": "a3dd21991aa7a31eb7925fec0bb901eee0be3235dbaa3f481582c00722e40cd8",
+    "hfd_14_AFA8": "917d13fd9d3b329a67ea8a654ddd9af4e8be94e94dfea0e69cbd9630570c4ce2"
   }
 }

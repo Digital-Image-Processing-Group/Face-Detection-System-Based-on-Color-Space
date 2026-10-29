@@ -26,9 +26,18 @@ python -m venv .venv
 
 ## 数据与查看
 
-200 张 HFD 对应 40 位作者编码参与者，每人五张；人物按种子 20261028 分为训练 24 人、验证 8 人、测试 8 人，共 120/40/40 张。另有背景验证/测试各 10 张，总划分 120/50/50。无脸背景不参与正样本高斯拟合。冻结分组和清单 SHA256 见 `data/split.json`。
+224 张 HFD 对应 48 位作者编码人物：原 40 人各五张，新增 8 人各三张。原测试已移入验证；新人物在看预测前固定为最终留出。主清单训练/验证/测试 120/100/24 张，人物 24/16/8 人；20 张背景全部在验证集。分组与完整性见 data/split.json。
 
-所有 220 张都有整图双层参考。人像由独立模型初始化后 Codex 逐图复核，尚无独立人工/专家审核；不是官方像素真值。定义见 [标注规范](annotation_guide.md)。检查拒绝人物跨集合、完全重复或近重复 RGB 图跨集合、尺寸与编码错误。受控人像易发生粗感知哈希碰撞，保留相关警告，不凭碰撞判定身份；人物分组依据作者编码。
+另有 33 张真实 WIDER-FAIR 场景，作者逐脸标为 Asian，但无人物编号，所以只作外部压力测试。恢复与运行：
+
+```powershell
+.\.venv\Scripts\python.exe -m src.training.public_sources restore-scenes
+.\.venv\Scripts\python.exe -m src.training.stress_assessment
+```
+
+压力测试不选阈值，必须使用同版本 skin_model 与 operating_point；结果在 models/stress_evaluation.json。两张纯手部图由真实原图裁剪得到，坐标与父图来源在报告中；不计为独立原图。
+
+主清单所有 244 张都有整图双层参考。人像由独立模型初始化后 Codex 逐图复核，尚无独立人工/专家审核；不是官方像素真值。定义见 [标注规范](annotation_guide.md)。检查拒绝人物跨集合、完全重复或近重复 RGB 图跨集合、尺寸与编码错误。受控人像易发生粗感知哈希碰撞，保留相关警告，不凭碰撞判定身份；人物分组依据作者编码。
 
 ```powershell
 .\.venv\Scripts\python.exe -m src.training contact-sheet --manifest data/manifest.csv --output artifacts/review/overlay_000.png --offset 0 --limit 5 --overlays --tile-size 600 --columns 3
@@ -42,4 +51,4 @@ offset=0、5……195 查看全部人像；200、210 查看背景。蓝色为 fa
 
 只在新增标注时安装 `requirements-annotation-tools.txt`，再运行 `python -m src.training.public_sources annotation-assets` 获取固定权重。`assisted_annotations --manifest <仅含待标注人像的清单>` 产生 sampled/draft；逐图查看，记录哈希与修正后才可用 `--finalize-review <记录> --output <同目录输出清单>` 定稿。复核记录应如实写明审核者及限制。
 
-草稿不能直接评估；不要对含背景的总清单运行人像初始化。16 张 SHAPE 网页说明图可通过 `python -m src.training.public_sources restore-stress` 单独恢复，只定性查看，不进入正式清单。
+草稿不能直接评估；不要对含背景的总清单运行人像初始化。

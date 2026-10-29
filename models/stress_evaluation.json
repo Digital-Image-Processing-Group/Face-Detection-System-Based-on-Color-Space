@@ -1,0 +1,1029 @@
+{
+  "model_revision": "skin-d239a8aaf4ae7f05",
+  "threshold": 4.0,
+  "original_photos": 33,
+  "original_file_hashes_verified": 33,
+  "scope": "External author-perceived-Asian real scenes, never used for fitting or calibration; anonymous scene IDs are not person IDs. Identity overlap with other sources cannot be proven absent; not pooled with subject-independent primary metrics.",
+  "reference": "Project assisted silver references with visual review and explicit corrections; not official pixel truth.",
+  "summary": {
+    "skin": {
+      "tp": 1154088,
+      "fp": 2522118,
+      "fn": 2239701,
+      "precision": 0.3139345292402004,
+      "recall": 0.34005885457227897,
+      "iou": 0.1950821742126778,
+      "dice": 0.32647491264138095
+    },
+    "face_baseline": {
+      "tp": 358826,
+      "fp": 1248009,
+      "fn": 1086308,
+      "precision": 0.22331228782046694,
+      "recall": 0.24829946565508804,
+      "iou": 0.13323689087434273,
+      "dice": 0.23514393494822522
+    }
+  },
+  "scene_summary": {
+    "color_cast_or_uneven_light": {
+      "images": 3,
+      "skin": {
+        "tp": 12516,
+        "fp": 161802,
+        "fn": 107701,
+        "precision": 0.0717998141327918,
+        "recall": 0.10411173128592462,
+        "iou": 0.04437998858232956,
+        "dice": 0.08498820174172848
+      },
+      "face_baseline": {
+        "tp": 76,
+        "fp": 82398,
+        "fn": 39192,
+        "precision": 0.0009215025341319688,
+        "recall": 0.0019354181521849853,
+        "iou": 0.0006246609570463399,
+        "dice": 0.0012485419986528888
+      }
+    },
+    "complex_background": {
+      "images": 33,
+      "skin": {
+        "tp": 1154088,
+        "fp": 2522118,
+        "fn": 2239701,
+        "precision": 0.3139345292402004,
+        "recall": 0.34005885457227897,
+        "iou": 0.1950821742126778,
+        "dice": 0.32647491264138095
+      },
+      "face_baseline": {
+        "tp": 358826,
+        "fp": 1248009,
+        "fn": 1086308,
+        "precision": 0.22331228782046694,
+        "recall": 0.24829946565508804,
+        "iou": 0.13323689087434273,
+        "dice": 0.23514393494822522
+      }
+    },
+    "hand_face_interference": {
+      "images": 30,
+      "skin": {
+        "tp": 1145486,
+        "fp": 2035656,
+        "fn": 2172816,
+        "precision": 0.3600864092203366,
+        "recall": 0.34520245595488297,
+        "iou": 0.21395124877707297,
+        "dice": 0.35248738199759855
+      },
+      "face_baseline": {
+        "tp": 358370,
+        "fp": 1071361,
+        "fn": 1020501,
+        "precision": 0.2506555428958315,
+        "recall": 0.2599010349771661,
+        "iou": 0.14625961949725577,
+        "dice": 0.2551945772309498
+      }
+    },
+    "multi_person": {
+      "images": 11,
+      "skin": {
+        "tp": 321701,
+        "fp": 687051,
+        "fn": 326654,
+        "precision": 0.31890990055038304,
+        "recall": 0.4961803333050566,
+        "iou": 0.24090126897737468,
+        "dice": 0.3882682289073669
+      },
+      "face_baseline": {
+        "tp": 39608,
+        "fp": 271837,
+        "fn": 235250,
+        "precision": 0.12717494260623866,
+        "recall": 0.14410350071673372,
+        "iou": 0.0724499035110985,
+        "dice": 0.1351110262099972
+      }
+    }
+  },
+  "per_image": [
+    {
+      "image_id": "wf_1_Handshaking_Handshaking_1_464",
+      "scene_tags": [
+        "complex_background",
+        "multi_person",
+        "hand_face_interference"
+      ],
+      "author_face_count": 2,
+      "skin": {
+        "tp": 2558,
+        "fp": 1799,
+        "fn": 31274,
+        "precision": 0.5871012164333257,
+        "recall": 0.07560889099077796,
+        "iou": 0.0717914175858101,
+        "dice": 0.13396527795962188
+      },
+      "face_baseline": {
+        "tp": 233,
+        "fp": 0,
+        "fn": 20950,
+        "precision": 1.0,
+        "recall": 0.010999386300335175,
+        "iou": 0.010999386300335175,
+        "dice": 0.02175943220022413
+      }
+    },
+    {
+      "image_id": "wf_1_Handshaking_Handshaking_1_380",
+      "scene_tags": [
+        "complex_background",
+        "hand_face_interference"
+      ],
+      "author_face_count": 1,
+      "skin": {
+        "tp": 17307,
+        "fp": 7822,
+        "fn": 122234,
+        "precision": 0.6887261729475904,
+        "recall": 0.1240280634365527,
+        "iou": 0.11744467742920543,
+        "dice": 0.21020222262707233
+      },
+      "face_baseline": {
+        "tp": 0,
+        "fp": 1379,
+        "fn": 16418,
+        "precision": 0.0,
+        "recall": 0.0,
+        "iou": 0.0,
+        "dice": 0.0
+      }
+    },
+    {
+      "image_id": "wf_1_Handshaking_Handshaking_1_463",
+      "scene_tags": [
+        "complex_background",
+        "hand_face_interference"
+      ],
+      "author_face_count": 1,
+      "skin": {
+        "tp": 49463,
+        "fp": 301812,
+        "fn": 123505,
+        "precision": 0.14080990676820154,
+        "recall": 0.2859661902779705,
+        "iou": 0.1041808837777497,
+        "dice": 0.1887025673208798
+      },
+      "face_baseline": {
+        "tp": 0,
+        "fp": 302532,
+        "fn": 38000,
+        "precision": 0.0,
+        "recall": 0.0,
+        "iou": 0.0,
+        "dice": 0.0
+      }
+    },
+    {
+      "image_id": "wf_1_Handshaking_Handshaking_1_625",
+      "scene_tags": [
+        "complex_background",
+        "hand_face_interference"
+      ],
+      "author_face_count": 1,
+      "skin": {
+        "tp": 13200,
+        "fp": 15083,
+        "fn": 83420,
+        "precision": 0.46671145210904075,
+        "recall": 0.1366176774994825,
+        "iou": 0.1181705057160506,
+        "dice": 0.2113640184783392
+      },
+      "face_baseline": {
+        "tp": 3918,
+        "fp": 7642,
+        "fn": 28381,
+        "precision": 0.3389273356401384,
+        "recall": 0.12130406514133564,
+        "iou": 0.0980946896672592,
+        "dice": 0.17866344421897445
+      }
+    },
+    {
+      "image_id": "wf_1_Handshaking_Handshaking_1_453",
+      "scene_tags": [
+        "complex_background",
+        "multi_person",
+        "hand_face_interference"
+      ],
+      "author_face_count": 2,
+      "skin": {
+        "tp": 35007,
+        "fp": 16845,
+        "fn": 23243,
+        "precision": 0.6751330710483684,
+        "recall": 0.6009785407725322,
+        "iou": 0.46616951860976097,
+        "dice": 0.6359012551997238
+      },
+      "face_baseline": {
+        "tp": 4608,
+        "fp": 8437,
+        "fn": 11499,
+        "precision": 0.3532387888079724,
+        "recall": 0.2860867945613708,
+        "iou": 0.1877444589308996,
+        "dice": 0.31613611416026344
+      }
+    },
+    {
+      "image_id": "wf_12_Group_Group_12_Group_Group_12_163",
+      "scene_tags": [
+        "complex_background",
+        "multi_person",
+        "hand_face_interference"
+      ],
+      "author_face_count": 5,
+      "skin": {
+        "tp": 9621,
+        "fp": 127019,
+        "fn": 92734,
+        "precision": 0.07041129976580797,
+        "recall": 0.09399638513018416,
+        "iou": 0.04194459703366554,
+        "dice": 0.08051214460553568
+      },
+      "face_baseline": {
+        "tp": 0,
+        "fp": 41439,
+        "fn": 20707,
+        "precision": 0.0,
+        "recall": 0.0,
+        "iou": 0.0,
+        "dice": 0.0
+      }
+    },
+    {
+      "image_id": "wf_12_Group_Group_12_Group_Group_12_221",
+      "scene_tags": [
+        "complex_background",
+        "hand_face_interference"
+      ],
+      "author_face_count": 1,
+      "skin": {
+        "tp": 23575,
+        "fp": 27449,
+        "fn": 166259,
+        "precision": 0.4620374725619316,
+        "recall": 0.12418744798086749,
+        "iou": 0.1084990542288168,
+        "dice": 0.19575849670760365
+      },
+      "face_baseline": {
+        "tp": 8578,
+        "fp": 14694,
+        "fn": 168252,
+        "precision": 0.3685974561705053,
+        "recall": 0.048509868235027995,
+        "iou": 0.044788120548860715,
+        "dice": 0.085736274500005
+      }
+    },
+    {
+      "image_id": "wf_12_Group_Team_Organized_Group_12_Group_Team_Organized_Group_12_334",
+      "scene_tags": [
+        "complex_background",
+        "hand_face_interference"
+      ],
+      "author_face_count": 1,
+      "skin": {
+        "tp": 46250,
+        "fp": 165443,
+        "fn": 53959,
+        "precision": 0.2184767564350262,
+        "recall": 0.46153539103274155,
+        "iou": 0.1740999503109331,
+        "dice": 0.29656751159017897
+      },
+      "face_baseline": {
+        "tp": 2317,
+        "fp": 20744,
+        "fn": 10726,
+        "precision": 0.1004726594683665,
+        "recall": 0.1776431802499425,
+        "iou": 0.06857667150087311,
+        "dice": 0.12835142920452028
+      }
+    },
+    {
+      "image_id": "wf_12_Group_Group_12_Group_Group_12_664",
+      "scene_tags": [
+        "complex_background",
+        "hand_face_interference"
+      ],
+      "author_face_count": 1,
+      "skin": {
+        "tp": 11763,
+        "fp": 7083,
+        "fn": 13060,
+        "precision": 0.6241642788920726,
+        "recall": 0.4738750352495669,
+        "iou": 0.36867673791763306,
+        "dice": 0.5387345714351142
+      },
+      "face_baseline": {
+        "tp": 3258,
+        "fp": 2,
+        "fn": 12880,
+        "precision": 0.9993865030674847,
+        "recall": 0.20188375263353575,
+        "iou": 0.20185873605947954,
+        "dice": 0.3359109186514074
+      }
+    },
+    {
+      "image_id": "wf_19_Couple_Couple_19_777",
+      "scene_tags": [
+        "complex_background",
+        "multi_person",
+        "hand_face_interference"
+      ],
+      "author_face_count": 2,
+      "skin": {
+        "tp": 56559,
+        "fp": 14271,
+        "fn": 33648,
+        "precision": 0.7985175772977552,
+        "recall": 0.6269912534503974,
+        "iou": 0.5413484178487337,
+        "dice": 0.7024348441662475
+      },
+      "face_baseline": {
+        "tp": 0,
+        "fp": 31244,
+        "fn": 19237,
+        "precision": 0.0,
+        "recall": 0.0,
+        "iou": 0.0,
+        "dice": 0.0
+      }
+    },
+    {
+      "image_id": "wf_19_Couple_Couple_19_661",
+      "scene_tags": [
+        "complex_background",
+        "multi_person",
+        "hand_face_interference"
+      ],
+      "author_face_count": 2,
+      "skin": {
+        "tp": 22367,
+        "fp": 117432,
+        "fn": 13995,
+        "precision": 0.15999399137332884,
+        "recall": 0.6151201804081183,
+        "iou": 0.14543480239801293,
+        "dice": 0.2539381588433308
+      },
+      "face_baseline": {
+        "tp": 7319,
+        "fp": 6581,
+        "fn": 9398,
+        "precision": 0.526546762589928,
+        "recall": 0.4378177902733744,
+        "iou": 0.3141471370933127,
+        "dice": 0.47810040173759677
+      }
+    },
+    {
+      "image_id": "wf_19_Couple_Couple_19_90",
+      "scene_tags": [
+        "complex_background",
+        "multi_person",
+        "hand_face_interference"
+      ],
+      "author_face_count": 2,
+      "skin": {
+        "tp": 87266,
+        "fp": 9790,
+        "fn": 18611,
+        "precision": 0.899130398944939,
+        "recall": 0.8242205578170897,
+        "iou": 0.7544589208676632,
+        "dice": 0.8600474048084836
+      },
+      "face_baseline": {
+        "tp": 0,
+        "fp": 45371,
+        "fn": 36904,
+        "precision": 0.0,
+        "recall": 0.0,
+        "iou": 0.0,
+        "dice": 0.0
+      }
+    },
+    {
+      "image_id": "wf_18_Concerts_Concerts_18_148",
+      "scene_tags": [
+        "complex_background",
+        "hand_face_interference"
+      ],
+      "author_face_count": 1,
+      "skin": {
+        "tp": 21595,
+        "fp": 41858,
+        "fn": 55051,
+        "precision": 0.34033063842529115,
+        "recall": 0.2817498630065496,
+        "iou": 0.18223013569162222,
+        "dice": 0.3082820005853004
+      },
+      "face_baseline": {
+        "tp": 0,
+        "fp": 29039,
+        "fn": 20939,
+        "precision": 0.0,
+        "recall": 0.0,
+        "iou": 0.0,
+        "dice": 0.0
+      }
+    },
+    {
+      "image_id": "wf_18_Concerts_Concerts_18_1049",
+      "scene_tags": [
+        "complex_background",
+        "hand_face_interference"
+      ],
+      "author_face_count": 1,
+      "skin": {
+        "tp": 47713,
+        "fp": 12546,
+        "fn": 34232,
+        "precision": 0.7917987354586037,
+        "recall": 0.5822563914820916,
+        "iou": 0.5049475611433893,
+        "dice": 0.6710500407864758
+      },
+      "face_baseline": {
+        "tp": 29289,
+        "fp": 24043,
+        "fn": 4458,
+        "precision": 0.5491824795619891,
+        "recall": 0.8678993688327852,
+        "iou": 0.5068177885447309,
+        "dice": 0.672699502750376
+      }
+    },
+    {
+      "image_id": "wf_18_Concerts_Concerts_18_555",
+      "scene_tags": [
+        "complex_background",
+        "hand_face_interference"
+      ],
+      "author_face_count": 1,
+      "skin": {
+        "tp": 119773,
+        "fp": 141034,
+        "fn": 352433,
+        "precision": 0.45923997438719055,
+        "recall": 0.2536456546507245,
+        "iou": 0.19531178657621812,
+        "dice": 0.32679638696721613
+      },
+      "face_baseline": {
+        "tp": 47810,
+        "fp": 11009,
+        "fn": 68972,
+        "precision": 0.8128325881092844,
+        "recall": 0.4093952835197205,
+        "iou": 0.37412650343138404,
+        "dice": 0.5445299286450532
+      }
+    },
+    {
+      "image_id": "wf_4_Dancing_Dancing_4_809",
+      "scene_tags": [
+        "complex_background",
+        "hand_face_interference"
+      ],
+      "author_face_count": 1,
+      "skin": {
+        "tp": 47591,
+        "fp": 9996,
+        "fn": 114393,
+        "precision": 0.8264191571014291,
+        "recall": 0.29380062228368237,
+        "iou": 0.2767240376787999,
+        "dice": 0.4334907615304389
+      },
+      "face_baseline": {
+        "tp": 0,
+        "fp": 34033,
+        "fn": 78092,
+        "precision": 0.0,
+        "recall": 0.0,
+        "iou": 0.0,
+        "dice": 0.0
+      }
+    },
+    {
+      "image_id": "wf_4_Dancing_Dancing_4_343",
+      "scene_tags": [
+        "complex_background",
+        "hand_face_interference"
+      ],
+      "author_face_count": 1,
+      "skin": {
+        "tp": 2616,
+        "fp": 87502,
+        "fn": 35693,
+        "precision": 0.02902860693757074,
+        "recall": 0.06828682555013182,
+        "iou": 0.020793094403510026,
+        "dice": 0.0407390969188722
+      },
+      "face_baseline": {
+        "tp": 2,
+        "fp": 29708,
+        "fn": 6041,
+        "precision": 6.731740154830023e-05,
+        "recall": 0.00033096144299189144,
+        "iou": 5.5942491119129537e-05,
+        "dice": 0.00011187872346376528
+      }
+    },
+    {
+      "image_id": "wf_4_Dancing_Dancing_4_787",
+      "scene_tags": [
+        "complex_background"
+      ],
+      "author_face_count": 1,
+      "skin": {
+        "tp": 2744,
+        "fp": 199192,
+        "fn": 35968,
+        "precision": 0.013588463671658347,
+        "recall": 0.07088241372184335,
+        "iou": 0.01153406416033358,
+        "dice": 0.022805092915794023
+      },
+      "face_baseline": {
+        "tp": 0,
+        "fp": 73228,
+        "fn": 34130,
+        "precision": 0.0,
+        "recall": 0.0,
+        "iou": 0.0,
+        "dice": 0.0
+      }
+    },
+    {
+      "image_id": "wf_4_Dancing_Dancing_4_459",
+      "scene_tags": [
+        "complex_background",
+        "hand_face_interference"
+      ],
+      "author_face_count": 1,
+      "skin": {
+        "tp": 22899,
+        "fp": 42825,
+        "fn": 49709,
+        "precision": 0.34841153916377576,
+        "recall": 0.31537847069193475,
+        "iou": 0.19837481482764893,
+        "dice": 0.33107307058381286
+      },
+      "face_baseline": {
+        "tp": 0,
+        "fp": 16456,
+        "fn": 43773,
+        "precision": 0.0,
+        "recall": 0.0,
+        "iou": 0.0,
+        "dice": 0.0
+      }
+    },
+    {
+      "image_id": "wf_50_Celebration_Or_Party_birthdayparty_50_179",
+      "scene_tags": [
+        "complex_background",
+        "multi_person",
+        "hand_face_interference"
+      ],
+      "author_face_count": 3,
+      "skin": {
+        "tp": 69173,
+        "fp": 72030,
+        "fn": 52143,
+        "precision": 0.48988335941870925,
+        "recall": 0.5701885983711958,
+        "iou": 0.3577679393419052,
+        "dice": 0.526994236607636
+      },
+      "face_baseline": {
+        "tp": 25113,
+        "fp": 13122,
+        "fn": 70753,
+        "precision": 0.6568065908199294,
+        "recall": 0.26195940166482384,
+        "iou": 0.23041986273718207,
+        "dice": 0.3745385940447871
+      }
+    },
+    {
+      "image_id": "wf_50_Celebration_Or_Party_houseparty_50_775",
+      "scene_tags": [
+        "complex_background",
+        "multi_person",
+        "hand_face_interference"
+      ],
+      "author_face_count": 2,
+      "skin": {
+        "tp": 28436,
+        "fp": 36898,
+        "fn": 18763,
+        "precision": 0.43524045673003336,
+        "recall": 0.60247039132185,
+        "iou": 0.3381333460170993,
+        "dice": 0.5053806439000116
+      },
+      "face_baseline": {
+        "tp": 0,
+        "fp": 21335,
+        "fn": 5869,
+        "precision": 0.0,
+        "recall": 0.0,
+        "iou": 0.0,
+        "dice": 0.0
+      }
+    },
+    {
+      "image_id": "wf_13_Interview_Interview_On_Location_13_292",
+      "scene_tags": [
+        "complex_background",
+        "multi_person"
+      ],
+      "author_face_count": 2,
+      "skin": {
+        "tp": 5602,
+        "fp": 69262,
+        "fn": 12200,
+        "precision": 0.07482902329557597,
+        "recall": 0.314683743399618,
+        "iou": 0.06434347146926399,
+        "dice": 0.1209073446571558
+      },
+      "face_baseline": {
+        "tp": 456,
+        "fp": 5600,
+        "fn": 12367,
+        "precision": 0.07529722589167767,
+        "recall": 0.0355611011463776,
+        "iou": 0.024751669109265594,
+        "dice": 0.048307643413316385
+      }
+    },
+    {
+      "image_id": "wf_13_Interview_Interview_On_Location_13_74",
+      "scene_tags": [
+        "complex_background",
+        "hand_face_interference"
+      ],
+      "author_face_count": 1,
+      "skin": {
+        "tp": 3914,
+        "fp": 96014,
+        "fn": 17797,
+        "precision": 0.03916820110479545,
+        "recall": 0.1802772787987656,
+        "iou": 0.03324697387980463,
+        "dice": 0.06435436003255535
+      },
+      "face_baseline": {
+        "tp": 0,
+        "fp": 33243,
+        "fn": 7391,
+        "precision": 0.0,
+        "recall": 0.0,
+        "iou": 0.0,
+        "dice": 0.0
+      }
+    },
+    {
+      "image_id": "wf_13_Interview_Interview_On_Location_13_933",
+      "scene_tags": [
+        "complex_background",
+        "hand_face_interference",
+        "color_cast_or_uneven_light"
+      ],
+      "author_face_count": 1,
+      "skin": {
+        "tp": 708,
+        "fp": 13252,
+        "fn": 36569,
+        "precision": 0.0507163323782235,
+        "recall": 0.01899294471121603,
+        "iou": 0.014011755625482396,
+        "dice": 0.027636278470636454
+      },
+      "face_baseline": {
+        "tp": 76,
+        "fp": 653,
+        "fn": 13276,
+        "precision": 0.10425240054869685,
+        "recall": 0.005692031156381066,
+        "iou": 0.005426633345233845,
+        "dice": 0.010794687877281443
+      }
+    },
+    {
+      "image_id": "wf_13_Interview_Interview_2_People_Visible_13_321",
+      "scene_tags": [
+        "complex_background",
+        "hand_face_interference"
+      ],
+      "author_face_count": 1,
+      "skin": {
+        "tp": 29643,
+        "fp": 259092,
+        "fn": 124117,
+        "precision": 0.10266507351031222,
+        "recall": 0.19278746097814775,
+        "iou": 0.07180054838053346,
+        "dice": 0.13398117492853026
+      },
+      "face_baseline": {
+        "tp": 12936,
+        "fp": 169142,
+        "fn": 91482,
+        "precision": 0.07104647458781402,
+        "recall": 0.12388668620352812,
+        "iou": 0.04728761514841351,
+        "dice": 0.09030492572322127
+      }
+    },
+    {
+      "image_id": "wf_27_Spa_Spa_27_293",
+      "scene_tags": [
+        "complex_background",
+        "hand_face_interference",
+        "color_cast_or_uneven_light"
+      ],
+      "author_face_count": 1,
+      "skin": {
+        "tp": 10779,
+        "fp": 35869,
+        "fn": 13846,
+        "precision": 0.23107099982850282,
+        "recall": 0.4377258883248731,
+        "iou": 0.17818296029358283,
+        "dice": 0.302470781361806
+      },
+      "face_baseline": {
+        "tp": 0,
+        "fp": 14213,
+        "fn": 7697,
+        "precision": 0.0,
+        "recall": 0.0,
+        "iou": 0.0,
+        "dice": 0.0
+      }
+    },
+    {
+      "image_id": "wf_27_Spa_Spa_27_580",
+      "scene_tags": [
+        "complex_background",
+        "hand_face_interference",
+        "color_cast_or_uneven_light"
+      ],
+      "author_face_count": 1,
+      "skin": {
+        "tp": 1029,
+        "fp": 112681,
+        "fn": 57286,
+        "precision": 0.009049336030252396,
+        "recall": 0.017645545742947785,
+        "iou": 0.006017684624201736,
+        "dice": 0.011963377416073246
+      },
+      "face_baseline": {
+        "tp": 0,
+        "fp": 67532,
+        "fn": 18219,
+        "precision": 0.0,
+        "recall": 0.0,
+        "iou": 0.0,
+        "dice": 0.0
+      }
+    },
+    {
+      "image_id": "wf_49_Greeting_peoplegreeting_49_44",
+      "scene_tags": [
+        "complex_background",
+        "multi_person",
+        "hand_face_interference"
+      ],
+      "author_face_count": 2,
+      "skin": {
+        "tp": 4856,
+        "fp": 3697,
+        "fn": 11326,
+        "precision": 0.5677540044428855,
+        "recall": 0.30008651588184404,
+        "iou": 0.24427788118114593,
+        "dice": 0.3926420052557105
+      },
+      "face_baseline": {
+        "tp": 1879,
+        "fp": 888,
+        "fn": 8256,
+        "precision": 0.6790748102638237,
+        "recall": 0.18539713862851503,
+        "iou": 0.1704617617708428,
+        "dice": 0.2912726709037359
+      }
+    },
+    {
+      "image_id": "wf_49_Greeting_peoplegreeting_49_885",
+      "scene_tags": [
+        "complex_background",
+        "hand_face_interference"
+      ],
+      "author_face_count": 1,
+      "skin": {
+        "tp": 3882,
+        "fp": 179457,
+        "fn": 10377,
+        "precision": 0.021173890988823982,
+        "recall": 0.2722491058278982,
+        "iou": 0.020039645666852506,
+        "dice": 0.03929189566696019
+      },
+      "face_baseline": {
+        "tp": 0,
+        "fp": 17367,
+        "fn": 4727,
+        "precision": 0.0,
+        "recall": 0.0,
+        "iou": 0.0,
+        "dice": 0.0
+      }
+    },
+    {
+      "image_id": "wf_49_Greeting_peoplegreeting_49_432",
+      "scene_tags": [
+        "complex_background",
+        "hand_face_interference"
+      ],
+      "author_face_count": 1,
+      "skin": {
+        "tp": 9173,
+        "fp": 24495,
+        "fn": 30152,
+        "precision": 0.2724545562551978,
+        "recall": 0.2332612841703751,
+        "iou": 0.14373237229708555,
+        "dice": 0.251339169509405
+      },
+      "face_baseline": {
+        "tp": 0,
+        "fp": 6085,
+        "fn": 14090,
+        "precision": 0.0,
+        "recall": 0.0,
+        "iou": 0.0,
+        "dice": 0.0
+      }
+    },
+    {
+      "image_id": "wf_49_Greeting_peoplegreeting_49_344",
+      "scene_tags": [
+        "complex_background",
+        "multi_person"
+      ],
+      "author_face_count": 2,
+      "skin": {
+        "tp": 256,
+        "fp": 218008,
+        "fn": 18717,
+        "precision": 0.0011728915441850236,
+        "recall": 0.013492858272281664,
+        "iou": 0.001080255379123221,
+        "dice": 0.0021581793733692466
+      },
+      "face_baseline": {
+        "tp": 0,
+        "fp": 97820,
+        "fn": 19310,
+        "precision": 0.0,
+        "recall": 0.0,
+        "iou": 0.0,
+        "dice": 0.0
+      }
+    },
+    {
+      "image_id": "wf_49_Greeting_peoplegreeting_49_645",
+      "scene_tags": [
+        "complex_background",
+        "hand_face_interference"
+      ],
+      "author_face_count": 1,
+      "skin": {
+        "tp": 82696,
+        "fp": 29107,
+        "fn": 330898,
+        "precision": 0.7396581487079953,
+        "recall": 0.1999448734749537,
+        "iou": 0.1867987648548343,
+        "dice": 0.3147943364731812
+      },
+      "face_baseline": {
+        "tp": 35932,
+        "fp": 3092,
+        "fn": 135977,
+        "precision": 0.9207667076670767,
+        "recall": 0.20901756161690196,
+        "iou": 0.20532454100262285,
+        "dice": 0.3406958607709557
+      }
+    },
+    {
+      "image_id": "wf_9_Press_Conference_Press_Conference_9_898",
+      "scene_tags": [
+        "complex_background",
+        "hand_face_interference"
+      ],
+      "author_face_count": 1,
+      "skin": {
+        "tp": 264074,
+        "fp": 25455,
+        "fn": 52089,
+        "precision": 0.9120813459100815,
+        "recall": 0.8352463760781622,
+        "iou": 0.7730096189310868,
+        "dice": 0.8719745349121336
+      },
+      "face_baseline": {
+        "tp": 175102,
+        "fp": 100336,
+        "fn": 27137,
+        "precision": 0.6357220136655073,
+        "recall": 0.8658171767067677,
+        "iou": 0.5787061059241511,
+        "dice": 0.7331397576186419
+      }
+    }
+  ],
+  "derived_hand_only": {
+    "images": 2,
+    "nonempty_predictions": 2,
+    "scope": "Crops of two reviewed real parent photos, not new independent originals or participants",
+    "records": [
+      {
+        "parent_image_id": "wf_1_Handshaking_Handshaking_1_463",
+        "crop_xyxy": [
+          153,
+          750,
+          870,
+          1337
+        ],
+        "image_path": "derived/hand_rois/wf_1_Handshaking_Handshaking_1_463.png",
+        "sha256": "06c27d71acd5f6a423040825e5c1f975dd3ff07bfb272214583655a8f123dc7a",
+        "reference_path": "derived/hand_rois/wf_1_Handshaking_Handshaking_1_463_reference.png",
+        "reference_sha256": "06e6c6b6991966e1e3cea53bdeb54f3fcd02973ea2ec798afef944220869fc68",
+        "original_independent_scene": false,
+        "face_false_positive_pixels": 136725,
+        "nonempty_prediction": true
+      },
+      {
+        "parent_image_id": "wf_1_Handshaking_Handshaking_1_625",
+        "crop_xyxy": [
+          153,
+          750,
+          870,
+          1337
+        ],
+        "image_path": "derived/hand_rois/wf_1_Handshaking_Handshaking_1_625.png",
+        "sha256": "2da2527335dca73c6df03490f749044d15610544cc3da0a111f906fd31f2f8b8",
+        "reference_path": "derived/hand_rois/wf_1_Handshaking_Handshaking_1_625_reference.png",
+        "reference_sha256": "942201b1d6fd09294d237746aefe6e0e1262f11d21f0aa8d535fb7e394bd22f4",
+        "original_independent_scene": false,
+        "face_false_positive_pixels": 1470,
+        "nonempty_prediction": true
+      }
+    ]
+  },
+  "integrity": {
+    "unique_decoded_originals": 33,
+    "exact_duplicate_originals": [],
+    "note": "No verified subject IDs; all scenes in one external partition; derivative hand crops retain parent lineage."
+  }
+}

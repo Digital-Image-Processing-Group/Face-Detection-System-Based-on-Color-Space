@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "model_revision": "skin-afa4f917e675769e",
-  "manifest_sha256": "752cc4196d08655f610435fd7bd61760e38b28baad1d03d4d56f209f39242985",
-  "distance_squared_threshold": 5.0,
+  "model_revision": "skin-d239a8aaf4ae7f05",
+  "manifest_sha256": "b3efdfe0bc9d8955f6b2ff7b191fb305ec83b94569db6c20ee700ff3a1270afe",
+  "distance_squared_threshold": 4.0,
   "selection": "validation_skin_micro_dice",
   "candidate_grid": {
     "min": 0.5,

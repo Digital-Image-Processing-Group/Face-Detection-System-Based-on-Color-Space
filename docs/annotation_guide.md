@@ -16,3 +16,5 @@
 `python -m src.training rasterize --manifest data/manifest.csv` 从记录和压缩参考重建两层 0/255 PNG，`read_mask` 读为 uint8 0/1；会检查参考哈希、尺寸、编码和复核状态。背景用明确的空多边形规范重建。
 
 missing 为缺标，skin sampled 为局部取样/草稿，face draft 为未定稿。正式评估需两层 complete、来源分组 verified 并通过完整检查。以后人工复核应记录审核身份、参考版本及新评估方案，不能只改状态。
+
+2026-10-29 补全：原 30 张侧脸去除离散后颈/耳后/头发脸部误标，记录 refinement_20261029.json；新增 24 张人物参考记录为 reserve.json。33 张场景两层位编码参考在 annotations/scenes/，不由主清单 rasterize 重建，直接由 stress_assessment 校验读取。纯手部裁剪保留父图及坐标。均未使用被评估的颜色模型作为标注来源。

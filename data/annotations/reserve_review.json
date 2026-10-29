@@ -1,0 +1,242 @@
+{
+  "reviewer": "codex_visual_review",
+  "reference_limitations": "Project-assisted silver references, visually reviewed before predictions; approximate boundaries, not independent expert truth.",
+  "reviewed_image_ids": [
+    "hfd_12_SEAFA6",
+    "hfd_12_SEAFA7",
+    "hfd_12_SEAFA8",
+    "hfd_5_AFA6",
+    "hfd_5_AFA7",
+    "hfd_5_AFA8",
+    "hfd_24_SEAFA6",
+    "hfd_24_SEAFA7",
+    "hfd_24_SEAFA8",
+    "hfd_17_AMA6",
+    "hfd_17_AMA7",
+    "hfd_17_AMA8",
+    "hfd_8_SEAMA6",
+    "hfd_8_SEAMA7",
+    "hfd_8_SEAMA8",
+    "hfd_13_EAMA6",
+    "hfd_13_EAMA7",
+    "hfd_13_EAMA8",
+    "hfd_19_EAFA6",
+    "hfd_19_EAFA7",
+    "hfd_19_EAFA8",
+    "hfd_14_AFA6",
+    "hfd_14_AFA7",
+    "hfd_14_AFA8"
+  ],
+  "draft_sha256": {
+    "hfd_12_SEAFA6": {
+      "skin": "be34be5b3e652f5750005020f58e2a7e9fc80f424e14602fcc7403b0e7913e2f",
+      "face": "1146f1e78b7e5242cd84bfda43400ba4b1d00bc915010776c93251ef24922e3f"
+    },
+    "hfd_12_SEAFA7": {
+      "skin": "3c95a6c0170564acfeddd850425b9e39e0a8611376ee6f283e33b02909d77ed5",
+      "face": "c15af6aa850a59b4b0ce0eed2cb813e3b48a5163dea704bcc93db43f6b37667b"
+    },
+    "hfd_12_SEAFA8": {
+      "skin": "b8132c84a0b0c0e6efafc238c844bb2ed8a95d29280d591937b3ccf616b08840",
+      "face": "02431b74a187a8d0d4638cec59b7fb5da3e28417f443aea5cdcbc97359c52b36"
+    },
+    "hfd_5_AFA6": {
+      "skin": "82003969f6ff9f195de140a0cd65a33eb6c5f17a705a2b359f6f6e82cd04f940",
+      "face": "953bb6e2b89e9d6477ad8249ef42bd0c75520e302550d4b0407fa082eaaadfc3"
+    },
+    "hfd_5_AFA7": {
+      "skin": "19e8a15f71efcaea94182b75b598dc1cc648c3276034eb4ff9ccf11c6761fd47",
+      "face": "2eff783fab11c45bec3955f7b942115dc9d62354a92e57fc37983f11ac057321"
+    },
+    "hfd_5_AFA8": {
+      "skin": "5dbc1c291078194170091473cf11efcb88ac76508df8f8ee5e4cb8024ea72594",
+      "face": "3e2657a40e9efbda55beb4c111065d5a8d0f72a2b70b8d2a1691fe4d7918456e"
+    },
+    "hfd_24_SEAFA6": {
+      "skin": "d0e9f77f73150e0feb47891ff265245c347cd33ceef46f8889e5d4e68b7c4060",
+      "face": "7bc885f4eab41f259c0ee42e47f8b95c21223a6250b2eee803c52a63b17a0a8c"
+    },
+    "hfd_24_SEAFA7": {
+      "skin": "0e48c01b772ba0f230b38d34a6095aba6735ef0bcd23c754de32c65bd07555d6",
+      "face": "dc43c4e2f6c6833a3b0c13392f344546c7a3a5e44efc04501f64ec4af60c171a"
+    },
+    "hfd_24_SEAFA8": {
+      "skin": "b1086ec18aecf2a855b4ee9b1d7fabef36aea272f54851cb108225ad54fdb2a1",
+      "face": "a27496c3b21f17e3876031c48ce4d463d53b3b343656f3664e6ac04c880c05a4"
+    },
+    "hfd_17_AMA6": {
+      "skin": "d7e30684657042e7d7a0aa4b1dcd53feda546ec7c352c6346e42d743ff4dbf5c",
+      "face": "58401f46aba222dda34d75150248217ff027ee0dc14ada7fe2313bbb64c7ba55"
+    },
+    "hfd_17_AMA7": {
+      "skin": "81370647502065fded079bccea19fdad8fb925155a30e4f9ef9720bcf339410f",
+      "face": "76e15cbbb69ef5e14064c0f7b7f57e0eb977487dfb5c1a2a73e4a45a630c6c36"
+    },
+    "hfd_17_AMA8": {
+      "skin": "d8ed8316a353e2d67d1bfbf20d18f91328ee9a438f3fccfa7a818b2b9e5404f5",
+      "face": "7cc52cfd89d51b6581a17d26637e1ce8663775208a16936e813cbb39d478ac87"
+    },
+    "hfd_8_SEAMA6": {
+      "skin": "6a5d9d96498334fa2bb0337ab9e5504fcb78daf3f39db396fa1cb1328531aa97",
+      "face": "c32686e26758a9285ed299a89e4c72455d621f92dc56ac78b3ef7fd4a1d916fc"
+    },
+    "hfd_8_SEAMA7": {
+      "skin": "caebe34ff04922d0e738257f519c1c52520506d80599d830d80c79efa818e7dd",
+      "face": "8cb37a85e7b18f71bb91896538b1861ef005cb69814013c35e64bae341f78e40"
+    },
+    "hfd_8_SEAMA8": {
+      "skin": "05fd78fd4279469fc36d2c03f0003fb945ef18496058b37443638951377d993e",
+      "face": "98d0d4f19ed632d54e3741a51c4325b962b425ee66db7a252d2c07557d6e0c8c"
+    },
+    "hfd_13_EAMA6": {
+      "skin": "1e3f7c35a114d89142457c23d8bbaf269311a145d9af581e1f4d1d9f2c719b22",
+      "face": "3e6ebdc4c27df7861748ca06d6e78706af67f9d4d3f1803ca841b5aff737aecc"
+    },
+    "hfd_13_EAMA7": {
+      "skin": "205e1adb17be5513aab75f2d91307e531ff71c25f22ef60c6769d4289c9f3ec7",
+      "face": "610fdf134cc4c8a400923e95388a54c797c0e0318685337655af5571bf37e2ca"
+    },
+    "hfd_13_EAMA8": {
+      "skin": "59d90dc40a75ae2493b34db6ce7f84c9ace8d9a657ec88a1b579b08a2fdf23ce",
+      "face": "d3d8333c6d6716717a183f1b75dcc77da71cf4d891796c3643e3be8ecb19fe09"
+    },
+    "hfd_19_EAFA6": {
+      "skin": "9fb4c1d31a269e6fd88ec1849c652cb70d8dd3ad91837b3f86b3711256824559",
+      "face": "879fea97169e30379b84ac444a190d8affc89f58bc80f9508b99152d28f68bd9"
+    },
+    "hfd_19_EAFA7": {
+      "skin": "fae325764d7825c96e845307abd33f8fbfdfba56ea1da7e73f95dedc90328bee",
+      "face": "61d8abc79706bc271d310e10d6804e0032b79371c9f8c511c25a151c4463d359"
+    },
+    "hfd_19_EAFA8": {
+      "skin": "eb30c23a6181db78ab5617ddc67b88dc4d514a85c61932513692d4fe902b74dc",
+      "face": "56043f3ade60ff74f747c0a54b450879af7892be79225cc31d824e5a67244604"
+    },
+    "hfd_14_AFA6": {
+      "skin": "47beea451f0872486cb859ce5a014ad514c7bd3a46214998f1c8e8e507f770cd",
+      "face": "0f0b4ad787712d7084bb4aac720209242cb362f6d18083c1627275e7e7deab95"
+    },
+    "hfd_14_AFA7": {
+      "skin": "e4bbf41deea9adec4f4e522969800038392b11f8d39bb8185fcab5467cf45515",
+      "face": "10051ea30a298b22335fdaabc6787dcf72cf89098239cef34765fb016c42e008"
+    },
+    "hfd_14_AFA8": {
+      "skin": "e0c2b3cd1e10fd49011b327ab96ed995c382c4ad6c3051836f7bdf3d4c9936f0",
+      "face": "8a2eeded5119878ebb9f708b84dd6a3e5cc01bf9a0ea830f5e65a7602fdcc327"
+    }
+  },
+  "corrections": {
+    "hfd_8_SEAMA7": [
+      {
+        "canvas_width": 500,
+        "polygon": [
+          [
+            155,
+            165
+          ],
+          [
+            198,
+            165
+          ],
+          [
+            198,
+            202
+          ],
+          [
+            155,
+            202
+          ]
+        ],
+        "layers": [
+          "skin",
+          "face"
+        ],
+        "value": 0
+      }
+    ],
+    "hfd_8_SEAMA8": [
+      {
+        "canvas_width": 500,
+        "polygon": [
+          [
+            290,
+            100
+          ],
+          [
+            350,
+            100
+          ],
+          [
+            350,
+            160
+          ],
+          [
+            290,
+            160
+          ]
+        ],
+        "layers": [
+          "skin",
+          "face"
+        ],
+        "value": 0
+      }
+    ],
+    "hfd_17_AMA7": [
+      {
+        "canvas_width": 500,
+        "polygon": [
+          [
+            360,
+            140
+          ],
+          [
+            415,
+            140
+          ],
+          [
+            415,
+            180
+          ],
+          [
+            360,
+            180
+          ]
+        ],
+        "layers": [
+          "skin",
+          "face"
+        ],
+        "value": 0
+      }
+    ],
+    "hfd_17_AMA8": [
+      {
+        "canvas_width": 500,
+        "polygon": [
+          [
+            460,
+            320
+          ],
+          [
+            499,
+            320
+          ],
+          [
+            499,
+            374
+          ],
+          [
+            460,
+            374
+          ]
+        ],
+        "layers": [
+          "skin",
+          "face"
+        ],
+        "value": 0
+      }
+    ]
+  }
+}

@@ -1,6 +1,8 @@
 {
-  "seed": 20261028,
-  "rationale": "Fresh Hawaii participants replace the already-inspected small-cohort test set. Faces split by original author participant codes at 60/20/20; background negatives are evaluation-only. No classification metrics consulted for this split.",
+  "seed": 20261029,
+  "manifest_sha256": "b3efdfe0bc9d8955f6b2ff7b191fb305ec83b94569db6c20ee700ff3a1270afe",
+  "evaluation_ready": true,
+  "strategy": "Former test participants/images retired to validation; fresh author participants selected before observing predictions. No new scene photo enters fitting/calibration.",
   "face_groups": {
     "train": [
       "hfd_AFA_007",
@@ -29,9 +31,17 @@
       "hfd_SEAMA_007"
     ],
     "validation": [
+      "hfd_AFA_012",
       "hfd_AFA_015",
+      "hfd_AMA_001",
       "hfd_EAFA_001",
+      "hfd_EAFA_003",
+      "hfd_EAFA_006",
+      "hfd_EAFA_010",
+      "hfd_EAFA_011",
       "hfd_EAMA_007",
+      "hfd_EAMA_012",
+      "hfd_EAMA_015",
       "hfd_SEAFA_001",
       "hfd_SEAFA_007",
       "hfd_SEAFA_025",
@@ -39,100 +49,29 @@
       "hfd_SEAFA_028"
     ],
     "test": [
-      "hfd_AFA_012",
-      "hfd_AMA_001",
-      "hfd_EAFA_003",
-      "hfd_EAFA_006",
-      "hfd_EAFA_010",
-      "hfd_EAFA_011",
-      "hfd_EAMA_012",
-      "hfd_EAMA_015"
+      "hfd_AFA_005",
+      "hfd_AFA_014",
+      "hfd_AMA_017",
+      "hfd_EAFA_019",
+      "hfd_EAMA_013",
+      "hfd_SEAFA_012",
+      "hfd_SEAFA_024",
+      "hfd_SEAMA_008"
     ]
   },
-  "manifest_sha256": "752cc4196d08655f610435fd7bd61760e38b28baad1d03d4d56f209f39242985",
-  "evaluation_ready": true,
-  "annotation_reference": "Project assisted silver-standard; no independent human/expert pixel-truth review",
   "splits": {
     "train": {
       "images": 120,
-      "participant_groups": 24,
-      "background_images": 0,
-      "groups": [
-        "hfd_AFA_007",
-        "hfd_AFA_010",
-        "hfd_AFA_013",
-        "hfd_AMA_009",
-        "hfd_AMA_018",
-        "hfd_EAFA_008",
-        "hfd_EAFA_016",
-        "hfd_EAFA_020",
-        "hfd_EAFA_022",
-        "hfd_EAFA_023",
-        "hfd_EAMA_002",
-        "hfd_EAMA_003",
-        "hfd_EAMA_005",
-        "hfd_EAMA_009",
-        "hfd_SEAFA_004",
-        "hfd_SEAFA_006",
-        "hfd_SEAFA_017",
-        "hfd_SEAFA_020",
-        "hfd_SEAFA_021",
-        "hfd_SEAFA_027",
-        "hfd_SEAMA_001",
-        "hfd_SEAMA_002",
-        "hfd_SEAMA_004",
-        "hfd_SEAMA_007"
-      ]
+      "participant_groups": 24
     },
     "validation": {
-      "images": 50,
-      "participant_groups": 8,
-      "background_images": 10,
-      "groups": [
-        "bsds_scene_105",
-        "bsds_scene_108",
-        "bsds_scene_182",
-        "bsds_scene_28",
-        "bsds_scene_306",
-        "bsds_scene_335",
-        "bsds_scene_41",
-        "bsds_scene_42",
-        "bsds_scene_65",
-        "bsds_scene_97",
-        "hfd_AFA_015",
-        "hfd_EAFA_001",
-        "hfd_EAMA_007",
-        "hfd_SEAFA_001",
-        "hfd_SEAFA_007",
-        "hfd_SEAFA_025",
-        "hfd_SEAFA_026",
-        "hfd_SEAFA_028"
-      ]
+      "images": 100,
+      "participant_groups": 16
     },
     "test": {
-      "images": 50,
-      "participant_groups": 8,
-      "background_images": 10,
-      "groups": [
-        "bsds_scene_100",
-        "bsds_scene_123",
-        "bsds_scene_130",
-        "bsds_scene_16",
-        "bsds_scene_196",
-        "bsds_scene_197",
-        "bsds_scene_27",
-        "bsds_scene_326",
-        "bsds_scene_35",
-        "bsds_scene_49",
-        "hfd_AFA_012",
-        "hfd_AMA_001",
-        "hfd_EAFA_003",
-        "hfd_EAFA_006",
-        "hfd_EAFA_010",
-        "hfd_EAFA_011",
-        "hfd_EAMA_012",
-        "hfd_EAMA_015"
-      ]
+      "images": 24,
+      "participant_groups": 8
     }
-  }
+  },
+  "background_policy": "All 20 previously inspected negative originals are validation only; fresh primary test has 24 face-positive photos. External hand crops reported separately."
 }

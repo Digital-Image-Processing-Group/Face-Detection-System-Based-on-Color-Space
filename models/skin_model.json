@@ -28,7 +28,7 @@
     "requested_samples_per_image": 2000,
     "actual_samples_per_image": 2000,
     "random_seed": 42,
-    "manifest_sha256": "752cc4196d08655f610435fd7bd61760e38b28baad1d03d4d56f209f39242985",
+    "manifest_sha256": "b3efdfe0bc9d8955f6b2ff7b191fb305ec83b94569db6c20ee700ff3a1270afe",
     "training_mask_margin_pixels": 15,
     "data_revision": "ff7ac002d48ac9a59b29324392ed244ae8ae26fd3d0700932ad1053b4eb8a966",
     "opencv_version": "5.0.0",
@@ -1117,5 +1117,5 @@
     ],
     "skipped": []
   },
-  "model_revision": "skin-afa4f917e675769e"
+  "model_revision": "skin-d239a8aaf4ae7f05"
 }

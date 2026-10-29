@@ -1,18 +1,18 @@
 {
-  "model_revision": "skin-afa4f917e675769e",
-  "manifest_sha256": "752cc4196d08655f610435fd7bd61760e38b28baad1d03d4d56f209f39242985",
-  "original_photos": 220,
-  "author_participant_groups": 40,
-  "original_file_hashes_verified": 220,
-  "masks_reconstructed_identically": 440,
+  "model_revision": "skin-d239a8aaf4ae7f05",
+  "manifest_sha256": "b3efdfe0bc9d8955f6b2ff7b191fb305ec83b94569db6c20ee700ff3a1270afe",
+  "original_photos": 244,
+  "author_participant_groups": 48,
+  "original_file_hashes_verified": 244,
+  "masks_reconstructed_identically": 488,
   "author_population_and_identity_verified": true,
   "fit_reproduced_exactly": true,
   "dataset_valid": true,
-  "duplicate_check_warning_count": 147,
+  "duplicate_check_warning_count": 166,
   "split_counts": {
     "train": 120,
-    "test": 50,
-    "validation": 50
+    "validation": 100,
+    "test": 24
   },
-  "limitations": "Project silver-standard references; no independent expert pixel-truth review. Real multi-person, strong color-cast and full hand-interference original scenes still absent."
+  "limitations": "Project silver-standard references; no independent expert pixel-truth review. New real scenes lack author subject IDs and are evaluated separately as external stress data."
 }

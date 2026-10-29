@@ -10,3 +10,6 @@ data/contact_sheets/
 artifacts/
 
 data/annotations/proposals/
+
+data/annotations/scene_drafts/
+data/derived/

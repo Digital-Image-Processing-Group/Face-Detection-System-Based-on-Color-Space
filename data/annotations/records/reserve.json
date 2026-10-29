@@ -1,0 +1,952 @@
+{
+  "annotations": [
+    {
+      "image_id": "hfd_12_SEAFA6",
+      "width": 2000,
+      "height": 1500,
+      "annotator": "codex_assisted_visual_review",
+      "review_status": "visually_reviewed",
+      "reference_path": "annotations/reference/hfd_12_SEAFA6.png",
+      "reference_sha256": "40280d3799f93d35fa408a2a1e4b85a48a9c0fadcdabcc20ac7eafeda61845cf",
+      "method": "Independent BiSeNet part parsing and multiclass skin initialization, followed by project visual review and explicit corrections; no evaluated YCrCb predictions used as references",
+      "reference_limitations": "Project-assisted silver references, visually reviewed before predictions; approximate boundaries, not independent expert truth.",
+      "initialization": {
+        "source_image_sha256": "ee58d5ad71e6d54b2f5c6c2cbdfb6f99644aa9a1e7c284810fee50618225d383",
+        "model_sha256": {
+          "resnet18.onnx": "0d9bd318e46987c3bdbfacae9e2c0f461cae1c6ac6ea6d43bbe541a91727e33f",
+          "selfie_multiclass.tflite": "c6748b1253a99067ef71f7e26ca71096cd449baefa8f101900ea23016507e0e0"
+        },
+        "method_revision": 3,
+        "head_crop_xyxy": [
+          401,
+          0,
+          1606,
+          1500
+        ],
+        "face_pixels": 423526,
+        "skin_pixels": 618775,
+        "method": "Independent neural initialization, not evaluated YCrCb predictions"
+      },
+      "review_corrections": [],
+      "skin": {
+        "status": "complete"
+      },
+      "face": {
+        "status": "complete"
+      }
+    },
+    {
+      "image_id": "hfd_12_SEAFA7",
+      "width": 2000,
+      "height": 1500,
+      "annotator": "codex_assisted_visual_review",
+      "review_status": "visually_reviewed",
+      "reference_path": "annotations/reference/hfd_12_SEAFA7.png",
+      "reference_sha256": "3e3d7f037df4f2e9e7c75f319f4bd4ed577613c48bd6c0afb4cb17b0f8af91f1",
+      "method": "Independent BiSeNet part parsing and multiclass skin initialization, followed by project visual review and explicit corrections; no evaluated YCrCb predictions used as references",
+      "reference_limitations": "Project-assisted silver references, visually reviewed before predictions; approximate boundaries, not independent expert truth.",
+      "initialization": {
+        "source_image_sha256": "e0097be6cb317fa8fd0a46c982cfcde12f1ced357f4469abe5606a2bc29ae20d",
+        "model_sha256": {
+          "resnet18.onnx": "0d9bd318e46987c3bdbfacae9e2c0f461cae1c6ac6ea6d43bbe541a91727e33f",
+          "selfie_multiclass.tflite": "c6748b1253a99067ef71f7e26ca71096cd449baefa8f101900ea23016507e0e0"
+        },
+        "method_revision": 3,
+        "head_crop_xyxy": [
+          944,
+          32,
+          1562,
+          1424
+        ],
+        "face_pixels": 154671,
+        "skin_pixels": 152076,
+        "method": "Independent neural initialization, not evaluated YCrCb predictions"
+      },
+      "review_corrections": [],
+      "skin": {
+        "status": "complete"
+      },
+      "face": {
+        "status": "complete"
+      }
+    },
+    {
+      "image_id": "hfd_12_SEAFA8",
+      "width": 2000,
+      "height": 1500,
+      "annotator": "codex_assisted_visual_review",
+      "review_status": "visually_reviewed",
+      "reference_path": "annotations/reference/hfd_12_SEAFA8.png",
+      "reference_sha256": "83943087a98a4fbb474a41e770e6dc5fa6044a54230fc1d823a1b8eb0931a192",
+      "method": "Independent BiSeNet part parsing and multiclass skin initialization, followed by project visual review and explicit corrections; no evaluated YCrCb predictions used as references",
+      "reference_limitations": "Project-assisted silver references, visually reviewed before predictions; approximate boundaries, not independent expert truth.",
+      "initialization": {
+        "source_image_sha256": "1e98b8e41d592d89f6b3a4489c2b695672dd82bbb3ff7e0cda158f186b0548a3",
+        "model_sha256": {
+          "resnet18.onnx": "0d9bd318e46987c3bdbfacae9e2c0f461cae1c6ac6ea6d43bbe541a91727e33f",
+          "selfie_multiclass.tflite": "c6748b1253a99067ef71f7e26ca71096cd449baefa8f101900ea23016507e0e0"
+        },
+        "method_revision": 3,
+        "head_crop_xyxy": [
+          421,
+          55,
+          1108,
+          1500
+        ],
+        "face_pixels": 208254,
+        "skin_pixels": 234524,
+        "method": "Independent neural initialization, not evaluated YCrCb predictions"
+      },
+      "review_corrections": [],
+      "skin": {
+        "status": "complete"
+      },
+      "face": {
+        "status": "complete"
+      }
+    },
+    {
+      "image_id": "hfd_5_AFA6",
+      "width": 2000,
+      "height": 1500,
+      "annotator": "codex_assisted_visual_review",
+      "review_status": "visually_reviewed",
+      "reference_path": "annotations/reference/hfd_5_AFA6.png",
+      "reference_sha256": "e0dc33133a0ca7bcf1676175176e6be510963d8e3f45f60ef1f20dea80cc17b6",
+      "method": "Independent BiSeNet part parsing and multiclass skin initialization, followed by project visual review and explicit corrections; no evaluated YCrCb predictions used as references",
+      "reference_limitations": "Project-assisted silver references, visually reviewed before predictions; approximate boundaries, not independent expert truth.",
+      "initialization": {
+        "source_image_sha256": "c24d03d560e30ca2661205af7c95f196954d84ba337afc8b308b19f52e49056f",
+        "model_sha256": {
+          "resnet18.onnx": "0d9bd318e46987c3bdbfacae9e2c0f461cae1c6ac6ea6d43bbe541a91727e33f",
+          "selfie_multiclass.tflite": "c6748b1253a99067ef71f7e26ca71096cd449baefa8f101900ea23016507e0e0"
+        },
+        "method_revision": 3,
+        "head_crop_xyxy": [
+          421,
+          0,
+          1559,
+          1341
+        ],
+        "face_pixels": 308883,
+        "skin_pixels": 707611,
+        "method": "Independent neural initialization, not evaluated YCrCb predictions"
+      },
+      "review_corrections": [],
+      "skin": {
+        "status": "complete"
+      },
+      "face": {
+        "status": "complete"
+      }
+    },
+    {
+      "image_id": "hfd_5_AFA7",
+      "width": 2000,
+      "height": 1500,
+      "annotator": "codex_assisted_visual_review",
+      "review_status": "visually_reviewed",
+      "reference_path": "annotations/reference/hfd_5_AFA7.png",
+      "reference_sha256": "5c6130e60715335cdc8adb7d9733b8eb5e6de7e677cb361e7988baefc0a2d73a",
+      "method": "Independent BiSeNet part parsing and multiclass skin initialization, followed by project visual review and explicit corrections; no evaluated YCrCb predictions used as references",
+      "reference_limitations": "Project-assisted silver references, visually reviewed before predictions; approximate boundaries, not independent expert truth.",
+      "initialization": {
+        "source_image_sha256": "b8599c117e4144e251382518551fdbe439e8b9380797e4bc9bf7392ea265e0b9",
+        "model_sha256": {
+          "resnet18.onnx": "0d9bd318e46987c3bdbfacae9e2c0f461cae1c6ac6ea6d43bbe541a91727e33f",
+          "selfie_multiclass.tflite": "c6748b1253a99067ef71f7e26ca71096cd449baefa8f101900ea23016507e0e0"
+        },
+        "method_revision": 3,
+        "head_crop_xyxy": [
+          782,
+          58,
+          1632,
+          1429
+        ],
+        "face_pixels": 198425,
+        "skin_pixels": 304898,
+        "method": "Independent neural initialization, not evaluated YCrCb predictions"
+      },
+      "review_corrections": [],
+      "skin": {
+        "status": "complete"
+      },
+      "face": {
+        "status": "complete"
+      }
+    },
+    {
+      "image_id": "hfd_5_AFA8",
+      "width": 2000,
+      "height": 1500,
+      "annotator": "codex_assisted_visual_review",
+      "review_status": "visually_reviewed",
+      "reference_path": "annotations/reference/hfd_5_AFA8.png",
+      "reference_sha256": "0e1b3f5068d918ee9140a8aef9e72904a4c4bdfe637111ca78e66c884321f0fc",
+      "method": "Independent BiSeNet part parsing and multiclass skin initialization, followed by project visual review and explicit corrections; no evaluated YCrCb predictions used as references",
+      "reference_limitations": "Project-assisted silver references, visually reviewed before predictions; approximate boundaries, not independent expert truth.",
+      "initialization": {
+        "source_image_sha256": "a8127fefc9a79c15d10eeae4bc6bfe07934ac89972457ed289785dff26b6569d",
+        "model_sha256": {
+          "resnet18.onnx": "0d9bd318e46987c3bdbfacae9e2c0f461cae1c6ac6ea6d43bbe541a91727e33f",
+          "selfie_multiclass.tflite": "c6748b1253a99067ef71f7e26ca71096cd449baefa8f101900ea23016507e0e0"
+        },
+        "method_revision": 3,
+        "head_crop_xyxy": [
+          469,
+          155,
+          987,
+          1419
+        ],
+        "face_pixels": 116204,
+        "skin_pixels": 184784,
+        "method": "Independent neural initialization, not evaluated YCrCb predictions"
+      },
+      "review_corrections": [],
+      "skin": {
+        "status": "complete"
+      },
+      "face": {
+        "status": "complete"
+      }
+    },
+    {
+      "image_id": "hfd_24_SEAFA6",
+      "width": 2000,
+      "height": 1500,
+      "annotator": "codex_assisted_visual_review",
+      "review_status": "visually_reviewed",
+      "reference_path": "annotations/reference/hfd_24_SEAFA6.png",
+      "reference_sha256": "083aa21b48d8aa7ec513683400343b7ca2b5290ba5f86039e08522455da815ac",
+      "method": "Independent BiSeNet part parsing and multiclass skin initialization, followed by project visual review and explicit corrections; no evaluated YCrCb predictions used as references",
+      "reference_limitations": "Project-assisted silver references, visually reviewed before predictions; approximate boundaries, not independent expert truth.",
+      "initialization": {
+        "source_image_sha256": "3a6119573ec74c48c8b94a966962cab2c71a086abcfb9f4b46b05b97c80dd9c5",
+        "model_sha256": {
+          "resnet18.onnx": "0d9bd318e46987c3bdbfacae9e2c0f461cae1c6ac6ea6d43bbe541a91727e33f",
+          "selfie_multiclass.tflite": "c6748b1253a99067ef71f7e26ca71096cd449baefa8f101900ea23016507e0e0"
+        },
+        "method_revision": 3,
+        "head_crop_xyxy": [
+          429,
+          0,
+          1614,
+          1463
+        ],
+        "face_pixels": 347799,
+        "skin_pixels": 440474,
+        "method": "Independent neural initialization, not evaluated YCrCb predictions"
+      },
+      "review_corrections": [],
+      "skin": {
+        "status": "complete"
+      },
+      "face": {
+        "status": "complete"
+      }
+    },
+    {
+      "image_id": "hfd_24_SEAFA7",
+      "width": 2000,
+      "height": 1500,
+      "annotator": "codex_assisted_visual_review",
+      "review_status": "visually_reviewed",
+      "reference_path": "annotations/reference/hfd_24_SEAFA7.png",
+      "reference_sha256": "f3b505a82816a2bf957b6e1528c022ad99c1d641054ed43de1c1a17bcfa98ef4",
+      "method": "Independent BiSeNet part parsing and multiclass skin initialization, followed by project visual review and explicit corrections; no evaluated YCrCb predictions used as references",
+      "reference_limitations": "Project-assisted silver references, visually reviewed before predictions; approximate boundaries, not independent expert truth.",
+      "initialization": {
+        "source_image_sha256": "96ed9d82f620603474d08b87379e77377efd94d5abb8484598312db4937b0370",
+        "model_sha256": {
+          "resnet18.onnx": "0d9bd318e46987c3bdbfacae9e2c0f461cae1c6ac6ea6d43bbe541a91727e33f",
+          "selfie_multiclass.tflite": "c6748b1253a99067ef71f7e26ca71096cd449baefa8f101900ea23016507e0e0"
+        },
+        "method_revision": 3,
+        "head_crop_xyxy": [
+          957,
+          235,
+          1516,
+          1277
+        ],
+        "face_pixels": 119008,
+        "skin_pixels": 119602,
+        "method": "Independent neural initialization, not evaluated YCrCb predictions"
+      },
+      "review_corrections": [],
+      "skin": {
+        "status": "complete"
+      },
+      "face": {
+        "status": "complete"
+      }
+    },
+    {
+      "image_id": "hfd_24_SEAFA8",
+      "width": 2000,
+      "height": 1500,
+      "annotator": "codex_assisted_visual_review",
+      "review_status": "visually_reviewed",
+      "reference_path": "annotations/reference/hfd_24_SEAFA8.png",
+      "reference_sha256": "e19a22d25aecfaac12d8fa06b3539d758f97830d34430f435c216005393965bb",
+      "method": "Independent BiSeNet part parsing and multiclass skin initialization, followed by project visual review and explicit corrections; no evaluated YCrCb predictions used as references",
+      "reference_limitations": "Project-assisted silver references, visually reviewed before predictions; approximate boundaries, not independent expert truth.",
+      "initialization": {
+        "source_image_sha256": "16aed41e6246f9e77172d846fe0e1a695e0c443cfbdaa36dbea3d27cd49da446",
+        "model_sha256": {
+          "resnet18.onnx": "0d9bd318e46987c3bdbfacae9e2c0f461cae1c6ac6ea6d43bbe541a91727e33f",
+          "selfie_multiclass.tflite": "c6748b1253a99067ef71f7e26ca71096cd449baefa8f101900ea23016507e0e0"
+        },
+        "method_revision": 3,
+        "head_crop_xyxy": [
+          342,
+          77,
+          1365,
+          1409
+        ],
+        "face_pixels": 194611,
+        "skin_pixels": 236383,
+        "method": "Independent neural initialization, not evaluated YCrCb predictions"
+      },
+      "review_corrections": [],
+      "skin": {
+        "status": "complete"
+      },
+      "face": {
+        "status": "complete"
+      }
+    },
+    {
+      "image_id": "hfd_17_AMA6",
+      "width": 2000,
+      "height": 1500,
+      "annotator": "codex_assisted_visual_review",
+      "review_status": "visually_reviewed",
+      "reference_path": "annotations/reference/hfd_17_AMA6.png",
+      "reference_sha256": "8630b697147a8dd7cbce13c33769e7cfe68f0f811e6875d09d750f582750a7fd",
+      "method": "Independent BiSeNet part parsing and multiclass skin initialization, followed by project visual review and explicit corrections; no evaluated YCrCb predictions used as references",
+      "reference_limitations": "Project-assisted silver references, visually reviewed before predictions; approximate boundaries, not independent expert truth.",
+      "initialization": {
+        "source_image_sha256": "aab1fb7859a3f453e39a890bf6e7e4f89e8eeaaca22db853492af8e9588e1ab7",
+        "model_sha256": {
+          "resnet18.onnx": "0d9bd318e46987c3bdbfacae9e2c0f461cae1c6ac6ea6d43bbe541a91727e33f",
+          "selfie_multiclass.tflite": "c6748b1253a99067ef71f7e26ca71096cd449baefa8f101900ea23016507e0e0"
+        },
+        "method_revision": 3,
+        "head_crop_xyxy": [
+          444,
+          63,
+          1557,
+          1389
+        ],
+        "face_pixels": 295036,
+        "skin_pixels": 383388,
+        "method": "Independent neural initialization, not evaluated YCrCb predictions"
+      },
+      "review_corrections": [],
+      "skin": {
+        "status": "complete"
+      },
+      "face": {
+        "status": "complete"
+      }
+    },
+    {
+      "image_id": "hfd_17_AMA7",
+      "width": 2000,
+      "height": 1500,
+      "annotator": "codex_assisted_visual_review",
+      "review_status": "visually_reviewed",
+      "reference_path": "annotations/reference/hfd_17_AMA7.png",
+      "reference_sha256": "e4172099630f92db086433b90a73648154edf73b37cafc9b09ea3535fba1dbb4",
+      "method": "Independent BiSeNet part parsing and multiclass skin initialization, followed by project visual review and explicit corrections; no evaluated YCrCb predictions used as references",
+      "reference_limitations": "Project-assisted silver references, visually reviewed before predictions; approximate boundaries, not independent expert truth.",
+      "initialization": {
+        "source_image_sha256": "03a3553a0982c634b3b8ed81b2d380e6e67fc7f7c1a70c8dec8ac7ad16bdf0b4",
+        "model_sha256": {
+          "resnet18.onnx": "0d9bd318e46987c3bdbfacae9e2c0f461cae1c6ac6ea6d43bbe541a91727e33f",
+          "selfie_multiclass.tflite": "c6748b1253a99067ef71f7e26ca71096cd449baefa8f101900ea23016507e0e0"
+        },
+        "method_revision": 3,
+        "head_crop_xyxy": [
+          516,
+          142,
+          1621,
+          1404
+        ],
+        "face_pixels": 199011,
+        "skin_pixels": 362142,
+        "method": "Independent neural initialization, not evaluated YCrCb predictions"
+      },
+      "review_corrections": [
+        {
+          "canvas_width": 500,
+          "polygon": [
+            [
+              360,
+              140
+            ],
+            [
+              415,
+              140
+            ],
+            [
+              415,
+              180
+            ],
+            [
+              360,
+              180
+            ]
+          ],
+          "layers": [
+            "skin",
+            "face"
+          ],
+          "value": 0
+        }
+      ],
+      "skin": {
+        "status": "complete"
+      },
+      "face": {
+        "status": "complete"
+      }
+    },
+    {
+      "image_id": "hfd_17_AMA8",
+      "width": 2000,
+      "height": 1500,
+      "annotator": "codex_assisted_visual_review",
+      "review_status": "visually_reviewed",
+      "reference_path": "annotations/reference/hfd_17_AMA8.png",
+      "reference_sha256": "3e4721966be25d797df7c161d92d007d18cdf6395dde67c00bd52527a0339d12",
+      "method": "Independent BiSeNet part parsing and multiclass skin initialization, followed by project visual review and explicit corrections; no evaluated YCrCb predictions used as references",
+      "reference_limitations": "Project-assisted silver references, visually reviewed before predictions; approximate boundaries, not independent expert truth.",
+      "initialization": {
+        "source_image_sha256": "5140f93c5ff56ec4fa3e0d33a5346c1b81cd70ffc67df6e0973cb4a74acbe9fe",
+        "model_sha256": {
+          "resnet18.onnx": "0d9bd318e46987c3bdbfacae9e2c0f461cae1c6ac6ea6d43bbe541a91727e33f",
+          "selfie_multiclass.tflite": "c6748b1253a99067ef71f7e26ca71096cd449baefa8f101900ea23016507e0e0"
+        },
+        "method_revision": 3,
+        "head_crop_xyxy": [
+          333,
+          123,
+          1529,
+          1438
+        ],
+        "face_pixels": 217223,
+        "skin_pixels": 412286,
+        "method": "Independent neural initialization, not evaluated YCrCb predictions"
+      },
+      "review_corrections": [
+        {
+          "canvas_width": 500,
+          "polygon": [
+            [
+              460,
+              320
+            ],
+            [
+              499,
+              320
+            ],
+            [
+              499,
+              374
+            ],
+            [
+              460,
+              374
+            ]
+          ],
+          "layers": [
+            "skin",
+            "face"
+          ],
+          "value": 0
+        }
+      ],
+      "skin": {
+        "status": "complete"
+      },
+      "face": {
+        "status": "complete"
+      }
+    },
+    {
+      "image_id": "hfd_8_SEAMA6",
+      "width": 2000,
+      "height": 1500,
+      "annotator": "codex_assisted_visual_review",
+      "review_status": "visually_reviewed",
+      "reference_path": "annotations/reference/hfd_8_SEAMA6.png",
+      "reference_sha256": "a5f893340b45caaebacf57d67fdc563a24896fd5ac2be9a445b0a81ca6a3cff4",
+      "method": "Independent BiSeNet part parsing and multiclass skin initialization, followed by project visual review and explicit corrections; no evaluated YCrCb predictions used as references",
+      "reference_limitations": "Project-assisted silver references, visually reviewed before predictions; approximate boundaries, not independent expert truth.",
+      "initialization": {
+        "source_image_sha256": "dee49c52a68e72ef675684a936f2c38e7da3fce3d4375fbe4fa1c5aea2602343",
+        "model_sha256": {
+          "resnet18.onnx": "0d9bd318e46987c3bdbfacae9e2c0f461cae1c6ac6ea6d43bbe541a91727e33f",
+          "selfie_multiclass.tflite": "c6748b1253a99067ef71f7e26ca71096cd449baefa8f101900ea23016507e0e0"
+        },
+        "method_revision": 3,
+        "head_crop_xyxy": [
+          283,
+          0,
+          1754,
+          1420
+        ],
+        "face_pixels": 425826,
+        "skin_pixels": 548083,
+        "method": "Independent neural initialization, not evaluated YCrCb predictions"
+      },
+      "review_corrections": [],
+      "skin": {
+        "status": "complete"
+      },
+      "face": {
+        "status": "complete"
+      }
+    },
+    {
+      "image_id": "hfd_8_SEAMA7",
+      "width": 2000,
+      "height": 1500,
+      "annotator": "codex_assisted_visual_review",
+      "review_status": "visually_reviewed",
+      "reference_path": "annotations/reference/hfd_8_SEAMA7.png",
+      "reference_sha256": "0cc942f816bd44a85e9305c2becb2d30f9ef4d9de5ad9b47bf2a4384f8f40914",
+      "method": "Independent BiSeNet part parsing and multiclass skin initialization, followed by project visual review and explicit corrections; no evaluated YCrCb predictions used as references",
+      "reference_limitations": "Project-assisted silver references, visually reviewed before predictions; approximate boundaries, not independent expert truth.",
+      "initialization": {
+        "source_image_sha256": "395d0d22503434bf3614f7399a52aff137e7a8d38c72c9936ae620ef3dc2f888",
+        "model_sha256": {
+          "resnet18.onnx": "0d9bd318e46987c3bdbfacae9e2c0f461cae1c6ac6ea6d43bbe541a91727e33f",
+          "selfie_multiclass.tflite": "c6748b1253a99067ef71f7e26ca71096cd449baefa8f101900ea23016507e0e0"
+        },
+        "method_revision": 3,
+        "head_crop_xyxy": [
+          599,
+          96,
+          1657,
+          1334
+        ],
+        "face_pixels": 201653,
+        "skin_pixels": 341765,
+        "method": "Independent neural initialization, not evaluated YCrCb predictions"
+      },
+      "review_corrections": [
+        {
+          "canvas_width": 500,
+          "polygon": [
+            [
+              155,
+              165
+            ],
+            [
+              198,
+              165
+            ],
+            [
+              198,
+              202
+            ],
+            [
+              155,
+              202
+            ]
+          ],
+          "layers": [
+            "skin",
+            "face"
+          ],
+          "value": 0
+        }
+      ],
+      "skin": {
+        "status": "complete"
+      },
+      "face": {
+        "status": "complete"
+      }
+    },
+    {
+      "image_id": "hfd_8_SEAMA8",
+      "width": 2000,
+      "height": 1500,
+      "annotator": "codex_assisted_visual_review",
+      "review_status": "visually_reviewed",
+      "reference_path": "annotations/reference/hfd_8_SEAMA8.png",
+      "reference_sha256": "9ceba4ff90aeed6d6d61dd7b93f41cd1b5b85980b74c7b1f055d7450b200b883",
+      "method": "Independent BiSeNet part parsing and multiclass skin initialization, followed by project visual review and explicit corrections; no evaluated YCrCb predictions used as references",
+      "reference_limitations": "Project-assisted silver references, visually reviewed before predictions; approximate boundaries, not independent expert truth.",
+      "initialization": {
+        "source_image_sha256": "d4b0be2bb06f823a77cf943f7c4360f8e921d298f7485aeabbbdce800bef8a66",
+        "model_sha256": {
+          "resnet18.onnx": "0d9bd318e46987c3bdbfacae9e2c0f461cae1c6ac6ea6d43bbe541a91727e33f",
+          "selfie_multiclass.tflite": "c6748b1253a99067ef71f7e26ca71096cd449baefa8f101900ea23016507e0e0"
+        },
+        "method_revision": 3,
+        "head_crop_xyxy": [
+          372,
+          110,
+          1342,
+          1333
+        ],
+        "face_pixels": 194909,
+        "skin_pixels": 339732,
+        "method": "Independent neural initialization, not evaluated YCrCb predictions"
+      },
+      "review_corrections": [
+        {
+          "canvas_width": 500,
+          "polygon": [
+            [
+              290,
+              100
+            ],
+            [
+              350,
+              100
+            ],
+            [
+              350,
+              160
+            ],
+            [
+              290,
+              160
+            ]
+          ],
+          "layers": [
+            "skin",
+            "face"
+          ],
+          "value": 0
+        }
+      ],
+      "skin": {
+        "status": "complete"
+      },
+      "face": {
+        "status": "complete"
+      }
+    },
+    {
+      "image_id": "hfd_13_EAMA6",
+      "width": 2000,
+      "height": 1500,
+      "annotator": "codex_assisted_visual_review",
+      "review_status": "visually_reviewed",
+      "reference_path": "annotations/reference/hfd_13_EAMA6.png",
+      "reference_sha256": "6247dd0bafe24fe3e0fc86cb5a541f3e224503a431b1b80d341b45645fdf5652",
+      "method": "Independent BiSeNet part parsing and multiclass skin initialization, followed by project visual review and explicit corrections; no evaluated YCrCb predictions used as references",
+      "reference_limitations": "Project-assisted silver references, visually reviewed before predictions; approximate boundaries, not independent expert truth.",
+      "initialization": {
+        "source_image_sha256": "41f09cc8cdf7bd02a61e5ab12799231f9cbe3afd221ca4d220b67602f8c6e6c0",
+        "model_sha256": {
+          "resnet18.onnx": "0d9bd318e46987c3bdbfacae9e2c0f461cae1c6ac6ea6d43bbe541a91727e33f",
+          "selfie_multiclass.tflite": "c6748b1253a99067ef71f7e26ca71096cd449baefa8f101900ea23016507e0e0"
+        },
+        "method_revision": 3,
+        "head_crop_xyxy": [
+          444,
+          4,
+          1574,
+          1311
+        ],
+        "face_pixels": 301522,
+        "skin_pixels": 407806,
+        "method": "Independent neural initialization, not evaluated YCrCb predictions"
+      },
+      "review_corrections": [],
+      "skin": {
+        "status": "complete"
+      },
+      "face": {
+        "status": "complete"
+      }
+    },
+    {
+      "image_id": "hfd_13_EAMA7",
+      "width": 2000,
+      "height": 1500,
+      "annotator": "codex_assisted_visual_review",
+      "review_status": "visually_reviewed",
+      "reference_path": "annotations/reference/hfd_13_EAMA7.png",
+      "reference_sha256": "551a383a9c7347c5ead7271f5c779cb96cadd3ef6d717f14be545225c8b6c3f1",
+      "method": "Independent BiSeNet part parsing and multiclass skin initialization, followed by project visual review and explicit corrections; no evaluated YCrCb predictions used as references",
+      "reference_limitations": "Project-assisted silver references, visually reviewed before predictions; approximate boundaries, not independent expert truth.",
+      "initialization": {
+        "source_image_sha256": "fc65ea1697051818fc9e5ab3b42ed839891a51b8badaeb9f0e8eaf6c3e2532d1",
+        "model_sha256": {
+          "resnet18.onnx": "0d9bd318e46987c3bdbfacae9e2c0f461cae1c6ac6ea6d43bbe541a91727e33f",
+          "selfie_multiclass.tflite": "c6748b1253a99067ef71f7e26ca71096cd449baefa8f101900ea23016507e0e0"
+        },
+        "method_revision": 3,
+        "head_crop_xyxy": [
+          583,
+          106,
+          1632,
+          1370
+        ],
+        "face_pixels": 174308,
+        "skin_pixels": 320466,
+        "method": "Independent neural initialization, not evaluated YCrCb predictions"
+      },
+      "review_corrections": [],
+      "skin": {
+        "status": "complete"
+      },
+      "face": {
+        "status": "complete"
+      }
+    },
+    {
+      "image_id": "hfd_13_EAMA8",
+      "width": 2000,
+      "height": 1500,
+      "annotator": "codex_assisted_visual_review",
+      "review_status": "visually_reviewed",
+      "reference_path": "annotations/reference/hfd_13_EAMA8.png",
+      "reference_sha256": "cd9bf413d2157bed0947b7be8c1b521056c929e7da9af29fdd7fdc68ce64ab71",
+      "method": "Independent BiSeNet part parsing and multiclass skin initialization, followed by project visual review and explicit corrections; no evaluated YCrCb predictions used as references",
+      "reference_limitations": "Project-assisted silver references, visually reviewed before predictions; approximate boundaries, not independent expert truth.",
+      "initialization": {
+        "source_image_sha256": "d0818429fc674829e1041ae76eee667039b2e3b45a9b5facb5ff5a9eb2f2275b",
+        "model_sha256": {
+          "resnet18.onnx": "0d9bd318e46987c3bdbfacae9e2c0f461cae1c6ac6ea6d43bbe541a91727e33f",
+          "selfie_multiclass.tflite": "c6748b1253a99067ef71f7e26ca71096cd449baefa8f101900ea23016507e0e0"
+        },
+        "method_revision": 3,
+        "head_crop_xyxy": [
+          270,
+          52,
+          1569,
+          1500
+        ],
+        "face_pixels": 247419,
+        "skin_pixels": 407715,
+        "method": "Independent neural initialization, not evaluated YCrCb predictions"
+      },
+      "review_corrections": [],
+      "skin": {
+        "status": "complete"
+      },
+      "face": {
+        "status": "complete"
+      }
+    },
+    {
+      "image_id": "hfd_19_EAFA6",
+      "width": 2000,
+      "height": 1500,
+      "annotator": "codex_assisted_visual_review",
+      "review_status": "visually_reviewed",
+      "reference_path": "annotations/reference/hfd_19_EAFA6.png",
+      "reference_sha256": "95e99b1824f94560428bf60a8e836415546261f1c7da739a7fbf4c3b2c582eb5",
+      "method": "Independent BiSeNet part parsing and multiclass skin initialization, followed by project visual review and explicit corrections; no evaluated YCrCb predictions used as references",
+      "reference_limitations": "Project-assisted silver references, visually reviewed before predictions; approximate boundaries, not independent expert truth.",
+      "initialization": {
+        "source_image_sha256": "4a2ba303f5a4a7de226e9a046c6be9f2ca5bf5b8b6af50962f8b5de3ad655753",
+        "model_sha256": {
+          "resnet18.onnx": "0d9bd318e46987c3bdbfacae9e2c0f461cae1c6ac6ea6d43bbe541a91727e33f",
+          "selfie_multiclass.tflite": "c6748b1253a99067ef71f7e26ca71096cd449baefa8f101900ea23016507e0e0"
+        },
+        "method_revision": 3,
+        "head_crop_xyxy": [
+          404,
+          0,
+          1562,
+          1467
+        ],
+        "face_pixels": 367714,
+        "skin_pixels": 574608,
+        "method": "Independent neural initialization, not evaluated YCrCb predictions"
+      },
+      "review_corrections": [],
+      "skin": {
+        "status": "complete"
+      },
+      "face": {
+        "status": "complete"
+      }
+    },
+    {
+      "image_id": "hfd_19_EAFA7",
+      "width": 2000,
+      "height": 1500,
+      "annotator": "codex_assisted_visual_review",
+      "review_status": "visually_reviewed",
+      "reference_path": "annotations/reference/hfd_19_EAFA7.png",
+      "reference_sha256": "c1d0117508ecf8fa7abf114e541f69d00fde338c5b14c1db3c84e54f669eb40a",
+      "method": "Independent BiSeNet part parsing and multiclass skin initialization, followed by project visual review and explicit corrections; no evaluated YCrCb predictions used as references",
+      "reference_limitations": "Project-assisted silver references, visually reviewed before predictions; approximate boundaries, not independent expert truth.",
+      "initialization": {
+        "source_image_sha256": "e23a0a2c959f41ddb2ff28f0aa0372ac92bd5ba786cd408e257894f9b321dfed",
+        "model_sha256": {
+          "resnet18.onnx": "0d9bd318e46987c3bdbfacae9e2c0f461cae1c6ac6ea6d43bbe541a91727e33f",
+          "selfie_multiclass.tflite": "c6748b1253a99067ef71f7e26ca71096cd449baefa8f101900ea23016507e0e0"
+        },
+        "method_revision": 3,
+        "head_crop_xyxy": [
+          693,
+          13,
+          1607,
+          1402
+        ],
+        "face_pixels": 184852,
+        "skin_pixels": 344187,
+        "method": "Independent neural initialization, not evaluated YCrCb predictions"
+      },
+      "review_corrections": [],
+      "skin": {
+        "status": "complete"
+      },
+      "face": {
+        "status": "complete"
+      }
+    },
+    {
+      "image_id": "hfd_19_EAFA8",
+      "width": 2000,
+      "height": 1500,
+      "annotator": "codex_assisted_visual_review",
+      "review_status": "visually_reviewed",
+      "reference_path": "annotations/reference/hfd_19_EAFA8.png",
+      "reference_sha256": "9ac499aa2394bd6bc62aa7d0d4f46cefba7b66547bcde14dea8df7b1ea4b4cc8",
+      "method": "Independent BiSeNet part parsing and multiclass skin initialization, followed by project visual review and explicit corrections; no evaluated YCrCb predictions used as references",
+      "reference_limitations": "Project-assisted silver references, visually reviewed before predictions; approximate boundaries, not independent expert truth.",
+      "initialization": {
+        "source_image_sha256": "31cd324633a3ba6f9e9cd6f1ce12add4c9826c56db040672a493935271bdeafa",
+        "model_sha256": {
+          "resnet18.onnx": "0d9bd318e46987c3bdbfacae9e2c0f461cae1c6ac6ea6d43bbe541a91727e33f",
+          "selfie_multiclass.tflite": "c6748b1253a99067ef71f7e26ca71096cd449baefa8f101900ea23016507e0e0"
+        },
+        "method_revision": 3,
+        "head_crop_xyxy": [
+          461,
+          0,
+          1007,
+          1500
+        ],
+        "face_pixels": 145756,
+        "skin_pixels": 140052,
+        "method": "Independent neural initialization, not evaluated YCrCb predictions"
+      },
+      "review_corrections": [],
+      "skin": {
+        "status": "complete"
+      },
+      "face": {
+        "status": "complete"
+      }
+    },
+    {
+      "image_id": "hfd_14_AFA6",
+      "width": 2000,
+      "height": 1500,
+      "annotator": "codex_assisted_visual_review",
+      "review_status": "visually_reviewed",
+      "reference_path": "annotations/reference/hfd_14_AFA6.png",
+      "reference_sha256": "9fc5d441e2558bc76fe076ef805c63a77e2f1b845070addd1e2629aeefae1a3a",
+      "method": "Independent BiSeNet part parsing and multiclass skin initialization, followed by project visual review and explicit corrections; no evaluated YCrCb predictions used as references",
+      "reference_limitations": "Project-assisted silver references, visually reviewed before predictions; approximate boundaries, not independent expert truth.",
+      "initialization": {
+        "source_image_sha256": "48b0483d9b372b6831d36df253629ad11f5fed81c62b6bf231d59968da0f5e65",
+        "model_sha256": {
+          "resnet18.onnx": "0d9bd318e46987c3bdbfacae9e2c0f461cae1c6ac6ea6d43bbe541a91727e33f",
+          "selfie_multiclass.tflite": "c6748b1253a99067ef71f7e26ca71096cd449baefa8f101900ea23016507e0e0"
+        },
+        "method_revision": 3,
+        "head_crop_xyxy": [
+          426,
+          0,
+          1635,
+          1370
+        ],
+        "face_pixels": 341797,
+        "skin_pixels": 502269,
+        "method": "Independent neural initialization, not evaluated YCrCb predictions"
+      },
+      "review_corrections": [],
+      "skin": {
+        "status": "complete"
+      },
+      "face": {
+        "status": "complete"
+      }
+    },
+    {
+      "image_id": "hfd_14_AFA7",
+      "width": 2000,
+      "height": 1500,
+      "annotator": "codex_assisted_visual_review",
+      "review_status": "visually_reviewed",
+      "reference_path": "annotations/reference/hfd_14_AFA7.png",
+      "reference_sha256": "95427f5882dc88390374a70c4442a25bec42fb345fc7766aa8d64fdb3d7b3cc8",
+      "method": "Independent BiSeNet part parsing and multiclass skin initialization, followed by project visual review and explicit corrections; no evaluated YCrCb predictions used as references",
+      "reference_limitations": "Project-assisted silver references, visually reviewed before predictions; approximate boundaries, not independent expert truth.",
+      "initialization": {
+        "source_image_sha256": "a3dd21991aa7a31eb7925fec0bb901eee0be3235dbaa3f481582c00722e40cd8",
+        "model_sha256": {
+          "resnet18.onnx": "0d9bd318e46987c3bdbfacae9e2c0f461cae1c6ac6ea6d43bbe541a91727e33f",
+          "selfie_multiclass.tflite": "c6748b1253a99067ef71f7e26ca71096cd449baefa8f101900ea23016507e0e0"
+        },
+        "method_revision": 3,
+        "head_crop_xyxy": [
+          489,
+          0,
+          1698,
+          1450
+        ],
+        "face_pixels": 239671,
+        "skin_pixels": 312048,
+        "method": "Independent neural initialization, not evaluated YCrCb predictions"
+      },
+      "review_corrections": [],
+      "skin": {
+        "status": "complete"
+      },
+      "face": {
+        "status": "complete"
+      }
+    },
+    {
+      "image_id": "hfd_14_AFA8",
+      "width": 2000,
+      "height": 1500,
+      "annotator": "codex_assisted_visual_review",
+      "review_status": "visually_reviewed",
+      "reference_path": "annotations/reference/hfd_14_AFA8.png",
+      "reference_sha256": "2bcbd99847fd90addae34e3d7ee5c1989971fe04fda2c95e190962442a668bc7",
+      "method": "Independent BiSeNet part parsing and multiclass skin initialization, followed by project visual review and explicit corrections; no evaluated YCrCb predictions used as references",
+      "reference_limitations": "Project-assisted silver references, visually reviewed before predictions; approximate boundaries, not independent expert truth.",
+      "initialization": {
+        "source_image_sha256": "917d13fd9d3b329a67ea8a654ddd9af4e8be94e94dfea0e69cbd9630570c4ce2",
+        "model_sha256": {
+          "resnet18.onnx": "0d9bd318e46987c3bdbfacae9e2c0f461cae1c6ac6ea6d43bbe541a91727e33f",
+          "selfie_multiclass.tflite": "c6748b1253a99067ef71f7e26ca71096cd449baefa8f101900ea23016507e0e0"
+        },
+        "method_revision": 3,
+        "head_crop_xyxy": [
+          390,
+          135,
+          1292,
+          1288
+        ],
+        "face_pixels": 142766,
+        "skin_pixels": 187101,
+        "method": "Independent neural initialization, not evaluated YCrCb predictions"
+      },
+      "review_corrections": [],
+      "skin": {
+        "status": "complete"
+      },
+      "face": {
+        "status": "complete"
+      }
+    }
+  ]
+}
