@@ -1,0 +1,26 @@
+第三次project  基于YCbCr颜色空间的亚洲人脸分割
+
+一、运行
+电脑需有Python 3.10或更新版本。双击“运行.bat”，或运行python main.py。
+首次运行若缺少依赖，程序会根据requirements.txt自动安装到本文件夹的_packages目录，需要联网。
+默认处理8张代表图片，完成后打开结果总览。
+
+全部验证：python main.py --all
+选图界面：python main.py --gui
+指定图片：python main.py --image "照片路径"
+“运行.bat”也可接收相同参数，例如：运行.bat --all。
+
+二、文件
+main.py：完整算法、训练所得模型参数、多图评价和选图界面。
+images：79个验证输入，包括24张测试人像、20张无脸背景、33张复杂场景和2张手部派生裁剪。
+masks.npz：这些输入的像素参考，用于计算指标。每个数组以图片名索引，第1位表示肤色，第2位表示人脸。
+requirements.txt：Python依赖。
+
+三、结果
+结果自动生成在results下的新时间戳目录中。每张图片输出肤色掩膜、人脸掩膜、叠加图和对照图。
+overview.jpg为总览；per_image.csv为逐图指标；summary.csv为各组汇总。
+完整协方差模型为默认模型。--all同时计算独立通道模型，比较结果写入CSV，图片输出使用默认模型。
+选图界面保存原尺寸PNG掩膜、0或1的NPY掩膜与叠加图。
+--output可指定新的结果目录；--no-open可关闭自动打开总览。
+
+图片来源：Hawai‘i Face Database、BSDS500、WIDER-FAIR，详见实验报告。

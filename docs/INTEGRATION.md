@@ -7,7 +7,7 @@
 - B：`de32d71`，分割、后处理、独立通道实现与 7 项行为测试。
 - 在本地 `codex/app-integration` 合并 A/B 后实施 C；`.gitignore` 冲突保留 A 的数据/环境排除规则，再加入 C 输出规则。A 原始模型及其评估产物保留。
 
-最终本地 `C` 与 `main` 指向完整交付版本，`codex/app-integration` 保留整合开发历史；本轮只在用户指定目录完成，没有推送远端。
+整合完成时，本地 `C`、`main` 和 `codex/app-integration` 指向 `6df1baa`。后续在该提交上创建 `full-project` 分支，补入最终课程报告和精简提交源码；GitHub 完整版只发布到此分支，远端 `main` 保留原状。
 
 ## 整合时补齐的问题
 

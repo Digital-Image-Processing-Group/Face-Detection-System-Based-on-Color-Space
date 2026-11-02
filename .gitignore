@@ -16,3 +16,7 @@ data/derived/
 reports/evidence/
 reports/gui/
 exports/
+
+submission/images/
+submission/results/
+submission/_packages/
