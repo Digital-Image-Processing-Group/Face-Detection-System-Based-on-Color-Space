@@ -1,0 +1,50 @@
+import cv2
+import numpy as np
+
+COLOR_SPACE = "OpenCV-YCrCb-uint8-full-range"
+FEATURE_ORDER = ["Cb", "Cr"]
+
+
+def validate_model(model):
+    if not isinstance(model, dict):
+        raise ValueError("model 必须是 dict")
+    if model.get("schema_version") != 1:
+        raise ValueError("schema_version 必须为 1")
+    if model.get("color_space") != COLOR_SPACE:
+        raise ValueError("color_space 不匹配")
+    if model.get("feature_order") != FEATURE_ORDER:
+        raise ValueError("feature_order 必须为 ['Cb','Cr']")
+
+    mean = model.get("mean")
+    if not isinstance(mean, (list, tuple)) or len(mean) != 2:
+        raise ValueError("mean 长度必须为 2")
+    cov = model.get("covariance")
+    if (not isinstance(cov, (list, tuple)) or len(cov) != 2
+            or any(not isinstance(r, (list, tuple)) or len(r) != 2 for r in cov)):
+        raise ValueError("covariance 必须为 2x2")
+
+    lam = model.get("regularization_lambda")
+    if lam is None or not np.isfinite(lam) or lam < 0:
+        raise ValueError("regularization_lambda 必须为非负有限数")
+
+    mean_arr = np.asarray(mean, dtype=np.float64)
+    cov_arr = np.asarray(cov, dtype=np.float64)
+    if not np.all(np.isfinite(mean_arr)) or not np.all(np.isfinite(cov_arr)):
+        raise ValueError("模型参数含非有限值")
+
+    rev = model.get("model_revision")
+    if not isinstance(rev, str) or not rev:
+        raise ValueError("model_revision 必须为非空字符串")
+
+    return {
+        "mean": mean_arr,
+        "covariance": cov_arr,
+        "regularization_lambda": float(lam),
+        "model_revision": rev,
+    }
+
+
+def get_cb_cr(bgr_image):
+    ycrcb = cv2.cvtColor(bgr_image, cv2.COLOR_BGR2YCrCb)
+    # OpenCV 返回 Y, Cr, Cb
+    return ycrcb[:, :, 2].astype(np.float64), ycrcb[:, :, 1].astype(np.float64)
