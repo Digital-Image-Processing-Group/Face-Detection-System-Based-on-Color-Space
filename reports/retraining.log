@@ -1,0 +1,7 @@
+{
+  "model": "artifacts\\retrained\\skin_model.json",
+  "model_revision": "skin-f5498e2587cb13a8",
+  "usage": "verified_subjects",
+  "images": 120,
+  "sampled_pixels": 240000
+}

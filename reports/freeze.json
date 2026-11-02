@@ -1,0 +1,79 @@
+{
+  "created_utc": "2026-11-02T13:02:16.679541+00:00",
+  "model_sha256": "d53cefa4fe6ab85bde11f9787fd27423ec7d2a214f379ea20149de4573b2b910",
+  "algorithm_files_sha256": {
+    "__init__.py": "176ea01c54d1cfb7d19e7f47c73f9b6241c1465757b282f3cd352db42173dccc",
+    "baseline.py": "59a96a0dd6eb1962582d2e2b02403e8e1e9a1a1103773ac64eb29635b2ad3732",
+    "model_io.py": "e3c9fcb0a3d54ad1e31e06b95eab25820f5a24478050ef3a484d1e0d05167c2b",
+    "postprocess.py": "af1d77db365e59c18fad0270d6e1be0f14e35c2f16f2f69c2385d29cb808e642",
+    "segment.py": "28b9c70994ae01ef400e783bd00bc50daa26c5f03a16a9c2f382742c702dcdec",
+    "skin_mask.py": "359c5fc8ecef1b6f755fcf6e05e83c0603756330cd170ec8aeef7d6975ccef79"
+  },
+  "reference_record_sha256": {
+    "bsds.json": "784ca65b24ee2ea0bc362e677f8a8acb600fd29329f7b329f78f72bb84d7f02b",
+    "hawaii.json": "7df3be8bd1bc30c7e0a0236cf6d4048eea1d80fa7ab18fc49cfb25ed7e42b098",
+    "reserve.json": "2bded1431f4c39698438730e183de73d045e7e14deb96554bc42b10d1c843b30"
+  },
+  "manifest_sha256": "b3efdfe0bc9d8955f6b2ff7b191fb305ec83b94569db6c20ee700ff3a1270afe",
+  "configs": {
+    "full": {
+      "schema_version": 1,
+      "algorithm_revision": "integrated-v1",
+      "model_revision": "skin-d239a8aaf4ae7f05",
+      "model_sha256": "d53cefa4fe6ab85bde11f9787fd27423ec7d2a214f379ea20149de4573b2b910",
+      "manifest_sha256": "b3efdfe0bc9d8955f6b2ff7b191fb305ec83b94569db6c20ee700ff3a1270afe",
+      "covariance_mode": "full",
+      "distance_squared_threshold": 4.0,
+      "postprocess": {
+        "open_kernel": 5,
+        "close_kernel": 9,
+        "min_area_ratio": 0.001,
+        "max_area_ratio": 0.85,
+        "min_aspect_ratio": 0.3,
+        "max_aspect_ratio": 2.0,
+        "min_fill_ratio": 0.3,
+        "min_ellipse_similarity": 0.3,
+        "hole_fill_max_area_ratio": 0.3,
+        "kernel_reference_side": 1000
+      },
+      "selection": "validation_face_micro_iou_including_background_false_positives",
+      "calibration_inputs_sha256": "b031c726110ba46c20243640d94811ed80688d7227b38c5cdb30aedc286632f5",
+      "config_revision": "7c71ca627e972bdb"
+    },
+    "diagonal": {
+      "schema_version": 1,
+      "algorithm_revision": "integrated-v1",
+      "model_revision": "skin-d239a8aaf4ae7f05",
+      "model_sha256": "d53cefa4fe6ab85bde11f9787fd27423ec7d2a214f379ea20149de4573b2b910",
+      "manifest_sha256": "b3efdfe0bc9d8955f6b2ff7b191fb305ec83b94569db6c20ee700ff3a1270afe",
+      "covariance_mode": "diagonal",
+      "distance_squared_threshold": 4.0,
+      "postprocess": {
+        "open_kernel": 5,
+        "close_kernel": 9,
+        "min_area_ratio": 0.001,
+        "max_area_ratio": 0.85,
+        "min_aspect_ratio": 0.3,
+        "max_aspect_ratio": 2.0,
+        "min_fill_ratio": 0.3,
+        "min_ellipse_similarity": 0.3,
+        "hole_fill_max_area_ratio": 0.3,
+        "kernel_reference_side": 1000
+      },
+      "selection": "validation_face_micro_iou_including_background_false_positives",
+      "calibration_inputs_sha256": "b031c726110ba46c20243640d94811ed80688d7227b38c5cdb30aedc286632f5",
+      "config_revision": "751b0a60c37603d9"
+    }
+  },
+  "config_file_sha256": {
+    "full": "092b61328cb140c98afef2f53051fc0943e67addeca60502d28df896400cf326",
+    "diagonal": "ef79be234f7e4595e6fc80829fd739fc595fd18e25adc7615667c2adb6262156"
+  },
+  "test_status": "Exploratory integration evaluation: A test results were previously published. No new blind-test claim.",
+  "target_subset": {
+    "tag": "frontal",
+    "split": "test",
+    "target": 0.65,
+    "scope": "controlled frontal portraits, not a verified small-angle or arbitrary normal-light subset"
+  }
+}

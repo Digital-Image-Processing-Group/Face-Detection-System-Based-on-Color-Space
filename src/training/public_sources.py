@@ -6,6 +6,8 @@ import io
 import json
 import ssl
 import tarfile
+import time
+from urllib.error import URLError
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 from urllib.request import Request, urlopen
@@ -24,8 +26,15 @@ def fetch(url: str, target: Path, limit: int = 8_000_000) -> bytes:
             raise ValueError("Cached source exceeds size bound")
         return content
     request=Request(url,headers={"User-Agent":"ColorSpaceResearch/1.0"})
-    with urlopen(request,timeout=25,context=truststore.SSLContext(ssl.PROTOCOL_TLS_CLIENT)) as response:
-        content=response.read(limit+1)
+    for attempt in range(4):
+        try:
+            with urlopen(request,timeout=40,context=truststore.SSLContext(ssl.PROTOCOL_TLS_CLIENT)) as response:
+                content=response.read(limit+1)
+            break
+        except (URLError, TimeoutError, ConnectionError, ssl.SSLError):
+            if attempt == 3:
+                raise
+            time.sleep(2 ** attempt)
     if len(content)>limit:
         raise ValueError("Source exceeds download size bound")
     target.parent.mkdir(parents=True,exist_ok=True)

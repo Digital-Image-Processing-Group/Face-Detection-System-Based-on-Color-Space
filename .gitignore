@@ -13,3 +13,6 @@ data/annotations/proposals/
 
 data/annotations/scene_drafts/
 data/derived/
+reports/evidence/
+reports/gui/
+exports/

@@ -1,0 +1,70 @@
+Calibration validation only: 5/100
+Calibration validation only: 10/100
+Calibration validation only: 15/100
+Calibration validation only: 20/100
+Calibration validation only: 25/100
+Calibration validation only: 30/100
+Calibration validation only: 35/100
+Calibration validation only: 40/100
+Calibration validation only: 45/100
+Calibration validation only: 50/100
+Calibration validation only: 55/100
+Calibration validation only: 60/100
+Calibration validation only: 65/100
+Calibration validation only: 70/100
+Calibration validation only: 75/100
+Calibration validation only: 80/100
+Calibration validation only: 85/100
+Calibration validation only: 90/100
+Calibration validation only: 95/100
+Calibration validation only: 100/100
+{
+  "full": {
+    "schema_version": 1,
+    "algorithm_revision": "integrated-v1",
+    "model_revision": "skin-d239a8aaf4ae7f05",
+    "model_sha256": "d53cefa4fe6ab85bde11f9787fd27423ec7d2a214f379ea20149de4573b2b910",
+    "manifest_sha256": "b3efdfe0bc9d8955f6b2ff7b191fb305ec83b94569db6c20ee700ff3a1270afe",
+    "covariance_mode": "full",
+    "distance_squared_threshold": 4.0,
+    "postprocess": {
+      "open_kernel": 5,
+      "close_kernel": 9,
+      "min_area_ratio": 0.001,
+      "max_area_ratio": 0.85,
+      "min_aspect_ratio": 0.3,
+      "max_aspect_ratio": 2.0,
+      "min_fill_ratio": 0.3,
+      "min_ellipse_similarity": 0.3,
+      "hole_fill_max_area_ratio": 0.3,
+      "kernel_reference_side": 1000
+    },
+    "selection": "validation_face_micro_iou_including_background_false_positives",
+    "calibration_inputs_sha256": "b031c726110ba46c20243640d94811ed80688d7227b38c5cdb30aedc286632f5",
+    "config_revision": "7c71ca627e972bdb"
+  },
+  "diagonal": {
+    "schema_version": 1,
+    "algorithm_revision": "integrated-v1",
+    "model_revision": "skin-d239a8aaf4ae7f05",
+    "model_sha256": "d53cefa4fe6ab85bde11f9787fd27423ec7d2a214f379ea20149de4573b2b910",
+    "manifest_sha256": "b3efdfe0bc9d8955f6b2ff7b191fb305ec83b94569db6c20ee700ff3a1270afe",
+    "covariance_mode": "diagonal",
+    "distance_squared_threshold": 4.0,
+    "postprocess": {
+      "open_kernel": 5,
+      "close_kernel": 9,
+      "min_area_ratio": 0.001,
+      "max_area_ratio": 0.85,
+      "min_aspect_ratio": 0.3,
+      "max_aspect_ratio": 2.0,
+      "min_fill_ratio": 0.3,
+      "min_ellipse_similarity": 0.3,
+      "hole_fill_max_area_ratio": 0.3,
+      "kernel_reference_side": 1000
+    },
+    "selection": "validation_face_micro_iou_including_background_false_positives",
+    "calibration_inputs_sha256": "b031c726110ba46c20243640d94811ed80688d7227b38c5cdb30aedc286632f5",
+    "config_revision": "751b0a60c37603d9"
+  }
+}

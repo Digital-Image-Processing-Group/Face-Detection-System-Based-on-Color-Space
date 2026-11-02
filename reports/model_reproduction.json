@@ -1,0 +1,27 @@
+{
+  "delivered_model_revision": "skin-d239a8aaf4ae7f05",
+  "reproduced_model_revision": "skin-f5498e2587cb13a8",
+  "training_images": 120,
+  "sampled_pixels": 240000,
+  "raw_source_hashes_verified": 244,
+  "mean_max_abs_difference": 0.0,
+  "covariance_max_abs_difference": 1.0658141036401503e-14,
+  "generated_masks_pixel_verified_against_frozen_references": 488,
+  "generated_png_byte_hash_differences": 120,
+  "historical_decoded_training_image_digest_differences": [
+    "hfd_7_AFA2",
+    "hfd_7_AFA3",
+    "hfd_7_AFA6",
+    "hfd_7_AFA7",
+    "hfd_7_AFA8"
+  ],
+  "delivered_environment": {
+    "opencv_version": "5.0.0",
+    "numpy_version": "2.4.4"
+  },
+  "current_environment": {
+    "opencv_version": "5.0.0",
+    "numpy_version": "2.5.4"
+  },
+  "qualification": "Numerical fit reproduced within 1e-10; not a byte-identical replay of A. All original file hashes and all 488 reference mask pixels verified. All training PNG file hashes and five historical decoded-image digests differ; A did not pin Pillow in its model metadata, so the cause of decoded digest drift is not established. Original model preserved."
+}

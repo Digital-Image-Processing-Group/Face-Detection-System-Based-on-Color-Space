@@ -1,15 +1,24 @@
 {
-  "distance_threshold": 20.0,
+  "schema_version": 1,
+  "algorithm_revision": "integrated-v1",
   "model_revision": "skin-d239a8aaf4ae7f05",
+  "model_sha256": "d53cefa4fe6ab85bde11f9787fd27423ec7d2a214f379ea20149de4573b2b910",
+  "manifest_sha256": "b3efdfe0bc9d8955f6b2ff7b191fb305ec83b94569db6c20ee700ff3a1270afe",
+  "covariance_mode": "full",
+  "distance_squared_threshold": 4.0,
   "postprocess": {
-    "open_kernel": 3,
-    "close_kernel": 5,
+    "open_kernel": 5,
+    "close_kernel": 9,
     "min_area_ratio": 0.001,
-    "max_area_ratio": 0.5,
-    "min_aspect_ratio": 0.5,
+    "max_area_ratio": 0.85,
+    "min_aspect_ratio": 0.3,
     "max_aspect_ratio": 2.0,
-    "min_fill_ratio": 0.4,
-    "min_ellipse_similarity": 0.5,
-    "hole_fill_max_area_ratio": 0.3
-  }
+    "min_fill_ratio": 0.3,
+    "min_ellipse_similarity": 0.3,
+    "hole_fill_max_area_ratio": 0.3,
+    "kernel_reference_side": 1000
+  },
+  "selection": "validation_face_micro_iou_including_background_false_positives",
+  "calibration_inputs_sha256": "b031c726110ba46c20243640d94811ed80688d7227b38c5cdb30aedc286632f5",
+  "config_revision": "7c71ca627e972bdb"
 }

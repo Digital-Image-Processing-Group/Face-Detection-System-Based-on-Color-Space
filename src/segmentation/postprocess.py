@@ -5,23 +5,25 @@ import numpy as np
 def _fill_holes_limited(region_mask, max_hole_area):
     h, w = region_mask.shape
     inv = (1 - region_mask).astype(np.uint8)
-    num, labels = cv2.connectedComponents(inv, connectivity=8)
+    num, labels, stats, _ = cv2.connectedComponentsWithStats(inv, connectivity=8)
     border = set(labels[0, :].tolist()) | set(labels[-1, :].tolist())
     border |= set(labels[:, 0].tolist()) | set(labels[:, -1].tolist())
     out = region_mask.copy()
     for lab in range(1, num):
         if lab in border:
             continue
-        hole = labels == lab
-        if int(hole.sum()) <= max_hole_area:
-            out[hole] = 1
+        if int(stats[lab, cv2.CC_STAT_AREA]) <= max_hole_area:
+            out[labels == lab] = 1
     return out
 
 
 def postprocess(skin_mask, pp):
     h, w = skin_mask.shape
-    ko = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (pp["open_kernel"], pp["open_kernel"]))
-    kc = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (pp["close_kernel"], pp["close_kernel"]))
+    scale = min(h, w) / pp.get("kernel_reference_side", min(h, w))
+    def size(key):
+        return min(101, max(1, round(pp[key] * scale)) | 1)
+    ko = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (size("open_kernel"), size("open_kernel")))
+    kc = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (size("close_kernel"), size("close_kernel")))
     m = cv2.morphologyEx(skin_mask, cv2.MORPH_OPEN, ko)
     m = cv2.morphologyEx(m, cv2.MORPH_CLOSE, kc)
 
@@ -29,7 +31,6 @@ def postprocess(skin_mask, pp):
     face = np.zeros((h, w), dtype=np.uint8)
     candidates = []
     img_area = float(h * w)
-    max_hole = int(pp["hole_fill_max_area_ratio"] * img_area)
 
     for i in range(1, num):
         x, y, bw, bh, area = stats[i]
@@ -45,7 +46,7 @@ def postprocess(skin_mask, pp):
         if fill < pp["min_fill_ratio"]:
             continue
 
-        comp = (labels == i).astype(np.uint8)
+        comp = (labels[y:y + bh, x:x + bw] == i).astype(np.uint8)
         cnts, _ = cv2.findContours(comp, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
         if not cnts:
             continue
@@ -60,12 +61,13 @@ def postprocess(skin_mask, pp):
         if sim < pp["min_ellipse_similarity"]:
             continue
 
-        roi = comp[y:y + bh, x:x + bw]
-        roi_filled = _fill_holes_limited(roi, max_hole)
+        # Limit holes relative to this component, not the whole photograph.
+        max_hole = int(pp["hole_fill_max_area_ratio"] * area)
+        roi_filled = _fill_holes_limited(comp, max_hole)
         face[y:y + bh, x:x + bw] = np.maximum(face[y:y + bh, x:x + bw], roi_filled)
         candidates.append({
             "bbox": {"x": int(x), "y": int(y), "width": int(bw), "height": int(bh)},
-            "area": int(area),
+            "area": int(roi_filled.sum()),
         })
 
     return face, candidates

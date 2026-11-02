@@ -1,5 +1,7 @@
 # A 交付与使用说明
 
+> 本文件保留 A 分支交付时的说明。完整 B/C 系统现已接入，当前运行与验收以 [README](../README.md)、[集成交付说明](INTEGRATION.md)及 [C 最终报告](../reports/FINAL_REPORT.md)为准；下文的“待实现”仅表示 A 当时的交接状态。
+
 主实验清单为 `data/manifest.csv`，统计模型为 `models/skin_model.json`，33 张外部场景另有来源清单。A 的数据、标注参考、统计模型和基线报告已交付；B/C 完整系统尚未验收。具体工作见 [B 交接](HANDOFF_B.md)、[C 交接](HANDOFF_C.md)，来源与使用条件见 [数据来源](DATA_SOURCES.md)。以下路径均相对仓库根目录。
 
 ## 交付文件与结果

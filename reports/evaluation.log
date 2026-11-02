@@ -1,0 +1,52 @@
+Evaluate full validation: 10/100
+Evaluate full validation: 20/100
+Evaluate full validation: 30/100
+Evaluate full validation: 40/100
+Evaluate full validation: 50/100
+Evaluate full validation: 60/100
+Evaluate full validation: 70/100
+Evaluate full validation: 80/100
+Evaluate full validation: 90/100
+Evaluate full validation: 100/100
+Evaluate full test: 10/24
+Evaluate full test: 20/24
+Evaluate full test: 24/24
+Evaluate full external_scenes: 10/33
+Evaluate full external_scenes: 20/33
+Evaluate full external_scenes: 30/33
+Evaluate full external_scenes: 33/33
+Evaluate full derived_hands: 2/2
+Evaluate diagonal validation: 10/100
+Evaluate diagonal validation: 20/100
+Evaluate diagonal validation: 30/100
+Evaluate diagonal validation: 40/100
+Evaluate diagonal validation: 50/100
+Evaluate diagonal validation: 60/100
+Evaluate diagonal validation: 70/100
+Evaluate diagonal validation: 80/100
+Evaluate diagonal validation: 90/100
+Evaluate diagonal validation: 100/100
+Evaluate diagonal test: 10/24
+Evaluate diagonal test: 20/24
+Evaluate diagonal test: 24/24
+Evaluate diagonal external_scenes: 10/33
+Evaluate diagonal external_scenes: 20/33
+Evaluate diagonal external_scenes: 30/33
+Evaluate diagonal external_scenes: 33/33
+Evaluate diagonal derived_hands: 2/2
+{
+  "full": {
+    "images": 8,
+    "mean_face_iou": 0.6816271734623307,
+    "target": 0.65,
+    "observed_target_met": true,
+    "qualification": "Exploratory on previously reported reference set; no new blind-test certification"
+  },
+  "diagonal": {
+    "images": 8,
+    "mean_face_iou": 0.68870885591282,
+    "target": 0.65,
+    "observed_target_met": true,
+    "qualification": "Exploratory on previously reported reference set; no new blind-test certification"
+  }
+}

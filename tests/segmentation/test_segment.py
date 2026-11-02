@@ -78,7 +78,8 @@ class TestSegment(unittest.TestCase):
 
     def test_no_candidate(self):
         img = _make_image(50, 50, [])
-        skin, face, cands, t = segment_image(img, MODEL, CONFIG)
+        result = segment_image(img, MODEL, CONFIG)
+        skin, face, cands, t = (result[k] for k in ("skin_mask", "face_mask", "candidates", "timing_ms"))
         self.assertEqual(skin.shape, (50, 50))
         self.assertEqual(face.shape, (50, 50))
         self.assertEqual(skin.dtype, np.uint8)
@@ -91,7 +92,8 @@ class TestSegment(unittest.TestCase):
 
     def test_multiple_candidates(self):
         img = _make_image(100, 100, [(10, 10, 20, 20), (70, 70, 20, 20)])
-        skin, face, cands, t = segment_image(img, MODEL, CONFIG)
+        result = segment_image(img, MODEL, CONFIG)
+        skin, face, cands, t = (result[k] for k in ("skin_mask", "face_mask", "candidates", "timing_ms"))
         self.assertEqual(len(cands), 2)
         for c in cands:
             self.assertIn("bbox", c)
@@ -101,13 +103,15 @@ class TestSegment(unittest.TestCase):
 
     def test_small_image(self):
         img = _make_image(10, 10, [])
-        skin, face, cands, t = segment_image(img, MODEL, CONFIG)
+        result = segment_image(img, MODEL, CONFIG)
+        skin, face, cands, t = (result[k] for k in ("skin_mask", "face_mask", "candidates", "timing_ms"))
         self.assertEqual(skin.shape, (10, 10))
         self.assertEqual(face.shape, (10, 10))
 
     def test_baseline_runs(self):
         img = _make_image(100, 100, [(10, 10, 20, 20)])
-        skin, face, cands, t = segment_image_baseline(img, MODEL, CONFIG)
+        result = segment_image_baseline(img, MODEL, CONFIG)
+        skin, face, cands, t = (result[k] for k in ("skin_mask", "face_mask", "candidates", "timing_ms"))
         self.assertEqual(skin.shape, (100, 100))
         self.assertEqual(face.shape, (100, 100))
         self.assertEqual(skin.dtype, np.uint8)

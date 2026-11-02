@@ -1,0 +1,31 @@
+{
+  "native_tk_window": true,
+  "tk_version": 8.6,
+  "checks": [
+    {
+      "case": "single",
+      "real_image_id": "hfd_12_SEAFA6",
+      "candidate_count": 1,
+      "screenshot": "reports/gui/single.png",
+      "screenshot_sha256": "5427393bac4eb4962a4e650a9e4255aac17598ec3b62dbf209c0c0fdc4480ec4",
+      "gui_saved_result": "reports/gui/12_SEAFA6_20261102_060550_545766"
+    },
+    {
+      "case": "no_face",
+      "real_image_id": "bsds_105027",
+      "candidate_count": 0,
+      "screenshot": "reports/gui/no_face.png",
+      "screenshot_sha256": "4af3ac3933b397f829f7011e4d1c485f8c66fd317475d54808ee93cea288a064"
+    },
+    {
+      "case": "multiple",
+      "real_image_id": "wf_1_Handshaking_Handshaking_1_453",
+      "candidate_count": 7,
+      "screenshot": "reports/gui/multiple.png",
+      "screenshot_sha256": "ae5a23e3cebd96ce0dcee5b71b0e1907cc6bfb4599f140d9f8e3308fe0ccf73e"
+    }
+  ],
+  "resize_capture": "reports/gui/resized.png",
+  "save_command_six_files_verified": true,
+  "qualification": "Programmatic real-Tk event-loop exercise with file-dialog choices supplied; screenshots visually reviewed separately. Not a manual click-through."
+}
