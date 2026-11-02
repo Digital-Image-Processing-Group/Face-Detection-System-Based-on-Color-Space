@@ -1,0 +1,11 @@
+{
+  "tests": {
+    "exit_code": 0
+  },
+  "detection": {
+    "exit_code": 0
+  },
+  "model_hash_binding_survives_checkout": true,
+  "source_commit": "e24d554b5c60c26afafe83e2ef3fdbc468a1b00d",
+  "qualification": "Fresh local Git clone, uses existing isolated Python dependencies, no original photos copied; real detection input passed by absolute path."
+}

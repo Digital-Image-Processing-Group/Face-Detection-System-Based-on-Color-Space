@@ -1,0 +1,67 @@
+Saved split manifest: C:\Users\UIA\AppData\Local\Temp\tmp2mm6p5sy\split.csv
+Saved split manifest: C:\Users\UIA\AppData\Local\Temp\tmpltu5j5e8\split.csv
+{
+  "model": "C:\\Users\\UIA\\AppData\\Local\\Temp\\tmpd30unfrn\\model.json",
+  "model_revision": "skin-6daadc345e860d08",
+  "usage": "verified_subjects",
+  "images": 2,
+  "sampled_pixels": 20
+}
+Calibration validation only: 1/1
+Calibration validation only: 1/1
+test_changed_training_mask_rejects_stale_model (tests.data.test_assessment.AssessmentTests.test_changed_training_mask_rejects_stale_model) ... ok
+test_confusion_and_empty_metric_conventions (tests.data.test_assessment.AssessmentTests.test_confusion_and_empty_metric_conventions) ... ok
+test_face_baseline_fills_holes_and_removes_small_component (tests.data.test_assessment.AssessmentTests.test_face_baseline_fills_holes_and_removes_small_component) ... ok
+test_no_face_images_have_separate_image_false_positive_accounting (tests.data.test_assessment.AssessmentTests.test_no_face_images_have_separate_image_false_positive_accounting) ... ok
+test_test_labels_do_not_select_threshold (tests.data.test_assessment.AssessmentTests.test_test_labels_do_not_select_threshold) ... ok
+test_training_margin_uses_only_interior (tests.data.test_assessment.AssessmentTests.test_training_margin_uses_only_interior) ... ok
+test_finalize_freezes_reviewed_bytes_and_refuses_changed_drafts (tests.data.test_references.ReferenceTests.test_finalize_freezes_reviewed_bytes_and_refuses_changed_drafts) ... ok
+test_finalize_requires_an_explicit_complete_review_ledger (tests.data.test_references.ReferenceTests.test_finalize_requires_an_explicit_complete_review_ledger) ... ok
+test_reference_bits_restore_distinct_skin_and_face_regions (tests.data.test_references.ReferenceTests.test_reference_bits_restore_distinct_skin_and_face_regions) ... ok
+test_reference_rejects_tampering_unreviewed_status_and_invalid_values (tests.data.test_references.ReferenceTests.test_reference_rejects_tampering_unreviewed_status_and_invalid_values) ... ok
+test_prepare_split_does_not_certify_missing_masks (tests.data.test_sources.PublicSourceTests.test_prepare_split_does_not_certify_missing_masks) ... ok
+test_restore_checks_author_hash_before_installing_a_download (tests.data.test_sources.PublicSourceTests.test_restore_checks_author_hash_before_installing_a_download) ... ok
+test_restore_preserves_frozen_annotations_and_refuses_corrupt_images (tests.data.test_sources.PublicSourceTests.test_restore_preserves_frozen_annotations_and_refuses_corrupt_images) ... ok
+test_bad_covariance_rejected (tests.data.test_training.TrainingTests.test_bad_covariance_rejected) ... ok
+test_balanced_sampling_and_determinism (tests.data.test_training.TrainingTests.test_balanced_sampling_and_determinism) ... ok
+test_batch_annotations_and_duplicate_ids (tests.data.test_training.TrainingTests.test_batch_annotations_and_duplicate_ids) ... ok
+test_cli_split_checks_real_files_before_export (tests.data.test_training.TrainingTests.test_cli_split_checks_real_files_before_export) ... ok
+test_cli_train_exports_valid_model_and_diagnostics (tests.data.test_training.TrainingTests.test_cli_train_exports_valid_model_and_diagnostics) ... ok
+test_colorless_and_review_excluded_samples_do_not_enter_model (tests.data.test_training.TrainingTests.test_colorless_and_review_excluded_samples_do_not_enter_model) ... ok
+test_exif_direction_and_bgr_order (tests.data.test_training.TrainingTests.test_exif_direction_and_bgr_order) ... ok
+test_fit_rejects_unverified_or_incomplete_annotation (tests.data.test_training.TrainingTests.test_fit_rejects_unverified_or_incomplete_annotation) ... ok
+test_fitting_uses_cbcr_order_and_sample_covariance (tests.data.test_training.TrainingTests.test_fitting_uses_cbcr_order_and_sample_covariance) ... ok
+test_group_split_is_reproducible_and_keeps_shared_subjects (tests.data.test_training.TrainingTests.test_group_split_is_reproducible_and_keeps_shared_subjects) ... ok
+test_held_out_pixels_do_not_enter_fit (tests.data.test_training.TrainingTests.test_held_out_pixels_do_not_enter_fit) ... ok
+test_identical_images_across_splits_rejected (tests.data.test_training.TrainingTests.test_identical_images_across_splits_rejected) ... ok
+test_manifest_roundtrip_and_duplicate_id_rejected (tests.data.test_training.TrainingTests.test_manifest_roundtrip_and_duplicate_id_rejected) ... ok
+test_mask_encodings_and_shape (tests.data.test_training.TrainingTests.test_mask_encodings_and_shape) ... ok
+test_polygon_holes_and_coordinate_validation (tests.data.test_training.TrainingTests.test_polygon_holes_and_coordinate_validation) ... ok
+test_rasterize_retains_annotation_semantics (tests.data.test_training.TrainingTests.test_rasterize_retains_annotation_semantics) ... ok
+test_split_refuses_unverified_and_existing_splits (tests.data.test_training.TrainingTests.test_split_refuses_unverified_and_existing_splits) ... ok
+test_subject_leakage_and_transitive_groups (tests.data.test_training.TrainingTests.test_subject_leakage_and_transitive_groups) ... ok
+test_transparency_and_grayscale_rejected (tests.data.test_training.TrainingTests.test_transparency_and_grayscale_rejected) ... ok
+test_bounded_holes_and_candidate_area (tests.integration.test_contracts.IntegrationTests.test_bounded_holes_and_candidate_area) ... ok
+test_calibration_does_not_read_test_pixels_or_labels (tests.integration.test_contracts.IntegrationTests.test_calibration_does_not_read_test_pixels_or_labels) ... ok
+test_contract_rejects_mask_encoding_or_coordinates (tests.integration.test_contracts.IntegrationTests.test_contract_rejects_mask_encoding_or_coordinates) ... ok
+test_exif_rotation_and_rgb_bgr (tests.integration.test_contracts.IntegrationTests.test_exif_rotation_and_rgb_bgr) ... ok
+test_export_failure_leaves_no_partial_directory (tests.integration.test_contracts.IntegrationTests.test_export_failure_leaves_no_partial_directory) ... ok
+test_invalid_config_and_conflicting_thresholds (tests.integration.test_contracts.IntegrationTests.test_invalid_config_and_conflicting_thresholds) ... ok
+test_invalid_covariance_rejected_before_inference (tests.integration.test_contracts.IntegrationTests.test_invalid_covariance_rejected_before_inference) ... ok
+test_metrics_known_counts_and_empty_conventions (tests.integration.test_contracts.IntegrationTests.test_metrics_known_counts_and_empty_conventions) ... ok
+test_model_revision_and_hash_binding (tests.integration.test_contracts.IntegrationTests.test_model_revision_and_hash_binding) ... ok
+test_no_candidate_is_successful_empty_export (tests.integration.test_contracts.IntegrationTests.test_no_candidate_is_successful_empty_export) ... ok
+test_real_model_multicandidate_and_exact_export (tests.integration.test_contracts.IntegrationTests.test_real_model_multicandidate_and_exact_export) ... ok
+test_transparency_gray_corrupt_and_wrong_extension_rejected (tests.integration.test_contracts.IntegrationTests.test_transparency_gray_corrupt_and_wrong_extension_rejected) ... ok
+test_baseline_runs (tests.segmentation.test_segment.TestSegment.test_baseline_runs) ... ok
+test_invalid_image (tests.segmentation.test_segment.TestSegment.test_invalid_image) ... ok
+test_invalid_model (tests.segmentation.test_segment.TestSegment.test_invalid_model) ... ok
+test_multiple_candidates (tests.segmentation.test_segment.TestSegment.test_multiple_candidates) ... ok
+test_no_candidate (tests.segmentation.test_segment.TestSegment.test_no_candidate) ... ok
+test_revision_mismatch (tests.segmentation.test_segment.TestSegment.test_revision_mismatch) ... ok
+test_small_image (tests.segmentation.test_segment.TestSegment.test_small_image) ... ok
+
+----------------------------------------------------------------------
+Ran 51 tests in 2.007s
+
+OK
