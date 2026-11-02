@@ -1,0 +1,15 @@
+{
+  "distance_threshold": 20.0,
+  "model_revision": "skin-d239a8aaf4ae7f05",
+  "postprocess": {
+    "open_kernel": 3,
+    "close_kernel": 5,
+    "min_area_ratio": 0.001,
+    "max_area_ratio": 0.5,
+    "min_aspect_ratio": 0.5,
+    "max_aspect_ratio": 2.0,
+    "min_fill_ratio": 0.4,
+    "min_ellipse_similarity": 0.5,
+    "hole_fill_max_area_ratio": 0.3
+  }
+}
