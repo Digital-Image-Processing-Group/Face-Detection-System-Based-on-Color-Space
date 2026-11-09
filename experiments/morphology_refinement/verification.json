@@ -1,0 +1,22 @@
+{
+  "inputs": 79,
+  "mask_roundtrips": 158,
+  "frozen_baseline_counts_match": true,
+  "color_masks_unchanged": true,
+  "original_resolution": true,
+  "comparison_sheets": 79,
+  "tests_passed": 55,
+  "test_process_exit": 0,
+  "validation_process_exit": 0,
+  "evaluation_process_exit": 0,
+  "gallery_links_checked": 158,
+  "gallery_defaults_to_faces": true,
+  "single_image_entry_pixel_matches": true,
+  "visually_reviewed": [
+    "hfd_5_AFA8",
+    "hfd_19_EAFA8",
+    "hfd_19_EAFA7",
+    "wf_50_Celebration_Or_Party_birthdayparty_50_179",
+    "wf_27_Spa_Spa_27_293"
+  ]
+}

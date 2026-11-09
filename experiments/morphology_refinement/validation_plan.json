@@ -1,0 +1,130 @@
+{
+  "created_utc": "2026-11-09T13:43:01.628964+00:00",
+  "split": "validation",
+  "objective": "maximum accumulated face IoU including background false positives",
+  "profiles": [
+    {
+      "close_kernel": 1,
+      "early_fill": false,
+      "candidate_fraction": 0.0
+    },
+    {
+      "close_kernel": 1,
+      "early_fill": true,
+      "candidate_fraction": 0.0
+    },
+    {
+      "close_kernel": 3,
+      "early_fill": false,
+      "candidate_fraction": 0.0
+    },
+    {
+      "close_kernel": 3,
+      "early_fill": true,
+      "candidate_fraction": 0.0
+    },
+    {
+      "close_kernel": 5,
+      "early_fill": false,
+      "candidate_fraction": 0.0
+    },
+    {
+      "close_kernel": 5,
+      "early_fill": true,
+      "candidate_fraction": 0.0
+    },
+    {
+      "close_kernel": 9,
+      "early_fill": false,
+      "candidate_fraction": 0.0
+    },
+    {
+      "close_kernel": 9,
+      "early_fill": true,
+      "candidate_fraction": 0.0
+    },
+    {
+      "close_kernel": 1,
+      "early_fill": false,
+      "candidate_fraction": 0.01
+    },
+    {
+      "close_kernel": 1,
+      "early_fill": true,
+      "candidate_fraction": 0.01
+    },
+    {
+      "close_kernel": 3,
+      "early_fill": false,
+      "candidate_fraction": 0.01
+    },
+    {
+      "close_kernel": 3,
+      "early_fill": true,
+      "candidate_fraction": 0.01
+    },
+    {
+      "close_kernel": 5,
+      "early_fill": false,
+      "candidate_fraction": 0.01
+    },
+    {
+      "close_kernel": 5,
+      "early_fill": true,
+      "candidate_fraction": 0.01
+    },
+    {
+      "close_kernel": 9,
+      "early_fill": false,
+      "candidate_fraction": 0.01
+    },
+    {
+      "close_kernel": 9,
+      "early_fill": true,
+      "candidate_fraction": 0.01
+    },
+    {
+      "close_kernel": 1,
+      "early_fill": false,
+      "candidate_fraction": 0.025
+    },
+    {
+      "close_kernel": 1,
+      "early_fill": true,
+      "candidate_fraction": 0.025
+    },
+    {
+      "close_kernel": 3,
+      "early_fill": false,
+      "candidate_fraction": 0.025
+    },
+    {
+      "close_kernel": 3,
+      "early_fill": true,
+      "candidate_fraction": 0.025
+    },
+    {
+      "close_kernel": 5,
+      "early_fill": false,
+      "candidate_fraction": 0.025
+    },
+    {
+      "close_kernel": 5,
+      "early_fill": true,
+      "candidate_fraction": 0.025
+    },
+    {
+      "close_kernel": 9,
+      "early_fill": false,
+      "candidate_fraction": 0.025
+    },
+    {
+      "close_kernel": 9,
+      "early_fill": true,
+      "candidate_fraction": 0.025
+    }
+  ],
+  "resolution": "original",
+  "color_model_sha256": "d53cefa4fe6ab85bde11f9787fd27423ec7d2a214f379ea20149de4573b2b910",
+  "algorithm_sha256": "d83c2e2e1fb02a1c9768275b248485220e6a3945fb1b954d2137a17929670d5d"
+}

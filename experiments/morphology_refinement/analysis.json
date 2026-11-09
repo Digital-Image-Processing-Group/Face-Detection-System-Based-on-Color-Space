@@ -1,0 +1,8 @@
+{
+  "test_changes_above_half_percentage_point": {
+    "improved": 5,
+    "declined": 4,
+    "stable": 15
+  },
+  "mean_iou_change_without_hfd_5_AFA8": -0.0007506313790162765
+}

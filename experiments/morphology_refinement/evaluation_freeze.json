@@ -1,0 +1,33 @@
+{
+  "selected_sha256": "6aa5184c5c56dfb21df05cd1365212ec45a579c43ace2c2c0e896b796ec22264",
+  "methods": {
+    "refined": {
+      "close_kernel": 9,
+      "early_fill": true,
+      "candidate_fraction": 0.01
+    },
+    "weak_close": {
+      "close_kernel": 5,
+      "early_fill": false,
+      "candidate_fraction": 0.0
+    },
+    "early_fill": {
+      "close_kernel": 9,
+      "early_fill": true,
+      "candidate_fraction": 0.0
+    },
+    "weak_close_early_fill": {
+      "close_kernel": 5,
+      "early_fill": true,
+      "candidate_fraction": 0.0
+    },
+    "adaptive": {
+      "close_kernel": 9,
+      "early_fill": true,
+      "candidate_fraction": 0.01
+    }
+  },
+  "runner_sha256": "086b749572f33d89fbea389a373f0ace25f75742eb1e4cdfa35d3917ea93db93",
+  "resolution": "original",
+  "created_utc": "2026-11-09T13:45:45.819130+00:00"
+}

@@ -1,0 +1,72 @@
+[
+  {
+    "image_id": "hfd_5_AFA8",
+    "before": 0.0,
+    "after": 0.6332457515045238,
+    "delta": 0.6332457515045238,
+    "evidence": "comparisons/hfd_5_AFA8.jpg"
+  },
+  {
+    "image_id": "hfd_19_EAFA8",
+    "before": 0.4607824652368607,
+    "after": 0.49496814299055647,
+    "delta": 0.03418567775369574,
+    "evidence": "comparisons/hfd_19_EAFA8.jpg"
+  },
+  {
+    "image_id": "hfd_12_SEAFA8",
+    "before": 0.7219346867904367,
+    "after": 0.7298830718510779,
+    "delta": 0.007948385060641217,
+    "evidence": "comparisons/hfd_12_SEAFA8.jpg"
+  },
+  {
+    "image_id": "hfd_19_EAFA7",
+    "before": 0.5117862770885911,
+    "after": 0.4678857884841681,
+    "delta": -0.04390048860442303,
+    "evidence": "comparisons/hfd_19_EAFA7.jpg"
+  },
+  {
+    "image_id": "hfd_14_AFA7",
+    "before": 0.7312483564371314,
+    "after": 0.7073192834409912,
+    "delta": -0.02392907299614022,
+    "evidence": "comparisons/hfd_14_AFA7.jpg"
+  },
+  {
+    "image_id": "wf_50_Celebration_Or_Party_birthdayparty_50_179",
+    "before": 0.31290346367067307,
+    "after": 0.44223412394797246,
+    "delta": 0.1293306602772994,
+    "evidence": "comparisons/wf_50_Celebration_Or_Party_birthdayparty_50_179.jpg"
+  },
+  {
+    "image_id": "wf_19_Couple_Couple_19_661",
+    "before": 0.20187099207846096,
+    "after": 0.24081481336949523,
+    "delta": 0.03894382129103427,
+    "evidence": "comparisons/wf_19_Couple_Couple_19_661.jpg"
+  },
+  {
+    "image_id": "wf_18_Concerts_Concerts_18_555",
+    "before": 0.355810543762351,
+    "after": 0.375427626850654,
+    "delta": 0.01961708308830301,
+    "evidence": "comparisons/wf_18_Concerts_Concerts_18_555.jpg"
+  },
+  {
+    "image_id": "wf_27_Spa_Spa_27_293",
+    "before": 0.48327071032385044,
+    "after": 0.0518789616661636,
+    "delta": -0.4313917486576868,
+    "evidence": "comparisons/wf_27_Spa_Spa_27_293.jpg"
+  },
+  {
+    "image_id": "wf_1_Handshaking_Handshaking_1_453",
+    "before": 0.25220984961542875,
+    "after": 0.1239601109215017,
+    "delta": -0.12824973869392703,
+    "evidence": "comparisons/wf_1_Handshaking_Handshaking_1_453.jpg"
+  }
+]

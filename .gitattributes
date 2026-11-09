@@ -3,3 +3,9 @@
 # C's frozen config binds the exact installed model bytes, including line endings.
 # Preserve the Windows checkout bytes used during calibration on every platform.
 models/skin_model.json text eol=crlf
+# Frozen morphology experiment inputs.
+config/pipeline.json text eol=crlf
+src/segmentation/morphology_refinement.py text eol=lf
+scripts/compare_morphology.py text eol=lf
+tests/segmentation/test_morphology_refinement.py text eol=lf
+experiments/morphology_refinement/*.json text eol=crlf
