@@ -128,12 +128,16 @@ def evaluate(manifest, model_path, full_path, diagonal_path, output_dir):
 def write_report(report, folder):
     def val(value):
         return "不适用" if value is None else f"{value:.4f}"
+    morphology = any(c.get('algorithm_revision') == 'morphology-v2' for c in report['freeze']['configs'].values())
+    selection_file = 'morphology.json' if morphology else 'calibration.json'
+    selection_text = ("固定肤色模型和距离阈值，仅在100张验证图上比较形态学配置，以累计人脸IoU选择，同时要求逐图平均IoU不下降、无脸误检图片数不增加。选定配置后再作探索性评估。"
+                      if morphology else "校准只读 validation 参考：6 个距离平方阈值 × 3 套后处理，共每模型 18 组；以包括无脸 FP 的验证集累计人脸 IoU 最大为选择依据，精确并列时先枚举者优先。随后冻结配置，再评估现有测试和外部场景。")
     lines = ["# 最终集成实验报告", "", "## 设计思路", "",
              "采用 A 的真实 Cb–Cr 二维高斯模型，接入 B 的马氏距离分割、形态学、连通域几何筛选与受限填洞；C 完成 EXIF 读取、Tkinter 展示、可追溯导出、验证集校准和评估。完整协方差与独立通道模型分别在同一验证集选择配置。", "",
              "输入为 uint8 BGR，OpenCV 返回 Y/Cr/Cb，模型按 Cb/Cr 取特征。仅在推理时加一次 λI；d²≤T 为肤色。保留所有通过筛选的连通域，不强行保留最大区域。填洞按候选区域面积限制；最终掩膜为原尺寸 uint8 0/1。", "",
              "## 实验过程", "",
              "主清单 244 张：训练 120、验证 100、测试 24；48 位作者编号人物按 24/16/8 隔离，20 张无脸背景全部在验证集。外部场景 33 张另列，两张手部裁剪不增加独立原图数。主数据与场景分别核对原图哈希；场景位编码参考先核对哈希、尺寸和取值。", "",
-             "模型、数据清单、配置及逐图原图/参考哈希保存在 freeze.json、evaluation.json 与 calibration.json。校准只读 validation 参考：6 个距离平方阈值 × 3 套后处理，共每模型 18 组；以包括无脸 FP 的验证集累计人脸 IoU 最大为选择依据，精确并列时先枚举者优先。随后冻结配置，再评估现有测试和外部场景。", "",
+             f"模型、数据清单、配置及逐图原图/参考哈希保存在 freeze.json、evaluation.json 与选参记录 {selection_file}。"+selection_text, "",
              "**评估性质：探索性集成评估。** A 已公开现有测试与场景结果，本轮没有新的盲测集。参考为辅助标注并经项目复核，未经独立专家逐像素精修；结果表示与该参考的一致程度。", "",
              "## 实际结果", "", "| 模型 / 数据 | 数量 | 肤色 P / R / IoU / Dice | 人脸 P / R / IoU / Dice | 有脸逐图平均 IoU |",
              "| --- | ---: | --- | --- | ---: |"]

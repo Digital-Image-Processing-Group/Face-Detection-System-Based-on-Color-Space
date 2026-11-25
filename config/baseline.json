@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "algorithm_revision": "integrated-v1",
+  "algorithm_revision": "morphology-v2",
   "model_revision": "skin-d239a8aaf4ae7f05",
   "model_sha256": "d53cefa4fe6ab85bde11f9787fd27423ec7d2a214f379ea20149de4573b2b910",
   "manifest_sha256": "b3efdfe0bc9d8955f6b2ff7b191fb305ec83b94569db6c20ee700ff3a1270afe",
@@ -18,7 +18,7 @@
     "hole_fill_max_area_ratio": 0.3,
     "kernel_reference_side": 1000
   },
-  "selection": "validation_face_micro_iou_including_background_false_positives",
-  "calibration_inputs_sha256": "b031c726110ba46c20243640d94811ed80688d7227b38c5cdb30aedc286632f5",
-  "config_revision": "751b0a60c37603d9"
+  "selection": "validation_face_micro_iou_with_mean_iou_and_background_guards",
+  "calibration_inputs_sha256": "c7c612b5bcecda664b392cb0a6519ed23d6dff01d1aec0d0fd967edf726e3ec0",
+  "config_revision": "13814f16de3bcd3c"
 }

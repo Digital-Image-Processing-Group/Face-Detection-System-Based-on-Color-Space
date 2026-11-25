@@ -2,6 +2,8 @@
 
 这里保留最终提交的 `main.py`、依赖清单、启动脚本和像素参考。模型均值、协方差及处理参数在 `main.py` 中，算法结果与 `src/` 中的完整工程一致。实验报告位于 [reports/course](../reports/course/)。
 
+A分支已同步形态学优化实现，使用两种模型各自验证选出的后处理配置。最新探索性对照见 [morphology.json](../reports/morphology.json)，课程Word/PDF记录的是优化前结果。更新工程后处理或配置后，在仓库根目录执行 `python scripts/sync_submission.py` 同步提交版；一致性行为测试同时检查两套实现的输出。
+
 ## 准备验证图片
 
 在仓库根目录安装依赖并恢复来源图片，然后生成提交版所需的 79 个输入：

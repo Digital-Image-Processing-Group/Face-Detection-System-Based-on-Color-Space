@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "algorithm_revision": "integrated-v1",
+  "algorithm_revision": "morphology-v2",
   "model_revision": "skin-d239a8aaf4ae7f05",
   "model_sha256": "d53cefa4fe6ab85bde11f9787fd27423ec7d2a214f379ea20149de4573b2b910",
   "manifest_sha256": "b3efdfe0bc9d8955f6b2ff7b191fb305ec83b94569db6c20ee700ff3a1270afe",
@@ -9,16 +9,21 @@
   "postprocess": {
     "open_kernel": 5,
     "close_kernel": 9,
-    "min_area_ratio": 0.001,
+    "min_area_ratio": 0.003,
     "max_area_ratio": 0.85,
     "min_aspect_ratio": 0.3,
     "max_aspect_ratio": 2.0,
     "min_fill_ratio": 0.3,
     "min_ellipse_similarity": 0.3,
     "hole_fill_max_area_ratio": 0.3,
-    "kernel_reference_side": 1000
+    "kernel_reference_side": 1000,
+    "method": "adaptive",
+    "local_kernel_ratio": 0.01,
+    "bridge_open_ratio": 0,
+    "noise_area_ratio": 2e-05,
+    "hole_fill_total_area_ratio": 0.3
   },
-  "selection": "validation_face_micro_iou_including_background_false_positives",
-  "calibration_inputs_sha256": "b031c726110ba46c20243640d94811ed80688d7227b38c5cdb30aedc286632f5",
-  "config_revision": "7c71ca627e972bdb"
+  "selection": "validation_face_micro_iou_with_mean_iou_and_background_guards",
+  "calibration_inputs_sha256": "c7c612b5bcecda664b392cb0a6519ed23d6dff01d1aec0d0fd967edf726e3ec0",
+  "config_revision": "042cb39a55aceaf4"
 }

@@ -26,10 +26,31 @@ COVARIANCE = np.array([[13.11251944771992, -7.345890096625399],
                        [-7.345890096625399, 16.315821194932038]])
 REGULARIZATION = 1.0
 THRESHOLD = 4.0
-POSTPROCESS = {'open_kernel': 5, 'close_kernel': 9, 'min_area_ratio': .001,
-               'max_area_ratio': .85, 'min_aspect_ratio': .3, 'max_aspect_ratio': 2.,
-               'min_fill_ratio': .3, 'min_ellipse_similarity': .3,
-               'hole_fill_max_area_ratio': .3, 'kernel_reference_side': 1000}
+POSTPROCESS = {'open_kernel': 5,
+ 'close_kernel': 9,
+ 'min_area_ratio': 0.003,
+ 'max_area_ratio': 0.85,
+ 'min_aspect_ratio': 0.3,
+ 'max_aspect_ratio': 2.0,
+ 'min_fill_ratio': 0.3,
+ 'min_ellipse_similarity': 0.3,
+ 'hole_fill_max_area_ratio': 0.3,
+ 'kernel_reference_side': 1000,
+ 'method': 'adaptive',
+ 'local_kernel_ratio': 0.01,
+ 'bridge_open_ratio': 0,
+ 'noise_area_ratio': 2e-05,
+ 'hole_fill_total_area_ratio': 0.3}
+BASELINE_POSTPROCESS = {'open_kernel': 5,
+ 'close_kernel': 9,
+ 'min_area_ratio': 0.001,
+ 'max_area_ratio': 0.85,
+ 'min_aspect_ratio': 0.3,
+ 'max_aspect_ratio': 2.0,
+ 'min_fill_ratio': 0.3,
+ 'min_ellipse_similarity': 0.3,
+ 'hole_fill_max_area_ratio': 0.3,
+ 'kernel_reference_side': 1000}
 DEMO_IDS = ('hfd_12_SEAFA6', 'hfd_8_SEAMA6', 'hfd_24_SEAFA8', 'hfd_5_AFA8',
             'wf_19_Couple_Couple_19_90', 'wf_1_Handshaking_Handshaking_1_453',
             'wf_27_Spa_Spa_27_293', 'bsds_105027')
@@ -49,22 +70,25 @@ def read_image(path):
     return cv2.cvtColor(rgb, cv2.COLOR_RGB2BGR)
 
 
-def _fill_holes_limited(region_mask, max_hole_area):
+def _fill_holes_limited(region_mask, max_hole_area, total_budget=None):
     h, w = region_mask.shape
     inv = (1 - region_mask).astype(np.uint8)
     num, labels, stats, _ = cv2.connectedComponentsWithStats(inv, connectivity=8)
     border = set(labels[0, :].tolist()) | set(labels[-1, :].tolist())
     border |= set(labels[:, 0].tolist()) | set(labels[:, -1].tolist())
     out = region_mask.copy()
-    for lab in range(1, num):
+    budget = region_mask.size if total_budget is None else total_budget
+    for lab in sorted(range(1, num), key=lambda k: int(stats[k, cv2.CC_STAT_AREA])):
         if lab in border:
             continue
-        if int(stats[lab, cv2.CC_STAT_AREA]) <= max_hole_area:
+        area = int(stats[lab, cv2.CC_STAT_AREA])
+        if area <= max_hole_area and area <= budget:
             out[labels == lab] = 1
+            budget -= area
     return out
 
 
-def postprocess(skin_mask, pp):
+def _global_cleanup(skin_mask, pp):
     h, w = skin_mask.shape
     scale = min(h, w) / pp.get("kernel_reference_side", min(h, w))
     def size(key):
@@ -73,6 +97,12 @@ def postprocess(skin_mask, pp):
     kc = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (size("close_kernel"), size("close_kernel")))
     m = cv2.morphologyEx(skin_mask, cv2.MORPH_OPEN, ko)
     m = cv2.morphologyEx(m, cv2.MORPH_CLOSE, kc)
+    return m
+
+
+def _postprocess_legacy(skin_mask, pp):
+    h, w = skin_mask.shape
+    m = _global_cleanup(skin_mask, pp)
 
     num, labels, stats, _ = cv2.connectedComponentsWithStats(m, connectivity=8)
     face = np.zeros((h, w), dtype=np.uint8)
@@ -108,7 +138,7 @@ def postprocess(skin_mask, pp):
         if sim < pp["min_ellipse_similarity"]:
             continue
 
-        # 按当前候选面积限制填洞。
+        # Limit holes relative to this component, not the whole photograph.
         max_hole = int(pp["hole_fill_max_area_ratio"] * area)
         roi_filled = _fill_holes_limited(comp, max_hole)
         face[y:y + bh, x:x + bw] = np.maximum(face[y:y + bh, x:x + bw], roi_filled)
@@ -120,6 +150,98 @@ def postprocess(skin_mask, pp):
     return face, candidates
 
 
+def _components(mask):
+    """Yield tight local masks with offsets; never join separate objects."""
+    count, labels, stats, _ = cv2.connectedComponentsWithStats(mask, connectivity=8)
+    for label in range(1, count):
+        x, y, w, h, _ = stats[label]
+        yield int(x), int(y), (labels[y:y+h, x:x+w] == label).astype(np.uint8)
+
+
+def _local_morph(mask, kernel_size, operation):
+    # Explicit zero padding prevents ROI edges acting as artificial foreground.
+    pad = kernel_size + 1
+    padded = np.pad(mask, pad)
+    kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (kernel_size, kernel_size))
+    result = cv2.morphologyEx(padded, operation, kernel)
+    return result[pad:-pad, pad:-pad]
+
+
+def _split_bridges(mask, ratio):
+    """Open thin bridges, then partition original pixels by nearest retained core.
+
+    This is a binary morphology partition, not a semantic face/hand classifier.
+    Recovery is label constrained so different cores cannot reconnect.
+    """
+    if not ratio:
+        return [mask]
+    size = min(101, max(3, round(min(mask.shape) * ratio)) | 1)
+    opened = _local_morph(mask, size, cv2.MORPH_OPEN)
+    count, labels, stats, _ = cv2.connectedComponentsWithStats(opened, connectivity=8)
+    cores = np.zeros_like(mask)
+    retained = 0
+    for label in range(1, count):
+        if stats[label, cv2.CC_STAT_AREA] >= max(9, .1 * mask.sum()):
+            cores[labels == label] = 1
+            retained += 1
+    if retained < 2 or retained > 6:
+        return [mask]
+    _, nearest = cv2.distanceTransformWithLabels(1 - cores, cv2.DIST_L2, 5,
+                                                labelType=cv2.DIST_LABEL_CCOMP)
+    return [((nearest == label) & (mask != 0)).astype(np.uint8)
+            for label in range(1, retained + 1)]
+
+
+def _adaptive_postprocess(skin_mask, pp):
+    h, w = skin_mask.shape
+    image_area = h * w
+    face = np.zeros_like(skin_mask)
+    candidates = []
+    initial = _global_cleanup(skin_mask, pp) if pp.get("preclean", False) else skin_mask
+    for x, y, raw in _components(initial):
+        if raw.sum() < max(2, image_area * pp.get("noise_area_ratio", .00002)):
+            continue
+        side = min(raw.shape)
+        size = min(31, max(1, round(side * pp["local_kernel_ratio"])) | 1)
+        clean = _local_morph(raw, size, cv2.MORPH_OPEN)
+        # Close within each surviving component: different faces stay separate.
+        for dx, dy, component in _components(clean):
+            close_size = min(31, max(1, round(min(component.shape) * pp["local_kernel_ratio"] * 2)) | 1)
+            component = _local_morph(component, close_size, cv2.MORPH_CLOSE)
+            for part in _split_bridges(component, pp.get("bridge_open_ratio", 0)):
+                for px, py, tight in _components(part):
+                    ph, pw = tight.shape
+                    area = int(tight.sum())
+                    if not pp["min_area_ratio"] <= area / image_area <= pp["max_area_ratio"]:
+                        continue
+                    if not pp["min_aspect_ratio"] <= pw / ph <= pp["max_aspect_ratio"]:
+                        continue
+                    if area / (pw * ph) < pp["min_fill_ratio"]:
+                        continue
+                    contours, _ = cv2.findContours(tight, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+                    contour = max(contours, key=cv2.contourArea)
+                    if len(contour) < 5:
+                        continue
+                    _, axes, _ = cv2.fitEllipse(contour)
+                    ellipse_area = np.pi * axes[0] * axes[1] / 4
+                    if ellipse_area <= 0 or min(area, ellipse_area) / max(area, ellipse_area) < pp["min_ellipse_similarity"]:
+                        continue
+                    filled = _fill_holes_limited(tight,
+                        int(area * pp["hole_fill_max_area_ratio"]),
+                        int(area * pp["hole_fill_total_area_ratio"]))
+                    left, top = x + dx + px, y + dy + py
+                    face[top:top+ph, left:left+pw] |= filled
+                    candidates.append({"bbox": {"x": left, "y": top, "width": pw, "height": ph},
+                                       "area": int(filled.sum())})
+    return face, candidates
+
+
+def postprocess(skin_mask, pp):
+    if pp.get("method", "legacy") == "adaptive":
+        return _adaptive_postprocess(skin_mask, pp)
+    return _postprocess_legacy(skin_mask, pp)
+
+
 def segment_image(image, diagonal=False):
     start = time.perf_counter()
     color = cv2.cvtColor(image, cv2.COLOR_BGR2YCrCb)
@@ -129,7 +251,7 @@ def segment_image(image, diagonal=False):
     difference = np.stack([cb - MEAN[0], cr - MEAN[1]], axis=-1)
     distance = np.einsum('...i,ij,...j->...', difference, inverse, difference)
     skin = (distance <= THRESHOLD).astype(np.uint8)
-    face, candidates = postprocess(skin, POSTPROCESS)
+    face, candidates = postprocess(skin, BASELINE_POSTPROCESS if diagonal else POSTPROCESS)
     return {'skin_mask': skin, 'face_mask': face, 'candidates': candidates,
             'timing_ms': (time.perf_counter() - start) * 1000}
 

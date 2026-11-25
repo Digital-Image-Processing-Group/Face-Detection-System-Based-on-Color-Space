@@ -50,6 +50,17 @@ def _validate_config(config):
     reference = pp.get("kernel_reference_side", 1000)
     if isinstance(reference, bool) or not isinstance(reference, (int, float)) or not np.isfinite(reference) or reference <= 0:
         raise ValueError("kernel_reference_side 必须为正有限数")
+    if pp.get("method", "legacy") not in ("legacy", "adaptive"):
+        raise ValueError("未知形态学 method")
+    if pp.get("method") == "adaptive":
+        if not isinstance(pp.get("preclean", False), bool):
+            raise ValueError("preclean 必须为布尔值")
+        for key in ("local_kernel_ratio", "hole_fill_total_area_ratio", "noise_area_ratio", "bridge_open_ratio"):
+            value = pp.get(key)
+            if isinstance(value, bool) or not isinstance(value, (int, float)) or not np.isfinite(value) or not 0 <= value <= 1:
+                raise ValueError(key + " 必须在 0 至 1 之间")
+        if pp["local_kernel_ratio"] == 0:
+            raise ValueError("local_kernel_ratio 必须大于零")
 
 
 def squared_threshold(config):
